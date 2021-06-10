@@ -1,0 +1,400 @@
+.Section1 {
+  background: white;
+  &-row1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 280px;
+    background: white;
+
+    &-shop {
+      width: 50%;
+      min-height: 280px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #cfd136;
+      padding-left: 30px;
+      padding-right: 20px;
+
+      &-image > img {
+        max-width: 250px;
+      }
+      &-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &-Gollaa {
+          // display: flex;
+          // background: red;
+          // align-items: flex-end;
+          // justify-content: flex-start;
+          margin-bottom: 8px;
+
+          &-image {
+            max-width: 90px;
+            margin: 0;
+          }
+          &-heading {
+            font-size: 16px;
+            font-family: Poppins;
+            font-weight: 200;
+            padding-left: 5px;
+          }
+        }
+        &-subheading {
+          font-family: "Monserrat";
+          font-weight: 200;
+          font-size: 16px;
+        }
+        &-app {
+          margin-top: 35px;
+        }
+        &-app > button {
+          padding-left: 12px;
+          padding-top: 6px;
+          padding-right: 18px;
+          padding-bottom: 6px;
+          margin-right: 6px;
+          color: white;
+          font-family: "Monserrat";
+          font-weight: 250;
+          font-size: 14px;
+          background: #161615 0% 0% no-repeat padding-box;
+          border: none;
+          outline: none;
+          border-radius: 6px;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+        &-app > span {
+          font-family: "Monserrat";
+          font-weight: 200;
+          font-size: 14px;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    &-grow {
+      display: flex;
+      width: 50%;
+      min-height: 280px;
+      background: #8cc63f;
+      padding-left: 56.52px;
+
+      &-image {
+        display: flex;
+        align-items: flex-end;
+        // justify-content: flex-end;
+        padding: 0;
+      }
+
+      &-image > img {
+        max-width: 350px;
+        padding: 0;
+        margin: 0;
+      }
+      &-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &-Gollaa {
+          margin-bottom: 8px;
+
+          &-image {
+            max-width: 90px;
+            margin: 0;
+          }
+          &-heading {
+            font-size: 16px;
+            font-family: Poppins;
+            font-weight: 200;
+            padding-left: 5px;
+          }
+        }
+        &-subheading {
+          font-family: "Monserrat";
+          font-weight: 200;
+          font-size: 16px;
+        }
+        &-app {
+          margin-top: 35px;
+        }
+        &-app > button {
+          padding-left: 12px;
+          padding-top: 6px;
+          padding-right: 18px;
+          padding-bottom: 6px;
+          margin-right: 6px;
+          color: white;
+          font-family: "Monserrat";
+          font-weight: 250;
+          font-size: 14px;
+          background: #161615 0% 0% no-repeat padding-box;
+          border: none;
+          outline: none;
+          overflow: hidden;
+          white-space: nowrap;
+          border-radius: 6px;
+        }
+        &-app > span {
+          font-family: "Monserrat";
+          font-weight: 200;
+          font-size: 14px;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  &-row2 {
+    display: flex;
+    width: 100%;
+    max-height: 300px;
+
+    &-support {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: calc(100% / 3);
+      // height: 200px;
+      background: #ede139;
+      padding-left: 20px;
+      padding-top: 20px;
+
+      &-image {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        // align-items: flex-end;
+        justify-content: flex-end;
+        // padding: 0;
+      }
+
+      &-image > img {
+        max-width: 300px;
+        // padding: 0;
+        // margin: 0;
+      }
+      &-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &-Gollaa {
+          margin-bottom: 8px;
+
+          &-image {
+            max-width: 90px;
+            margin: 0;
+          }
+          &-heading {
+            font-size: 16px;
+            font-family: Poppins;
+            font-weight: 200;
+            padding-left: 5px;
+          }
+        }
+        &-subheading {
+          font-family: "Monserrat";
+          font-weight: 200;
+          font-size: 16px;
+        }
+        &-app {
+          margin-top: 35px;
+        }
+        &-app > button {
+          padding-left: 12px;
+          padding-top: 6px;
+          padding-right: 18px;
+          padding-bottom: 6px;
+          margin-right: 6px;
+          color: white;
+          font-family: "Monserrat";
+          font-weight: 250;
+          font-size: 14px;
+          background: #161615 0% 0% no-repeat padding-box;
+          border: none;
+          outline: none;
+          border-radius: 6px;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+        &-app > span {
+          font-family: "Monserrat";
+          font-weight: 200;
+          font-size: 14px;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    &-stay {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      justify-content: space-between;
+      width: calc(100% / 3);
+      // min-height: 250px;
+      background: #5dbc58;
+      padding-left: 20px;
+      padding-top: 20px;
+
+      &-image {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        justify-content: flex-end;
+        // padding: 0;
+      }
+
+      &-image > img {
+        max-width: 250px;
+        // padding: 0;
+        // margin: 0;
+      }
+      &-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &-Gollaa {
+          margin-bottom: 8px;
+
+          &-image {
+            max-width: 90px;
+            margin: 0;
+          }
+          &-heading {
+            font-size: 16px;
+            font-family: Poppins;
+            font-weight: 200;
+            padding-left: 5px;
+          }
+        }
+        &-subheading {
+          font-family: "Monserrat";
+          font-weight: 200;
+          font-size: 16px;
+        }
+        &-app {
+          margin-top: 35px;
+        }
+        &-app > button {
+          padding-left: 12px;
+          padding-top: 6px;
+          padding-right: 18px;
+          padding-bottom: 6px;
+          margin-right: 6px;
+          color: white;
+          font-family: "Monserrat";
+          font-weight: 250;
+          font-size: 14px;
+          background: #161615 0% 0% no-repeat padding-box;
+          border: none;
+          outline: none;
+          border-radius: 6px;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+        &-app > span {
+          font-family: "Monserrat";
+          font-weight: 200;
+          font-size: 14px;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+    }
+    &-trade {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      justify-content: space-between;
+      width: calc(100% / 3);
+      // min-height: 250px;
+      background: #afd466;
+      padding-left: 20px;
+      padding-top: 20px;
+
+      &-image {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        // align-items: flex-end;
+        justify-content: flex-end;
+        // padding: 0;
+      }
+
+      &-image > img {
+        max-width: 250px;
+        // padding: 0;
+        // margin: 0;
+      }
+      &-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &-Gollaa {
+          margin-bottom: 8px;
+
+          &-image {
+            max-width: 90px;
+            margin: 0;
+          }
+          &-heading {
+            font-size: 16px;
+            font-family: Poppins;
+            font-weight: 200;
+            padding-left: 5px;
+          }
+        }
+        &-subheading {
+          font-family: "Monserrat";
+          font-weight: 200;
+          font-size: 16px;
+        }
+        &-app {
+          margin-top: 35px;
+        }
+        &-app > button {
+          padding-left: 12px;
+          padding-top: 6px;
+          padding-right: 18px;
+          padding-bottom: 6px;
+          margin-right: 6px;
+          color: white;
+          font-family: "Monserrat";
+          font-weight: 250;
+          font-size: 14px;
+          background: #161615 0% 0% no-repeat padding-box;
+          border: none;
+          outline: none;
+          border-radius: 6px;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+        &-app > span {
+          font-family: "Monserrat";
+          font-weight: 200;
+          font-size: 14px;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}

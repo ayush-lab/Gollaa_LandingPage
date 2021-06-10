@@ -1,0 +1,35 @@
+.Navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+
+  &-logo {
+    height: inherit;
+    background: #ebebeb;
+    border-bottom: solid 0.5px grey;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50%;
+    padding-left: 1rem;
+  }
+  &-logo > img {
+    width: 120px;
+  }
+  &-menu {
+    width: 50%;
+    padding-right: 1rem;
+    height: inherit;
+    background: #8cc63f;
+    border-bottom: solid 0.5px grey;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  &-menu > img {
+    width: 30px;
+    // height: 42px;
+  }
+}

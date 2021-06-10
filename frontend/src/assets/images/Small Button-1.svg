@@ -1,0 +1,7 @@
+<svg id="Small_Button" data-name="Small Button" xmlns="http://www.w3.org/2000/svg" width="411" height="67" viewBox="0 0 411 67">
+  <g id="Download_App_button" data-name="Download App button" transform="translate(0 0)">
+    <rect id="Rectangle_115" data-name="Rectangle 115" width="257" height="67" rx="10" transform="translate(0 0)" fill="#161615"/>
+    <text id="Download_App" data-name="Download App" transform="translate(32 40)" fill="#fff" font-size="23" font-family="Montserrat-Light, Montserrat" font-weight="300"><tspan x="0" y="0">Download App</tspan></text>
+  </g>
+  <text id="See_More" data-name="See More" transform="translate(301 40)" fill="#161615" font-size="23" font-family="Montserrat-SemiBold, Montserrat" font-weight="600" opacity="0"><tspan x="0" y="0">See More</tspan></text>
+</svg>
