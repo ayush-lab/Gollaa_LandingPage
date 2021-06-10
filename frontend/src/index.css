@@ -16,6 +16,12 @@
   font-weight: 250;
   font-style: normal;
 }
+@font-face {
+  font-family: "Monserrat";
+  src: url("assets/fonts/Montserrat-Medium.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
 
 body {
   margin: 0;
