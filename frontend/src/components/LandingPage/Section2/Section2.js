@@ -1,6 +1,6 @@
 import React from 'react';
 import earth from '../../../assets/images/Today for tomorrow Illustration.svg'
-import logo from '../../../assets/images/Gollaa_logo.svg'
+import logo from '../../../assets/images/Gollaa Logo White.svg'
 
 export default function Section2(){
 

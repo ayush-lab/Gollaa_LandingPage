@@ -1,0 +1,41 @@
+.Section3 {
+  background: #cec41d;
+  display: flex;
+  width: 100%;
+  padding-top: 40px;
+
+  &-farmingText {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    // align-content: center;
+    padding-left: 40px;
+    padding-right: 20px;
+  }
+  &-farmingText p:nth-child(1) {
+    color: white;
+    font-family: "Monserrat";
+    font-weight: 300;
+    font-size: 34px;
+    padding-bottom: 20px;
+  }
+
+  &-farmingText p:nth-child(2),
+  &-farmingText p:nth-child(3) {
+    color: black;
+    font-family: "Poppins";
+    font-weight: 200;
+  }
+  &-farmingText p:nth-child(2) {
+    padding-bottom: 20px;
+    font-size: 22px;
+  }
+
+  &-farmingImage {
+    width: 50%;
+  }
+  &-farmingImage > img {
+    max-width: 90%;
+  }
+}
