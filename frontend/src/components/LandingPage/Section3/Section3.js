@@ -7,10 +7,10 @@ export default function Section3(){
     return(
         <div className="Section3">
             <div className="Section3-farmingText">
-                <p>DIRECT FROM <br/> FARM & FARMER</p>
+                <p><span>DIRECT FROM </span> <span>FARM & FARMER</span></p>
 
-                <p>Your Partner on the journey of sourcing <br/> fresh and authentic 
-                    products directly <br/> from local businesses</p>
+                <p><span>Your Partner on the journey of sourcing </span> <span>fresh and authentic 
+                    products directly </span> from local businesses</p>
              
                 <p>In our pursuit to establish a circular economy, 
                     we help farmers and artisans deliver their quality
@@ -21,7 +21,9 @@ export default function Section3(){
             </div>
 
             <div className="Section3-farmingImage">
-                <img src={farming} alt="man planting"/>
+                <div className="Section3-farmingImage-image">
+                    <img src={farming} alt="man planting"/>
+                </div>
             </div>
 
         </div>

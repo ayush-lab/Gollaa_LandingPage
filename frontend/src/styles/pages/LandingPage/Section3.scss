@@ -3,6 +3,7 @@
   display: flex;
   width: 100%;
   padding-top: 40px;
+  padding-bottom: 20px;
 
   &-farmingText {
     width: 50%;
@@ -20,6 +21,9 @@
     font-size: 34px;
     padding-bottom: 20px;
   }
+  &-farmingText p:nth-child(1) span {
+    display: block;
+  }
 
   &-farmingText p:nth-child(2),
   &-farmingText p:nth-child(3) {
@@ -31,11 +35,223 @@
     padding-bottom: 20px;
     font-size: 22px;
   }
+  &-farmingText p:nth-child(2) span {
+    display: block;
+  }
 
   &-farmingImage {
     width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-image {
+      max-width: 100%;
+    }
+    &-image > img {
+      max-width: 90%;
+    }
   }
-  &-farmingImage > img {
-    max-width: 90%;
+}
+
+@media (max-width: 1000px) {
+  .Section3 {
+    padding-top: 30px;
+    padding-bottom: 20px;
+
+    &-farmingText {
+      // width: 50%;
+      padding-left: 30px;
+      padding-right: 15px;
+    }
+    &-farmingText p:nth-child(1) {
+      font-size: 28px;
+      padding-bottom: 12px;
+    }
+
+    &-farmingText p:nth-child(2),
+    &-farmingText p:nth-child(3) {
+      font-size: 16px;
+    }
+    &-farmingText p:nth-child(2) {
+      padding-bottom: 20px;
+      font-size: 18px;
+    }
+
+    &-farmingImage {
+      &-image {
+        max-width: 100%;
+      }
+      &-image > img {
+        max-width: 90%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .Section3 {
+    padding-top: 25px;
+    padding-bottom: 15px;
+
+    &-farmingText {
+      // width: 50%;
+      padding-left: 30px;
+      padding-right: 15px;
+    }
+    &-farmingText p:nth-child(1) {
+      font-size: 24px;
+      padding-bottom: 10px;
+    }
+
+    &-farmingText p:nth-child(2),
+    &-farmingText p:nth-child(3) {
+      font-size: 14px;
+    }
+    &-farmingText p:nth-child(2) {
+      padding-bottom: 16px;
+      font-size: 16px;
+    }
+    &-farmingText p:nth-child(2) span {
+      display: inline;
+    }
+
+    &-farmingImage {
+      &-image {
+        max-width: 100%;
+      }
+      &-image > img {
+        max-width: 90%;
+      }
+    }
+  }
+}
+
+@media (max-width: 570px) {
+  .Section3 {
+    padding-top: 25px;
+    padding-bottom: 15px;
+
+    &-farmingText {
+      // width: 50%;
+      padding-left: 25px;
+      padding-right: 5px;
+    }
+    &-farmingText p:nth-child(1) {
+      font-size: 22px;
+      padding-bottom: 8px;
+      color: black;
+    }
+    &-farmingText p:nth-child(1) span {
+      display: inline;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    &-farmingText p:nth-child(2),
+    &-farmingText p:nth-child(3) {
+      font-size: 12px;
+    }
+    &-farmingText p:nth-child(2) {
+      padding-bottom: 16px;
+      font-size: 16px;
+    }
+    &-farmingText p:nth-child(2) span {
+      display: inline;
+    }
+    &-farmingText p:nth-child(3) {
+      display: none;
+    }
+
+    &-farmingImage {
+      &-image {
+        max-width: 100%;
+      }
+      &-image > img {
+        max-width: 90%;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .Section3 {
+    padding-top: 25px;
+    padding-bottom: 15px;
+
+    &-farmingText {
+      // width: 50%;
+      padding-left: 25px;
+      padding-right: 0px;
+    }
+    &-farmingText p:nth-child(1) {
+      font-size: 20px;
+      padding-bottom: 6px;
+    }
+    &-farmingText p:nth-child(1) span:nth-child(2) {
+      white-space: nowrap;
+      overflow: hidden;
+      z-index: 2;
+    }
+
+    &-farmingText p:nth-child(2) {
+      padding-bottom: 12px;
+      font-size: 12px;
+    }
+    &-farmingText p:nth-child(2) span {
+      display: inline;
+    }
+
+    &-farmingText p:nth-child(3) {
+      display: none;
+    }
+
+    &-farmingImage {
+      &-image {
+        max-width: 100%;
+      }
+      &-image > img {
+        max-width: 90%;
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .Section3 {
+    padding-top: 20px;
+    padding-bottom: 15px;
+
+    &-farmingText {
+      // width: 50%;
+      padding-left: 20px;
+      padding-right: 0px;
+    }
+    &-farmingText p:nth-child(1) {
+      font-size: 18px;
+      padding-bottom: 5px;
+    }
+    &-farmingText p:nth-child(1) span:nth-child(2) {
+    }
+
+    &-farmingText p:nth-child(2) {
+      padding-bottom: 8px;
+      font-size: 10px;
+    }
+    &-farmingText p:nth-child(2) span {
+      display: inline;
+    }
+
+    &-farmingText p:nth-child(3) {
+      display: none;
+    }
+
+    &-farmingImage {
+      &-image {
+        max-width: 100%;
+      }
+      &-image > img {
+        max-width: 90%;
+      }
+    }
   }
 }

@@ -1,0 +1,116 @@
+$Footer-height: 200px;
+
+// colors
+$Light-Green: #8abb2a;
+$Cloudy-White: #fafafa;
+$Mustard-Yellow: #dad800;
+$Pure-Yellow: #dad800;
+$Yellowish-Green: #adcb4f;
+$Pure-Green: #5faf42;
+
+.Footer {
+  height: $Footer-height;
+  width: 100%;
+  display: flex;
+  background: aqua;
+  padding: 0;
+  margin: 0;
+
+  &-col1 {
+    display: flex;
+    flex-direction: column;
+    height: $Footer-height;
+    flex-basis: 20%;
+
+    &-row1 {
+      background-color: $Light-Green;
+      height: 50%;
+    }
+    &-row2 {
+      background: $Cloudy-White;
+      height: 50%;
+    }
+  }
+
+  &-col2 {
+    height: $Footer-height;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    flex-basis: 30%;
+    background: $Mustard-Yellow;
+    font-family: "Monserrat";
+    font-weight: 300;
+
+    &-info {
+      padding-bottom: 5px;
+    }
+    &-details {
+      //   background: red;
+
+      &-contact {
+        padding-bottom: 3px;
+      }
+      &-contact > img {
+        width: 20px;
+      }
+    }
+  }
+
+  &-col3 {
+    height: $Footer-height;
+    flex-basis: 40%;
+    font-family: "Monserrat";
+    font-weight: 300;
+
+    &-row1 {
+      height: 50%;
+      background-color: $Light-Green;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding-left: 20px;
+    }
+    &-row1 p:nth-child(1) {
+      padding-bottom: 5px;
+      text-transform: uppercase;
+      font-size: 16px;
+    }
+    &-row1 p:nth-child(2) {
+      font-size: 14px;
+    }
+
+    &-row2 {
+      height: 50%;
+      width: 100%;
+      display: flex;
+
+      &-col1 {
+        width: 80%;
+        background: $Yellowish-Green;
+        padding-left: 20px;
+        font-size: 14px;
+      }
+      &-col2 {
+        width: 50%;
+        background: $Pure-Green;
+      }
+    }
+  }
+  &-col4 {
+    flex-basis: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $Pure-Yellow;
+
+    &-logo {
+      flex-basis: 200px;
+    }
+    &-logo > img {
+      width: 100%;
+    }
+  }
+}

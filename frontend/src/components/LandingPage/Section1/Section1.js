@@ -12,6 +12,7 @@ export default function Section1(){
         <React.Fragment>
             <div className="Section1">
                 <div className="Section1-row1">
+
                     <div className="Section1-row1-shop">
                         <div className="Section1-row1-shop-image">
                             <img src={Gollaa_Shop}  alt="Gollaa_shop" />
@@ -36,7 +37,7 @@ export default function Section1(){
                                 <img  className="Section1-row1-grow-text-Gollaa-image" src={Gollaa_text} alt="Golla_text"/>
                                 <span className="Section1-row1-grow-text-Gollaa-heading" >Grow</span>
                             </div>
-                            <p className="Section1-row1-grow-text-subheading">Accelerate your jouney to success</p>
+                            <p className="Section1-row1-grow-text-subheading">Accelerate your <br/> jouney to success</p>
                             <div className="Section1-row1-grow-text-app">
                                 <button>Download App</button>
                                 <span>See More</span>
@@ -47,65 +48,65 @@ export default function Section1(){
                             <img src={Gollaa_Grow}  alt="Gollaa_grow" />
                         </div>
                     </div>
-                </div>
+                
 
 
-                <div className="Section1-row2">
+                {/* <div className="Section1-row1"> */}
 
-                    <div className="Section1-row2-support">
+                    <div className="Section1-row1-support">
 
-                        <div className="Section1-row2-support-text">
-                            <div className="Section1-row2-support-text-Gollaa">
-                                <img  className="Section1-row2-support-text-Gollaa-image" src={Gollaa_text} alt="Golla_text"/>
-                                <span className="Section1-row2-support-text-Gollaa-heading" >Support</span>
+                        <div className="Section1-row1-support-text">
+                            <div className="Section1-row1-support-text-Gollaa">
+                                <img  className="Section1-row1-support-text-Gollaa-image" src={Gollaa_text} alt="Golla_text"/>
+                                <span className="Section1-row1-support-text-Gollaa-heading" >Support</span>
                             </div>
-                            <p className="Section1-row2-support-text-subheading">Extending Support to <br/> local Communities</p>
-                            <div className="Section1-row2-support-text-app">
+                            <p className="Section1-row1-support-text-subheading">Extending Support to <br/> local Communities</p>
+                            <div className="Section1-row1-support-text-app">
                                 <button>Download App</button>
                                 <span>See More</span>
                             </div>
                         </div>
 
-                        <div className="Section1-row2-support-image">
+                        <div className="Section1-row1-support-image">
                             <img src={Gollaa_Support}  alt="Gollaa_support" />
                         </div>
                     </div>
 
-                    <div className="Section1-row2-stay">
+                    <div className="Section1-row1-stay">
 
-                        <div className="Section1-row2-stay-text">
-                            <div className="Section1-row2-stay-text-Gollaa">
-                                <img  className="Section1-row2-stay-text-Gollaa-image" src={Gollaa_text} alt="Golla_text"/>
-                                <span className="Section1-row2-stay-text-Gollaa-heading">Stay</span>
+                        <div className="Section1-row1-stay-text">
+                            <div className="Section1-row1-stay-text-Gollaa">
+                                <img  className="Section1-row1-stay-text-Gollaa-image" src={Gollaa_text} alt="Golla_text"/>
+                                <span className="Section1-row1-stay-text-Gollaa-heading">Stay</span>
                             </div>
-                            <p className="Section1-row2-stay-text-subheading">Replenish and recharge <br/> in nature's lap</p>
-                            <div className="Section1-row2-stay-text-app">
+                            <p className="Section1-row1-stay-text-subheading">Replenish and recharge <br/> in nature's lap</p>
+                            <div className="Section1-row1-stay-text-app">
                                 <button>Download App</button>
                                 <span>See More</span>
                             </div>
                         </div>
 
-                        <div className="Section1-row2-stay-image">
+                        <div className="Section1-row1-stay-image">
                             <img src={Gollaa_Stay}  alt="Gollaa_stay" />
                         </div>
                     </div>
 
 
-                      <div className="Section1-row2-trade">
+                      <div className="Section1-row1-trade">
 
-                        <div className="Section1-row2-trade-text">
-                            <div className="Section1-row2-trade-text-Gollaa">
-                                <img  className="Section1-row2-trade-text-Gollaa-image" src={Gollaa_text} alt="Golla_text"/>
-                                <span className="Section1-row2-trade-text-Gollaa-heading" >Trade</span>
+                        <div className="Section1-row1-trade-text">
+                            <div className="Section1-row1-trade-text-Gollaa">
+                                <img  className="Section1-row1-trade-text-Gollaa-image" src={Gollaa_text} alt="Golla_text"/>
+                                <span className="Section1-row1-trade-text-Gollaa-heading" >Trade</span>
                             </div>
-                            <p className="Section1-row2-trade-text-subheading">Be a part of a Collaborative <br/>economy</p>
-                            <div className="Section1-row2-trade-text-app">
+                            <p className="Section1-row1-trade-text-subheading">Be a part of a Collaborative <br/>economy</p>
+                            <div className="Section1-row1-trade-text-app">
                                 <button>Download App</button>
                                 <span>See More</span>
                             </div>
                         </div>
 
-                        <div className="Section1-row2-trade-image">
+                        <div className="Section1-row1-trade-image">
                             <img src={Gollaa_Trade}  alt="Gollaa_trade" />
                         </div>
                     </div>

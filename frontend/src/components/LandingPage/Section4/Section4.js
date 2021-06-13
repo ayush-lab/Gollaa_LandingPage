@@ -22,12 +22,14 @@ export default function Section4(){
             <div className="Section4-info">
 
                 <div className="Section4-info-top">
-                  
+                  <p className="Section4-info-top-Text">
+                     <span>GOLLAA </span> A CHANGE 
+                  </p>
                 </div>
 
                 <div className="Section4-info-bottom">
                     <p className="Section4-info-bottom-Text1">
-                    GOLLAA <br/> A CHANGE 
+                    <span>GOLLAA </span> A CHANGE 
                     </p>
 
                     <p className="Section4-info-bottom-Text2" >We at Gollaa have decided to take up the 

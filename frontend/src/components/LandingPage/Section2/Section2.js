@@ -28,16 +28,18 @@ export default function Section2(){
                 </div>
 
                 <div className="Section2-info-bottom">
-                    <p className="Section2-info-bottom-bigText">
+                    <span className="Section2-info-bottom-bigText1">
                     Gollaa is a platform that allows 
                     farmers and local businesses to market and sell 
-                    their products at real prices. Our vision statement 
+                    their products at real prices. </span>
+                    
+                   <span className="Section2-info-bottom-bigText2"> Our vision statement 
                     " TODAY FOR TOMORROW" perfectly captures the motivation and inducement
                      that we carry within our hearts to help local communities become
                       resilient and gain a reputable position in society. By taking action
                        today, we wish to create an equilibrium between the environment and humanity.
 
-                    </p>
+                    </span>
                 </div>
             </div>
 
