@@ -3,7 +3,7 @@ $Section1_height: auto;
 $row2_height: auto;
 
 .Section1 {
-  background: white;
+  background: #5dbc58;
   &-row1 {
     display: flex;
     flex-wrap: wrap;
@@ -14,7 +14,7 @@ $row2_height: auto;
     &-shop {
       // width: 50%;
       // min-height: 280px;
-      flex: 1 1 450px;
+      flex: 1 1 50%;
       min-height: $Section1_height;
       display: flex;
       justify-content: space-between;
@@ -44,6 +44,8 @@ $row2_height: auto;
 
         &-Gollaa {
           margin-bottom: 8px;
+          overflow: hidden;
+          white-space: nowrap;
 
           &-image {
             // max-width: 90px;
@@ -98,7 +100,7 @@ $row2_height: auto;
       display: flex;
       // width: 50%;
       // min-height: 280px;
-      flex: 1 1 450px;
+      flex: 1 1 50%;
       min-height: $Section1_height;
       // min-height: calc(50% - 80px);
       background: #8cc63f;
@@ -239,6 +241,7 @@ $row2_height: auto;
           font-size: 14px;
         }
         &-app {
+          display: none;
           margin-top: 35px;
           position: absolute;
           top: 60px;
@@ -325,6 +328,7 @@ $row2_height: auto;
           font-size: 14px;
         }
         &-app {
+          display: none;
           margin-top: 35px;
           position: absolute;
           top: 60px;
@@ -355,6 +359,7 @@ $row2_height: auto;
         }
       }
     }
+
     &-trade {
       display: flex;
       flex-direction: column;
@@ -410,6 +415,7 @@ $row2_height: auto;
           font-size: 14px;
         }
         &-app {
+          display: none;
           margin-top: 35px;
           position: absolute;
           top: 60px;
@@ -776,8 +782,6 @@ $row2_height: auto;
   }
 }
 
-// media query 2
-
 @media (max-width: 690px) {
   $Section1_height: auto;
   $row2_height: auto;
@@ -800,7 +804,6 @@ $row2_height: auto;
           display: flex;
           justify-content: center;
           align-items: center;
-          background: green;
         }
         &-image > img {
           max-width: 90%;
@@ -826,6 +829,7 @@ $row2_height: auto;
           &-app {
             margin-top: 35px;
             opacity: 1;
+            display: none;
           }
           &-app > button {
             padding-left: 12px;
@@ -859,7 +863,7 @@ $row2_height: auto;
         }
         &-image > img {
           // max-width: 350px;
-          max-width: 100%;
+          max-width: 250px;
         }
         &-text {
           width: 100%;
@@ -927,11 +931,11 @@ $row2_height: auto;
         &-image {
           display: flex;
           align-items: flex-end;
-          justify-content: flex-end;
+          justify-content: center;
         }
 
         &-image > img {
-          max-width: 320px;
+          max-width: 220px;
           height: auto;
           object-fit: contain;
         }
@@ -991,12 +995,12 @@ $row2_height: auto;
         &-image {
           display: flex;
           align-items: flex-end;
-          justify-content: flex-end;
+          justify-content: center;
           text-align: right;
         }
 
         &-image > img {
-          max-width: 230px;
+          max-width: 130px;
           object-fit: contain;
         }
         &-text {
@@ -1058,12 +1062,12 @@ $row2_height: auto;
         &-image {
           display: flex;
           align-items: flex-end;
-          justify-content: flex-end;
+          justify-content: center;
           text-align: right;
         }
 
         &-image > img {
-          max-width: 180px;
+          max-width: 120px;
           object-fit: contain;
         }
         &-text {
@@ -1085,6 +1089,670 @@ $row2_height: auto;
           }
           &-subheading {
             font-size: 14px;
+          }
+          &-app {
+            margin-top: 35px;
+            position: absolute;
+            top: 60px;
+          }
+          &-app > button {
+            padding-left: 12px;
+            padding-top: 6px;
+            padding-right: 18px;
+            padding-bottom: 6px;
+            margin-right: 16px;
+            font-size: 12px;
+            border-radius: 6px;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+          &-app > span {
+            font-size: 12px;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+}
+
+// media query 2
+
+@media (max-width: 550px) {
+  $Section1_height: auto;
+  $row2_height: auto;
+
+  .Section1 {
+    &-row1 {
+      height: $Section1_height;
+      align-items: stretch;
+      position: relative;
+      &-shop {
+        flex: 1 1 100%;
+        justify-content: flex-start;
+        padding-left: 25px;
+        padding-right: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        &-image {
+          flex: 1 1 65px;
+        }
+        &-image > img {
+          max-width: 100%;
+        }
+        &-text {
+          width: 50%;
+          height: $Section1_height;
+          padding-top: 0px;
+
+          &-Gollaa {
+            margin-bottom: 8px;
+            &-image {
+              max-width: 85px;
+            }
+            &-heading {
+              font-size: 22px;
+              padding-left: 5px;
+            }
+          }
+          &-subheading {
+            font-size: 18px;
+          }
+          &-app {
+            margin-top: 35px;
+            opacity: 1;
+            display: none;
+          }
+          &-app > button {
+            padding-left: 12px;
+            padding-top: 6px;
+            padding-right: 18px;
+            padding-bottom: 6px;
+            margin-right: 16px;
+            font-size: 14px;
+          }
+          &-app > span {
+            font-size: 14px;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+        }
+      }
+
+      &-grow {
+        display: flex;
+        flex: 1 1 50%;
+        // max-height: 200px;
+        // align-self: flex-start;
+        padding-left: 25px;
+        padding-top: 25px;
+        &-image {
+          padding: 0;
+        }
+        &-image {
+          width: 100%;
+        }
+        &-image > img {
+          // max-width: 350px;
+          max-width: 200px;
+        }
+        &-text {
+          width: 100%;
+          height: $Section1_height;
+          position: relative;
+
+          &-Gollaa {
+            margin-bottom: 8px;
+
+            &-image {
+              max-width: 65px;
+              margin: 0;
+            }
+            &-heading {
+              font-size: 14px;
+              padding-left: 5px;
+            }
+          }
+          &-subheading {
+            font-size: 12px;
+          }
+          &-app {
+            margin-top: 35px;
+            position: absolute;
+            top: 60px;
+          }
+          &-app > button {
+            padding-left: 12px;
+            padding-top: 6px;
+            padding-right: 18px;
+            padding-bottom: 6px;
+            margin-right: 16px;
+            color: white;
+            font-family: "Monserrat";
+            font-weight: 250;
+            font-size: 12px;
+            background: #161615 0% 0% no-repeat padding-box;
+            border: none;
+            outline: none;
+            border-radius: 6px;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+          &-app > span {
+            font-family: "Monserrat";
+            font-weight: 200;
+            font-size: 12px;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+        }
+      }
+
+      &-support {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1 1 50%;
+        // height: 300px;
+        padding-left: 25px;
+        padding-top: 25px;
+
+        &-image {
+          display: flex;
+        }
+
+        &-image > img {
+          max-width: 150px;
+          height: auto;
+          object-fit: contain;
+        }
+        &-text {
+          display: flex;
+          position: relative;
+
+          &-Gollaa {
+            margin-bottom: 8px;
+
+            &-image {
+              max-width: 65px;
+              margin: 0;
+            }
+            &-heading {
+              font-size: 14px;
+              padding-left: 5px;
+            }
+          }
+          &-subheading {
+            font-size: 12px;
+          }
+          &-app {
+            margin-top: 35px;
+            position: absolute;
+            top: 60px;
+          }
+          &-app > button {
+            padding-left: 12px;
+            padding-top: 6px;
+            padding-right: 18px;
+            padding-bottom: 6px;
+            margin-right: 16px;
+            font-size: 12px;
+            border-radius: 6px;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+          &-app > span {
+            font-size: 12px;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+        }
+      }
+
+      &-stay {
+        // position: static;
+        // opacity: 0.2;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1 1 50%;
+        padding-left: 25px;
+        padding-top: 25px;
+        &-image {
+          display: flex;
+        }
+
+        &-image > img {
+          max-width: 130px;
+          object-fit: contain;
+        }
+        &-text {
+          display: flex;
+          position: relative;
+
+          &-Gollaa {
+            margin-bottom: 8px;
+
+            &-image {
+              max-width: 65px;
+              margin: 0;
+            }
+            &-heading {
+              font-size: 14px;
+              padding-left: 5px;
+            }
+          }
+          &-subheading {
+            font-size: 12px;
+          }
+          &-app {
+            display: none;
+            margin-top: 35px;
+            position: absolute;
+            top: 60px;
+          }
+          &-app > button {
+            padding-left: 12px;
+            padding-top: 6px;
+            padding-right: 18px;
+            padding-bottom: 6px;
+            margin-right: 16px;
+            font-size: 12px;
+            border: none;
+            outline: none;
+            border-radius: 6px;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+          &-app > span {
+            font-family: "Monserrat";
+            font-weight: 200;
+            font-size: 12px;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+        }
+      }
+
+      &-trade {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 0 0 50%;
+        padding-left: 25px;
+        padding-top: 25px;
+
+        &-image {
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          text-align: right;
+        }
+
+        &-image > img {
+          max-width: 120px;
+          object-fit: contain;
+        }
+        &-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          position: relative;
+          &-Gollaa {
+            margin-bottom: 8px;
+
+            &-image {
+              max-width: 65px;
+              margin: 0;
+            }
+            &-heading {
+              font-size: 14px;
+              padding-left: 5px;
+            }
+          }
+          &-subheading {
+            font-size: 12px;
+          }
+          &-app {
+            margin-top: 35px;
+            position: absolute;
+            top: 60px;
+          }
+          &-app > button {
+            padding-left: 12px;
+            padding-top: 6px;
+            padding-right: 18px;
+            padding-bottom: 6px;
+            margin-right: 16px;
+            font-size: 12px;
+            border-radius: 6px;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+          &-app > span {
+            font-size: 12px;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+}
+
+// media query 2
+
+@media (max-width: 450px) {
+  $Section1_height: auto;
+  $row2_height: auto;
+  $shop_height: auto;
+
+  .Section1 {
+    &-row1 {
+      height: $Section1_height;
+      align-items: stretch;
+      position: relative;
+      &-shop {
+        flex: 1 1 100%;
+        justify-content: flex-start;
+        padding-left: 25px;
+        padding-right: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        height: $shop_height;
+
+        &-image {
+          flex: 1 1 85px;
+          width: 55%;
+        }
+        &-image > img {
+          max-width: 100%;
+        }
+        &-text {
+          width: 45%;
+          height: $Section1_height;
+          padding-top: 0px;
+
+          &-Gollaa {
+            margin-bottom: 8px;
+            overflow: visible;
+            white-space: nowrap;
+            &-image {
+              max-width: 85px;
+            }
+            &-heading {
+              font-size: 22px;
+              padding-left: 5px;
+            }
+          }
+          &-subheading {
+            font-size: 16px;
+          }
+          &-app {
+            margin-top: 35px;
+            opacity: 1;
+            display: none;
+          }
+          &-app > button {
+            padding-left: 12px;
+            padding-top: 6px;
+            padding-right: 18px;
+            padding-bottom: 6px;
+            margin-right: 16px;
+            font-size: 14px;
+          }
+          &-app > span {
+            font-size: 14px;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+        }
+      }
+
+      &-grow {
+        display: flex;
+        flex: 0 1 50%;
+        // max-height: 200px;
+        align-self: flex-start;
+        padding-left: 0px;
+        padding-top: 0px;
+        &-image {
+          padding: 0;
+        }
+        &-image {
+          width: 100%;
+        }
+        &-image > img {
+          // max-width: 350px;
+          max-width: 100%;
+        }
+        &-text {
+          width: 100%;
+          height: $Section1_height;
+          position: relative;
+          padding-left: 25px;
+          padding-top: 25px;
+
+          &-Gollaa {
+            margin-bottom: 8px;
+
+            &-image {
+              max-width: 65px;
+              margin: 0;
+            }
+            &-heading {
+              font-size: 14px;
+              padding-left: 5px;
+            }
+          }
+          &-subheading {
+            font-size: 12px;
+          }
+          &-app {
+            margin-top: 35px;
+            position: absolute;
+            top: 60px;
+          }
+          &-app > button {
+            padding-left: 12px;
+            padding-top: 6px;
+            padding-right: 18px;
+            padding-bottom: 6px;
+            margin-right: 16px;
+            color: white;
+            font-family: "Monserrat";
+            font-weight: 250;
+            font-size: 12px;
+            background: #161615 0% 0% no-repeat padding-box;
+            border: none;
+            outline: none;
+            border-radius: 6px;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+          &-app > span {
+            font-family: "Monserrat";
+            font-weight: 200;
+            font-size: 12px;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+        }
+      }
+
+      &-support {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1 1 50%;
+        height: 250px;
+        padding-left: 0;
+        padding-top: 0;
+
+        &-image {
+          display: flex;
+        }
+
+        &-image > img {
+          max-width: 95%;
+          height: auto;
+          object-fit: contain;
+        }
+        &-text {
+          display: flex;
+          position: relative;
+          padding-left: 25px;
+          padding-top: 25px;
+          &-Gollaa {
+            margin-bottom: 8px;
+
+            &-image {
+              max-width: 65px;
+              margin: 0;
+            }
+            &-heading {
+              font-size: 14px;
+              padding-left: 5px;
+            }
+          }
+          &-subheading {
+            font-size: 12px;
+          }
+          &-app {
+            margin-top: 35px;
+            position: absolute;
+            top: 60px;
+          }
+          &-app > button {
+            padding-left: 12px;
+            padding-top: 6px;
+            padding-right: 18px;
+            padding-bottom: 6px;
+            margin-right: 16px;
+            font-size: 12px;
+            border-radius: 6px;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+          &-app > span {
+            font-size: 12px;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+        }
+      }
+
+      &-stay {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        flex: 0 0 50%;
+        padding-left: 0;
+        padding-top: 0;
+        position: relative;
+
+        &-image {
+          display: flex;
+        }
+
+        &-image > img {
+          max-width: 130px;
+          object-fit: contain;
+        }
+        &-text {
+          display: flex;
+          position: absolute;
+          top: -15%;
+          left: 10%;
+
+          &-Gollaa {
+            margin-bottom: 8px;
+
+            &-image {
+              max-width: 65px;
+              margin: 0;
+            }
+            &-heading {
+              font-size: 14px;
+              padding-left: 5px;
+            }
+          }
+          &-subheading {
+            font-size: 12px;
+          }
+          &-app {
+            display: none;
+            margin-top: 35px;
+            position: absolute;
+            top: 60px;
+          }
+          &-app > button {
+            padding-left: 12px;
+            padding-top: 6px;
+            padding-right: 18px;
+            padding-bottom: 6px;
+            margin-right: 16px;
+            font-size: 12px;
+            border: none;
+            outline: none;
+            border-radius: 6px;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+          &-app > span {
+            font-family: "Monserrat";
+            font-weight: 200;
+            font-size: 12px;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+        }
+      }
+
+      &-trade {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 0 0 50%;
+        padding-left: 0;
+        padding-top: 0;
+
+        &-image {
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          text-align: right;
+        }
+
+        &-image > img {
+          max-width: 60%;
+          object-fit: contain;
+        }
+        &-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          position: relative;
+          padding-left: 25px;
+          padding-top: 25px;
+          &-Gollaa {
+            margin-bottom: 8px;
+
+            &-image {
+              max-width: 65px;
+              margin: 0;
+            }
+            &-heading {
+              font-size: 14px;
+              padding-left: 5px;
+            }
+          }
+          &-subheading {
+            font-size: 12px;
           }
           &-app {
             margin-top: 35px;

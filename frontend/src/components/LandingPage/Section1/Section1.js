@@ -8,6 +8,7 @@ import Gollaa_Trade from '../../../assets/images/Gollaa Trade Illustration.svg';
 
 export default function Section1(){
 
+  
     return(
         <React.Fragment>
             <div className="Section1">
@@ -71,6 +72,7 @@ export default function Section1(){
                             <img src={Gollaa_Support}  alt="Gollaa_support" />
                         </div>
                     </div>
+
 
                     <div className="Section1-row1-stay">
 

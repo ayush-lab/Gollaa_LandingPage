@@ -1,6 +1,9 @@
 import React from 'react';
 import Gollaa_logo from '../../../assets/images/Gollaa_logo.svg';
-import Contact from '../../../assets/images/contact.png';
+import Phone from '../../../assets/images/phone.svg';
+import Email from '../../../assets/images/email.svg';
+import Time from '../../../assets/images/time.svg';
+
 export default function Footer(){
 
     return(
@@ -18,27 +21,30 @@ export default function Footer(){
 
 
             <div className="Footer-col2">
-                <p className="Footer-col2-info">Contact us</p>
+              
 
                <div className="Footer-col2-details"> 
+
+               <p className="Footer-col2-details-info">Contact us</p>
+
                     <div className="Footer-col2-details-contact"> 
-                        <img src={Contact} alt="contact"/>
+                        <img src={Phone} alt="contact"/>
                         <span>+(91) 9810 XXXX XX </span>
                     </div>
 
                     <div className="Footer-col2-details-contact"> 
-                        <img src={Contact} alt="contact"/>
-                        <span>+(91) 9810 XXXX XX </span>
+                        <img src={Email} alt="email"/>
+                        <span>info@gollaa.com</span>
                     </div>
 
                     <div className="Footer-col2-details-contact"> 
-                        <img src={Contact} alt="contact"/>
-                        <span>+(91) 9810 XXXX XX </span>
+                       <img src={Time} alt="Time"/>
+                       <span>MON-FRI, 10am-5pm</span>
                     </div>
 
                     <div className="Footer-col2-details-contact"> 
-                        <img src={Contact} alt="contact"/>
-                        <span>+(91) 9810 XXXX XX </span>
+                        <img src={Time} alt="TIme"/>
+                        <span>SAT, 10am-1pm</span>
                     </div>
                 </div>
             </div>

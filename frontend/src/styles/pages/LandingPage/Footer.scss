@@ -12,7 +12,6 @@ $Pure-Green: #5faf42;
   height: $Footer-height;
   width: 100%;
   display: flex;
-  background: aqua;
   padding: 0;
   margin: 0;
 
@@ -44,17 +43,23 @@ $Pure-Green: #5faf42;
     font-family: "Monserrat";
     font-weight: 300;
 
-    &-info {
-      padding-bottom: 5px;
-    }
     &-details {
-      //   background: red;
+      &-info {
+        font-size: 16px;
+        padding-bottom: 10px;
+      }
 
       &-contact {
-        padding-bottom: 3px;
+        padding-bottom: 8px;
+        display: flex;
+        img {
+          width: 15px;
+        }
       }
-      &-contact > img {
-        width: 20px;
+
+      &-contact > span {
+        font-size: 14px;
+        margin-left: 15px;
       }
     }
   }
@@ -74,12 +79,13 @@ $Pure-Green: #5faf42;
       padding-left: 20px;
     }
     &-row1 p:nth-child(1) {
-      padding-bottom: 5px;
       text-transform: uppercase;
       font-size: 16px;
+      padding-bottom: 12px;
     }
     &-row1 p:nth-child(2) {
       font-size: 14px;
+      padding-bottom: 8px;
     }
 
     &-row2 {
@@ -92,6 +98,9 @@ $Pure-Green: #5faf42;
         background: $Yellowish-Green;
         padding-left: 20px;
         font-size: 14px;
+      }
+      &-col1 p:nth-child(1) {
+        padding-bottom: 8px;
       }
       &-col2 {
         width: 50%;
@@ -111,6 +120,353 @@ $Pure-Green: #5faf42;
     }
     &-logo > img {
       width: 100%;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  $Footer-height: 180px;
+
+  .Footer {
+    height: $Footer-height;
+    &-col1 {
+      display: flex;
+      height: $Footer-height;
+      flex-basis: 20%;
+
+      &-row1 {
+      }
+      &-row2 {
+      }
+    }
+
+    &-col2 {
+      height: $Footer-height;
+      padding-left: 18px;
+      flex-basis: 30%;
+
+      &-details {
+        &-info {
+          padding-bottom: 10px;
+        }
+
+        &-contact {
+          padding-bottom: 8px;
+        }
+
+        &-contact > span {
+          font-size: 14px;
+          margin-left: 15px;
+        }
+      }
+    }
+
+    &-col3 {
+      height: $Footer-height;
+      flex-basis: 40%;
+      &-row1 {
+        padding-left: 20px;
+      }
+      &-row1 p:nth-child(1) {
+        padding-bottom: 5px;
+        text-transform: uppercase;
+        font-size: 16px;
+      }
+      &-row1 p:nth-child(2) {
+        font-size: 14px;
+      }
+
+      &-row2 {
+        height: 50%;
+        width: 100%;
+
+        &-col1 {
+          width: 80%;
+          padding-left: 20px;
+          font-size: 14px;
+        }
+        &-col2 {
+          width: 50%;
+        }
+      }
+    }
+    &-col4 {
+      flex-basis: 25%;
+      background-color: $Pure-Yellow;
+
+      &-logo {
+        flex-basis: 150px;
+      }
+      &-logo > img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  $Footer-height: 180px;
+
+  .Footer {
+    height: $Footer-height;
+    &-col1 {
+      display: flex;
+      height: $Footer-height;
+      flex-basis: 15%;
+
+      &-row1 {
+      }
+      &-row2 {
+      }
+    }
+
+    &-col2 {
+      height: $Footer-height;
+      padding-left: 18px;
+      flex-basis: 35%;
+
+      &-details {
+        &-info {
+          padding-bottom: 10px;
+        }
+
+        &-contact {
+          padding-bottom: 8px;
+        }
+
+        &-contact > span {
+          font-size: 12px;
+          margin-left: 10px;
+        }
+      }
+    }
+
+    &-col3 {
+      height: $Footer-height;
+      flex-basis: 40%;
+      &-row1 {
+        padding-left: 20px;
+      }
+      &-row1 p:nth-child(1) {
+        padding-bottom: 5px;
+        text-transform: lowercase;
+        text-transform: capitalize;
+        font-size: 16px;
+      }
+      &-row1 p:nth-child(2) {
+        font-size: 14px;
+      }
+
+      &-row2 {
+        height: 50%;
+        width: 100%;
+
+        &-col1 {
+          width: 80%;
+          padding-left: 20px;
+          font-size: 14px;
+        }
+        &-col2 {
+          width: 50%;
+        }
+      }
+    }
+    &-col4 {
+      flex-basis: 25%;
+      background-color: $Pure-Yellow;
+
+      &-logo {
+        flex-basis: 120px;
+      }
+      &-logo > img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  $Footer-height: 180px;
+
+  .Footer {
+    height: $Footer-height;
+    &-col1 {
+      display: flex;
+      height: $Footer-height;
+      flex-basis: 15%;
+
+      &-row1 {
+      }
+      &-row2 {
+      }
+    }
+
+    &-col2 {
+      height: $Footer-height;
+      padding-left: 18px;
+      flex-basis: 35%;
+
+      &-details {
+        &-info {
+          padding-bottom: 10px;
+        }
+
+        &-contact {
+          padding-bottom: 8px;
+        }
+        &-contact > div {
+          width: 10px;
+          img {
+            width: 15px;
+          }
+        }
+        &-contact > span {
+          font-size: 12px;
+          margin-left: 15px;
+        }
+      }
+    }
+
+    &-col3 {
+      height: $Footer-height;
+      flex-basis: 40%;
+      &-row1 {
+        padding-left: 20px;
+      }
+      &-row1 p:nth-child(1) {
+        padding-bottom: 5px;
+        text-transform: lowercase;
+        text-transform: capitalize;
+        font-size: 16px;
+      }
+      &-row1 p:nth-child(2) {
+        font-size: 14px;
+      }
+
+      &-row2 {
+        height: 50%;
+        width: 100%;
+
+        &-col1 {
+          width: 80%;
+          padding-left: 20px;
+          font-size: 14px;
+        }
+        &-col2 {
+          width: 50%;
+        }
+      }
+    }
+    &-col4 {
+      flex-basis: 25%;
+      background-color: $Pure-Yellow;
+
+      &-logo {
+        flex-basis: 100px;
+      }
+      &-logo > img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  $Footer-height: 100px;
+
+  .Footer {
+    height: $Footer-height;
+    &-col1 {
+      display: flex;
+      height: $Footer-height;
+      flex-basis: 15%;
+
+      &-row1 {
+      }
+      &-row2 {
+      }
+    }
+
+    &-col2 {
+      height: $Footer-height;
+      padding-left: 13px;
+      margin: 0;
+      flex-basis: 35%;
+      align-items: flex-start;
+
+      &-details {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        &-info {
+          padding-bottom: 7px;
+          font-size: 10px;
+        }
+
+        &-contact {
+          margin: 0;
+          padding-bottom: 3px;
+          // display: inline-block;
+          img {
+            width: 10px;
+            padding: 0;
+            margin: 0;
+          }
+        }
+
+        &-contact > span {
+          font-size: 8px;
+          margin-left: 4px;
+          margin-bottom: 0;
+          padding: 0;
+        }
+      }
+    }
+
+    &-col3 {
+      height: $Footer-height;
+      flex-basis: 40%;
+      &-row1 {
+        padding-left: 10px;
+      }
+      &-row1 p:nth-child(1) {
+        padding-bottom: 5px;
+        text-transform: lowercase;
+        text-transform: capitalize;
+        font-size: 10px;
+      }
+      &-row1 p:nth-child(2) {
+        font-size: 8px;
+        padding-bottom: 2px;
+      }
+
+      &-row2 {
+        height: 50%;
+        width: 100%;
+
+        &-col1 {
+          width: 80%;
+          padding-left: 10px;
+          font-size: 8px;
+        }
+        &-col1 p:nth-child(1) {
+          padding-bottom: 4px;
+        }
+        &-col2 {
+          width: 50%;
+        }
+      }
+    }
+    &-col4 {
+      flex-basis: 25%;
+      background-color: $Pure-Yellow;
+
+      &-logo {
+        flex-basis: 60px;
+      }
+      &-logo > img {
+        width: 100%;
+      }
     }
   }
 }
