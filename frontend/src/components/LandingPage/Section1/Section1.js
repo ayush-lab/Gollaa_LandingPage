@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Gollaa_Shop from '../../../assets/images/Shop_Illustration.svg';
 import Gollaa_text from '../../../assets/images/Gollaa.svg';
 import Gollaa_Grow from '../../../assets/images/GollaaGrow_illustration.svg';
@@ -8,13 +8,33 @@ import Gollaa_Trade from '../../../assets/images/Gollaa Trade Illustration.svg';
 
 export default function Section1(){
 
-  
+  const [shopOpen,shopToggler] = useState(false);
+
+  const openFirst = {
+      position:'absolute',
+      width:'30px',
+      height:'30px'
+  }
+  const openSecond = {
+    position:'absolute',
+    width:'100vw',
+    height:'100vh',
+  }
+
+  const Toggler=()=>{
+    shopToggler(prevState=>!prevState);
+    
+   
+  }
+
+
     return(
         <React.Fragment>
             <div className="Section1">
                 <div className="Section1-row1">
-
-                    <div className="Section1-row1-shop">
+                  {/* <div className={shopOpen ? "Section1-row1-shopOpen" : "Section1-row1-shop"}> */}
+                    {/* <div className={shopOpen ? "Section1-row1-shopOpen" : "Section1-row1-shop"}> */}
+                    <div  className={shopOpen ? "Section1-row1-shopOpen" : "Section1-row1-shop"}>
                         <div className="Section1-row1-shop-image">
                             <img src={Gollaa_Shop}  alt="Gollaa_shop" />
                         </div>
@@ -26,12 +46,13 @@ export default function Section1(){
                             <p className="Section1-row1-shop-text-subheading" >Let's buy what is <br/> truly natural</p>
                             <div className="Section1-row1-shop-text-app">
                                 <button>Download App</button>
-                                <span>See More</span>
+                                <span onClick={()=>Toggler()}>See More</span>
                             </div>
                         </div>
-                    </div>
+                    {/* </div> */}
+                 </div>
 
-                    <div className="Section1-row1-grow">
+                    <div className= "Section1-row1-grow">
 
                         <div  className="Section1-row1-grow-text">
                             <div className="Section1-row1-grow-text-Gollaa">
