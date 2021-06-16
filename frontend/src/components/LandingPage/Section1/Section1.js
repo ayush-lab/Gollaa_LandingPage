@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useRef} from 'react';
 import Gollaa_Shop from '../../../assets/images/Shop_Illustration.svg';
 import Gollaa_text from '../../../assets/images/Gollaa.svg';
 import Gollaa_Grow from '../../../assets/images/GollaaGrow_illustration.svg';
@@ -8,48 +8,86 @@ import Gollaa_Trade from '../../../assets/images/Gollaa Trade Illustration.svg';
 
 export default function Section1(){
 
-  const [shopOpen,shopToggler] = useState(false);
+  const [shop,shopHandler] = useState({shopOpen:false,shopHover:false});
 
-  const openFirst = {
-      position:'absolute',
-      width:'30px',
-      height:'30px'
-  }
-  const openSecond = {
-    position:'absolute',
-    width:'100vw',
-    height:'100vh',
+  const FullScreen=()=>{
+    shopHandler(prevState=>({...prevState,shopOpen:!prevState.shopOpen}))
   }
 
-  const Toggler=()=>{
-    shopToggler(prevState=>!prevState);
-    
-   
+  const NormalScreen = ()=>{
+    let timeout = null;
+    shopRef.current.classList.add('Section1-row1-shopClosed');
+    // shopRef.current.classList.remove('Section1-row1-shopOpen');
+
+    if(timeout){
+        clearTimeout(timeout)
+        timeout=null;
+    }
+    setTimeout(()=>{
+        shopRef.current.classList.remove('Section1-row1-shopClosed')
+        shopHandler(prevState=>({...prevState,shopOpen:!prevState.shopOpen}))
+        
+    },3000)
   }
 
+  let shopRef=useRef();
 
     return(
         <React.Fragment>
             <div className="Section1">
                 <div className="Section1-row1">
-                  {/* <div className={shopOpen ? "Section1-row1-shopOpen" : "Section1-row1-shop"}> */}
-                    {/* <div className={shopOpen ? "Section1-row1-shopOpen" : "Section1-row1-shop"}> */}
-                    <div  className={shopOpen ? "Section1-row1-shopOpen" : "Section1-row1-shop"}>
-                        <div className="Section1-row1-shop-image">
+
+                    <div className={shop.shopOpen ? "Section1-row1-dummyShop" : "displayNone"}></div>
+
+                    <div onMouseEnter={()=>{shopHandler(prevState=>({...prevState,shopHover:true}))}}
+                         onMouseLeave={()=>{shopHandler(prevState=>({...prevState,shopHover:false}))}} 
+                         ref={shopRef} className={shop.shopOpen ? "Section1-row1-shopOpen" : "Section1-row1-shop"}>
+                        
+                        <span onClick={()=>NormalScreen()} 
+                              className={shop.shopOpen ? "Section1-row1-shopOpen-cross" : "displayNone"}>
+                        </span>
+
+                        <span className="Section1-row1-shop-image">
                             <img src={Gollaa_Shop}  alt="Gollaa_shop" />
-                        </div>
-                        <div className="Section1-row1-shop-text">
+                        </span>
+
+                        {/* Normal screen block ( No Modal ) */}
+                        <div className={shop.shopOpen ? "displayNone" : "Section1-row1-shop-text"}>
                             <div className="Section1-row1-shop-text-Gollaa">
                                 <img  className="Section1-row1-shop-text-Gollaa-image" src={Gollaa_text} alt="Golla_text"/>
                                 <span className="Section1-row1-shop-text-Gollaa-heading" >SHOP</span>
                             </div>
                             <p className="Section1-row1-shop-text-subheading" >Let's buy what is <br/> truly natural</p>
-                            <div className="Section1-row1-shop-text-app">
+                            <div className={shop.shopHover ? "maxOpacity" : "Section1-row1-shop-text-app"}>
                                 <button>Download App</button>
-                                <span onClick={()=>Toggler()}>See More</span>
+                                <span onClick={()=>FullScreen()}>See More</span>
                             </div>
                         </div>
-                    {/* </div> */}
+
+                        {/* Full screen  */}
+                        <div className={shop.shopOpen ? "Section1-row1-shopOpen-textBlock" : "displayNone"} >
+                            <div className="Section1-row1-shop-textBlock-Gollaa">
+                                <img  className="Section1-row1-shop-textBlock-Gollaa-image" src={Gollaa_text} alt="Golla_text"/>
+                                <span className="Section1-row1-shop-textBlock-Gollaa-heading" >SHOP</span>
+                            </div>
+                            <p className="Section1-row1-shop-textBlock-subheading1" >Your partner on the journey of sourcing fresh 
+                            and authentic products directly from local businesses.</p>
+
+                            <p className="Section1-row1-shop-textBlock-subheading2" >In our pursuit to establish a circular economy, 
+                            help farmers and artisans deliver their quality products directly to the end consumers.</p>
+
+                            <p className="Section1-row1-shop-textBlock-subheading3" > Gollaa is a powerful platform dedicated to helping our real
+                             heroes- the farmers generate profits from their product without having to deal with any middlemen. 
+                             We are transforming how people shop by making the entire process, right from production to delivery, 
+                             completely transparent. This reassurance makes for a remarkable shopping experience for the users, as well as a secure 
+                             way of selling for the farmers. Not only this, 
+                            Gollaa’s model is a step towards sustainability and ecological consciousness.</p>
+
+                            <div className= "Section1-row1-shop-textBlock-app">
+                                <button>Download App</button>
+                            </div>
+                        </div>
+
                  </div>
 
                     <div className= "Section1-row1-grow">

@@ -1,6 +1,5 @@
 import React from 'react';
 import Navbar from '../../components/LandingPage/Navbar/Navbar';
-import Layout from '../../components/LandingPage/Layout/Layout';
 import Section1 from '../../components/LandingPage/Section1/Section1';
 import Section2 from '../../components/LandingPage/Section2/Section2';
 import Section3 from '../../components/LandingPage/Section3/Section3';
