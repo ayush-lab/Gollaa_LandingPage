@@ -2,24 +2,43 @@
     @keyframes zoomIn{
     
       0%{
-        width:50vw;
+        width:60vw;
         height:50vh;
       }
       100%{
-        width:100vw;
-        height:100vh; 
-      }
-    }
-
-
-    @keyframes zoomedOut{
-      0%{
         width:100%;
         height:100vh;
       }
+    }
+    
+    @keyframes textAnimation{
+      0%{
+        transform: translateX(-100%);
+      }
       100%{
-        height:50vh;
-        width:50%;
+        
+        transform: translateX(0);
+      }
+    }
+     
+    @keyframes textAnimationReverse{
+      0%{
+        transform: translateX(0%);
+      }
+      100%{
+        
+        transform: translateX(-300%);
+      }
+    }
+
+    @keyframes zoomedOut{
+      0%{
+        width:100vw;
+        height:100vh;
+      }
+      100%{
+        height:45vh;
+        width:50vw;
       }
     }
 
@@ -34,6 +53,25 @@
       }
     }
     
+
+    .download_button{
+      padding-left: 12px;
+      padding-top: 6px;
+      padding-right: 18px;
+      padding-bottom: 6px;
+      margin-right: 16px;
+      color: white;
+      font-family: "Monserrat";
+      font-weight: 250;
+      font-size: 14px;
+      background: #161615 0% 0% no-repeat padding-box;
+      border: none;
+      outline: none;
+      border-radius: 6px;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    
 // $Section1_height: calc(60% - 80px);
 $Half-Width: 50%;
 $Section1_height: auto;
@@ -41,32 +79,39 @@ $row2_height: auto;
 
 .Section1 {
   background: #5dbc58;
+ 
 
   &-row1 {
     display: flex;
     flex-wrap: wrap;
     position:relative;
+    max-width:100%;
 
     &-shopOpen{
       position:absolute;
-      width:100vw;
+      background: #cfd136;
+      max-width:100%;
       height:100vh;
+      flex-grow: 1;
+      flex-shrink: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       transition: all 1s ease;
       z-index:2;
-      animation: zoomIn 2s forwards;
+      animation: zoomIn 1.5s forwards;
       opacity:1;
 
       &-cross{
         position:absolute;
         top:5%;
-        right:5%;
+        right:4%;
+        z-index:3;
+      }
+      &-cross >img{
         cursor:pointer;
       }
-      &-cross:after{
-        content:'x';
-        width:40px;
-        height:40px;
-      }
+     
       &-textBlock{
         width: 50%;
         height:100vh;
@@ -74,7 +119,46 @@ $row2_height: auto;
         flex-direction: column;
         justify-content: center;
         animation: txt 1s forwards;
-        // align-items:flex-start;
+        align-items:flex-start;
+        padding-right:50px;
+        padding-bottom:50px;
+        animation:textAnimation 1s forwards;
+
+        &-Gollaa {
+          margin-bottom: 2rem;
+          overflow: hidden;
+          white-space: nowrap;
+
+          &-image {
+            // max-width: 90px;
+            max-width: 50%;
+            margin: 0;
+          }
+          &-heading {
+            font-size: 16px;
+            font-family: Poppins;
+            font-weight: 200;
+            padding-left: 5px;
+          }
+        }
+        &-subheading1{
+          font-family:'Monserrat';
+          font-weight: 250;
+          font-size:16px;
+          padding-bottom:2rem;
+        }
+        &-subheading2,&-subheading3{
+          font-family:'Poppins';
+          font-weight:200;
+          font-size:16px;
+        }
+        &-subheading2{
+          padding-bottom:1rem;
+        }
+        &-app >button{
+          @extend .download_button;
+          margin-top:1.5rem;
+        }
       }
       
     }
@@ -82,13 +166,17 @@ $row2_height: auto;
 
     &-shopClosed{
       position:absolute;
+      background: #cfd136;
+      z-index:2;
       width:500px;
       height:200px;
       transition: all 1s ease !important;
-      animation: zoomedOut 2s forwards !important;
+      animation: zoomedOut 1.5s forwards !important;
       z-index:2;
+      &-textBlock{
+        animation:textAnimationReverse 3.5s forwards;
+      }
     }
-
 
     &-dummyShop{
       display:inline-block;
@@ -99,7 +187,7 @@ $row2_height: auto;
        transition:background 0.5s ease;
     }
    
-    &-shop,&-shopOpen,&-dummyShop {
+    &-shop,&-dummyShop {
       
       flex-basis: $Half-Width !important;
       min-height:200px !important;
@@ -119,7 +207,8 @@ $row2_height: auto;
       
 
       &-image {
-        flex: 1 1 250px;
+        // flex: 1 1 250px;
+        flex:1 1 50%;
       }
       &-image > img {
         max-width: 90%;
@@ -160,21 +249,7 @@ $row2_height: auto;
           opacity:0;
         }
         &-app > button, .maxOpacity > button{
-          padding-left: 12px;
-          padding-top: 6px;
-          padding-right: 18px;
-          padding-bottom: 6px;
-          margin-right: 16px;
-          color: white;
-          font-family: "Monserrat";
-          font-weight: 250;
-          font-size: 14px;
-          background: #161615 0% 0% no-repeat padding-box;
-          border: none;
-          outline: none;
-          border-radius: 6px;
-          overflow: hidden;
-          white-space: nowrap;
+          @extend .download_button;
         }
         &-app > span , .maxOpacity>span{
           font-family: "Monserrat";

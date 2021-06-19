@@ -4,6 +4,7 @@ $Section2_height: 450px;
   display: flex;
   width: 100%;
   height: $Section2_height;
+  position:relative;
 
   &-picture {
     width: 45%;
@@ -34,16 +35,19 @@ $Section2_height: 450px;
     width: calc(100% - 45%);
     display: flex;
     flex-direction: column;
-    // background: antiquewhite;
+    // background: antiquewhite
 
     &-top {
       height: 50%;
+      display:flex;
+      flex-direction:column;
+      justify-content: flex-end;
       background: #adcb4f;
 
       &-imagewithText {
-        // background: red;
-        padding-left: 30px;
-        padding-top: 60px;
+        z-index:2;
+        padding-left: 80px;
+        padding-bottom: 30px;
       }
       &-image {
         max-width: 150px;
@@ -51,14 +55,15 @@ $Section2_height: 450px;
       &-text {
         font-family: "Monserrat";
         font-weight: 300;
-        font-size: 38px;
+        font-size: 36px;
         color: white;
       }
     }
     &-bottom {
+      z-index:2;
       height: 50%;
       background: #8abb2a;
-      padding-left: 30px;
+      padding-left: 80px;
       padding-top: 20px;
       padding-right: 30%;
 
@@ -67,11 +72,21 @@ $Section2_height: 450px;
         font-family: "poppins";
         font-weight: 200;
         font-size: 14px;
-
         color: white;
       }
+      &-link{
+        z-index:3 !important;
+        font-family:"poppins";
+        padding-top:8px;
+        font-size:14px;
+        text-decoration: none;
+        color:black !important;
+        cursor:pointer;
+      }
     }
+
   }
+  
 }
 
 @media (max-width: 1000px) {

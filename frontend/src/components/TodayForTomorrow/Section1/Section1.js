@@ -1,18 +1,13 @@
-import React,{useState} from 'react';
-import {Link} from 'react-router-dom';
+import React from 'react';
 import earth from '../../../assets/images/Today for tomorrow Illustration.svg'
 import logo from '../../../assets/images/Gollaa Logo White.svg'
 
-export default function Section2(){
+export default function Section2_Today(){
 
-
-  const [Section2,Section2Handler] = useState({Hover:false});
 
 
     return(
-          <div className="Section2"  
-             onMouseEnter={()=>{Section2Handler(prevState=>({...prevState,Hover:true}))}}
-             onMouseLeave={()=>{Section2Handler(prevState=>({...prevState,Hover:false}))}}>
+          <div className="Section2">
 
             <div className="Section2-picture">
                 <img className="Section2-picture-earth" src={earth} alt="earth with factories and trees"/>
@@ -47,15 +42,9 @@ export default function Section2(){
                       resilient and gain a reputable position in society. By taking action
                        today, we wish to create an equilibrium between the environment and humanity.
                     </span>
-                    
-                    <div className={Section2.Hover ? "Section2-info-bottom-link": "displayNone"}>
-                        <Link className="link" to="today" exact>See More</Link>
-                    </div>
-                    
-                </div>
+                  </div>
             </div>
 
-            <div className={Section2.Hover ? "overlay-come": "overlay-exit"}></div>
         </div>
 
     

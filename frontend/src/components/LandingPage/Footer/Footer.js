@@ -10,13 +10,7 @@ export default function Footer(){
         <div className="Footer">
             
             <div className="Footer-col1">
-                <div className="Footer-col1-row1">
-
-                </div>
-
-                <div className="Footer-col1-row2">
-
-                </div>
+                <button>Download app</button>
             </div>
 
 
@@ -51,20 +45,12 @@ export default function Footer(){
 
 
             <div className="Footer-col3">
+            
                 <div className="Footer-col3-row1">
                     <p>Information</p>
                     <p>Blog</p>
-                </div>
-                <div className="Footer-col3-row2">
-                    <div className="Footer-col3-row2-col1">
-                        <p>About Us</p>
-                        <p>Our Story</p>
-                    </div>
-
-                    <div className="Footer-col3-row2-col2">
-                        
-                    </div>
-
+                    <p>About Us</p>
+                    <p>Our Story</p>
                 </div>
 
             </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import Gollaa_logo from '../../../assets/images/Gollaa_logo.svg';
 // import Menu from '../../../assets/images/Menu.svg';
 
@@ -26,7 +27,9 @@ export default function Navbar(){
             <div className="Navbar">
 
                 <div className="Navbar-logo">
-                    <img src={Gollaa_logo} alt="Golla_logo" />
+                    <Link className="link" to="/home">
+                        <img src={Gollaa_logo} alt="Golla_logo" />
+                    </Link>
                 </div>
 
                 <div  className="Navbar-menu">

@@ -4,8 +4,14 @@ import farming from '../../../assets/images/Direct From Farm &.svg'
 
 export default function Section3(){
 
+
+  const [Section3,Section3Handler] = React.useState({Hover:false});
+
     return(
-        <div className="Section3">
+        <div className="Section3"
+             onMouseEnter={()=>{Section3Handler(prevState=>({...prevState,Hover:true}))}}
+             onMouseLeave={()=>{Section3Handler(prevState=>({...prevState,Hover:false}))}}>
+
             <div className="Section3-farmingText">
                 <p><span>DIRECT FROM </span> <span>FARM & FARMER</span></p>
 
@@ -18,14 +24,17 @@ export default function Section3(){
                       powerful platform dedicated to helping our real 
                       heroes - the farmers generate profits form their 
                     products without having to deal with any middlemen.</p>
-            </div>
+
+                <div className={Section3.Hover ? "Section3-farmingText-link": "displayNone"}>
+                    <button>Download App</button></div>
+                </div>
 
             <div className="Section3-farmingImage">
                 <div className="Section3-farmingImage-image">
                     <img src={farming} alt="man planting"/>
                 </div>
             </div>
-
+            <div className={Section3.Hover ? "overlay-come": "overlay-exit"}></div>
         </div>
     );
 }

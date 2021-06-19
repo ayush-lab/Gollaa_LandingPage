@@ -1,4 +1,5 @@
 .Section3 {
+  position:relative;
   background: #cec41d;
   display: flex;
   width: 100%;
@@ -14,6 +15,30 @@
     padding-left: 40px;
     padding-right: 20px;
     z-index: 2;
+
+    &-link{
+      padding-top:16px;
+      z-index:2;
+    }
+    &-link>button{
+      padding-top:16px;
+      padding-left: 12px;
+      padding-top: 6px;
+      padding-right: 18px;
+      padding-bottom: 6px;
+      margin-right: 16px;
+      color: white;
+      font-family: "Monserrat";
+      font-weight: 250;
+      font-size: 14px;
+      background: #161615 0% 0% no-repeat padding-box;
+      border: none;
+      outline: none;
+      border-radius: 6px;
+      overflow: hidden;
+      white-space: nowrap;
+
+    }
   }
   &-farmingText p:nth-child(1) {
     color: white;

@@ -17,18 +17,31 @@ $Pure-Green: #5faf42;
 
   &-col1 {
     display: flex;
-    flex-direction: column;
+    justify-content:center;
+    align-items:center;
     height: $Footer-height;
     flex-basis: 20%;
+    background: $Mustard-Yellow;
+  }
 
-    &-row1 {
-      background-color: $Light-Green;
-      height: 50%;
-    }
-    &-row2 {
-      background: $Cloudy-White;
-      height: 50%;
-    }
+  &-col1 >button{
+    padding-top:16px;
+    padding-left: 12px;
+    padding-top: 6px;
+    padding-right: 18px;
+    padding-bottom: 6px;
+    margin-right: 16px;
+    color: white;
+    font-family: "Monserrat";
+    font-weight: 250;
+    font-size: 14px;
+    background: #161615 0% 0% no-repeat padding-box;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    overflow: hidden;
+    white-space: nowrap;
+
   }
 
   &-col2 {
@@ -39,7 +52,7 @@ $Pure-Green: #5faf42;
     align-items: center;
     padding-left: 20px;
     flex-basis: 30%;
-    background: $Mustard-Yellow;
+    background: $Pure-Green;
     font-family: "Monserrat";
     font-weight: 300;
 
@@ -69,44 +82,26 @@ $Pure-Green: #5faf42;
     flex-basis: 40%;
     font-family: "Monserrat";
     font-weight: 300;
+    background:#5DBC58;
+    display:flex;
+    justify-content: center;
+    align-items:center;
 
-    &-row1 {
-      height: 50%;
-      background-color: $Light-Green;
+    &-row1 { 
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
-      padding-left: 20px;
+      // padding-left: 20px;
     }
     &-row1 p:nth-child(1) {
       text-transform: uppercase;
       font-size: 16px;
       padding-bottom: 12px;
     }
-    &-row1 p:nth-child(2) {
+    &-row1 p {
       font-size: 14px;
       padding-bottom: 8px;
     }
 
-    &-row2 {
-      height: 50%;
-      width: 100%;
-      display: flex;
-
-      &-col1 {
-        width: 80%;
-        background: $Yellowish-Green;
-        padding-left: 20px;
-        font-size: 14px;
-      }
-      &-col1 p:nth-child(1) {
-        padding-bottom: 8px;
-      }
-      &-col2 {
-        width: 50%;
-        background: $Pure-Green;
-      }
-    }
   }
   &-col4 {
     flex-basis: 25%;

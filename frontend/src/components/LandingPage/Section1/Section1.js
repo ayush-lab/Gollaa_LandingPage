@@ -1,4 +1,5 @@
 import React,{useState,useRef} from 'react';
+import Cross from '../../../assets/images/Cross.svg'
 import Gollaa_Shop from '../../../assets/images/Shop_Illustration.svg';
 import Gollaa_text from '../../../assets/images/Gollaa.svg';
 import Gollaa_Grow from '../../../assets/images/GollaaGrow_illustration.svg';
@@ -14,10 +15,11 @@ export default function Section1(){
     shopHandler(prevState=>({...prevState,shopOpen:!prevState.shopOpen}))
   }
 
-  const NormalScreen = ()=>{
+  const BackToNormalScreen=()=>{
     let timeout = null;
     shopRef.current.classList.add('Section1-row1-shopClosed');
-    // shopRef.current.classList.remove('Section1-row1-shopOpen');
+    FullScreenText.current.classList.add('Section1-row1-shopClosed-textBlock');
+    // shopRef.current.classList.remove('Section1-row1-shopOpen-textBlock');
 
     if(timeout){
         clearTimeout(timeout)
@@ -27,10 +29,12 @@ export default function Section1(){
         shopRef.current.classList.remove('Section1-row1-shopClosed')
         shopHandler(prevState=>({...prevState,shopOpen:!prevState.shopOpen}))
         
-    },3000)
+    },1500)
   }
 
   let shopRef=useRef();
+  let FullScreenText=useRef();
+  console.log(shop)
 
     return(
         <React.Fragment>
@@ -43,8 +47,8 @@ export default function Section1(){
                          onMouseLeave={()=>{shopHandler(prevState=>({...prevState,shopHover:false}))}} 
                          ref={shopRef} className={shop.shopOpen ? "Section1-row1-shopOpen" : "Section1-row1-shop"}>
                         
-                        <span onClick={()=>NormalScreen()} 
-                              className={shop.shopOpen ? "Section1-row1-shopOpen-cross" : "displayNone"}>
+                        <span className={shop.shopOpen ? "Section1-row1-shopOpen-cross" : "displayNone"} onClick={BackToNormalScreen} >
+                              <img  src={Cross} alt="Overlay-cross"/>
                         </span>
 
                         <span className="Section1-row1-shop-image">
@@ -65,25 +69,25 @@ export default function Section1(){
                         </div>
 
                         {/* Full screen  */}
-                        <div className={shop.shopOpen ? "Section1-row1-shopOpen-textBlock" : "displayNone"} >
-                            <div className="Section1-row1-shop-textBlock-Gollaa">
-                                <img  className="Section1-row1-shop-textBlock-Gollaa-image" src={Gollaa_text} alt="Golla_text"/>
-                                <span className="Section1-row1-shop-textBlock-Gollaa-heading" >SHOP</span>
+                        <div ref={FullScreenText} className={shop.shopOpen ? "Section1-row1-shopOpen-textBlock " : "displayNone"} >
+                            <div className="Section1-row1-shopOpen-textBlock-Gollaa">
+                                <img  className="Section1-row1-shopOpen-textBlock-Gollaa-image" src={Gollaa_text} alt="Golla_text"/>
+                                <span className="Section1-row1-shopOpen-textBlock-Gollaa-heading" >SHOP</span>
                             </div>
-                            <p className="Section1-row1-shop-textBlock-subheading1" >Your partner on the journey of sourcing fresh 
+                            <p className="Section1-row1-shopOpen-textBlock-subheading1" >Your partner on the journey of sourcing fresh 
                             and authentic products directly from local businesses.</p>
 
-                            <p className="Section1-row1-shop-textBlock-subheading2" >In our pursuit to establish a circular economy, 
+                            <p className="Section1-row1-shopOpen-textBlock-subheading2" >In our pursuit to establish a circular economy, 
                             help farmers and artisans deliver their quality products directly to the end consumers.</p>
 
-                            <p className="Section1-row1-shop-textBlock-subheading3" > Gollaa is a powerful platform dedicated to helping our real
+                            <p className="Section1-row1-shopOpen-textBlock-subheading3" > Gollaa is a powerful platform dedicated to helping our real
                              heroes- the farmers generate profits from their product without having to deal with any middlemen. 
                              We are transforming how people shop by making the entire process, right from production to delivery, 
                              completely transparent. This reassurance makes for a remarkable shopping experience for the users, as well as a secure 
                              way of selling for the farmers. Not only this, 
                             Gollaa’s model is a step towards sustainability and ecological consciousness.</p>
 
-                            <div className= "Section1-row1-shop-textBlock-app">
+                            <div className= "Section1-row1-shopOpen-textBlock-app">
                                 <button>Download App</button>
                             </div>
                         </div>

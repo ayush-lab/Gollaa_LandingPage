@@ -4,6 +4,7 @@ $Section4_height: 450px;
   display: flex;
   width: 100%;
   height: $Section4_height;
+  position: relative;
 
   &-picture {
     width: 50%;
@@ -36,43 +37,62 @@ $Section4_height: 450px;
     // background: antiquewhite;
 
     &-top {
-      height: 25%;
+      height: 50%;
       background: #adcb4f;
+      display:flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding-left:60px;
+      padding-bottom:30px;
 
-      &-Text {
-        display: none;
-        font-family: "Monserrat";
-        font-weight: 300;
-
-        span {
-          display: block;
+      &-imageText{
+        z-index:3;
+        &-image{
+          max-width: 150px;
+          // padding-bottom:16px;
+        }
+  
+        &-Text {
+          font-family: "Monserrat";
+          font-weight: 300;
+          font-size: 36px;
+          color:white;
+  
+  
+          span {
+            display: inline-block;
+          }
         }
       }
+      
     }
 
     &-bottom {
-      height: 75%;
+      height: 50%;
       background: #8abb2a;
-      padding-left: 40px;
+      display:flex;
+      flex-direction: column;
+      padding-left: 60px;
       padding-top: 40px;
-      padding-right: 25px;
+      // padding-right: 25px;
 
-      &-Text1 {
-        font-family: "Monserrat";
-        font-weight: 300;
-        font-size: 30px;
-        color: white;
-        padding-bottom: 20px;
+      // &-Text1 {
+      //   font-family: "Monserrat";
+      //   font-weight: 300;
+      //   font-size: 14px;
+      //   color: white;
+      //   padding-bottom: 20px;
 
-        span {
-          display: block;
-        }
-      }
+      //   span {
+      //     display: block;
+      //   }
+      // }
       &-Text2 {
         color: white;
+        width:55%;
         font-family: "Poppins";
         font-weight: 200;
-        font-size: 20px;
+        font-size: 14px;
       }
     }
   }
