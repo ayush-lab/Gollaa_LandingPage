@@ -1,7 +1,21 @@
 @import "base/base";
+
+// Landing page
 @import "pages/LandingPage/Navbar";
 @import "pages/LandingPage/Section1";
 @import "pages/LandingPage/Section2";
 @import "pages/LandingPage/Section3";
 @import "pages/LandingPage/Section4";
 @import "pages/LandingPage/Footer";
+
+//TodayforTommow
+@import "pages/TodayforTomorrow/Section1.scss";
+@import "pages/TodayforTomorrow/Section2.scss";
+@import "pages/TodayforTomorrow/Section3.scss";
+@import "pages/TodayforTomorrow/Section4.scss";
+@import "pages/TodayforTomorrow/Section5.scss";
+@import "pages/TodayforTomorrow/Section6.scss";
+
+// The Change
+@import "pages/TheChange/Section1.scss";
+@import "pages/TheChange/Section2.scss";

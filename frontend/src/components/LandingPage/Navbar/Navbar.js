@@ -23,7 +23,7 @@ export default function Navbar(){
       let toggler = React.useRef();
 
     return(
-        <React.Fragment>
+        <div style={{marginBottom:'80px'}}>
             <div className="Navbar">
 
                 <div className="Navbar-logo">
@@ -48,7 +48,7 @@ export default function Navbar(){
                 </div>
                 
             </div>
-        </React.Fragment>
+        </div>
     )
 
 }

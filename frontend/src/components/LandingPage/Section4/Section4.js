@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import earth_Illustration from '../../../assets/images/Earth Illustration.svg'
 import logo from '../../../assets/images/Gollaa Logo White.svg'
 
@@ -45,7 +46,8 @@ export default function Section4(){
                         responsibility of paving the way for a
                          better tomorrow- one that is sustainable and humane.</p>
                     
-                    <div className={Section4.Hover ? "Section2-info-bottom-link": "displayNone"}>See More</div>
+                    <div className={Section4.Hover ? "Section2-info-bottom-link": "displayNone"}>
+                        <Link to="home/change" className="link">See More</Link></div>
                 </div>
             </div>
 
