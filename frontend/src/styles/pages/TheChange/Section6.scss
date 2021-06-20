@@ -1,9 +1,9 @@
-$Section2_height: 450px;
+$Section6_height: 450px;
 
-.Section2Change {
+.Section6Change {
   display: flex;
   width: 100%;
-  height: $Section2_height;
+  height: $Section6_height;
   position:relative;
 
   &-info {
@@ -12,7 +12,7 @@ $Section2_height: 450px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #5FAF42;
+    background: #F1F2F2;
     color:black;
     &-heading{
         font-size:30px;
@@ -42,7 +42,7 @@ $Section2_height: 450px;
     justify-content: center;
     align-items:center;
     position: relative;
-    background:#145629;
+    background:#F1F2F2;
 
     &-earth {
       width: 60%;

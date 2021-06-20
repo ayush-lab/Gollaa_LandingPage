@@ -1,19 +1,19 @@
-$Section2_height: 450px;
+$Section7_height: 450px;
 
-.Section2Change {
+.Section7Change {
   display: flex;
   width: 100%;
-  height: $Section2_height;
+  height: $Section7_height;
   position:relative;
 
-  &-info {
+  &-left,&-right {
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #5FAF42;
-    color:black;
+    background: #ADCB4F;
+    color:white;
     &-heading{
         font-size:30px;
         font-family:'Monserrat';
@@ -36,20 +36,14 @@ $Section2_height: 450px;
 
    }
 
-  &-picture {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    position: relative;
-    background:#145629;
+   &-right{
+       background:#8ABB2A;
+       &-heading{
+           font-weight:250;
+       }
+   }
 
-    &-earth {
-      width: 60%;
-      height: 60%;
-    }
 
-  }
 
  
 }

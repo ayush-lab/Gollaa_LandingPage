@@ -16,7 +16,7 @@ export default function Section1Change(){
             <div className="Section1Change-info">
        
                 <div className="Section1Change-info-heading">
-                    <p className="Section1Change-info-heading-text"><span>GOLLAA:A CHANGE</span></p>
+                    <p className="Section1Change-info-heading-text"><span>GOLLAA: A CHANGE</span></p>
                 </div>
                 <div className="Section1Change-info-para">
 

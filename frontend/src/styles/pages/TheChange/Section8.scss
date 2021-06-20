@@ -1,0 +1,22 @@
+.Section8Values{
+    height:480px;
+    background:#EDE139;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+    overflow-x: visible;
+
+    &-heading{
+        text-align: center;
+        font-family:'Monserrat';
+        font-weight:200;
+        font-size:36px;
+    }
+    &-cards{
+        display:flex;
+        flex-wrap:nowrap;
+        align-items:center;
+        justify-content:space-around;
+        overflow-x: visible;
+    }
+}
