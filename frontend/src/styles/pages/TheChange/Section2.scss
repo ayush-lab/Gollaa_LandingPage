@@ -1,4 +1,4 @@
-$Section2_height: 450px;
+$Section2_height: calc(100vh - 80px);
 
 .Section2Change {
   display: flex;
@@ -18,8 +18,8 @@ $Section2_height: 450px;
         font-size:30px;
         font-family:'Monserrat';
         font-weight:300;
-        padding-bottom:2rem;
-        padding-left:40px;
+        padding-bottom:1rem;
+        padding-left:60px;
         align-self:flex-start;
     }
 
@@ -27,8 +27,8 @@ $Section2_height: 450px;
         font-size:14px;
         font-family:'poppins';
         font-weight:200;
-        padding-left:40px;
-        padding-right:40px;
+        padding-left:60px;
+        padding-right:60px;
         &-text1{
             padding-bottom:1rem;
         }

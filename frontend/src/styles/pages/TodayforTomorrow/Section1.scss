@@ -1,4 +1,4 @@
-$Section1_height: 450px;
+$Section1_height: calc(100vh - 80px);
 
 .Section1Today {
   display: flex;
@@ -50,8 +50,8 @@ $Section1_height: 450px;
         font-size:14px;
         font-family:'poppins';
         font-weight:200;
-        padding-left:40px;
-        padding-right:40px;
+        padding-left:60px;
+        padding-right:60px;
         &-text1{
             padding-bottom:1rem;
         }

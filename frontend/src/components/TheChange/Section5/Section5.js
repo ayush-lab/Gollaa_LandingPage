@@ -1,5 +1,5 @@
 import React from 'react';
-import Certificate from '../../../assets/images/Certificate.svg'
+import Recycle from '../../../assets/images/Recycle.svg'
 
 
 export default function Section5Change(){
@@ -9,7 +9,7 @@ export default function Section5Change(){
         <div className="Section5Change">
 
             <div className="Section5Change-picture">
-                <img className="Section5Change-picture-earth" src={Certificate} alt="Gollaa cerficate"/>
+                <img className="Section5Change-picture-earth" src={Recycle} alt="Recycle"/>
             </div>
 
 

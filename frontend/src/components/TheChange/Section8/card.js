@@ -11,7 +11,7 @@ export default function Card(props){
                         <img src={props.src} alt={props.alt}/>
                     </div>
                     
-                    <div className="card-back">
+                    <div className="card-back" style={{color:props.textColor,background:props.backColor}}>
                         <p>{props.backText}</p>
                     </div>
                 </div>

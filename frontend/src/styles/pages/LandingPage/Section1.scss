@@ -188,7 +188,7 @@ $row2_height: auto;
     }
    
     &-shop,&-dummyShop {
-      
+      position:relative;
       flex-basis: $Half-Width !important;
       min-height:200px !important;
       transition: all 1s ease;
@@ -247,9 +247,11 @@ $row2_height: auto;
           margin-top: 35px;
           cursor: pointer;
           opacity:0;
+          z-index:3;
         }
         &-app > button, .maxOpacity > button{
           @extend .download_button;
+    
         }
         &-app > span , .maxOpacity>span{
           font-family: "Monserrat";
@@ -261,11 +263,6 @@ $row2_height: auto;
           transition:opacity 1s ease;
         }
       }
-    }
-
-    &-shop:hover{
-      background:#afaf3193;
-      transition:background 0.5s ease;
     }
 
    

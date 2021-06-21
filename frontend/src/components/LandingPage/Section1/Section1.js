@@ -91,7 +91,7 @@ export default function Section1(){
                                 <button>Download App</button>
                             </div>
                         </div>
-
+                        <div className={shop.shopHover ? "overlay-come": "overlay-exit"}></div>
                  </div>
 
                     <div className= "Section1-row1-grow">
