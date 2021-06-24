@@ -24,7 +24,7 @@ $Section2_height:  calc(100vh - 80px);
     }
 
     &-para{
-        font-size:14px;
+        font-size:12px;
         font-family:'poppins';
         font-weight:200;
         padding-left:60px;
@@ -44,10 +44,10 @@ $Section2_height:  calc(100vh - 80px);
 
     &-earth {
       position: absolute;
-      top: 10%;
-      left: 20%;
-      width: 60%;
-      height: 80%;
+      top: 20%;
+      left: 30%;
+      width: 50%;
+      height: 60%;
     }
 
     &-top {

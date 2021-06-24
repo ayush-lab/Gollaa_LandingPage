@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {NavLink,Link} from 'react-router-dom';
 import Gollaa_logo from '../../../assets/images/Gollaa_logo.svg';
 // import Menu from '../../../assets/images/Menu.svg';
 
@@ -40,7 +40,7 @@ export default function Navbar(){
 
                     <div ref={navNode} className={open ? "Navbar-menu-options" : "Navbar-menu-none"}>
                         <ul className={open ? "Navbar-menu-options-list" : "Navbar-menu-none-list"}>
-                            <li>Blog</li>
+                            <NavLink activeClassName="activeClassName" className="link" to="/blog"><li>Blog</li></NavLink>
                             <li>Our Stories</li>
                             <li>About Us</li>
                         </ul>

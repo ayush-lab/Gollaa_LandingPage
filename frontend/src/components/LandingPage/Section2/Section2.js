@@ -49,7 +49,7 @@ export default function Section2(){
                     </span>
                     
                     <div className={Section2.Hover ? "Section2-info-bottom-link": "displayNone"}>
-                        <Link className="link" to="home/today">See More</Link>
+                        <Link className="link" to="/today">See More</Link>
                     </div>
                     
                 </div>

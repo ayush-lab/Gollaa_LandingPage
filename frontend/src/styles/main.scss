@@ -1,6 +1,7 @@
 @import "base/base";
 
 // Landing page
+@import "pages/LandingPage/index"; 
 @import "pages/LandingPage/Navbar";
 @import "pages/LandingPage/Section1";
 @import "pages/LandingPage/Section2";
@@ -9,6 +10,7 @@
 @import "pages/LandingPage/Footer";
 
 //TodayforTommow
+
 @import "pages/TodayforTomorrow/Section1.scss";
 @import "pages/TodayforTomorrow/Section2.scss";
 @import "pages/TodayforTomorrow/Section3.scss";
@@ -26,4 +28,25 @@
 @import "pages/TheChange/Section7.scss";
 @import "pages/TheChange/Section8.scss";
 @import "pages/TheChange/Cards.scss";
+
+//  The blog page
+@import "pages/Blog/index.scss";
+
+// Terroir
+@import "pages/Blog/Terroir/Section1.scss";
+@import "pages/Blog/Terroir/Section2.scss";
+@import "pages/Blog/Terroir/Section3.scss";
+@import "pages/Blog/Terroir/Section4.scss";
+
+// City
+@import "pages/Blog/City/Section1.scss";
+@import "pages/Blog/City/Section2.scss";
+@import "pages/Blog/City/Section3.scss";
+@import "pages/Blog/City/Section4.scss";
+@import "pages/Blog/City/Section5.scss";
+
+
+
+
+
 

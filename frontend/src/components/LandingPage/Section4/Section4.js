@@ -47,7 +47,7 @@ export default function Section4(){
                          better tomorrow- one that is sustainable and humane.</p>
                     
                     <div className={Section4.Hover ? "Section2-info-bottom-link": "displayNone"}>
-                        <Link to="home/change" className="link">See More</Link></div>
+                        <Link to="/change" className="link">See More</Link></div>
                 </div>
             </div>
 

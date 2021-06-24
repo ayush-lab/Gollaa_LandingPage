@@ -1,0 +1,25 @@
+.CitySection4{
+    background:#DAD800;
+    padding-top:50px;
+    padding-bottom:50px;
+    color:white;
+    display:flex;
+    flex-direction: column;
+    text-align:center;
+    padding-left:30%;
+    padding-right:30%;
+
+    &-heading{
+         font-family: "Monserrat";
+        font-size:30px;
+        font-weight:300;
+        padding-bottom:1rem;
+        text-align:center;
+    }
+    &-para{
+        text-align: center;
+        font-family: "Poppins";
+        font-size:12px;
+        font-weight:200;
+    }
+}

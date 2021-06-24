@@ -1,0 +1,46 @@
+.TerroirSection4{
+    height:calc(100vh - 80px);
+    width:100%;
+    display:flex;
+    background:#5FAF42;
+
+    &-left{
+        flex-basis:55%;
+    }
+    &-left img{
+        width:100%;
+        height:100%;
+        object-fit: cover;
+        background-position: center;
+    }
+
+    &-right{
+        flex-basis: 45%;
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items:center;
+        padding-left:50px;
+        padding-right:50px;
+
+        &-heading{
+            font-family: "Monserrat";
+            font-size:30px;
+            font-weight:300;
+            text-align:center;
+            color:white;
+            padding-bottom:1rem;
+        }
+        &-heading span{
+            display:block;
+        }
+        &-para{
+            font-family: "Poppins";
+            font-size:12px;
+            font-weight:200;
+            text-align:center;
+            color:white;
+        }
+    }
+
+}

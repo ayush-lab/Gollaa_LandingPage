@@ -15,8 +15,8 @@ $Section3_height:  calc(100vh - 80px);
 
     &-earth {
     
-      width: 60%;
-      height: 60%;
+      width: 50%;
+      height: 50%;
     }
 
   }
@@ -30,7 +30,7 @@ $Section3_height:  calc(100vh - 80px);
     background: #5DBC58;
     color:white;
     &-heading{
-        font-size:36px;
+        font-size:30px;
         font-family:'Monserrat';
         font-weight:300;
         padding-bottom:1rem;
@@ -38,7 +38,7 @@ $Section3_height:  calc(100vh - 80px);
     }
 
     &-para{
-        font-size:14px;
+        font-size:12px;
         font-family:'poppins';
         font-weight:200;
         padding-left:60px;

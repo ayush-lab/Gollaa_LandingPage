@@ -2,8 +2,8 @@
     @keyframes zoomIn{
     
       0%{
-        width:60vw;
-        height:50vh;
+        width:50vw;
+        height:250px;
       }
       100%{
         width:100%;
@@ -37,7 +37,7 @@
         height:100vh;
       }
       100%{
-        height:45vh;
+        height:300px;
         width:50vw;
       }
     }
@@ -79,7 +79,7 @@ $row2_height: auto;
 
 .Section1 {
   background: #5dbc58;
- 
+  scroll-snap-align: start;
 
   &-row1 {
     display: flex;
@@ -99,7 +99,7 @@ $row2_height: auto;
       align-items: center;
       transition: all 1s ease;
       z-index:2;
-      animation: zoomIn 1.5s forwards;
+      animation: zoomIn 1.5s ease;
       opacity:1;
 
       &-cross{
@@ -122,7 +122,7 @@ $row2_height: auto;
         align-items:flex-start;
         padding-right:50px;
         padding-bottom:50px;
-        animation:textAnimation 1s forwards;
+        animation:textAnimation 1s ease;
 
         &-Gollaa {
           margin-bottom: 2rem;
@@ -169,12 +169,12 @@ $row2_height: auto;
       background: #cfd136;
       z-index:2;
       width:500px;
-      height:200px;
+      height:300px;
       transition: all 1s ease !important;
       animation: zoomedOut 1.5s forwards !important;
       z-index:2;
       &-textBlock{
-        animation:textAnimationReverse 3.5s forwards;
+        animation:textAnimationReverse 3s ease;
       }
     }
 
@@ -183,9 +183,6 @@ $row2_height: auto;
       position:static;
     }
  
-    &-shop{
-       transition:background 0.5s ease;
-    }
    
     &-shop,&-dummyShop {
       position:relative;

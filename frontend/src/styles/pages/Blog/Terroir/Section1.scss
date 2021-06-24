@@ -1,0 +1,53 @@
+.TerroirSection1{
+    display:flex;
+    width:100%;
+    height:calc(100vh - 80px);
+    position:relative;
+
+    &-left{
+        flex-basis:70%;
+    }
+    &-left img{
+        width:100%;
+        object-fit: cover;
+        object-position: center;
+        height:100%;
+    }
+    &-right{
+        flex-basis:30%;
+        background-color:#DAD800;
+    }
+    &-text{
+        position:absolute;
+        top:15%;
+        right:13%;
+        font-family:'Monserrat';
+        font-weight: 300;
+        font-size:46px;
+        color:#145629;
+    }
+    &-text span{
+        display:block;
+        text-align:center;
+    }
+}
+
+.TerroirDescription{
+    background:#EBEBEB;
+    color:#1A1818;
+    height:350px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    padding-left:25%;
+    padding-right:25%;
+    font-family: 'poppins';
+    font-weight:200;
+    font-size:14px;
+}
+.TerroirDescription p{
+    text-align: center;
+}
+.TerroirDescription span{
+    // display:block;
+}

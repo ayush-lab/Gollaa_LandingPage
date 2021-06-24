@@ -5,7 +5,9 @@ $Section4_height: 450px;
   width: 100%;
   height: $Section4_height;
   position: relative;
+  scroll-snap-align: center;
 
+  
   &-picture {
     width: 50%;
     display: flex;
@@ -92,7 +94,7 @@ $Section4_height: 450px;
         width:55%;
         font-family: "Poppins";
         font-weight: 200;
-        font-size: 14px;
+        font-size: 12px;
       }
     }
   }

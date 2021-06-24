@@ -1,0 +1,37 @@
+.CitySection5{
+    background:#A1D8D8;
+    display:flex;
+
+    &-left{
+        flex-basis:50%;
+    }
+    &-left >img{
+        width:100%;
+        height:100%;
+    }
+    &-right{
+        flex-basis:50%;
+        padding-left:50px;
+        padding-right: 50px;
+        padding-top:60px;
+        &-heading,&-para{
+           
+        }
+
+        &-heading{
+           font-family: "Monserrat";
+           font-size:30px;
+           font-weight:300;
+           padding-bottom:1rem;
+           text-align:center;
+           overflow:none;
+           white-space: nowrap;
+       }
+       &-para{
+           text-align: center;
+           font-family: "Poppins";
+           font-size:12px;
+           font-weight:200;
+       }
+    }
+}
