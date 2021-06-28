@@ -1,0 +1,26 @@
+.StoriesSection2{
+    display:flex;
+    flex-direction:column;
+    background:#FFFFFF;
+    justify-content: center;
+    align-items: center;
+    padding-left:10%;
+    padding-right:10%;
+    padding-top:5%;
+    padding-bottom:5%;
+
+
+    &-heading{  
+        color:#707070;
+        font-family: "Monserrat";
+        font-size:30px;
+        font-weight:300;
+        padding-bottom:2rem;
+    }
+
+    &-cards{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:space-between;
+    }
+}

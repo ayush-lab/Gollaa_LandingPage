@@ -45,7 +45,7 @@ export default function BlogMain(){
                 <img src={Currency} alt="currency"/>
                 <div className="Blog-row3-text">
                     <p>complementary local currency</p>
-                    <button>See More</button>
+                    <Link className="link" to="/blog/currency"><button>See More</button></Link>
                 </div>
             </div>
 

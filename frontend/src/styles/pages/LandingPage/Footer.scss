@@ -15,7 +15,8 @@ $Pure-Green: #5faf42;
   padding: 0;
   margin: 0;
   scroll-snap-align: center;
-
+  position:relative;
+  z-index:3;
   
   &-col1 {
     display: flex;

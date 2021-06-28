@@ -1,0 +1,31 @@
+.AboutUsSection1{
+    background:#8ABB2A;
+    height:100vh;
+    text-align:center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    padding-left:20%;
+    padding-right:20%;
+
+    &-text{
+        &-para1{
+            padding-bottom: 2rem;
+        }
+        &-para1,&-para2,&-para3{
+            color:white;
+            font-family: 'poppins';
+            font-weight:200;
+            font-size:12px;
+        }
+        &-heading{
+            color:white;
+            font-family: "Monserrat";
+            font-size:30px;
+            font-weight:300;
+            padding-bottom:1rem;
+        }
+    }
+   
+}

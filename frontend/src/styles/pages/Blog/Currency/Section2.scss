@@ -1,0 +1,53 @@
+.CurrencySection2{
+    height:calc(100vh - 80px);
+    width:100%;
+    position:relative;
+
+    &-card{
+        position:absolute;
+        top:10%;
+        left:5%;
+        width:400px;
+        height:280px;
+        background:#ADCB4F;
+        border-radius:20px;
+        color:white;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 40px;
+        padding-right:40px;
+        opacity:0;
+        transition:opacity 0.8s ease;
+        &-text{
+            &-heading{
+                font-family: "Monserrat";
+                font-size:30px;
+                font-weight:300;
+                padding-bottom:1rem;
+                text-align:center;
+            }
+            &-heading>span{
+                display: block;
+            }
+            &-para{
+                text-align: center;
+                font-family: "Poppins";
+                font-size:12px;
+                font-weight:200;
+            }
+      }
+    }
+
+}
+
+.CurrencySection2 >img{
+    width:100%;
+    height:100%;
+}
+
+.CurrencySection2:hover .CurrencySection2-card{
+    opacity:1;
+    transition: opacity 1s ease;
+}

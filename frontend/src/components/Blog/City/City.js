@@ -1,7 +1,7 @@
 import React from 'react';
 // import {Link} from 'react-router-dom';
 import City from '../../../assets/images/city.png';
-import City3 from '../../../assets/images/city3.png';
+import City3 from '../../../assets/images/city3.svg';
 import Migrants from '../../../assets/images/migrants.png';
 import City2 from '../../../assets/images/city2.png';
 
@@ -50,24 +50,26 @@ export default function CitySection1(){
 
           <div className="CitySection3">
                 <div className="CitySection3-left">
-                    <p className="CitySection3-left-heading">
-                    How Can Agrotourism Help Distress <span>Migration</span>?
-                    </p>
-
-                    <p className="CitySection3-left-para1">
-                    A significant portion of the rural population is forced to
-                     uproot their lives and move to an urban location. This is for a meager
-                      income that they use to sustain their families. Also termed as distress
-                       migration, it often results in ghost villages with abandoned houses
-                        and little to no population.
-                    </p>
-                    <p className="CitySection3-left-para2"> Agrotourism can be the solution for this
-                        problem by creating employment opportunities in rural areas. 
-                        The local economic activity and status of the region can be improved 
-                        promoting agrotourism. Tourists can contribute to the upliftment of
-                        the local producer’s livelihood. Along with this, this type of 
-                        tourism can
-                     provide a boost to the local crafts, cuisine, other trades.</p>
+                    <div className="CitySection3-left-text">
+                        <p className="CitySection3-left-text-heading">
+                        How Can Agrotourism Help Distress <span>Migration</span>?
+                        </p>
+                   
+                        <p className="CitySection3-left-text-para1">
+                        A significant portion of the rural population is forced to
+                        uproot their lives and move to an urban location. This is for a meager
+                        income that they use to sustain their families. Also termed as distress
+                        migration, it often results in ghost villages with abandoned houses
+                            and little to no population.
+                        </p>
+                        <p className="CitySection3-left-text-para2"> Agrotourism can be the solution for this
+                            problem by creating employment opportunities in rural areas. 
+                            The local economic activity and status of the region can be improved 
+                            promoting agrotourism. Tourists can contribute to the upliftment of
+                            the local producer’s livelihood. Along with this, this type of 
+                            tourism can
+                        provide a boost to the local crafts, cuisine, other trades.</p>
+                     </div>
                 </div>
 
                 <div className="CitySection3-right">
@@ -86,12 +88,22 @@ export default function CitySection1(){
               <div className="CitySection5-left">
                   <img src={City2} alt="city"/>
               </div>
+            <div className="CitySection5-text">
+                <div className="CitySection5-right">
+                    <p className="CitySection5-right-heading">Environmental Impact of Agrotourism</p>
+                    <p className="CitySection5-right-para">Agrotourism is the perfect amalgamation of luxury and sustainability. It has brought forward the need for creating awareness about climate change and organic production activities. Agrotourism is an eco-friendly way of rejuvenating and discovering the beauty of farms. It has a reduced footprint
+                    as compared to conventional tourism.</p>
+                </div>
 
-              <div className="CitySection5-right">
-                <p className="CitySection5-right-heading">Environmental Impact of Agrotourism</p>
-                <p className="CitySection5-right-para">Agrotourism is the perfect amalgamation of luxury and sustainability. It has brought forward the need for creating awareness about climate change and organic production activities. Agrotourism is an eco-friendly way of rejuvenating and discovering the beauty of farms. It has a reduced footprint
-                 as compared to conventional tourism.</p>
+                <div className="CitySection5-last">
+                    <p className="CitySection5-last-heading">Final Words</p>
+                    <p className="CitySection5-last-para">So the next time life gets too overwhelming with a 
+                        hectic schedule, polluted environment, or overcrowded localities, choose to take a break from 
+                        the hustle and bustle. A pleasant and comfortable stay at a farm can reduce your stress
+                        and anxiety and help you come back with replenished energy and focus.</p>
+                </div>
               </div>
+
 
           </div>
 

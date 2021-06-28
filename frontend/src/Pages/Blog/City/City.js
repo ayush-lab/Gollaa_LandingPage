@@ -5,7 +5,7 @@ import CitySection1 from '../../../components/Blog/City/City';
 
 
 
-export default function Blog(){
+export default function City(){
 
     React.useEffect(() => {
         window.scrollTo(0, 0)

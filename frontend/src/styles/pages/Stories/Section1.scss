@@ -1,0 +1,36 @@
+.StoriesSection1{
+    background-color:#8ABB2A;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    text-align: center;
+    height:calc(100vh - 80px);
+    &-text{
+        padding-bottom:2rem;
+        padding-left:20%;
+        padding-right:20%;
+
+        &-para{
+            color:white;
+            font-family: 'poppins';
+            font-weight:200;
+            font-size:12px;
+        }
+    }
+
+    &-heading{
+        color:white;
+        font-family: "Monserrat";
+        font-size:30px;
+        font-weight:300;
+        padding-bottom:2rem;
+    }
+
+    &-cards{
+        width:100%;
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}

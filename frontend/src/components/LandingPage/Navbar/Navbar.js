@@ -40,9 +40,9 @@ export default function Navbar(){
 
                     <div ref={navNode} className={open ? "Navbar-menu-options" : "Navbar-menu-none"}>
                         <ul className={open ? "Navbar-menu-options-list" : "Navbar-menu-none-list"}>
-                            <NavLink activeClassName="activeClassName" className="link" to="/blog"><li>Blog</li></NavLink>
-                            <li>Our Stories</li>
-                            <li>About Us</li>
+                            <NavLink activeClassName="activeClassName" className="link Navbar-menu-options-list-li1" to="/blog"><li >Blog</li></NavLink>
+                            <NavLink activeClassName="activeClassName" className="link Navbar-menu-options-list-li2" to="/stories"><li >Our Stories</li></NavLink>
+                            <NavLink activeClassName="activeClassName" className="link Navbar-menu-options-list-li3" to="/aboutus"><li >About Us</li></NavLink>
                         </ul>
                     </div>
                 </div>

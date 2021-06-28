@@ -6,6 +6,9 @@ import TheChange from "./Pages/TheChange/TheChange";
 import Blog from "./Pages/Blog/main";
 import Terroir from "./Pages/Blog/Terroir/Terroir";
 import City from "./Pages/Blog/City/City";
+import Currency from "./Pages/Blog/Currency/Currency";
+import Stories from "./Pages/Stories/Story";
+import AboutUs from './Pages/AbousUs/AboutUs';
 
 
 function App() {
@@ -17,6 +20,11 @@ function App() {
           <Route path='/blog' exact component={Blog} />
           <Route path='/blog/terroir'  component={Terroir} />
           <Route path='/blog/city'  component={City} />
+          <Route path='/blog/currency'  component={Currency} />
+
+          <Route path='/stories' exact component={Stories} />
+          <Route path='/aboutus' exact component={AboutUs} />
+
           <Route path='/home' exact component={LandingPage} />
           <Redirect to='/home' component={LandingPage}/>
         </Switch>

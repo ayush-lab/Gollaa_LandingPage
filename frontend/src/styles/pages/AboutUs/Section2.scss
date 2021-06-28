@@ -1,0 +1,9 @@
+.AboutUsSection2{
+    background-color: #EBEBEB;
+    padding:50px;
+
+    &-cards{
+        display:flex;
+        justify-content: space-around;
+    }
+}

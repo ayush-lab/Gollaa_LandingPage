@@ -1,0 +1,31 @@
+.CurrencySection1{
+    background:#ADCB4F;
+    display:flex;
+    flex-direction: column;
+    color:white;
+
+    &-text{
+        padding-top:60px;
+        padding-bottom:60px;
+    
+
+        &-heading{
+            font-family: "Monserrat";
+            font-size:36px;
+            font-weight:300;
+            padding-bottom:1rem;
+            text-align:center;
+        }
+        &-heading>span{
+            display:block;
+        }
+        &-para{
+            text-align: center;
+            font-family: "Poppins";
+            font-size:12px;
+            font-weight:200;
+            padding-left:30%;
+            padding-right:30%;
+        }
+    }
+}
