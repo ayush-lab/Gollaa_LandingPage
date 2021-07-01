@@ -12,7 +12,9 @@ export default function Section8Values(){
     return(
     
         <div className="Section8Values">
-            <p className="Section8Values-heading">Gollaa's Values</p> 
+            <p className="Section8Values-heading">
+                <span>Gollaa's Values</span>
+            </p> 
 
             <div className="Section8Values-cards">
 

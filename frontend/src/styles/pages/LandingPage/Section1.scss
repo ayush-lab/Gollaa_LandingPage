@@ -14,19 +14,24 @@
     @keyframes textAnimation{
       0%{
         transform: translateX(-100%);
+        opacity:0;
       }
       100%{
         transform: translateX(0);
+        opacity:1;
+
       }
     }
      
     @keyframes textAnimationReverse{
       0%{
         transform: translateX(0%);
+        opacity:1;
       }
       100%{
         
-        transform: translateX(-300%);
+        opacity:0;
+        transform: translateX(-150%);
       }
     }
 
@@ -53,31 +58,29 @@
     }
 
 
-    @keyframes growTxt{
-      0%{
-        transform:translateX(100%);
-        opacity:0;
-      }
-      100%{
-        transform:translateX(0);
-        opacity:1;
-      }
-    }
+    
     @keyframes growText{
       0%{
         transform: translateX(100%);
+        opacity:0;
       }
       100%{
         transform: translateX(0);
+        opacity:1;
+
       }
     }
      
     @keyframes growTextReverse{
       0%{
         transform: translateX(0%);
+        opacity:1;
+
       }
       100%{
         transform: translateX(250%);
+        opacity:0;
+
       }
     }
 
@@ -208,7 +211,7 @@ $row2_height: auto;
     &-shopClosed{
       position:absolute;
       background: #cfd136;
-      z-index:2;
+      z-index:10;
       width:50%;
       height:300px;
       transition: all 1s ease !important;
@@ -478,6 +481,7 @@ $row2_height: auto;
   
     &-supportOpen{
       position:absolute;
+      top:300px;
       background: #ede139;
       max-width:100%;
       height:100vh;

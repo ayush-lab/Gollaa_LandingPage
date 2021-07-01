@@ -251,7 +251,7 @@ $Pure-Green: #5faf42;
         text-transform: capitalize;
         font-size: 16px;
       }
-      &-row1 p:nth-child(2) {
+      &-row1 p {
         font-size: 14px;
       }
 
@@ -266,6 +266,9 @@ $Pure-Green: #5faf42;
         }
         &-col2 {
           width: 50%;
+        }
+        &-row2{
+          font-size:14px;
         }
       }
     }
@@ -297,6 +300,10 @@ $Pure-Green: #5faf42;
       }
       &-row2 {
       }
+    }
+
+    &-col1 > button{
+      display:none;
     }
 
     &-col2 {
@@ -341,19 +348,19 @@ $Pure-Green: #5faf42;
         font-size: 14px;
       }
 
-      &-row2 {
-        height: 50%;
-        width: 100%;
+      // &-row2 {
+      //   height: 50%;
+      //   width: 100%;
 
-        &-col1 {
-          width: 80%;
-          padding-left: 20px;
-          font-size: 14px;
-        }
-        &-col2 {
-          width: 50%;
-        }
-      }
+      //   &-col1 {
+      //     width: 80%;
+      //     padding-left: 20px;
+      //     font-size: 14px;
+      //   }
+      //   &-col2 {
+      //     width: 50%;
+      //   }
+      // }
     }
     &-col4 {
       flex-basis: 25%;
@@ -389,7 +396,7 @@ $Pure-Green: #5faf42;
       height: $Footer-height;
       padding-left: 13px;
       margin: 0;
-      flex-basis: 35%;
+      flex-basis: 40%;
       align-items: flex-start;
 
       &-details {
@@ -423,37 +430,42 @@ $Pure-Green: #5faf42;
 
     &-col3 {
       height: $Footer-height;
-      flex-basis: 40%;
+      flex-basis: 35%;
+      justify-content:flex-start;
       &-row1 {
         padding-left: 10px;
+        padding-bottom:20px;
+      }
+     
+      &-row1 p{
+        font-size: 8px;
+        padding-bottom: 2px;
       }
       &-row1 p:nth-child(1) {
         padding-bottom: 5px;
-        text-transform: lowercase;
-        text-transform: capitalize;
+        text-transform: uppercase;
         font-size: 10px;
       }
       &-row1 p:nth-child(2) {
         font-size: 8px;
-        padding-bottom: 2px;
       }
 
-      &-row2 {
-        height: 50%;
-        width: 100%;
+      // &-row2 {
+      //   height: 50%;
+      //   width: 100%;
 
-        &-col1 {
-          width: 80%;
-          padding-left: 10px;
-          font-size: 8px;
-        }
-        &-col1 p:nth-child(1) {
-          padding-bottom: 4px;
-        }
-        &-col2 {
-          width: 50%;
-        }
-      }
+      //   &-col1 {
+      //     width: 80%;
+      //     padding-left: 10px;
+      //     font-size: 8px;
+      //   }
+      //   &-col1 p:nth-child(1) {
+      //     padding-bottom: 4px;
+      //   }
+      //   &-col2 {
+      //     width: 50%;
+      //   }
+      // }
     }
     &-col4 {
       flex-basis: 25%;

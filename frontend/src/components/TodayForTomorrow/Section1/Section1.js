@@ -7,8 +7,9 @@ export default function Section1Today(){
           <div className="Section1Today">
 
             <div className="Section1Today-picture">
-                <img className="Section1Today-picture-earth" src={earth} alt="earth with factories and trees"/>
-
+                <div className="Section1Today-picture-earth">
+                    <img  src={earth} alt="earth with factories and trees"/>
+                </div>
                 <div className="Section1Today-picture-top">
 
                 </div>

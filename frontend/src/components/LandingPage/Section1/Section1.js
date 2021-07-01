@@ -12,6 +12,7 @@ export default function Section1(){
   const [shop,shopHandler] = useState({shopOpen:false,shopHover:false});
   const [grow,growHandler] = useState({growOpen:false,growHover:false});
   const [support,supportHandler] = useState({supportOpen:false,supportHover:false});
+  const [stay,stayHandler] = useState({stayOpen:false,stayHover:false});
 
 
   const shopFullScreen=()=>{
@@ -22,6 +23,9 @@ export default function Section1(){
   }
   const supportFullScreen=()=>{
     supportHandler(prevState=>({...prevState,supportOpen:!prevState.supportOpen}))
+  }
+  const stayFullScreen=()=>{
+    stayHandler(prevState=>({...prevState,stayOpen:!prevState.stayOpen}))
   }
 
   const shopBackToNormalScreen=()=>{
@@ -71,6 +75,22 @@ export default function Section1(){
         
     },1500)
   }
+
+//   const stayBackToNormalScreen=()=>{
+//     let timeout = null;
+//     stayRef.current.classList.add('Section1-row1-stayClosed');
+//     stayFullScreenText.current.classList.add('Section1-row1-stayClosed-textBlock');
+
+//     if(timeout){
+//         clearTimeout(timeout)
+//         timeout=null;
+//     }
+//     setTimeout(()=>{
+//         stayRef.current.classList.remove('Section1-row1-stayClosed')
+//         stayHandler(prevState=>({...prevState,supportOpen:!prevState.stayOpen}))
+        
+//     },1500)
+//   }
 
   let shopRef=useRef();
   let shopFullScreenText=useRef();
