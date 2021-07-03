@@ -20,7 +20,7 @@
     &-text{
         position:absolute;
         top:15%;
-        right:13%;
+        right:15%;
         font-family:'Monserrat';
         font-weight: 300;
         font-size:46px;
@@ -50,4 +50,11 @@
 }
 .TerroirDescription span{
     // display:block;
+}
+
+
+@media(min-width:1750px){
+    .TerroirSection1-text{
+        right:20%;
+    }
 }

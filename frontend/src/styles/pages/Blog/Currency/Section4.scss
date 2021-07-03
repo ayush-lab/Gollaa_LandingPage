@@ -1,6 +1,7 @@
 .CurrencySection4{
     display:flex;
-    height:calc(100vh -80px);
+    height:calc(100vh - 80px);
+    z-index:2;
 
     &-left{
         position:relative;
@@ -10,19 +11,11 @@
         display:flex;
         flex-direction: column;
         text-align:center;
+        // align-items:center;
+        // justify-content: center;
         padding-top:50px;
         padding-bottom:50px;
-        &-heading{
-            font-family: "Monserrat";
-            font-size:30px;
-            font-weight:300;
-            padding-bottom:1rem;
-            text-align:center;
-        }
-        &-heading>span{
-            display: block;
-        }
-
+       
         &-text{
             position: absolute;
             padding-left:60px;
@@ -35,18 +28,31 @@
             // align-items:center;
             justify-content: center;
             text-align:center;
-            
-            &-para1,&-para2{
+            &-heading{
+                font-family: "Monserrat";
+                font-size:30px;
+                font-weight:300;
+                padding-bottom:1rem;
+                text-align:center;
+            }
+            &-heading>span{
+                display: block;
+            }
+            &-para{
                 text-align: center;
                 font-family: "Poppins";
                 font-size:12px;
                 font-weight:200;
                 transform:translateX(-150%);
                 transition:transform 0.7s ease;
+                &-para1,&-para2{
+                   
+                }
+                &-para1{
+                    padding-bottom:1rem;
+                }
             }
-            &-para1{
-                padding-bottom:0.5rem;
-            }
+            
 
         }
     }
@@ -60,12 +66,12 @@
     
 }
 
-.CurrencySection4:hover .CurrencySection4-left-text-para1
- {
-    transform:translateX(0);
-}
+// .CurrencySection4:hover .CurrencySection4-left-text-para1
+//  {
+//     transform:translateX(0);
+// }
 
-.CurrencySection4:hover .CurrencySection4-left-text-para2
- {
-    transform:translateX(0);
-}
+// .CurrencySection4:hover .CurrencySection4-left-text-para2
+//  {
+//     transform:translateX(0);
+// }

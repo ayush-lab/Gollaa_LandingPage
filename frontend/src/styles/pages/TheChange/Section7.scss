@@ -1,5 +1,6 @@
 $Section7_height:  calc(100vh - 80px);
-
+$Section7_heading_font:28px;
+$Section7_padding:90px;
 .Section7Change {
   display: flex;
   width: 100%;
@@ -15,11 +16,11 @@ $Section7_height:  calc(100vh - 80px);
     background: #ADCB4F;
     color:white;
     &-heading{
-        font-size:30px;
+        font-size:$Section7_heading_font;
         font-family:'Monserrat';
         font-weight:300;
         padding-bottom:1rem;
-        padding-left:60px;
+        padding-left:$Section7_padding;
         align-self:flex-start;
     }
 
@@ -27,8 +28,8 @@ $Section7_height:  calc(100vh - 80px);
         font-size:12px;
         font-family:'poppins';
         font-weight:200;
-        padding-left:60px;
-        padding-right:60px;
+        padding-left:$Section7_padding;
+        padding-right:$Section7_padding;
         &-text1{
             padding-bottom:1rem;
         }

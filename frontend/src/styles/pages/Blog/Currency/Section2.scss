@@ -47,7 +47,12 @@
     height:100%;
 }
 
-.CurrencySection2:hover .CurrencySection2-card{
-    opacity:1;
-    transition: opacity 1s ease;
+// .CurrencySection2:hover .CurrencySection2-card{
+//     opacity:1;
+//     transition: opacity 1s ease;
+// }
+
+.opacity_appear{
+    opacity:1 !important;
+    transition: opacity 1s ease !important;
 }

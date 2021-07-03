@@ -1,5 +1,6 @@
 $Section3_height:  calc(100vh - 80px);
-
+$Section3_heading_font:28px;
+$Section3_padding:90px;
 .Section3Today {
   display: flex;
   width: 100%;
@@ -30,12 +31,12 @@ $Section3_height:  calc(100vh - 80px);
     background: #5DBC58;
     color:white;
     &-heading{
-        font-size:30px;
+        font-size:$Section3_heading_font;
         font-family:'Monserrat';
         font-weight:250;
         padding-bottom:rem;
         align-self:flex-start;
-        padding-left:60px;
+        padding-left:$Section3_padding;
         padding-bottom:1rem;
     }
 
@@ -43,8 +44,8 @@ $Section3_height:  calc(100vh - 80px);
         font-size:12px;
         font-family:'poppins';
         font-weight:200;
-        padding-left:60px;
-        padding-right:60px;
+        padding-left:$Section3_padding;
+        padding-right:$Section3_padding;
         &-text1{
             padding-bottom:1rem;
         }

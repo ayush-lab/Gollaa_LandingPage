@@ -39,35 +39,42 @@
             &-heading>span{
                 display:block;
             }
-
-        
-            &-para1,&-para2{
+            &-para{
                 text-align: center;
                 font-family: "Poppins";
                 font-size:12px;
                 font-weight:200;
                 transform:translateX(150%);
                 transition:transform 0.7s ease;
+                
+                &-para1,&-para2{
+               
+                }
+                &-para1{
+                    padding-bottom:1rem;
+                }
+            }
 
-            }
-            &-para1{
-                padding-bottom:1rem;
-            }
+        
+           
         }
     }
 
 }
 
-.CitySection1:hover,.CitySection1-right-text-para1
- {
-    transform:translateX(0) ;
-}
+// .CitySection1:hover.CitySection1-right-text-para1
+//  {
+//     transform:translateX(0) ;
+// }
 
-.CitySection1:hover,.CitySection1-right-text-para2
- {
-    transform:translateX(0);
-}
+// .CitySection1:hover,.CitySection1-right-text-para2
+//  {
+//     transform:translateX(0);
+// }
 
+.right_to_left{
+    transform:translateX(0) !important;
+}
 
 @media(max-width:1250px){
     .CitySection1{

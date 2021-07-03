@@ -1,6 +1,7 @@
 .CitySection5{
     background:#A1D8D8;
     display:flex;
+    height:calc(100vh - 80px - 180px);
     &-left{
         flex-basis:50%;
     }
@@ -40,7 +41,7 @@
     &-last{
         position:absolute;
         padding-top:2rem;
-        transform:translateY(150%);
+        transform:translateY(100%);
         transition:all 0.5s ease;
         opacity:0;
         // padding-left:50px;
@@ -63,9 +64,14 @@
     }
 }
 
-.CitySection5:hover .CitySection5-last{
-    transform: translate(0);
-    opacity:1;
+// .CitySection5:hover .CitySection5-last{
+//     transform: translate(0);
+//     opacity:1;
+// }
+
+.Bottom_to_Top{
+    transform: translate(0) !important;
+    opacity:1 !important;
 }
 
 @media(min-width:1450px){

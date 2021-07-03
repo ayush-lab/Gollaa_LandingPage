@@ -1,14 +1,14 @@
-import React from 'react';
+import React,{useState} from 'react';
 // import {Link} from 'react-router-dom';
-import fruit1 from '../../../assets/images/fruit1.png';
-import fruit2 from '../../../assets/images/fruit2.png';
-import fruit3 from '../../../assets/images/fruit3.png';
-import fruit4 from '../../../assets/images/fruit4.png';
-import fruit5 from '../../../assets/images/fruit5.png';
-import fruit6 from '../../../assets/images/fruit6.png';
-import fruit7 from '../../../assets/images/fruit7.png';
-import fruit8 from '../../../assets/images/fruit8.png';
-import fruit9 from '../../../assets/images/fruit9.png';
+import Fruit1 from '../../../assets/images/fruit1.png';
+import Fruit2 from '../../../assets/images/fruit2.png';
+import Fruit3 from '../../../assets/images/fruit3.png';
+import Fruit4 from '../../../assets/images/fruit4.png';
+import Fruit5 from '../../../assets/images/fruit5.png';
+import Fruit6 from '../../../assets/images/fruit6.png';
+import Fruit7 from '../../../assets/images/fruit7.png';
+import Fruit8 from '../../../assets/images/fruit8.png';
+import Fruit9 from '../../../assets/images/fruit9.png';
 
 
 
@@ -16,7 +16,20 @@ import fruit9 from '../../../assets/images/fruit9.png';
 export default function TerroirSection2(){
 
 
-//   const [Section2,Section2Handler] = useState({Hover:false});
+  // state to save the hover state of fruits
+  const [fruit1,fruit1Handler] = useState(false);
+  const [fruit2,fruit2Handler] = useState(false);
+  const [fruit3,fruit3Handler] = useState(false);
+  const [fruit4,fruit4Handler] = useState(false);
+  const [fruit5,fruit5Handler] = useState(false);
+  const [fruit6,fruit6Handler] = useState(false);
+  const [fruit7,fruit7Handler] = useState(false);
+  const [fruit8,fruit8Handler] = useState(false);
+  const [fruit9,fruit9Handler] = useState(false);
+
+
+console.log("fruit1",fruit1)
+console.log("fruit2",fruit2)
 
 
     return(
@@ -36,19 +49,90 @@ export default function TerroirSection2(){
 
                     <div className="TerroirSection2-right-middle">
                         <div className="TerroirSection2-right-middle-col1">
-                            <img src={fruit1} alt="fruits"/>
-                            <img src={fruit2} alt="fruits"/>
-                            <img src={fruit3} alt="fruits"/>
+
+                            <div onMouseEnter={()=>fruit1Handler(true)} 
+                                onMouseLeave={()=>fruit1Handler(false)}
+                                className="relative">
+                                <p className={fruit1 ? "fruit-text-none" : "TerroirSection2-right-middle-col1-name1"}>
+                                    Strawberry
+                                </p>
+                                <img className={fruit1 ? "TerroirSection2-right-middle-col1-fruit1" : "fruit-picture-none"} src={Fruit1} alt="fruits"/>
+
+                            </div>
+                            
+
+                            <div onMouseEnter={()=>fruit2Handler(true)} 
+                                 onMouseLeave={()=>fruit2Handler(false)} 
+                                 className="relative">
+                                <p className={fruit2 ? "fruit-text-none" : "TerroirSection2-right-middle-col1-name2"}>
+                                    Ghingaru
+                                </p>
+                                <img className={fruit2 ? "TerroirSection2-right-middle-col1-fruit2" : "fruit-picture-none"} src={Fruit4} alt="fruit"/>
+
+                            </div>
+                          
+                            <div onMouseEnter={()=>fruit3Handler(true)} 
+                                 onMouseLeave={()=>fruit3Handler(false)} >
+                                <p className={fruit3 ? "fruit-text-none" :"TerroirSection2-right-middle-col1-name3"}>
+                                    Mulbarries
+                                </p>
+                                <img className={fruit3 ? "TerroirSection2-right-middle-col1-fruit3" : "fruit-picture-none"} src={Fruit7} alt="fruit"/>
+
+                            </div>
+                     
                         </div>
+
                         <div className="TerroirSection2-right-middle-col2">
-                            <img src={fruit4} alt="fruit"/>
-                            <img src={fruit5} alt="fruit"/>
-                            <img src={fruit6} alt="fruit"/>
+                            <div onMouseEnter={()=>fruit4Handler(true)} 
+                                onMouseLeave={()=>fruit4Handler(false)} className="relative">
+                                <p  className={fruit4 ? "fruit-text-none" :"TerroirSection2-right-middle-col2-name1"}>Kafal</p>
+                            <img className={fruit4 ? "TerroirSection2-right-middle-col2-fruit1" : "fruit-picture-none"} src={Fruit2} alt="fruits"/>
+
+                            </div>
+                            
+                            
+                            <div onMouseEnter={()=>fruit5Handler(true)} 
+                               onMouseLeave={()=>fruit5Handler(false)} className="relative">
+                                <p className={fruit5 ? "fruit-text-none" :"TerroirSection2-right-middle-col2-name2"}>Apricot</p>
+                                <img className={fruit5 ? "TerroirSection2-right-middle-col2-fruit2" : "fruit-picture-none"} src={Fruit5} alt="fruit"/>
+
+                            </div>
+                         
+
+                            <div  
+                              onMouseEnter={()=>fruit6Handler(true)} 
+                               onMouseLeave={()=>fruit6Handler(false)} className="relative">
+                                <p  className={fruit6 ? "fruit-text-none" :"TerroirSection2-right-middle-col2-name3"}>Plum</p>
+                                <img className={fruit6 ? "TerroirSection2-right-middle-col2-fruit3" : "fruit-picture-none"} src={Fruit8} alt="fruit"/>
+
+                            </div>
                         </div>
+
+                        
                         <div className="TerroirSection2-right-middle-col3">
-                            <img src={fruit7} alt="fruit"/>
-                            <img src={fruit8} alt="fruit"/>
-                            <img src={fruit9} alt="fruit"/>
+                            <div onMouseEnter={()=>fruit7Handler(true)} 
+                                onMouseLeave={()=>fruit7Handler(false)} className="relative">
+                                 <p className={fruit7 ? "fruit-text-none" :"TerroirSection2-right-middle-col3-name1"}>Hisalu</p>
+                                 <img className={fruit7 ? "TerroirSection2-right-middle-col3-fruit1" : "fruit-picture-none"} src={Fruit3} alt="fruits"/>
+
+                            </div>
+                               
+                            
+                            <div onMouseEnter={ ()=>fruit8Handler(true)}
+                                onMouseLeave={()=>fruit8Handler(false)} className="relative" >
+                                <p  className={fruit8 ? "fruit-text-none" :"TerroirSection2-right-middle-col3-name2"}> Dadim</p>
+                                <img className={fruit8 ? "TerroirSection2-right-middle-col3-fruit2" : "fruit-picture-none"} src={Fruit6} alt="fruit"/>
+
+                            </div>
+
+
+                            <div onMouseEnter={()=>fruit9Handler(true)}
+                                onMouseLeave={()=>fruit9Handler(false)}  className="relative">
+                                <p className={fruit9 ? "fruit-text-none" :"TerroirSection2-right-middle-col3-name3"}> Kilmode</p>
+                                <img className={fruit9 ? "TerroirSection2-right-middle-col3-fruit3" : "fruit-picture-none"} src={Fruit9} alt="fruit"/>
+
+                            </div>
+                            
                         </div>
                     </div>
 

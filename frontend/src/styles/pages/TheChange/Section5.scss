@@ -1,5 +1,8 @@
 $Section5_height: calc(100vh - 80px);
 
+$Section5_heading_font:28px;
+$Section5_padding:90px;
+
 .Section5Change {
   display: flex;
   width: 100%;
@@ -30,19 +33,19 @@ $Section5_height: calc(100vh - 80px);
     background: #CEC41D;
     color:white;
     &-heading{
-        font-size:30px;
+        font-size:$Section5_heading_font;
         font-family:'Monserrat';
         font-weight:300;
         padding-bottom:1rem;
-        padding-left:60px;
+        padding-left:$Section5_padding;
     }
 
     &-para{
         font-size:12px;
         font-family:'poppins';
         font-weight:200;
-        padding-left:60px;
-        padding-right:60px;
+        padding-left:$Section5_padding;
+        padding-right:$Section5_padding;
         &-text1{
             padding-bottom:1rem;
         }
@@ -52,7 +55,7 @@ $Section5_height: calc(100vh - 80px);
         &-text3{
           font-family: 'Monserrat';
           font-weight: 250;
-          font-size:30px;
+          font-size:$Section5_heading_font;
           padding-bottom:1rem;
         }
     }

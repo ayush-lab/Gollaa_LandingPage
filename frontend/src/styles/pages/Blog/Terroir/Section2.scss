@@ -22,7 +22,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
+        padding-right:60px;
         &-top,&-bottom{
             color:#145629;
             font-family:'poppins';
@@ -34,13 +35,71 @@
             &-col1,&-col2,&-col3{
                 display: flex;
                 flex-direction: column;
+
+                &-fruit1,&-fruit2,&-fruit3{
+                    opacity:1;
+                    display:block;
+                    visibility:visible;
+                    transition:all 0.7s ease;
+                    cursor:pointer;
+                    // width:100px;
+                    // height:120px;
+                    // object-fit: cover;
+                    // object-position: center;
+                }
+
+                &-name1,&-name2,&-name3{
+                    text-align:center;
+                    transition:all 0.7s ease;
+                    width:100px;
+                    height:120px;
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                    color:#145629;
+                    font-family:'Monserrat';
+                    font-weight:300;
+                    font-size:22px;
+                    cursor:pointer;
+                }
+                &-name1>p,&-name2>p,&-name3>p{
+                    opacity:1;
+                    display:block;
+                }
+              
+               
             }
             &-col1{
                 padding-right: 40px;
+              
+                &-fruit2,&-fruit3{
+                    margin-top:20px;
+                }
+                &-name2,&-name3{
+                    margin-top:20px;
+                }
             }
             &-col2{
+                // padding-top:20px;
                 padding-right: 40px;
+                &-fruit2,&-fruit3{
+                    margin-top:20px;
+                }
+                &-name2,&-name3{
+                    margin-top:20px;
+                }
             }
+            &-col3{ 
+                // padding-top:20px;
+                &-fruit2,&-fruit3{
+                    margin-top:20px;
+
+                }
+                &-name2,&-name3{
+                    margin-top:20px;
+                }
+            }
+           
            
         }
         &-middle img{
@@ -51,4 +110,21 @@
         }
     }
 
+}
+
+.fruit-picture-none {
+    opacity:0;
+    display:none;
+    width:0;
+    height:0;
+    visibility:hidden;
+    transition:all 0.5s ease;
+}
+.fruit-text-none {
+    opacity:0;
+    display:none;
+    // width:0;
+    // height:0;
+    visibility:hidden;
+    transition:all 0.5s ease;
 }

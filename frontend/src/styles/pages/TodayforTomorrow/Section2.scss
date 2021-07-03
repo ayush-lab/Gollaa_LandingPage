@@ -1,4 +1,6 @@
 $Section2_height:  calc(100vh - 80px);
+$Section2_padding:90px;
+$Section2_heading_font:28px;
 
 .Section2Today {
   display: flex;
@@ -15,11 +17,11 @@ $Section2_height:  calc(100vh - 80px);
     background: #5FAF42;
     color:black;
     &-heading{
-        font-size:30px;
+        font-size:$Section2_heading_font;
         font-family:'Monserrat';
         font-weight:250;
         padding-bottom:1rem;
-        padding-left:60px;
+        padding-left:$Section2_padding;
         align-self:flex-start;
     }
 
@@ -27,8 +29,8 @@ $Section2_height:  calc(100vh - 80px);
         font-size:12px;
         font-family:'poppins';
         font-weight:200;
-        padding-left:60px;
-        padding-right:60px;
+        padding-left:$Section2_padding;
+        padding-right:$Section2_padding;
         &-text1{
             padding-bottom:1rem;
         }

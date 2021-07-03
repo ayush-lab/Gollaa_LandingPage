@@ -1,5 +1,7 @@
 $Section1_height: calc(100vh - 80px);
-
+$Section1_heading_font:36px;
+$Section1_subHeading_font:28px;
+$Section1_padding:90px;
 .Section1Change {
   display: flex;
   width: 100%;
@@ -30,7 +32,7 @@ $Section1_height: calc(100vh - 80px);
     background: #ADCB4F;
     color:white;
     &-heading{
-        font-size:36px;
+        font-size:$Section1_heading_font;
         font-family:'Monserrat';
         font-weight:300;
         padding-bottom:2rem;
@@ -40,15 +42,15 @@ $Section1_height: calc(100vh - 80px);
         font-size:12px;
         font-family:'poppins';
         font-weight:200;
-        padding-left:60px;
-        padding-right:60px;
+        padding-left:$Section1_padding;
+        padding-right:$Section1_padding;
         &-text1{
             padding-bottom:1rem;
         }
         &-text2{
           font-family: 'Monserrat';
           font-weight: 300;
-          font-size:30px;
+          font-size:$Section1_subHeading_font;
           padding-bottom:1rem;
         }
     }

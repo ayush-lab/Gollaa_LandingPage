@@ -1,7 +1,19 @@
 .CurrencySection5{
-    height:calc(100vh -80px);
+    height:calc(100vh - 80px - 180px);
+    width:100%;
     position:relative;
-    &-text{
+    overflow:hidden;
+    &-overlay{
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height: 100%;
+        background:#000;
+        opacity:0.3;
+        z-index:1;
+    }
+    &-textBlock{
         position:absolute;
         width:100%;
         height:100%;
@@ -9,54 +21,81 @@
         flex-direction: column;
         align-items:center;
         justify-content: center;
-        top:-0;
-        left:0;
+        top:0;
         color: white;
         text-align:center;
         padding-top:50px;
         padding-bottom:50px;
-        &-heading{
-            font-family: "Monserrat";
-            font-size:30px;
-            font-weight:300;
-            padding-bottom:1rem;
-            text-align:center;
-        }
-        &-heading>span{
-            display: block;
-        }
+        &-text{
+            width:40%;
+            z-index:2;
 
-       
-        &-para1,&-para2{
-            text-align: center;
-            font-family: "Poppins";
-            font-size:12px;
-            font-weight:200;
-        }
-        &-para1{
-            padding-bottom:0.5rem;
-        }
+            &-heading{
+                font-family: "Monserrat";
+                font-size:30px;
+                font-weight:300;
+                padding-bottom:1rem;
+                text-align:center;
+            }
+            &-heading>span{
+                display: block;
+            }
 
+        
+            &-para1,&-para2{
+                text-align: center;
+                font-family: "Poppins";
+                font-size:12px;
+                font-weight:200;
+            }
+            &-para1{
+                padding-bottom:0.5rem;
+            }
+        }
         
     }
     &-image{
+        position:absolute;
         width:100%;
-        height:calc(100vh - 80px);
+        height:100%;
+        background:brown;
+        top:0;
+        z-index:0;
+        overflow:hidden;
+        // &-img{
+        //     width: 100%;
+        //     height:100%;
+        //     background:url(../../../../assets/images/coinRain.svg);
+        //     // background-size:100% 100%;
+        //     object-fit:cover;
+        //     background-repeat: repeat-y;
+        //     transition:all 1s ease;
+        //     z-index:0;
+        // }
     }
+    
     &-image>img{
         width:100%;
         height:100%;
+        object-fit:cover;
+        transform:translateY(0);
+        background-repeat: repeat-y;
+        transition:all 1s ease;
+        z-index:0;
+
     }
-   
     
 }
 
-// .CurrencySection4:hover .CurrencySection4-left-text-para1
-//  {
-//     transform:translateX(0);
-// }
-
-// .CurrencySection4:hover .CurrencySection4-left-text-para2
-//  {
-//     transform:translateX(0);
+// .CurrencySection5:hover .CurrencySection5-image-img{
+//     background:url(../../../../assets/images/coinRain.svg);
+//     background-size:100% 50%;
+//     background-size:100% 100%;
+//     object-fit:cover;
+//     transform:translateY(0%);
+//     background-repeat: repeat-y;
+//     transition:all 1s ease;
+//     z-index:0;
+//     width: 100%;
+//     height:100%;
 // }
