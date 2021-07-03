@@ -9,14 +9,14 @@ import Gollaa_Trade from '../../../assets/images/Gollaa Trade Illustration.svg';
 
 export default function Section1(){
 
-  const [shop,shopHandler] = useState({shopOpen:false,shopHover:false});
+  const [shop,shopHandler] = useState({shopOpen:false,shopHover:false,shopClicked:false});
   const [grow,growHandler] = useState({growOpen:false,growHover:false});
   const [support,supportHandler] = useState({supportOpen:false,supportHover:false});
   const [stay,stayHandler] = useState({stayOpen:false,stayHover:false});
 
 
   const shopFullScreen=()=>{
-    shopHandler(prevState=>({...prevState,shopOpen:!prevState.shopOpen}))
+    shopHandler(prevState=>({...prevState,shopOpen:!prevState.shopOpen,shopClicked:!prevState.shopClicked}))
   }
   const growFullScreen=()=>{
     growHandler(prevState=>({...prevState,growOpen:!prevState.growOpen}))
@@ -30,8 +30,11 @@ export default function Section1(){
 
   const shopBackToNormalScreen=()=>{
     let timeout = null;
+    // shopRef.current.classList.remove('Section1-row1-shopOpen');
     shopRef.current.classList.add('Section1-row1-shopClosed');
     shopFullScreenText.current.classList.add('Section1-row1-shopClosed-textBlock');
+    // shopFullScreenText.current.classList.add('Section1-row1-shopClosed-textBlock');
+
 
     if(timeout){
         clearTimeout(timeout)
@@ -39,7 +42,7 @@ export default function Section1(){
     }
     setTimeout(()=>{
         shopRef.current.classList.remove('Section1-row1-shopClosed')
-        shopHandler(prevState=>({...prevState,shopOpen:!prevState.shopOpen}))
+        shopHandler(prevState=>({...prevState,shopOpen:!prevState.shopOpen,shopClicked:!prevState.shopClicked}))
         
     },1500)
   }
@@ -102,8 +105,20 @@ export default function Section1(){
   let supportRef=useRef();
   let supportFullScreenText=useRef();
 
+  let overlayShop = []
+  if(shop.shopHover && !shop.shopClicked){
+      overlayShop = ["overlay-come"]
+  }
+  if(!shop.shopHover){
+    //   let ind = overlayShop.indexOf("overlay-come");
+    //   overlayShop.splice(ind,1);
+      overlayShop = ["overlay-exit"];
+  }
+  if(shop.shopClicked){
+      overlayShop=["overlay-motion"]
+  }
 
-  console.log(shop)
+  console.log(overlayShop)
 
     return(
         <React.Fragment>
@@ -116,11 +131,12 @@ export default function Section1(){
                          onMouseLeave={()=>{shopHandler(prevState=>({...prevState,shopHover:false}))}} 
                          ref={shopRef} className={shop.shopOpen ? "Section1-row1-shopOpen" : "Section1-row1-shop"}>
                         
-                        <span className={shop.shopOpen ? "Section1-row1-shopOpen-cross" : "displayNone"} onClick={shopBackToNormalScreen} >
+                        <span className={shop.shopOpen ? "Section1-row1-shopOpen-cross" : "displayNone"}
+                              onClick={shopBackToNormalScreen} >
                               <img  src={Cross} alt="Overlay-cross"/>
                         </span>
 
-                        <span className="Section1-row1-shop-image">
+                        <span className={shop.shopOpen ? "Section1-row1-shopOpen-image" : "Section1-row1-shop-image"} >
                             <img src={Gollaa_Shop}  alt="Gollaa_shop" />
                         </span>
 
@@ -160,7 +176,7 @@ export default function Section1(){
                                 <button>Download App</button>
                             </div>
                         </div>
-                        <div className={shop.shopHover ? "overlay-come": "overlay-exit"}></div>
+                        <div className={overlayShop.join('')}></div>
                  </div>
                  
                  {/* grow card */}
@@ -240,10 +256,11 @@ export default function Section1(){
                                 <img  className="Section1-row1-support-text-Gollaa-image" src={Gollaa_text} alt="Golla_text"/>
                                 <span className="Section1-row1-support-text-Gollaa-heading" >Support</span>
                             </div>
-                            <p className="Section1-row1-support-text-subheading">Extending Support to <br/> local Communities</p>
-                            <div className={support.supportHover ? "maxOpacity" : "Section1-row1-support-text-app"}>
+                            <p className="Section1-row1-support-text-subheading">Extending Support to <br/> local Communities
+                            <div className={support.supportHover ? "maxOpacity" : "Section1-row1-support-text-subheading-app"}>
                                 <span onClick={()=>supportFullScreen()}>See More</span>
                             </div>
+                            </p>
                         </div>
 
                         <div ref={supportFullScreenText} className={support.supportOpen ? "Section1-row1-supportOpen-textBlock " : "displayNone"} >

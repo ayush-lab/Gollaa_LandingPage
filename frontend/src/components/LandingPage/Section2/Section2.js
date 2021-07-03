@@ -15,7 +15,9 @@ export default function Section2(){
                onMouseLeave={()=>{Section2Handler(prevState=>({...prevState,Hover:false}))}}>
 
             <div className="Section2-picture">
-                <img className="Section2-picture-earth" src={earth} alt="earth with factories and trees"/>
+                <div className="Section2-picture-earth">
+                    <img  src={earth} alt="earth with factories and trees"/>
+                </div>
 
                 <div className="Section2-picture-top">
 

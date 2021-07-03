@@ -1,4 +1,4 @@
-$Footer-height: 200px;
+$Footer-height: 180px;
 
 // colors
 $Light-Green: #8abb2a;
@@ -54,6 +54,7 @@ $Pure-Green: #5faf42;
     justify-content: center;
     align-items: center;
     padding-left: 20px;
+    padding-top:20px;
     flex-basis: 30%;
     background: $Pure-Green;
     font-family: "Monserrat";
@@ -61,7 +62,7 @@ $Pure-Green: #5faf42;
 
     &-details {
       &-info {
-        font-size: 16px;
+        font-size: 14px;
         padding-bottom: 10px;
       }
 
@@ -74,7 +75,7 @@ $Pure-Green: #5faf42;
       }
 
       &-contact > span {
-        font-size: 14px;
+        font-size: 12px;
         margin-left: 15px;
       }
     }
@@ -97,11 +98,11 @@ $Pure-Green: #5faf42;
     }
     &-row1 p:nth-child(1) {
       text-transform: uppercase;
-      font-size: 16px;
+      font-size: 14px;
       padding-bottom: 12px;
     }
     &-row1 p {
-      font-size: 14px;
+      font-size: 12px;
       padding-bottom: 8px;
     }
 
@@ -114,7 +115,7 @@ $Pure-Green: #5faf42;
     background-color: $Pure-Yellow;
 
     &-logo {
-      flex-basis: 200px;
+      flex-basis: 150px;
     }
     &-logo > img {
       width: 100%;
@@ -153,7 +154,7 @@ $Pure-Green: #5faf42;
         }
 
         &-contact > span {
-          font-size: 14px;
+          font-size: 12px;
           margin-left: 15px;
         }
       }
@@ -165,27 +166,14 @@ $Pure-Green: #5faf42;
       &-row1 {
         padding-left: 20px;
       }
+     
+      &-row1 p {
+        font-size: 12px;
+      }
       &-row1 p:nth-child(1) {
         padding-bottom: 5px;
         text-transform: uppercase;
-        font-size: 16px;
-      }
-      &-row1 p:nth-child(2) {
         font-size: 14px;
-      }
-
-      &-row2 {
-        height: 50%;
-        width: 100%;
-
-        &-col1 {
-          width: 80%;
-          padding-left: 20px;
-          font-size: 14px;
-        }
-        &-col2 {
-          width: 50%;
-        }
       }
     }
     &-col4 {
@@ -249,10 +237,10 @@ $Pure-Green: #5faf42;
         padding-bottom: 5px;
         text-transform: lowercase;
         text-transform: capitalize;
-        font-size: 16px;
+        font-size: 14px;
       }
       &-row1 p {
-        font-size: 14px;
+        font-size: 12px;
       }
 
       &-row2 {
@@ -338,15 +326,16 @@ $Pure-Green: #5faf42;
       &-row1 {
         padding-left: 20px;
       }
+      &-row1 p {
+        font-size: 12px;
+      }
       &-row1 p:nth-child(1) {
         padding-bottom: 5px;
         text-transform: lowercase;
         text-transform: capitalize;
-        font-size: 16px;
-      }
-      &-row1 p:nth-child(2) {
         font-size: 14px;
       }
+  
 
       // &-row2 {
       //   height: 50%;

@@ -1,45 +1,47 @@
 .Section3 {
   position:relative;
+  height:calc(100vh - 80px);
   background: #cec41d;
   display: flex;
   width: 100%;
   padding-top: 40px;
-  padding-bottom: 20px;
-  scroll-snap-align: center;
+  padding-bottom: 40px;
+  // scroll-snap-align: center;
 
 
   &-farmingText {
     width: 50%;
     display: flex;
     flex-direction: column;
-    // justify-content: center;
-    // align-content: center;
+    justify-content: center;
+    align-content: center;
     padding-left: 40px;
-    padding-right: 20px;
+    padding-right: 10%;
     z-index: 2;
 
-    &-link{
-      padding-top:16px;
+    &-link,&-btn{
+      padding-top:1.3rem;
       z-index:2;
     }
-    &-link>button{
-      padding-top:16px;
-      padding-left: 12px;
-      padding-top: 6px;
-      padding-right: 18px;
-      padding-bottom: 6px;
-      margin-right: 16px;
+    &-link>button,&-btn>button{
+      width:110px;
+      height:32px;
+      // margin-right: 16px;
       color: white;
       font-family: "Monserrat";
       font-weight: 250;
-      font-size: 14px;
+      font-size: 12px;
       background: #161615 0% 0% no-repeat padding-box;
       border: none;
       outline: none;
       border-radius: 6px;
       overflow: hidden;
       white-space: nowrap;
-
+      opacity:0;
+    }
+    &-btn>button{
+      opacity:1;
+      transition: opacity 0.5s ease;
     }
   }
   &-farmingText p:nth-child(1) {
@@ -47,7 +49,8 @@
     font-family: "Monserrat";
     font-weight: 300;
     font-size: 36px;
-    padding-bottom: 20px;
+    margin:0;
+    padding-bottom: 1rem;
   }
   &-farmingText p:nth-child(1) span {
     display: block;
@@ -55,26 +58,35 @@
 
   &-farmingText p:nth-child(2),
   &-farmingText p:nth-child(3) {
+    margin:0;
     color: black;
     font-family: "Poppins";
     font-weight: 200;
     font-size:12px;
   }
   &-farmingText p:nth-child(2) {
-    padding-bottom: 20px;
+    padding-bottom: 1rem;
     font-size: 16px;
   }
   &-farmingText p:nth-child(2) span {
     display: block;
   }
+  &-farmingText p:nth-child(3) {
+    // padding-right:10%;
+  }
 
   &-farmingImage {
     width: 50%;
+    height:100%;
     display: flex;
     justify-content: center;
     align-items: center;
     &-image {
-      max-width: 100%;
+      width: 100%;
+      height:100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     &-image > img {
       max-width: 90%;

@@ -36,6 +36,15 @@ export default function CitySection1(){
           </div>
 
           <div className="CitySection2">
+             <div className="CitySection2-Agrotourism">
+                  <p className="CitySection2-Agrotourism-heading">What Is Agrotourism?</p>
+                  <p className="CitySection2-Agrotourism-para">What started out as a venture by farmers to earn extra money to 
+                      sustain themselves has now transformed into a global business.
+                       Agrotourism was initiated to help farmers keep pace with their 
+                       dwindling economy with globalization rising at an unprecedented rate.
+                       This tourism focuses on education as well as recreation.</p>
+
+              </div>
               <img src={City3} alt="city1"/>
               <div className="CitySection2-text">
                   <p className="CitySection2-text-heading">What Is Agrotourism?</p>

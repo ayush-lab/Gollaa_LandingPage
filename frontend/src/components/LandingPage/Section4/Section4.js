@@ -14,8 +14,9 @@ export default function Section4(){
              onMouseLeave={()=>{Section4Handler(prevState=>({...prevState,Hover:false}))}}>
 
             <div className="Section4-picture">
-                <img className="Section4-picture-earth" src={earth_Illustration} alt="earth being built"/>
-
+                <div className="Section4-picture-earth">
+                    <img  src={earth_Illustration} alt="earth being built"/>
+                </div>
                 <div className="Section4-picture-top">
 
                 </div>

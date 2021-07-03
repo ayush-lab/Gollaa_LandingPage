@@ -197,3 +197,34 @@
     }
   }
 }
+
+
+
+
+@media(max-width:900px){
+ .Navbar-menu-options-list,
+ .Navbar-menu-none-list{
+   width:200px;
+ } 
+}
+
+// @media(max-width:770px){
+//   .Navbar-menu-options-list,
+//   .Navbar-menu-none-list{
+//     width:190px;
+//   } 
+//  }
+
+//  @media(max-width:570px){
+//  .Navbar-menu-options-list,
+//  .Navbar-menu-none-list{
+//    width:180px;
+//  } 
+// }
+
+@media(max-width:400px){
+  .Navbar-menu-options-list,
+  .Navbar-menu-none-list{
+    width:160px;
+  } 
+ }

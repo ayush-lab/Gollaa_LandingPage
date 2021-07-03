@@ -25,7 +25,7 @@ export default function Section3(){
                       heroes - the farmers generate profits form their 
                     products without having to deal with any middlemen.</p>
 
-                <div className={Section3.Hover ? "Section3-farmingText-link": "displayNone"}>
+                <div className={Section3.Hover ?  "Section3-farmingText-btn" :"Section3-farmingText-link"}>
                     <button>Download App</button></div>
                 </div>
 
