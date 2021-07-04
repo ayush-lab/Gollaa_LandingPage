@@ -8,21 +8,18 @@
 
       }
       100%{
-        height:100vh;
+        height:calc(100vh - 80px);
         width:100%;
       }
     }
     
     @keyframes textAnimation{
       0%{
-        transform: translateX(-20%);
+        transform: translateX(15%);
         opacity:0;
-        display:none;
       }
       15%{
         opacity:0;
-      }
-      50%{
       }
       100%{
         transform: translateX(0);
@@ -39,24 +36,24 @@
       }
       50%{
         opacity:0;
+        // display:none;
       }
       100%{
         opacity:0;
-        transform: translateX(-20%);
+        transform: translateX(-30%);
       }
     }
 
     @keyframes zoomedOut{
       0%{
         width:100vw;
-        height:100vh;
+        height:calc(100vh - 80px);
+
       }
       100%{
         // height:300px;
         // height:calc(50vh);
         height:calc(50vh - 40px);
-
-
         width:50vw;
       }
     }
@@ -172,7 +169,7 @@
       margin-right: 16px;
       color: black;
       font-family: "Monserrat";
-      font-weight: 250;
+      font-weight: 300;
       font-size: 12px;
       background: inherit;
       border: 1.5px solid black;
@@ -201,7 +198,7 @@ $Section1_height: calc(100vh - 80px);
       position:absolute;
       background: #cfd136;
       max-width:100vw;
-      height:100vh;
+      height:calc(100vh - 80px);
       flex-grow: 1;
       flex-shrink: 1;
       display: flex;
@@ -211,10 +208,7 @@ $Section1_height: calc(100vh - 80px);
       z-index:10;
       animation: zoomIn 1.5s ease;
       opacity:1;
-      padding-left: 30px;
-      padding-right: 20px;
-      padding-top: 20px;
-      padding-bottom: 20px;
+      padding:0;
       &-image{
         display:flex;
         justify-content: center;
@@ -232,7 +226,7 @@ $Section1_height: calc(100vh - 80px);
         position:absolute;
         top:5%;
         right:3%;
-        z-index:3;
+        z-index:10;
         opacity:1;
         transform:opacity 0.5s ease;
       }
@@ -242,14 +236,16 @@ $Section1_height: calc(100vh - 80px);
      
       &-textBlock{
         width: 50%;
-        height:100vh;
+        height:calc(100vh - 80px);
         display: flex;
         flex: 0 0 50vw;
         flex-direction: column;
         justify-content: center;
         align-items:flex-start;
-        padding-right:50px;
-        padding-bottom:50px;
+        padding-left:10px;
+        padding-right:90px;
+        // padding-right:50px;
+        // padding-bottom:50px;
         // animation: txt 2s forwards;
         animation:textAnimation 2s ease;
 
@@ -259,14 +255,15 @@ $Section1_height: calc(100vh - 80px);
           white-space: nowrap;
 
           &-image {
-            max-width: 50%;
-            margin: 0;
+            // max-width: 50%;
+            max-width: 120px;
+            margin-right: 6px;
           }
           &-heading {
             font-size: 16px;
-            font-family: Poppins;
+            font-family: "Poppins";
             font-weight: 200;
-            padding-left: 5px;
+            // padding-left: 5px;
           }
         }
         &-subheading1{
@@ -285,7 +282,7 @@ $Section1_height: calc(100vh - 80px);
         }
         &-app >button{
           @extend .download_button;
-          margin-top:1.5rem;
+          margin-top:1.2rem;
         }
       }
       
@@ -297,7 +294,6 @@ $Section1_height: calc(100vh - 80px);
       background: #cfd136;
       z-index:10;
       width:50%;
-      // height:300px;
       height:calc(50vh - 40px);
       transition: all 1s ease !important;
       animation: zoomedOut 1.5s forwards !important;
@@ -307,6 +303,7 @@ $Section1_height: calc(100vh - 80px);
         justify-content: center;
         align-items:center;
         flex-basis:50%;
+        margin-left:20%;
         width:50%;
       }
       &-image>img{
@@ -331,7 +328,7 @@ $Section1_height: calc(100vh - 80px);
       // height:300px !important;
       // height:calc(50%);
       height:calc(50vh - 40px);
-      transition: all 1s ease;
+      // transition: all 0s ease;
       left:0;
       opacity:1;
       flex-grow: 1;
@@ -371,7 +368,7 @@ $Section1_height: calc(100vh - 80px);
           }
           &-heading {
             font-size: 16px;
-            font-family: Poppins;
+            font-family: "Poppins";
             font-weight: 200;
             padding-left: 6px;
           }

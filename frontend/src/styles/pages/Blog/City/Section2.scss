@@ -24,14 +24,14 @@
         width:100%;
         height:100%;
         display:flex;
-        justify-content:center;
+        justify-content:flex-start;
         align-items:center;
         flex-direction:column;
         text-align:center;
         color:white;
         padding-left:30%;
         padding-right:30%;
-        padding-top:40px;
+        padding-top:90px;
 
         &-heading{
             font-family: "Monserrat";

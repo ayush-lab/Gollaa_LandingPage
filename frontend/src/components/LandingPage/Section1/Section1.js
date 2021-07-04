@@ -42,6 +42,7 @@ export default function Section1(){
     }
     setTimeout(()=>{
         shopRef.current.classList.remove('Section1-row1-shopClosed')
+        shopFullScreenText.current.classList.remove('Section1-row1-shopClosed-textBlock');
         shopHandler(prevState=>({...prevState,shopOpen:!prevState.shopOpen,shopClicked:!prevState.shopClicked}))
         
     },1500)

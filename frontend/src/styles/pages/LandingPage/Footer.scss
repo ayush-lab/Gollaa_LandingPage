@@ -54,7 +54,7 @@ $Pure-Green: #5faf42;
     justify-content: center;
     align-items: center;
     padding-left: 20px;
-    padding-top:20px;
+    padding-top:0px;
     flex-basis: 30%;
     background: $Pure-Green;
     font-family: "Monserrat";
@@ -89,7 +89,8 @@ $Pure-Green: #5faf42;
     background:#5DBC58;
     display:flex;
     justify-content: center;
-    align-items:center;
+    align-items:flex-start;
+    padding-top:30px;
 
     &-row1 { 
       display: flex;
@@ -323,6 +324,8 @@ $Pure-Green: #5faf42;
     &-col3 {
       height: $Footer-height;
       flex-basis: 40%;
+      padding:0;
+      align-items:center;
       &-row1 {
         padding-left: 20px;
       }

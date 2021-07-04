@@ -36,6 +36,15 @@
         overflow-x: auto;
         overflow-y: hidden;
     }
+    &-mobcards{
+        display:none;
+        align-items:center;
+        justify-content:space-around;
+        // padding-left: 50px;
+        // padding-right:50px;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
 }
 
 
@@ -95,6 +104,12 @@
             font-size:18px;
         }
         &-cards{
+            display:flex;
+            align-items:flex-start;
+            justify-content:flex-start;
+            display:none;
+        }
+        &-mobcards{
             display:flex;
             align-items:flex-start;
             justify-content:flex-start;

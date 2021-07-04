@@ -10,7 +10,7 @@ import City2 from '../../../assets/images/city2.png';
 export default function CitySection1(){
 
 
-    let RightToLeftRef=React.useRef();
+    // let RightToLeftRef=React.useRef();
     let zoomOut = React.useRef();
     let LeftToRightRef = React.useRef();
     let BottomToTopRef = React.useRef();
@@ -18,7 +18,7 @@ export default function CitySection1(){
 
     return(
         <>
-          <div onMouseEnter={()=>{RightToLeftRef.current.classList.add('right_to_left')}} className="CitySection1"> 
+          <div className="CitySection1"> 
 
                 <div className="CitySection1-left">
                     <img src={City} alt="city"/>
@@ -28,7 +28,7 @@ export default function CitySection1(){
                     <div className="CitySection1-right-text">
                     <p className="CitySection1-right-text-heading">An Escape Nestled <span>Away From The Cities</span></p>
                     
-                        <div ref={RightToLeftRef} className="CitySection1-right-text-para">
+                        <div  className="CitySection1-right-text-para">
                             <p  className="CitySection1-right-text-para-para1">Agrotourism, a term that has earned immense popularity in recent years, with more 
                                 urban people craving the serenity and calm of the countryside. With a phone that never 
                                 stops ringing or the lack of fresh air, city life can be daunting at times. Tourists can
@@ -112,6 +112,14 @@ export default function CitySection1(){
                     <p className="CitySection5-right-heading">Environmental Impact of Agrotourism</p>
                     <p className="CitySection5-right-para">Agrotourism is the perfect amalgamation of luxury and sustainability. It has brought forward the need for creating awareness about climate change and organic production activities. Agrotourism is an eco-friendly way of rejuvenating and discovering the beauty of farms. It has a reduced footprint
                     as compared to conventional tourism.</p>
+                </div>
+
+                <div className="CitySection5-lastDummy">
+                    <p className="CitySection5-lastDummy-heading">Final Words</p>
+                    <p className="CitySection5-lastDummy-para">So the next time life gets too overwhelming with a 
+                        hectic schedule, polluted environment, or overcrowded localities, choose to take a break from 
+                        the hustle and bustle. A pleasant and comfortable stay at a farm can reduce your stress
+                        and anxiety and help you come back with replenished energy and focus.</p>
                 </div>
 
                 <div ref={BottomToTopRef} className="CitySection5-last">

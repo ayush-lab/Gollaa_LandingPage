@@ -1,29 +1,45 @@
+
+$Section5_padding:90px;
+$Section5_heading_font:28px;
+
 .CitySection5{
     background:#A1D8D8;
     display:flex;
     height:calc(100vh - 80px - 180px);
+    position:relative;
+    max-width:100vw;
+
     &-left{
         flex-basis:50%;
+        width:50%;
     }
     &-left >img{
         width:100%;
         height:100%;
+        object-fit: cover;
     }
     &-text{
         flex-basis:50%;
-        padding-left:50px;
-        padding-right: 50px;
-        padding-top:60px;
+        width:50%;
+        // padding-top:60px;
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
     }
     &-right{
-        
+        // padding-bottom:2rem;
+        width:100%;
+        padding-left:$Section5_padding;
+        padding-right: $Section5_padding;
         &-heading,&-para{
            
         }
 
         &-heading{
            font-family: "Monserrat";
-           font-size:30px;
+           font-size:$Section5_heading_font;
            font-weight:300;
            padding-bottom:1rem;
            text-align:center;
@@ -38,17 +54,25 @@
        }
     }
 
-    &-last{
+    &-last,&-lastDummy{
         position:absolute;
-        padding-top:2rem;
+        top:50%;
+        left:50%;
+        width:50%;
+        height:50%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
         transform:translateY(100%);
         transition:all 0.5s ease;
         opacity:0;
-        // padding-left:50px;
-        padding-right: 50px;
+        padding-top:1rem;
+        padding-left:$Section5_padding;
+        padding-right: $Section5_padding;
         &-heading{
             font-family: "Monserrat";
-            font-size:30px;
+            font-size:$Section5_heading_font;
             font-weight:300;
             padding-bottom:1rem;
             text-align:center;
@@ -61,6 +85,22 @@
             font-size:12px;
             font-weight:200;
         }
+    }
+    &-lastDummy{
+        position:relative !important;
+        opacity:0;
+        transform:translateY(0%) !important;
+        // padding-left:0 !important;
+        // padding-right: 0 !important;
+        top:0;
+        left:0;
+        // width:100%;
+        height:auto !important;
+        width:100% !important;
+        display:block;
+        flex-direction: none;
+        align-items: none;
+        justify-content: none;
     }
 }
 

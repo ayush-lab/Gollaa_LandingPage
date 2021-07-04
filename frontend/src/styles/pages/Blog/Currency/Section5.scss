@@ -1,8 +1,11 @@
 .CurrencySection5{
     height:calc(100vh - 80px - 180px);
-    width:100%;
+    display:flex;
+    max-width:100vw;
     position:relative;
     overflow:hidden;
+    background:#000;
+
     &-overlay{
         position:absolute;
         top:0;
@@ -55,47 +58,47 @@
         
     }
     &-image{
-        position:absolute;
-        width:100%;
-        height:100%;
-        background:brown;
+        max-width:100vw;
+        height:500%;
+        background:rgb(78, 1, 1);
         top:0;
+        left:0;
         z-index:0;
+        transform:translateY(0);
+        transition:all 1.2s ease-in;
         overflow:hidden;
+
         // &-img{
+        //     top:0;
         //     width: 100%;
-        //     height:100%;
-        //     background:url(../../../../assets/images/coinRain.svg);
-        //     // background-size:100% 100%;
+        //     height:500%;
+        //     background:url(../../../../assets/images/coinRain.svg),
+        //                url(../../../../assets/images/coinRain.svg),
+        //                url(../../../../assets/images/coinRain.svg),
+        //                url(../../../../assets/images/coinRain.svg),
+        //                url(../../../../assets/images/coinRain.svg);
+        //     background-position:0 0,0 100%,0 200%, 0 300%, 0 400%;
+        //     transform: translateY(0);
         //     object-fit:cover;
-        //     background-repeat: repeat-y;
+        //     background-repeat:no-repeat,no-repeat,no-repeat,no-repeat,no-repeat;
         //     transition:all 1s ease;
         //     z-index:0;
         // }
     }
     
-    &-image>img{
-        width:100%;
-        height:100%;
+    &-image img{
+        // position:absolute;
+        display:block;
+        width:100vw;
+        height:calc(100% / 4);
         object-fit:cover;
-        transform:translateY(0);
-        background-repeat: repeat-y;
-        transition:all 1s ease;
-        z-index:0;
-
+        z-index:1;
+        // background-size:100%;
+        overflow-x:hidden;
     }
     
 }
 
-// .CurrencySection5:hover .CurrencySection5-image-img{
-//     background:url(../../../../assets/images/coinRain.svg);
-//     background-size:100% 50%;
-//     background-size:100% 100%;
-//     object-fit:cover;
-//     transform:translateY(0%);
-//     background-repeat: repeat-y;
-//     transition:all 1s ease;
-//     z-index:0;
-//     width: 100%;
-//     height:100%;
-// }
+.CurrencySection5:hover .CurrencySection5-image{
+   transform:translateY(calc(-100% / 2));
+}

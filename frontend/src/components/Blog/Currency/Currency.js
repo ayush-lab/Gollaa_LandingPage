@@ -90,6 +90,10 @@ export default function CurrencySections(){
           <div className="CurrencySection5">
               <div className="CurrencySection5-image">
                   <img src={CoinRain} alt="coin background"/>
+                  <img src={CoinRain} alt="coin background"/>
+                  <img src={CoinRain} alt="coin background"/>
+                  <img src={CoinRain} alt="coin background"/>
+
                   {/* <div className="CurrencySection5-image-img"></div> */}
               </div>
               <div className="CurrencySection5-textBlock">

@@ -60,50 +60,54 @@ export default function StoriesSections(){
         <div className="StoriesSection2">
             <p className="StoriesSection2-heading">What is our Economic model</p>
             <div className="StoriesSection2-cards">
-                <EconomicCard 
-                    image={BlockChain} 
-                    content="100% transparency guaranteed by Blockchain technology" 
-                    alt="BlockChain"
-                    backgroundColor="#5FAF42"
-                    color="white"
-                    />
-                
-                <EconomicCard 
-                    image={Platforms} 
-                    content="Gollaa is a multifaceted platform with local economy and environment at its heart" 
-                    alt="multifaceted platform"
-                    backgroundColor="#FFE815"
-                    color="#707070" 
-                    />
 
-                <EconomicCard 
-                    image={FarmersGolla} 
-                    content="A collaborative platform/local business where farmers can directly sell their products to consumers" 
-                    alt="farmers"
-                    backgroundColor="#ADCB4F"
-                    color="white"/>
-
-                <EconomicCard 
-                    image={ValueGolla} 
-                    content="Gollaa support to provide seminars and holistic training programs for local businesses to rekindle the local markets." 
-                    alt="seminars and holistic"
-                    backgroundColor="#5DBC58"
-                    color="#FFFFFF" />
-
-                <EconomicCard 
-                    image={GollaIdeas} 
-                    content="Peer to peer microfinancing to support farmers aiming for sustainable innovation" 
-                    alt="Peer to peer microfinancing"
-                    backgroundColor="#A1D8D8"
-                    color="#707070"/>
-
-                <EconomicCard 
-                    image={GollaTree} 
-                    content="Hospitality services for urbanites to reunite with roots and treasure the tranquility in midst of Farm and close to nature." 
-                    alt="GollaTree"
-                    backgroundColor="#CEC41D"
-                    color="#FFFFFF"/>  
+                <div className="StoriesSection2-cards-row1">
+                    <EconomicCard 
+                        image={BlockChain} 
+                        content="100% transparency guaranteed by Blockchain technology" 
+                        alt="BlockChain"
+                        backgroundColor="#5FAF42"
+                        color="white"
+                        />
                     
+                    <EconomicCard 
+                        image={Platforms} 
+                        content="Gollaa is a multifaceted platform with local economy and environment at its heart" 
+                        alt="multifaceted platform"
+                        backgroundColor="#FFE815"
+                        color="#707070" 
+                        />
+
+                    <EconomicCard 
+                        image={FarmersGolla} 
+                        content="A collaborative platform/local business where farmers can directly sell their products to consumers" 
+                        alt="farmers"
+                        backgroundColor="#ADCB4F"
+                        color="white"/>
+                </div>
+
+                <div className="StoriesSection2-cards-row2">
+                    <EconomicCard 
+                        image={ValueGolla} 
+                        content="Gollaa support to provide seminars and holistic training programs for local businesses to rekindle the local markets." 
+                        alt="seminars and holistic"
+                        backgroundColor="#5DBC58"
+                        color="#FFFFFF" />
+
+                    <EconomicCard 
+                        image={GollaIdeas} 
+                        content="Peer to peer microfinancing to support farmers aiming for sustainable innovation" 
+                        alt="Peer to peer microfinancing"
+                        backgroundColor="#A1D8D8"
+                        color="#707070"/>
+
+                    <EconomicCard 
+                        image={GollaTree} 
+                        content="Hospitality services for urbanites to reunite with roots and treasure the tranquility in midst of Farm and close to nature." 
+                        alt="GollaTree"
+                        backgroundColor="#CEC41D"
+                        color="#FFFFFF"/>  
+                </div>
             </div>
         </div>
      </>  

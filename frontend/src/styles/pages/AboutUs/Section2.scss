@@ -1,9 +1,29 @@
 .AboutUsSection2{
     background-color: #EBEBEB;
-    padding:50px;
+    max-width:100vw;
+    height:calc(100vh - 80px );
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x:hidden;
+    overflow-y: hidden;
 
     &-cards{
+        width:100vw;
         display:flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
+    }
+}
+
+@media(max-width:970px){
+    .AboutUsSection2{
+        height:calc(90vh - 80px);
+
+        &-cards{
+            width:100%;
+            justify-content: flex-start;
+            overflow-x: auto !important;
+            overflow-y:none !important;
+        }
     }
 }

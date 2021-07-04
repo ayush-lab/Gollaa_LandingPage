@@ -28,10 +28,6 @@ export default function TerroirSection2(){
   const [fruit9,fruit9Handler] = useState(false);
 
 
-console.log("fruit1",fruit1)
-console.log("fruit2",fruit2)
-
-
     return(
         <>
           <div className="TerroirSection2"> 
@@ -72,7 +68,7 @@ console.log("fruit2",fruit2)
                             </div>
                           
                             <div onMouseEnter={()=>fruit3Handler(true)} 
-                                 onMouseLeave={()=>fruit3Handler(false)} >
+                                 onMouseLeave={()=>fruit3Handler(false)} className="relative" >
                                 <p className={fruit3 ? "fruit-text-none" :"TerroirSection2-right-middle-col1-name3"}>
                                     Mulbarries
                                 </p>

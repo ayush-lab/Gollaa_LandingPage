@@ -1,0 +1,50 @@
+$Mobcard_width:260px;
+$Mobcard_height:350px;
+
+.Mobcard{
+    max-width:$Mobcard_width;
+    max-height:$Mobcard_height;
+    min-width:$Mobcard_width;
+    min-height:$Mobcard_height;
+    border-radius: 20px;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    align-items:center;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:20px;
+    padding-bottom:20px;
+    margin-left:20px;
+    margin-right:20px;
+    &-image{
+        max-width:95%;
+        max-height:45%;
+        padding-bottom: 1rem;
+        display:flex;
+        justify-content: center;
+        align-items:center;
+    }
+    &-image >img{
+        min-width:100%;
+        min-height:100%;
+        object-fit:cover;
+    }
+
+    &-text{
+        width:100%;
+        height:50%;
+        text-align: center;
+    }
+    &-text p:nth-child(1){
+        font-family: "Monserrat";
+        font-weight: 250;
+        font-size:12px;
+        padding-bottom:1rem;
+    }
+    &-text p:nth-child(2){
+        font-family: 'Poppins';
+        font-weight: 200;
+        font-size:8px;
+    }
+}
