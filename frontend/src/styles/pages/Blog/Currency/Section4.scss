@@ -14,10 +14,6 @@ $Section4_padding:90px;
         display:flex;
         flex-direction: column;
         text-align:center;
-        // align-items:center;
-        // justify-content: center;
-        // padding-top:50px;
-        // padding-bottom:50px;
        
         &-text{
             position: absolute;
@@ -28,14 +24,13 @@ $Section4_padding:90px;
             top:0;
             display:flex;
             flex-direction:column;
-            // align-items:center;
             justify-content: center;
             text-align:center;
             &-heading{
                 font-family: "Monserrat";
                 font-size:$Section4_heading_font;
                 font-weight:300;
-                padding-bottom:1rem;
+                padding-bottom:2rem;
                 text-align:center;
             }
             &-heading>span{
@@ -69,12 +64,254 @@ $Section4_padding:90px;
     
 }
 
-// .CurrencySection4:hover .CurrencySection4-left-text-para1
-//  {
-//     transform:translateX(0);
-// }
 
-// .CurrencySection4:hover .CurrencySection4-left-text-para2
-//  {
-//     transform:translateX(0);
-// }
+@media(max-width:900px){
+    $Section4_heading_font:1.75rem;
+    $Section4_padding:60px;
+
+.CurrencySection4{
+    display:flex;
+    height:calc(100vh - 80px);
+    z-index:2;
+
+    &-left{
+        position:relative;
+        flex-basis:50%;
+        display:flex;
+        flex-direction: column;
+        text-align:center;
+       
+        &-text{
+            position: absolute;
+            padding-left:$Section4_padding;
+            padding-right:$Section4_padding;
+            width:100%;
+            height:100%;
+            top:0;
+            display:flex;
+            flex-direction:column;
+            justify-content: center;
+            text-align:center;
+            &-heading{
+                font-size:$Section4_heading_font;
+                padding-bottom:1rem;
+                text-align:center;
+            }
+            &-heading>span{
+                display: block;
+            }
+            &-para{
+                text-align: center;
+                font-size:0.625rem;
+                transform:translateX(0%);
+                &-para1,&-para2{
+                   
+                }
+                &-para1{
+                    padding-bottom:1rem;
+                }
+            }
+            
+
+        }
+    }
+    &-right>img{
+        width:100%;
+        height:100%;
+    }
+    &-right{
+        flex-basis:50%;
+    }
+    
+}
+
+}
+
+
+@media(max-width:770px){
+    $Section4_heading_font:1.75rem;
+    $Section4_padding:60px;
+
+.CurrencySection4{
+    display:flex;
+    flex-direction: column-reverse;
+    height:calc(100vh - 80px);
+    z-index:2;
+
+    &-left{
+        position:relative;
+        flex-basis:50%;
+        height:50%;
+        width:100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        text-align:center;
+       
+        &-text{
+            flex-basis:50%;
+            height:50%;
+            width:100%;
+            position: static;
+            padding-left:$Section4_padding;
+            padding-right:$Section4_padding;
+            display:flex;
+            flex-direction:column;
+            text-align:center;
+            &-heading{
+                font-size:$Section4_heading_font;
+                padding-bottom:1rem;
+                text-align:center;
+            }
+            &-heading>span{
+                display: block;
+            }
+            &-para{
+                text-align: center;
+                font-size:0.625rem;
+                &-para1,&-para2{
+                   
+                }
+                &-para1{
+                    padding-bottom:0.5rem;
+                }
+            }
+            
+
+        }
+    }
+   
+    &-right{
+        flex-basis:50%;
+        width:100%;
+        height:50%;
+    }
+    &-right>img{
+        width:100%;
+        height:100%;
+    }
+    
+}
+
+}
+
+
+
+@media(max-width:570px){
+    $Section4_heading_font:0.875rem;
+    $Section4_padding:60px;
+
+.CurrencySection4{
+    display:flex;
+    flex-direction: column-reverse;
+    height:calc(70vh - 80px);
+    z-index:2;
+
+    &-left{
+        position:relative;
+        flex-basis:50%;
+        height:50%;
+        width:100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        text-align:center;
+       
+        &-text{
+            flex-basis:50%;
+            height:50%;
+            width:100%;
+            position: static;
+            padding-left:$Section4_padding;
+            padding-right:$Section4_padding;
+            display:flex;
+            flex-direction:column;
+            text-align:center;
+            &-heading{
+                font-size:$Section4_heading_font;
+                padding-bottom:1rem;
+                text-align:center;
+            }
+            &-heading>span{
+                display: inline-block;
+            }
+            &-para{
+                text-align: center;
+                font-size:0.5rem;
+                &-para1,&-para2{
+                   
+                }
+                &-para1{
+                    padding-bottom:0.5rem;
+                }
+            }
+            
+
+        }
+    }
+   
+    
+}
+
+}
+
+@media(max-width:370px){
+    $Section4_heading_font:0.875rem;
+    $Section4_padding:15px;
+
+.CurrencySection4{
+    display:flex;
+    flex-direction: column-reverse;
+    height:calc(70vh - 80px);
+    z-index:2;
+
+    &-left{
+        position:relative;
+        flex-basis:50%;
+        height:50%;
+        width:100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        text-align:center;
+       
+        &-text{
+            flex-basis:50%;
+            height:50%;
+            width:100%;
+            position: static;
+            padding-left:$Section4_padding;
+            padding-right:$Section4_padding;
+            display:flex;
+            flex-direction:column;
+            text-align:center;
+            &-heading{
+                font-size:$Section4_heading_font;
+                padding-bottom:1rem;
+                text-align:center;
+            }
+            &-heading>span{
+                display: inline-block;
+            }
+            &-para{
+                text-align: center;
+                font-size:0.5rem;
+                &-para1,&-para2{
+                   
+                }
+                &-para1{
+                    padding-bottom:0.5rem;
+                }
+            }
+            
+
+        }
+    }
+   
+    
+}
+
+}

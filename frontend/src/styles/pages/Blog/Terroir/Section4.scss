@@ -2,8 +2,8 @@ $Section4_heading_font:28px;
 $Section4_padding:90px;
 
 .TerroirSection4{
-    height:calc(100vh - 80px);
-    width:100%;
+    height:calc(100vh - 80px - 180px);
+    max-width:100vw;
     display:flex;
     background:#5FAF42;
 
@@ -45,5 +45,299 @@ $Section4_padding:90px;
             color:white;
         }
     }
+
+}
+
+@media(max-width:1280px){
+    $Section4_heading_font:28px;
+    $Section4_padding:60px;
+
+.TerroirSection4{
+    height:auto;
+    
+    max-width:100vw;
+    display:flex;
+    background:#5FAF42;
+
+    &-left{
+        flex-basis:50%;
+    }
+    &-left img{
+        width:100%;
+        height:100%;
+        object-fit: cover;
+        background-position: center;
+    }
+
+    &-right{
+        padding-top:5%;
+        padding-bottom:5%;
+        flex-basis: 50%;
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items:center;
+        padding-left:$Section4_padding;
+        padding-right:$Section4_padding;
+
+        &-heading{
+            font-family: "Monserrat";
+            font-size:$Section4_heading_font;
+            font-weight:300;
+            text-align:center;
+            color:white;
+            padding-bottom:1rem;
+        }
+        &-heading span{
+            display:block;
+        }
+        &-para{
+            font-family: "Poppins";
+            font-size:12px;
+            font-weight:200;
+            text-align:center;
+            color:white;
+        }
+    }
+
+}
+
+}
+
+
+@media(max-width:900px){
+    $Section4_heading_font:28px;
+    $Section4_padding:60px;
+
+.TerroirSection4{
+    height:auto;
+    
+    max-width:100vw;
+    display:flex;
+    background:#5FAF42;
+
+    &-left{
+        flex-basis:50%;
+    }
+    &-left img{
+        width:100%;
+        height:100%;
+        object-fit: cover;
+        background-position: center;
+    }
+
+    &-right{
+        padding-top:5%;
+        padding-bottom:5%;
+        flex-basis: 50%;
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items:center;
+        padding-left:$Section4_padding;
+        padding-right:$Section4_padding;
+
+        &-heading{
+            font-family: "Monserrat";
+            font-size:$Section4_heading_font;
+            font-weight:300;
+            text-align:center;
+            color:white;
+            padding-bottom:1rem;
+        }
+        &-heading span{
+            display:block;
+        }
+        &-para{
+            font-family: "Poppins";
+            font-size:10px;
+            font-weight:200;
+            text-align:center;
+            color:white;
+        }
+    }
+
+}
+
+}
+
+@media(max-width:770px){
+    $Section4_heading_font:28px;
+    $Section4_padding:60px;
+
+.TerroirSection4{
+    height:calc((100vh - 80px ));
+    max-width:100vw;
+    display:flex;
+    flex-direction:column;
+    background:#5FAF42;
+
+    &-left{
+        flex-basis:100%;
+        height:40%;
+        width:100%;
+    }
+    &-left img{
+        width:100%;
+        height:100%;
+        object-fit: cover;
+        background-position: center;
+    }
+
+    &-right{
+        padding-top:5%;
+        padding-bottom:5%;
+        flex-basis: 100%;
+        width:100%;
+        height:60%;
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items:center;
+        padding-left:$Section4_padding;
+        padding-right:$Section4_padding;
+
+        &-heading{
+            font-family: "Monserrat";
+            font-size:$Section4_heading_font;
+            font-weight:300;
+            text-align:center;
+            color:white;
+            padding-bottom:1rem;
+        }
+        &-heading span{
+            display:block;
+        }
+        &-para{
+            font-family: "Poppins";
+            font-size:10px;
+            text-align:center;
+            color:white;
+        }
+    }
+
+}
+
+}
+
+
+
+@media(max-width:570px){
+    $Section4_heading_font:14px;
+    $Section4_padding:60px;
+
+.TerroirSection4{
+    height:calc((100vh - 80px ));
+    max-width:100vw;
+    display:flex;
+    flex-direction:column;
+    background:#5FAF42;
+
+    &-left{
+        flex-basis:100%;
+        height:40%;
+        width:100%;
+    }
+    &-left img{
+        width:100%;
+        height:100%;
+        object-fit: cover;
+        background-position: center;
+    }
+
+    &-right{
+        padding-top:5%;
+        padding-bottom:5%;
+        flex-basis: 100%;
+        width:100%;
+        height:60%;
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items:center;
+        padding-left:$Section4_padding;
+        padding-right:$Section4_padding;
+
+        &-heading{
+            font-family: "Monserrat";
+            font-size:$Section4_heading_font;
+            font-weight:300;
+            text-align:center;
+            color:white;
+            padding-bottom:1rem;
+        }
+        &-heading span{
+            display:block;
+        }
+        &-para{
+            font-family: "Poppins";
+            font-size:8px;
+            text-align:center;
+            color:white;
+        }
+    }
+
+}
+
+}
+
+
+
+@media(max-width:370px){
+    $Section4_heading_font:14px;
+    $Section4_padding:15px;
+
+.TerroirSection4{
+    height:calc((100vh - 80px ));
+    max-width:100vw;
+    display:flex;
+    flex-direction:column;
+    background:#5FAF42;
+
+    &-left{
+        flex-basis:100%;
+        height:40%;
+        width:100%;
+    }
+    &-left img{
+        width:100%;
+        height:100%;
+        object-fit: cover;
+        background-position: center;
+    }
+
+    &-right{
+        padding-top:5%;
+        padding-bottom:5%;
+        flex-basis: 100%;
+        width:100%;
+        height:60%;
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items:center;
+        padding-left:$Section4_padding;
+        padding-right:$Section4_padding;
+
+        &-heading{
+            font-family: "Monserrat";
+            font-size:$Section4_heading_font;
+            font-weight:300;
+            text-align:center;
+            color:white;
+            padding-bottom:1rem;
+        }
+        &-heading span{
+            display:block;
+        }
+        &-para{
+            font-family: "Poppins";
+            font-size:8px;
+            text-align:center;
+            color:white;
+        }
+    }
+
+}
 
 }

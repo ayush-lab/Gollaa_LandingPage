@@ -15,6 +15,12 @@
     }
 }
 
+@media(min-height:700px){
+   .AboutUsSection2{
+        height:calc(100vh - 80px - 180px);
+   }
+}
+
 @media(max-width:970px){
     .AboutUsSection2{
         height:calc(90vh - 80px);

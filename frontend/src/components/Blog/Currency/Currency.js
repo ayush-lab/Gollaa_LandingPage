@@ -12,6 +12,8 @@ export default function CurrencySections(){
     let OpacityRef = React.useRef();
     let zoomOutRef = React.useRef();
     let LeftToRightRef = React.useRef();
+    let CoinRef = React.useRef();
+
 
     return(
         <>
@@ -25,7 +27,20 @@ export default function CurrencySections(){
           </div>
 
           <div onMouseEnter={()=>{OpacityRef.current.classList.add('opacity_appear')}} className="CurrencySection2">
-              <img src={PiggyBank} alt="piggy bank"/>
+              <div className="CurrencySection2-image">
+                  <img src={PiggyBank} alt="piggy bank"/>
+                </div>
+              <div  className="CurrencySection2-about">
+                  <div className="CurrencySection2-about-text">
+                      <p className="CurrencySection2-about-text-heading">Principle of local <span>currency</span></p>
+                      <p className="CurrencySection2-about-text-para">In a local economy, money circulates within a region.
+                       A local currency is accepted within an area as a means of payment. This money is circulated locally 
+                       for an extended period of time. In this cycle, everyone earns something, and everyone buys something.
+                        Every dollar that a business owner spends locally has a higher chance of returning back to the business
+                         when it is being circulated locally. 
+                      This is the principle on which the local economy functions.</p>
+                  </div>
+              </div>
               <div ref={OpacityRef} className="CurrencySection2-card">
                   <div className="CurrencySection2-card-text">
                       <p className="CurrencySection2-card-text-heading">Principle of local <span>currency</span></p>
@@ -43,11 +58,18 @@ export default function CurrencySections(){
           <div  onMouseEnter={()=>{zoomOutRef.current.classList.add('zoom_in_currency')}} className="CurrencySection3">
               <div className="CurrencySection3-left">
                 <img src={ManonCoins} alt="ManonCoins Gollaa"/>
-                <div className={"CurrencySection3-left-overlay"}></div>
+                {/* <div className={"CurrencySection3-left-overlay"}></div> */}
               </div>
 
               <div className="CurrencySection3-right">
-
+                <div className="CurrencySection3-right-text">
+                        <p ref={zoomOutRef} className="CurrencySection3-right-text-heading">Why Is It Important?</p>
+                        <p className="CurrencySection3-right-text-para1">Money flows faster out of the local economy than it can be earned back. This leads to an increase in 
+                            unemployment and depopulation. Lack of economic stability produces several disadvantages 
+                            for the local communities. </p>
+                        <p className="CurrencySection3-right-text-para2">The domestic economy is also subject to inflation, volatility, and limited usage. The local money is complementary and indexed to the domestic economy but rules out the problems associated with the conventional currency. 
+                            This makes it exceptionally advantageous in times of economic hardships.</p>
+                    </div>
               </div>
 
               <div className="CurrencySection3-textBlock">
@@ -87,15 +109,30 @@ export default function CurrencySections(){
               
           </div>
 
-          <div className="CurrencySection5">
-              <div className="CurrencySection5-image">
+          <div  onMouseEnter={()=>{CoinRef.current.classList.add('CoinRain')}} className="CurrencySection5">
+              <div ref={CoinRef}  className="CurrencySection5-image">
                   <img src={CoinRain} alt="coin background"/>
                   <img src={CoinRain} alt="coin background"/>
                   <img src={CoinRain} alt="coin background"/>
                   <img src={CoinRain} alt="coin background"/>
-
-                  {/* <div className="CurrencySection5-image-img"></div> */}
               </div>
+
+              <div className="CurrencySection5-about">
+                  <div className="CurrencySection5-about-text">
+                        <p className="CurrencySection5-about-text-heading">Advantages of local  <span>currency</span></p>
+                        <p className="CurrencySection5-about-text-para1">The local currency can either be
+                        digitalized or be used as banknotes. Digitized local currency helps consumers make secure
+                        payments conveniently. Some local currencies also offer incentives on the usage of the local money, 
+                        which encourages consumers to make purchases. The circulative local economy can create jobs by 
+                        supporting small businesses. The local currency can either be digitalized or be used as banknotes. 
+                        Digitized local currency helps consumers make secure payments conveniently. Some local currencies also 
+                        offer incentives on the usage of the local money, which encourages consumers to make purchases. 
+                        The circulative local economy can create jobs by supporting small businesses.</p>
+                        <p className="CurrencySection5-about-text-para2">The local currency can either be digitalized or be used as banknotes. 
+                        Digitized local currency helps consumers make secure payments conveniently. Some local</p>
+                    </div>
+              </div>
+
               <div className="CurrencySection5-textBlock">
                   <div className="CurrencySection5-textBlock-text">
                         <p className="CurrencySection5-textBlock-text-heading">Advantages of local  <span>currency</span></p>

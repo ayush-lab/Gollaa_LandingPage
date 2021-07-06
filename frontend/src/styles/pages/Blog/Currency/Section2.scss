@@ -1,14 +1,20 @@
+$Section2_heading_font:1.75rem;
+$Section2_para_font:0.75rem;
+$Section2_padding:none;
+$Section2_padding_card:40px;
+
 .CurrencySection2{
     height:calc(100vh - 80px);
     width:100%;
     position:relative;
-
+    &-about{
+        display:none;
+    }
     &-card{
         position:absolute;
         top:10%;
         left:5%;
         width:400px;
-        // height:280px;
         background:#8CC63F;
         border-radius:20px;
         color:white;
@@ -16,15 +22,13 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        // padding-left: 40px;
-        // padding-right:40px;
-        padding:40px;
+        padding:$Section2_padding_card;
         opacity:0;
         transition:opacity 0.8s ease;
         &-text{
             &-heading{
                 font-family: "Monserrat";
-                font-size:28px;
+                font-size:$Section2_heading_font;
                 font-weight:300;
                 padding-bottom:1rem;
                 text-align:center;
@@ -35,7 +39,74 @@
             &-para{
                 text-align: center;
                 font-family: "Poppins";
-                font-size:12px;
+                font-size:$Section2_para_font;
+                font-weight:200;
+            }
+      }
+    }
+    &-image{
+        width:100%;
+        height:100%;
+    }
+    &-image >img{
+        width:100%;
+        height:100%;
+        // object-fit: cover;
+    }
+
+}
+
+.opacity_appear{
+    opacity:1 !important;
+    transition: opacity 1s ease !important;
+}
+
+
+@media(max-width:900px){
+    $Section2_heading_font:1.75rem;
+    $Section2_para_font:0.625rem;
+    $Section2_padding:none;
+    $Section2_padding_card:35px;
+
+
+
+.CurrencySection2{
+    height:calc(100vh - 80px);
+    width:100%;
+    position:relative;
+    &-about{
+        display:none;
+    }
+    &-card{
+        position:absolute;
+        top:10%;
+        left:5%;
+        width:400px;
+        background:#8CC63F;
+        border-radius:20px;
+        color:white;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding:$Section2_padding_card;
+        opacity:1;
+        transition:opacity 0.8s ease;
+        &-text{
+            &-heading{
+                font-family: "Monserrat";
+                font-size:$Section2_heading_font;
+                font-weight:300;
+                padding-bottom:1rem;
+                text-align:center;
+            }
+            &-heading>span{
+                display: block;
+            }
+            &-para{
+                text-align: center;
+                font-family: "Poppins";
+                font-size:$Section2_para_font;
                 font-weight:200;
             }
       }
@@ -43,17 +114,179 @@
 
 }
 
-.CurrencySection2 >img{
+
+}
+
+
+@media(max-width:770px){
+    $Section2_heading_font:1.75rem;
+    $Section2_para_font:0.625rem;
+    $Section2_padding:60px;
+    $Section2_padding_card:35px;
+
+
+.CurrencySection2{
+    height:calc(100vh - 80px);
     width:100%;
-    height:100%;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    &-image{
+        width:100%;
+        height: 50%;
+        flex-basis: 50%;
+    }
+    &-about{
+        flex-basis:50%;
+        height:50%;
+        width:100%;
+        background:#8CC63F;
+        color:white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding:$Section2_padding;
+        &-text{
+            &-heading{
+                font-family: "Monserrat";
+                font-size:$Section2_heading_font;
+                font-weight:300;
+                padding-bottom:1rem;
+                text-align:center;
+            }
+            &-heading>span{
+                display: inline-block;
+            }
+            &-para{
+                text-align: center;
+                font-family: "Poppins";
+                font-size:$Section2_para_font;
+                font-weight:200;
+            }
+      }
+    }
+    &-card{
+        display:none;
+    }
+
 }
 
-// .CurrencySection2:hover .CurrencySection2-card{
-//     opacity:1;
-//     transition: opacity 1s ease;
-// }
 
-.opacity_appear{
-    opacity:1 !important;
-    transition: opacity 1s ease !important;
 }
+
+
+@media(max-width:570px){
+    $Section2_heading_font:0.875rem;
+    $Section2_para_font:0.5rem;
+    $Section2_padding:60px;
+    $Section2_padding_card:35px;
+
+
+.CurrencySection2{
+    height:calc(70vh - 80px);
+    width:100%;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    &-image{
+        width:100%;
+        height: 50%;
+        flex-basis: 50%;
+    }
+    &-about{
+        flex-basis:50%;
+        height:50%;
+        width:100%;
+        background:#8CC63F;
+        color:white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding:$Section2_padding;
+        &-text{
+            &-heading{
+                font-family: "Monserrat";
+                font-size:$Section2_heading_font;
+                font-weight:300;
+                padding-bottom:1rem;
+                text-align:center;
+            }
+            &-heading>span{
+                display: inline-block;
+            }
+            &-para{
+                text-align: center;
+                font-family: "Poppins";
+                font-size:$Section2_para_font;
+                font-weight:200;
+            }
+      }
+    }
+    &-card{
+        display:none;
+    }
+
+}
+
+
+}
+
+@media(max-width:370px){
+    $Section2_heading_font:0.875rem;
+    $Section2_para_font:0.5rem;
+    $Section2_padding:15px;
+    $Section2_padding_card:35px;
+
+
+.CurrencySection2{
+    height:calc(70vh - 80px);
+    width:100%;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    &-image{
+        width:100%;
+        height: 50%;
+        flex-basis: 50%;
+    }
+    &-about{
+        flex-basis:50%;
+        height:50%;
+        width:100%;
+        background:#8CC63F;
+        color:white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding:$Section2_padding;
+        &-text{
+            &-heading{
+                font-family: "Monserrat";
+                font-size:$Section2_heading_font;
+                font-weight:300;
+                padding-bottom:1rem;
+                text-align:center;
+            }
+            &-heading>span{
+                display: inline-block;
+            }
+            &-para{
+                text-align: center;
+                font-family: "Poppins";
+                font-size:$Section2_para_font;
+                font-weight:200;
+            }
+      }
+    }
+    &-card{
+        display:none;
+    }
+
+}
+
+
+}
+

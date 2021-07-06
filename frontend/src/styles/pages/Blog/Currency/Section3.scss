@@ -1,3 +1,7 @@
+// $Section3_heading_font:1.75rem;
+// $Section3_para_font:0.75rem;
+// $Section3_padding:none;
+
 .CurrencySection3{
     display:flex;
     height:calc(100vh - 80px);
@@ -27,6 +31,9 @@
     &-right{
         flex-basis:50%;
         background:#DAD800;
+        &-text{
+            display:none;
+        }
     }
     &-textBlock{
         position:absolute;
@@ -68,10 +75,329 @@
     }
 }
 
-// .CurrencySection3:hover .CurrencySection3-text-heading{
-//     transform: scale(1.5,1.5);
-// }
-
 .zoom_in_currency{
     transform: scale(1.5,1.5) !important;
+}
+
+
+@media(max-width:900px){
+    .CurrencySection3{
+        display:flex;
+        height:calc(100vh - 80px);
+        position:relative;
+    
+        &-left{
+            flex-basis:50%;
+            position:relative;
+    
+        }
+        &-left>img{
+            width:100%;
+            height:100%;
+        }
+    
+        &-right{
+            flex-basis:50%;
+            background:#DAD800;
+            &-text{
+                display:none;
+            }
+        }
+        &-textBlock{
+            width:100%;
+            height:100%;
+            top:10%;
+            display: flex;
+            flex-direction: column;
+            justify-content:start;
+            align-items:center;
+    
+            &-text{
+                width:40%;
+                color: black;
+                z-index:5;
+            
+                &-heading{
+                    font-family: "Monserrat";
+                    font-size:1.75rem;
+                    font-weight:300;
+                    padding-bottom:1rem;
+                    text-align:center;
+                    transform:scale(1,1);
+                    transition: transform 0.5s ease;
+                }
+                &-heading>span{
+                    display: block;
+                }
+                &-para1,&-para2{
+                    text-align: center;
+                    font-family: "Poppins";
+                    font-size:0.625rem;
+                    font-weight:200;
+                }
+                &-para1{
+                    padding-bottom:1rem;
+                }
+           }
+        }
+    }
+    
+    .zoom_in_currency{
+        transform: scale(1,1) !important;
+    }
+}
+
+@media(max-width:770px){
+    .CurrencySection3{
+        display:flex;
+        flex-direction:column;
+        height:calc(100vh - 80px);
+        position:relative;
+    
+        &-left{
+            flex-basis:50%;
+            width:100%;
+            height:50%;
+            position:relative;
+    
+        }
+        &-left>img{
+            width:100%;
+            height:100%;
+        }
+    
+        &-right{
+            display:flex;
+            background:#DAD800;
+            flex-basis:50%;
+            width:100%;
+            height:50%;
+            flex-direction: column;
+            justify-content:center;
+            align-items:center;
+
+            &-text{
+                display:flex;
+                flex-direction: column;
+                justify-content:center;
+                align-items:center;
+                padding-left:60px;
+                padding-right:60px;
+                color: black;
+                z-index:5;
+            
+                &-heading{
+                    font-family: "Monserrat";
+                    font-size:1.75rem;
+                    font-weight:300;
+                    padding-bottom:1rem;
+                    text-align:center;
+                }
+                &-heading>span{
+                    display: block;
+                }
+                &-para1,&-para2{
+                    text-align: center;
+                    font-family: "Poppins";
+                    font-size:0.625rem;
+                    font-weight:200;
+                }
+                &-para1{
+                    padding-bottom:0.5rem;
+                }
+           }
+        }
+        &-textBlock{
+            display:none;
+        }
+    }
+  
+}
+
+@media(max-width:770px){
+    .CurrencySection3{
+        display:flex;
+        flex-direction:column;
+        height:calc(100vh - 80px);
+        position:relative;
+    
+        &-left{
+            flex-basis:50%;
+            width:100%;
+            height:50%;
+            position:relative;
+    
+        }
+        &-left>img{
+            width:100%;
+            height:100%;
+        }
+    
+        &-right{
+            display:flex;
+            background:#DAD800;
+            flex-basis:50%;
+            width:100%;
+            height:50%;
+            flex-direction: column;
+            justify-content:center;
+            align-items:center;
+
+            &-text{
+                display:flex;
+                flex-direction: column;
+                justify-content:center;
+                align-items:center;
+                padding-left:60px;
+                padding-right:60px;
+                color: black;
+                z-index:5;
+            
+                &-heading{
+                    font-family: "Monserrat";
+                    font-size:1.75rem;
+                    font-weight:300;
+                    padding-bottom:1rem;
+                    text-align:center;
+                }
+                &-heading>span{
+                    display: block;
+                }
+                &-para1,&-para2{
+                    text-align: center;
+                    font-family: "Poppins";
+                    font-size:0.625rem;
+                    font-weight:200;
+                }
+                &-para1{
+                    padding-bottom:0.5rem;
+                }
+           }
+        }
+        &-textBlock{
+            display:none;
+        }
+    }
+  
+}
+
+@media(max-width:570px){
+    .CurrencySection3{
+        display:flex;
+        flex-direction:column;
+        height:calc(70vh - 80px);
+        position:relative;
+    
+        &-left{
+            flex-basis:50%;
+            width:100%;
+            height:50%;
+            position:relative;
+    
+        }
+        &-left>img{
+            width:100%;
+            height:100%;
+        }
+    
+        &-right{
+            display:flex;
+            background:#DAD800;
+            flex-basis:50%;
+            width:100%;
+            height:50%;
+            flex-direction: column;
+            justify-content:center;
+            align-items:center;
+
+            &-text{
+                display:flex;
+                flex-direction: column;
+                justify-content:center;
+                align-items:center;
+                padding-left:60px;
+                padding-right:60px;
+                color: black;
+                z-index:5;
+            
+                &-heading{
+                    font-size:0.875rem;
+                    padding-bottom:1rem;
+                    text-align:center;
+                }
+                &-heading>span{
+                    display: block;
+                }
+                &-para1,&-para2{
+                    text-align: center;
+                    font-size:0.5rem;
+                }
+                &-para1{
+                    padding-bottom:0.5rem;
+                }
+           }
+        }
+    }
+  
+}
+
+
+@media(max-width:570px){
+    .CurrencySection3{
+        display:flex;
+        flex-direction:column;
+        height:calc(70vh - 80px);
+        position:relative;
+    
+        &-left{
+            flex-basis:50%;
+            width:100%;
+            height:50%;
+            position:relative;
+    
+        }
+        &-left>img{
+            width:100%;
+            height:100%;
+        }
+    
+        &-right{
+            display:flex;
+            background:#DAD800;
+            flex-basis:50%;
+            width:100%;
+            height:50%;
+            flex-direction: column;
+            justify-content:center;
+            align-items:center;
+
+            &-text{
+                display:flex;
+                flex-direction: column;
+                justify-content:center;
+                align-items:center;
+                padding-left:15px;
+                padding-right:15px;
+                color: black;
+                z-index:5;
+            
+                &-heading{
+                    font-size:0.875rem;
+                    padding-bottom:1rem;
+                    text-align:center;
+                }
+                &-heading>span{
+                    display: block;
+                }
+                &-para1,&-para2{
+                    text-align: center;
+                    font-size:0.5rem;
+                }
+                &-para1{
+                    padding-bottom:0.5rem;
+                }
+           }
+        }
+    }
+  
 }

@@ -1,4 +1,7 @@
 $Section2_height: calc(100vh - 80px);
+$Section2_heading_font:36px;
+$Section2_text_font:12px;
+$Section2_padding:90px;
 
 .Section2 {
   display: flex;
@@ -63,7 +66,7 @@ $Section2_height: calc(100vh - 80px);
       &-text {
         font-family: "Monserrat";
         font-weight: 300;
-        font-size: 36px;
+        font-size: $Section2_heading_font;
         color: white;
       }
     }
@@ -79,7 +82,7 @@ $Section2_height: calc(100vh - 80px);
       &-bigText2 {
         font-family: "poppins";
         font-weight: 200;
-        font-size: 12px;
+        font-size: $Section2_text_font;
         color: white;
       }
       &-link{
@@ -95,6 +98,23 @@ $Section2_height: calc(100vh - 80px);
 
   }
   
+}
+
+@media(min-width:1500px){
+  $Section2_heading_font:2.5rem;
+  $Section2_text_font:1rem;
+  $Section2_padding:90px;
+
+  .Section2-info-top-text{
+    font-size:$Section2_heading_font;
+
+  }
+  .Section2-info-bottom-bigText1,
+  .Section2-info-bottom-bigText2{
+    font-size:$Section2_text_font;
+  }
+
+
 }
 
 @media (max-width: 1000px) {

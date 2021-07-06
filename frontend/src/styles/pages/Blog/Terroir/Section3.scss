@@ -19,6 +19,7 @@
 .TerroirSection3{
     height:auto;
     background:#A1D8D8;
+    max-width:100vw;
 
     &-heading{
         padding-top:40px;
@@ -27,7 +28,7 @@
         color:#145629;
         font-family:'Monserrat';
         font-weight:300;
-        font-size:30px;
+        font-size:1.75rem;
     }
 
     &-pictures{
@@ -121,3 +122,370 @@
     }
 }
 
+
+@media(max-width:970px){
+   
+    .TerroirSection3{
+       
+    
+        &-heading{
+            padding-top:30px;
+            padding-bottom:30px;
+            text-align:center;
+        }
+    
+        &-pictures{
+         
+            &-row1,&-row2{
+                display:flex;
+                flex-wrap:wrap;
+                justify-content: space-evenly;
+                align-content: center;
+                padding-left:30px;
+                padding-right:30px;
+                padding-bottom:130px;
+            }
+        
+        }
+    
+    
+        &-pictures img{
+            width:250px;
+            height:250px;
+            z-index:2;
+            position:relative;
+        }
+    
+        &-pictures-row1-image1,&-pictures-row1-image2,&-pictures-row1-image3,
+        &-pictures-row1-image4,&-pictures-row1-image5,&-pictures-row1-image6{
+            position:relative;
+        }
+    }
+    
+}
+
+@media(max-width:900px){
+   
+    .TerroirSection3{
+       
+    
+        &-heading{
+            padding-top:30px;
+            padding-bottom:30px;
+            text-align:center;
+        }
+    
+        &-pictures{
+            display:flex;
+            flex-direction:row;
+
+            &-row1,&-row2{
+                display:flex;
+                flex-wrap:wrap;
+                justify-content: space-evenly;
+                align-content: center;
+                padding-left:40px;
+                padding-right:40px;
+                padding-bottom:130px;
+            }
+        
+        }
+    
+    
+        &-pictures img{
+            width:250px;
+            height:250px;
+            z-index:2;
+            position:relative;
+        }
+    
+        &-pictures-row1-image1,&-pictures-row1-image2,&-pictures-row1-image3,
+        &-pictures-row1-image4,&-pictures-row1-image5,&-pictures-row1-image6{
+            position:relative;
+        }
+    }
+    
+}
+
+
+@media(max-width:760px){
+   
+    .TerroirSection3{
+        overflow:none;
+        padding-bottom:5%;
+        padding-top:5%;
+        margin:0 auto;
+        &-heading{
+            padding-bottom:0px;
+            text-align:center;
+            // font-size:0.625rem;
+        }
+    
+        &-pictures{
+            max-width:100vw;
+            display:flex;
+            flex-direction:row !important;
+            overflow-x:auto;
+            overflow:none;
+            padding-top:3rem;
+            &-row1,&-row2{
+                display:flex;
+                flex-direction:row !important;
+                flex-wrap:nowrap;
+                justify-content: space-evenly;
+                align-content: center;
+                padding-left:0px;
+                padding-right:0px;
+            }
+            &-row1{
+                // padding-left:25px;
+            }
+            &-row2{
+                // padding-right:25px;
+            }
+        
+        }
+    
+    
+        &-pictures img{
+            width:250px;
+            height:250px;
+            z-index:2;
+            position:relative;
+            border-radius:20px;
+        }
+    
+        &-pictures-row1-image1,&-pictures-row1-image2,&-pictures-row1-image3,
+        &-pictures-row1-image4,&-pictures-row1-image5,&-pictures-row1-image6{
+            position:relative;
+            margin-right:50px;
+            margin-left:50px;
+
+        }
+        
+
+        &-pictures-row1-image1-name,
+        &-pictures-row1-image2-name,
+        &-pictures-row1-image3-name,
+        &-pictures-row1-image4-name,
+        &-pictures-row1-image5-name,
+        &-pictures-row1-image6-name{
+            position:absolute; 
+            left:0;
+            top:-10%;
+            left:-10%;
+            z-index:0 !important;
+            width:120%;
+            height:140%;
+            border-radius:20px;
+            background:#ADCB4F;
+            color:black;
+            font-family:"Monserrat";
+            font-size:16px;
+            display:flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding-bottom:10%;
+            transition:all 0.5s ease;
+            opacity:1;
+        }
+
+        &-pictures-row1-image1-name{
+        }
+    
+        &-pictures-row1-image2-name{
+            background:#5DBC58;
+            color:white;
+        }
+        &-pictures-row1-image3-name{
+            background:#5DBC58;
+        }
+        &-pictures-row1-image4-name{
+            background:#DAD800;
+            color:white;
+    
+        }
+        &-pictures-row1-image5-name{
+            background:#CFD136;
+        }
+        &-pictures-row1-image6-name{
+            background:#145629;
+            color:white;
+        }
+        
+    
+        &-pictures-row1-image1:hover &-pictures-row1-image1-name
+        {
+            height:140%;
+            opacity:1;
+        }
+        &-pictures-row1-image2:hover &-pictures-row1-image2-name
+        {
+            height:140%;
+            opacity:1;
+        }
+        &-pictures-row1-image3:hover &-pictures-row1-image3-name
+        {
+            height:140%;
+            opacity:1;
+        }
+        &-pictures-row1-image4:hover &-pictures-row1-image4-name
+        {
+            height:140%;
+            opacity:1;
+        }
+        &-pictures-row1-image5:hover &-pictures-row1-image5-name
+        {
+            height:140%;
+            opacity:1;
+        }
+        &-pictures-row1-image6:hover &-pictures-row1-image6-name
+        {
+            height:140%;
+            opacity:1;
+        }
+    }
+    
+}
+
+
+
+@media(max-width:760px){
+   
+    .TerroirSection3{
+        overflow:none;
+        padding-bottom:5%;
+        padding-top:5%;
+        margin:0 auto;
+        &-heading{
+            padding-bottom:0px;
+            text-align:center;
+            font-size:0.875rem;
+        }
+    
+        &-pictures{
+            max-width:100vw;
+            display:flex;
+            flex-direction:row !important;
+            overflow-x:auto;
+            overflow:none;
+            padding-top:3rem;
+            &-row1,&-row2{
+                display:flex;
+                flex-direction:row !important;
+                flex-wrap:nowrap;
+                justify-content: space-evenly;
+                align-content: center;
+                padding-left:0px;
+                padding-right:0px;
+            }
+            &-row1{
+                // padding-left:25px;
+            }
+            &-row2{
+                // padding-right:25px;
+            }
+        
+        }
+    
+    
+        &-pictures img{
+            width:250px;
+            height:250px;
+            z-index:2;
+            position:relative;
+            border-radius:20px;
+        }
+    
+        &-pictures-row1-image1,&-pictures-row1-image2,&-pictures-row1-image3,
+        &-pictures-row1-image4,&-pictures-row1-image5,&-pictures-row1-image6{
+            position:relative;
+            margin-right:50px;
+            margin-left:50px;
+
+        }
+        
+
+        &-pictures-row1-image1-name,
+        &-pictures-row1-image2-name,
+        &-pictures-row1-image3-name,
+        &-pictures-row1-image4-name,
+        &-pictures-row1-image5-name,
+        &-pictures-row1-image6-name{
+            position:absolute; 
+            left:0;
+            top:-10%;
+            left:-10%;
+            z-index:0 !important;
+            width:120%;
+            height:130%;
+            border-radius:20px;
+            background:#ADCB4F;
+            color:black;
+            font-family:"Monserrat";
+            font-size:0.75rem;
+            display:flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding-bottom:7%;
+            transition:all 0.5s ease;
+            opacity:1;
+        }
+
+        &-pictures-row1-image1-name{
+        }
+    
+        &-pictures-row1-image2-name{
+            background:#5DBC58;
+            color:white;
+        }
+        &-pictures-row1-image3-name{
+            background:#5DBC58;
+        }
+        &-pictures-row1-image4-name{
+            background:#DAD800;
+            color:white;
+    
+        }
+        &-pictures-row1-image5-name{
+            background:#CFD136;
+        }
+        &-pictures-row1-image6-name{
+            background:#145629;
+            color:white;
+        }
+        
+    
+        &-pictures-row1-image1:hover &-pictures-row1-image1-name
+        {
+            height:140%;
+            opacity:1;
+        }
+        &-pictures-row1-image2:hover &-pictures-row1-image2-name
+        {
+            height:140%;
+            opacity:1;
+        }
+        &-pictures-row1-image3:hover &-pictures-row1-image3-name
+        {
+            height:140%;
+            opacity:1;
+        }
+        &-pictures-row1-image4:hover &-pictures-row1-image4-name
+        {
+            height:140%;
+            opacity:1;
+        }
+        &-pictures-row1-image5:hover &-pictures-row1-image5-name
+        {
+            height:140%;
+            opacity:1;
+        }
+        &-pictures-row1-image6:hover &-pictures-row1-image6-name
+        {
+            height:140%;
+            opacity:1;
+        }
+    }
+    
+}

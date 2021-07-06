@@ -53,7 +53,9 @@ export default function CitySection1(){
                        This tourism focuses on education as well as recreation.</p>
 
               </div>
-              <img src={City3} alt="city1"/>
+              <div className="CitySection2-image">
+                 <img src={City3} alt="city1"/>
+              </div>
               <div className="CitySection2-text">
                   <p ref={zoomOut}  className="CitySection2-text-heading">What Is Agrotourism?</p>
                   <p className="CitySection2-text-para">What started out as a venture by farmers to earn extra money to 

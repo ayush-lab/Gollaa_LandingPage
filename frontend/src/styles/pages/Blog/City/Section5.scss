@@ -90,8 +90,6 @@ $Section5_heading_font:28px;
         position:relative !important;
         opacity:0;
         transform:translateY(0%) !important;
-        // padding-left:0 !important;
-        // padding-right: 0 !important;
         top:0;
         left:0;
         // width:100%;
@@ -104,11 +102,6 @@ $Section5_heading_font:28px;
     }
 }
 
-// .CitySection5:hover .CitySection5-last{
-//     transform: translate(0);
-//     opacity:1;
-// }
-
 .Bottom_to_Top{
     transform: translate(0) !important;
     opacity:1 !important;
@@ -117,5 +110,427 @@ $Section5_heading_font:28px;
 @media(min-width:1450px){
     .CitySection5-last{
         transform:translateY(240%);
+    }
+}
+
+@media(max-width:1300px){
+    .CitySection5-right-heading{
+        white-space:normal;
+        overflow:visible;
+    }
+    .CitySection5-right{
+        padding-left:60px;
+        padding-right:60px;
+ 
+    }
+    .CitySection5-last,.CitySection5-lastDummy{
+        padding-left:60px;
+        padding-right:60px;
+    }
+}
+
+
+@media(max-width:900px){
+
+$Section5_padding:40px;
+$Section5_heading_font:28px;
+
+.CitySection5{
+    display:flex;
+    height:calc(100vh - 80px - 180px);
+    position:relative;
+    max-width:100vw;
+
+    &-left{
+        flex-basis:50%;
+        width:50%;
+    }
+    &-left >img{
+        width:100%;
+        height:100%;
+        object-fit: cover;
+    }
+    &-text{
+        flex-basis:50%;
+        width:50%;
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+    }
+    &-right{
+        width:100%;
+        padding-left:$Section5_padding;
+        padding-right: $Section5_padding;
+        &-heading,&-para{
+           
+        }
+
+        &-heading{
+           font-size:$Section5_heading_font;
+           padding-bottom:1rem;
+           text-align:center;
+           overflow:visible;
+           white-space: normal;
+       }
+       &-para{
+           text-align: center;
+           font-size:10px;
+       }
+    }
+
+    &-last,&-lastDummy{
+        display:none;
+        position:absolute;
+        top:50%;
+        left:50%;
+        width:50%;
+        height:50%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        transform:translateY(0%);
+        transition:all 0.5s ease;
+        opacity:0;
+        padding-top:1rem;
+        padding-left:$Section5_padding;
+        padding-right: $Section5_padding;
+        &-heading{
+            font-size:$Section5_heading_font;
+            font-weight:300;
+            padding-bottom:1rem;
+            text-align:center;
+            overflow:none;
+            white-space: nowrap;
+        }
+        &-para{
+            text-align: center;
+            font-family: "Poppins";
+            font-size:10px;
+            font-weight:200;
+        }
+    }
+    &-lastDummy{
+        display:inline-block !important;
+        position:relative !important;
+        opacity:1;
+        transform:translateY(0%) !important;
+        top:0;
+        left:0;
+        height:auto !important;
+        width:100% !important;
+        display:block;
+        flex-direction: none;
+        align-items: none;
+        justify-content: none;
+    }
+}
+.Bottom_to_Top{
+    transform: translate(0);
+    opacity:1;
+}
+}
+
+
+@media(max-width:770px){
+
+    $Section5_padding:60px;
+    $Section5_heading_font:28px;
+    
+    .CitySection5{
+        display:flex;
+        flex-direction:column;
+        height:calc(100vh - 80px);
+        position:relative;
+        max-width:100vw;
+        background:#5FAF42;
+    
+        &-left{
+            flex-basis:50%;
+            width:100%;
+            height:50%;
+        }
+        &-left >img{
+            width:100%;
+            height:100%;
+            object-fit: cover;
+        }
+        &-text{
+            flex-basis:50%;
+            width:100%;
+            height:50%;
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items: center;
+        }
+        &-right{
+            width:100%;
+            padding-left:$Section5_padding;
+            padding-right: $Section5_padding;
+            &-heading,&-para{
+               
+            }
+    
+            &-heading{
+               font-size:$Section5_heading_font;
+               padding-bottom:1rem;
+               text-align:center;
+               overflow:visible;
+               white-space: normal;
+           }
+           &-para{
+               text-align: center;
+               font-size:10px;
+           }
+        }
+    
+        &-last,&-lastDummy{
+            display:none;
+            position:absolute;
+            top:50%;
+            left:50%;
+            width:50%;
+            height:50%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            transform:translateY(0%);
+            transition:all 0.5s ease;
+            opacity:0;
+            padding-top:1rem;
+            padding-left:$Section5_padding;
+            padding-right: $Section5_padding;
+            &-heading{
+                font-size:$Section5_heading_font;
+                font-weight:300;
+                padding-bottom:1rem;
+                text-align:center;
+                overflow:none;
+                white-space: nowrap;
+            }
+            &-para{
+                text-align: center;
+                font-family: "Poppins";
+                font-size:10px;
+                font-weight:200;
+            }
+        }
+        &-lastDummy{
+            display:inline-block !important;
+            position:relative !important;
+            opacity:1;
+            transform:translateY(0%) !important;
+            top:0;
+            left:0;
+            height:auto !important;
+            width:100% !important;
+            display:block;
+            flex-direction: none;
+            align-items: none;
+            justify-content: none;
+        }
+    }
+}
+
+
+@media(max-width:570px){
+
+    $Section5_padding:60px;
+    $Section5_heading_font:14px;
+    
+    .CitySection5{
+        display:flex;
+        flex-direction:column;
+        height:calc(80vh - 80px);
+        position:relative;
+        max-width:100vw;
+    
+        &-left{
+            flex-basis:45%;
+            width:100%;
+            height:45%;
+        }
+        &-left >img{
+            width:100%;
+            height:100%;
+            object-fit: cover;
+        }
+        &-text{
+            flex-basis:55%;
+            width:100%;
+            height:55%;
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items: center;
+        }
+        &-right{
+            width:100%;
+            padding-left:$Section5_padding;
+            padding-right: $Section5_padding;
+            &-heading,&-para{
+               
+            }
+    
+            &-heading{
+               font-size:$Section5_heading_font;
+               padding-bottom:1rem;
+               text-align:center;
+               overflow:visible;
+               white-space: normal;
+           }
+           &-para{
+               text-align: center;
+               font-size:8px;
+           }
+        }
+    
+        &-last,&-lastDummy{
+            display:none;
+            position:absolute;
+            top:50%;
+            left:50%;
+            width:50%;
+            height:50%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            transform:translateY(0%);
+            transition:all 0.5s ease;
+            opacity:0;
+            padding-top:1rem;
+            padding-left:$Section5_padding;
+            padding-right: $Section5_padding;
+            &-heading{
+                font-size:$Section5_heading_font;
+                font-weight:300;
+                padding-bottom:1rem;
+                text-align:center;
+                overflow:none;
+                white-space: nowrap;
+            }
+            &-para{
+                text-align: center;
+                font-family: "Poppins";
+                font-size:8px;
+                font-weight:200;
+            }
+        }
+        &-lastDummy{
+            display:inline-block !important;
+            position:relative !important;
+            opacity:1;
+            transform:translateY(0%) !important;
+            top:0;
+            left:0;
+            height:auto !important;
+            width:100% !important;
+            display:block;
+            flex-direction: none;
+            align-items: none;
+            justify-content: none;
+        }
+    }
+}
+
+
+@media(max-width:570px){
+
+    $Section5_padding:15px;
+    $Section5_heading_font:14px;
+    
+    .CitySection5{
+        display:flex;
+        flex-direction:column;
+        height:calc(80vh - 80px);
+        position:relative;
+        max-width:100vw;
+    
+        &-left{
+            flex-basis:45%;
+            width:100%;
+            height:45%;
+        }
+        &-left >img{
+            width:100%;
+            height:100%;
+            object-fit: cover;
+        }
+        &-text{
+            flex-basis:55%;
+            width:100%;
+            height:55%;
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items: center;
+        }
+        &-right{
+            width:100%;
+            padding-left:$Section5_padding;
+            padding-right: $Section5_padding;
+            &-heading,&-para{
+               
+            }
+    
+            &-heading{
+               font-size:$Section5_heading_font;
+               padding-bottom:1rem;
+               text-align:center;
+               overflow:visible;
+               white-space: normal;
+           }
+           &-para{
+               text-align: center;
+               font-size:8px;
+           }
+        }
+    
+        &-last,&-lastDummy{
+            display:none;
+            position:absolute;
+            top:50%;
+            left:50%;
+            width:50%;
+            height:50%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            transform:translateY(0%);
+            transition:all 0.5s ease;
+            opacity:0;
+            padding-top:1rem;
+            padding-left:$Section5_padding;
+            padding-right: $Section5_padding;
+            &-heading{
+                font-size:$Section5_heading_font;
+                font-weight:300;
+                padding-bottom:1rem;
+                text-align:center;
+                overflow:none;
+                white-space: nowrap;
+            }
+            &-para{
+                text-align: center;
+                font-family: "Poppins";
+                font-size:8px;
+                font-weight:200;
+            }
+        }
+        &-lastDummy{
+            display:inline-block !important;
+            position:relative !important;
+            opacity:1;
+            transform:translateY(0%) !important;
+            top:0;
+            left:0;
+            height:auto !important;
+            width:100% !important;
+            display:block;
+            flex-direction: none;
+            align-items: none;
+            justify-content: none;
+        }
     }
 }

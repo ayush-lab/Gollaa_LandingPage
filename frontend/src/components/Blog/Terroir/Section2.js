@@ -43,6 +43,46 @@ export default function TerroirSection2(){
                             fruits you’ll be able to enjoy once you are in Uttarakhand are listed below-</p>
                     </div>
 
+                    <div className="TerroirSection2-right-mobile">
+                        <div className="TerroirSection2-right-mobile-content">
+                            <img src={Fruit1} alt="fruits"/>
+                            <span className="TerroirSection2-right-mobile-content-name1">Strawberry</span>
+                        </div>
+                        <div className="TerroirSection2-right-mobile-content">
+                            <img src={Fruit2} alt="fruits"/>
+                            <span className="TerroirSection2-right-mobile-content-name2">Kafal</span>
+                        </div>
+                          <div className="TerroirSection2-right-mobile-content">
+                            <img src={Fruit3} alt="fruits"/>
+                            <span className="TerroirSection2-right-mobile-content-name3">Hisalu</span>
+                        </div>
+                        <div className="TerroirSection2-right-mobile-content">
+                            <img src={Fruit4} alt="fruits"/>
+                            <span className="TerroirSection2-right-mobile-content-name4">Ghingaru</span>
+                        </div>
+                        <div className="TerroirSection2-right-mobile-content">
+                            <img src={Fruit5} alt="fruits"/>
+                            <span className="TerroirSection2-right-mobile-content-name5">Apricot</span>
+                        </div>
+                        <div className="TerroirSection2-right-mobile-content">
+                            <img src={Fruit6} alt="fruits"/>
+                            <span className="TerroirSection2-right-mobile-content-name6">Dadim</span>
+                        </div>
+                        <div className="TerroirSection2-right-mobile-content">
+                            <img src={Fruit7} alt="fruits"/>
+                            <span className="TerroirSection2-right-mobile-content-name7">Mulbarries</span>
+                        </div>
+                        <div className="TerroirSection2-right-mobile-content">
+                            <img src={Fruit8} alt="fruits"/>
+                            <span className="TerroirSection2-right-mobile-content-name8">Plum</span>
+                        </div>
+                        <div className="TerroirSection2-right-mobile-content">
+                            <img src={Fruit9} alt="fruits"/>
+                            <span className="TerroirSection2-right-mobile-content-name9">Kilmode</span>
+                        </div>
+                    </div>
+
+
                     <div className="TerroirSection2-right-middle">
                         <div className="TerroirSection2-right-middle-col1">
 
@@ -61,7 +101,7 @@ export default function TerroirSection2(){
                                  onMouseLeave={()=>fruit2Handler(false)} 
                                  className="relative">
                                 <p className={fruit2 ? "fruit-text-none" : "TerroirSection2-right-middle-col1-name2"}>
-                                    Ghingaru
+                                    Kafal
                                 </p>
                                 <img className={fruit2 ? "TerroirSection2-right-middle-col1-fruit2" : "fruit-picture-none"} src={Fruit4} alt="fruit"/>
 
@@ -70,7 +110,7 @@ export default function TerroirSection2(){
                             <div onMouseEnter={()=>fruit3Handler(true)} 
                                  onMouseLeave={()=>fruit3Handler(false)} className="relative" >
                                 <p className={fruit3 ? "fruit-text-none" :"TerroirSection2-right-middle-col1-name3"}>
-                                    Mulbarries
+                                    Hisalu
                                 </p>
                                 <img className={fruit3 ? "TerroirSection2-right-middle-col1-fruit3" : "fruit-picture-none"} src={Fruit7} alt="fruit"/>
 
@@ -81,7 +121,7 @@ export default function TerroirSection2(){
                         <div className="TerroirSection2-right-middle-col2">
                             <div onMouseEnter={()=>fruit4Handler(true)} 
                                 onMouseLeave={()=>fruit4Handler(false)} className="relative">
-                                <p  className={fruit4 ? "fruit-text-none" :"TerroirSection2-right-middle-col2-name1"}>Kafal</p>
+                                <p  className={fruit4 ? "fruit-text-none" :"TerroirSection2-right-middle-col2-name1"}>Ghingaru</p>
                             <img className={fruit4 ? "TerroirSection2-right-middle-col2-fruit1" : "fruit-picture-none"} src={Fruit2} alt="fruits"/>
 
                             </div>
@@ -98,7 +138,7 @@ export default function TerroirSection2(){
                             <div  
                               onMouseEnter={()=>fruit6Handler(true)} 
                                onMouseLeave={()=>fruit6Handler(false)} className="relative">
-                                <p  className={fruit6 ? "fruit-text-none" :"TerroirSection2-right-middle-col2-name3"}>Plum</p>
+                                <p  className={fruit6 ? "fruit-text-none" :"TerroirSection2-right-middle-col2-name3"}>Dadim</p>
                                 <img className={fruit6 ? "TerroirSection2-right-middle-col2-fruit3" : "fruit-picture-none"} src={Fruit8} alt="fruit"/>
 
                             </div>
@@ -108,7 +148,7 @@ export default function TerroirSection2(){
                         <div className="TerroirSection2-right-middle-col3">
                             <div onMouseEnter={()=>fruit7Handler(true)} 
                                 onMouseLeave={()=>fruit7Handler(false)} className="relative">
-                                 <p className={fruit7 ? "fruit-text-none" :"TerroirSection2-right-middle-col3-name1"}>Hisalu</p>
+                                 <p className={fruit7 ? "fruit-text-none" :"TerroirSection2-right-middle-col3-name1"}>Mulbarries</p>
                                  <img className={fruit7 ? "TerroirSection2-right-middle-col3-fruit1" : "fruit-picture-none"} src={Fruit3} alt="fruits"/>
 
                             </div>
@@ -116,7 +156,7 @@ export default function TerroirSection2(){
                             
                             <div onMouseEnter={ ()=>fruit8Handler(true)}
                                 onMouseLeave={()=>fruit8Handler(false)} className="relative" >
-                                <p  className={fruit8 ? "fruit-text-none" :"TerroirSection2-right-middle-col3-name2"}> Dadim</p>
+                                <p  className={fruit8 ? "fruit-text-none" :"TerroirSection2-right-middle-col3-name2"}> Plum</p>
                                 <img className={fruit8 ? "TerroirSection2-right-middle-col3-fruit2" : "fruit-picture-none"} src={Fruit6} alt="fruit"/>
 
                             </div>

@@ -9,7 +9,7 @@ import Gollaa_Trade from '../../../assets/images/Gollaa Trade Illustration.svg';
 
 export default function Section1(){
 
-  const [shop,shopHandler] = useState({shopOpen:false,shopHover:false,shopClicked:false});
+  const [shop,shopHandler] = useState({shopOpen:false,shopHover:false,shopClicked:false,shopClosedClick:false});
   const [grow,growHandler] = useState({growOpen:false,growHover:false});
   const [support,supportHandler] = useState({supportOpen:false,supportHover:false});
   const [stay,stayHandler] = useState({stayOpen:false,stayHover:false});
@@ -34,6 +34,8 @@ export default function Section1(){
     shopRef.current.classList.add('Section1-row1-shopClosed');
     shopFullScreenText.current.classList.add('Section1-row1-shopClosed-textBlock');
     // shopFullScreenText.current.classList.add('Section1-row1-shopClosed-textBlock');
+    shopHandler(prevState=>({...prevState,shopClosedClick:true}))
+
 
 
     if(timeout){
@@ -43,7 +45,7 @@ export default function Section1(){
     setTimeout(()=>{
         shopRef.current.classList.remove('Section1-row1-shopClosed')
         shopFullScreenText.current.classList.remove('Section1-row1-shopClosed-textBlock');
-        shopHandler(prevState=>({...prevState,shopOpen:!prevState.shopOpen,shopClicked:!prevState.shopClicked}))
+        shopHandler(prevState=>({...prevState,shopOpen:!prevState.shopOpen,shopClicked:!prevState.shopClicked,shopClosedClick:!prevState.shopClicked}))
         
     },1500)
   }
@@ -111,12 +113,13 @@ export default function Section1(){
       overlayShop = ["overlay-come"]
   }
   if(!shop.shopHover){
-    //   let ind = overlayShop.indexOf("overlay-come");
-    //   overlayShop.splice(ind,1);
       overlayShop = ["overlay-exit"];
   }
   if(shop.shopClicked){
       overlayShop=["overlay-motion"]
+  }
+  if(shop.shopClosedClick){
+    overlayShop=["overlay-come"]
   }
 
   console.log(overlayShop)

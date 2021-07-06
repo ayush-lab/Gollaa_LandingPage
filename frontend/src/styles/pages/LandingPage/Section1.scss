@@ -15,7 +15,7 @@
     
     @keyframes textAnimation{
       0%{
-        transform: translateX(15%);
+        transform: translateX(0%);
         opacity:0;
       }
       15%{
@@ -40,7 +40,7 @@
       }
       100%{
         opacity:0;
-        transform: translateX(-30%);
+        transform: translateX(0%);
       }
     }
 
@@ -54,7 +54,7 @@
         // height:300px;
         // height:calc(50vh);
         height:calc(50vh - 40px);
-        width:50vw;
+        max-width:49.5vw;
       }
     }
 
@@ -214,13 +214,15 @@ $Section1_height: calc(100vh - 80px);
         justify-content: center;
         align-items:center;
         flex-basis:50%;
+        height:100%;
         width:50%;
+      
       }
       &-image>img{
         min-width:calc(40vw / 2);
-        min-height:calc(40vh / 2);
+        // min-height:calc(40vh / 2);
         width:60%;
-        height:60%;
+        height:90%;
       }
       &-cross{
         position:absolute;
@@ -244,6 +246,7 @@ $Section1_height: calc(100vh - 80px);
         align-items:flex-start;
         padding-left:10px;
         padding-right:90px;
+
         // padding-right:50px;
         // padding-bottom:50px;
         // animation: txt 2s forwards;
@@ -282,7 +285,7 @@ $Section1_height: calc(100vh - 80px);
         }
         &-app >button{
           @extend .download_button;
-          margin-top:1.2rem;
+          margin-top:2.2rem;
         }
       }
       
@@ -293,26 +296,21 @@ $Section1_height: calc(100vh - 80px);
       position:absolute;
       background: #cfd136;
       z-index:10;
-      width:50%;
+      width:50vw;
       height:calc(50vh - 40px);
       transition: all 1s ease !important;
       animation: zoomedOut 1.5s forwards !important;
       z-index:10;
-      &-image{
-        display:flex;
-        justify-content: center;
-        align-items:center;
-        flex-basis:50%;
-        margin-left:20%;
-        width:50%;
-      }
-      &-image>img{
-        max-width:90%;
-        // height:100%;
-      }
+      padding-left: 30px;
+      padding-right: 20px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+
       &-textBlock{
         animation:textAnimationReverse 1.5s ease;
         opacity:0;
+        width:50%;
+        padding-left:20px;
       }
     }
 
@@ -325,12 +323,10 @@ $Section1_height: calc(100vh - 80px);
     &-shop,&-dummyShop {
       position:relative;
       flex-basis: $Half-Width !important;
-      // height:300px !important;
-      // height:calc(50%);
       height:calc(50vh - 40px);
-      // transition: all 0s ease;
       left:0;
       opacity:1;
+      transition:opacity 0.5s ease;
       flex-grow: 1;
       flex-shrink: 1;
       display: flex;
@@ -346,9 +342,11 @@ $Section1_height: calc(100vh - 80px);
       &-image {
         // flex: 1 1 250px;
         flex:1 1 50%;
+        height:90%;
       }
       &-image > img {
         max-width: 90%;
+        height:100%;
       }
       &-text {
         width: 50%;
@@ -367,7 +365,7 @@ $Section1_height: calc(100vh - 80px);
             margin: 0;
           }
           &-heading {
-            font-size: 16px;
+            font-size: 1rem;
             font-family: "Poppins";
             font-weight: 200;
             padding-left: 6px;

@@ -1,4 +1,8 @@
 $Section4_height: calc(100vh - 80px - 180px);
+$Section4_heading_font:2.25rem;
+$Section4_text_font:0.75rem;
+$Section4_padding:90px;
+
 
 .Section4 {
   display: flex;
@@ -64,7 +68,7 @@ $Section4_height: calc(100vh - 80px - 180px);
         &-Text {
           font-family: "Monserrat";
           font-weight: 300;
-          font-size: 36px;
+          font-size: $Section4_heading_font;
           color:white;
   
   
@@ -83,30 +87,82 @@ $Section4_height: calc(100vh - 80px - 180px);
       flex-direction: column;
       padding-left: 110px;
       padding-top: 30px;
-      // padding-right: 25px;
-
-      // &-Text1 {
-      //   font-family: "Monserrat";
-      //   font-weight: 300;
-      //   font-size: 14px;
-      //   color: white;
-      //   padding-bottom: 20px;
-
-      //   span {
-      //     display: block;
-      //   }
-      // }
+    
       &-Text2 {
         color: white;
         width:55%;
         font-family: "Poppins";
         font-weight: 200;
-        font-size: 12px;
+        font-size: $Section4_text_font;
       }
     }
   }
 }
 
+@media(min-width:1500px){
+  $Section4_height: calc(100vh - 80px - 180px);
+  $Section4_heading_font:2.5rem;
+  $Section4_text_font:1rem;
+  $Section4_padding:90px;
+
+
+.Section4 {
+  height: $Section4_height;
+  &-picture {
+
+    &-earth {
+      width:100%;
+      height:100%;
+    }
+    &-earth >img{
+      width:50%;
+      height:70%;
+    }
+    &-top {
+      height: 50%;
+    }
+    &-bottom {
+      height: 50%;
+    }
+  }
+  &-info {
+    width: calc(100% - 50%);
+
+    &-top {
+      height: 50%;
+      padding-left:110px;
+      padding-bottom:30px;
+
+      &-imageText{
+        z-index:3;
+        &-image{
+          max-width: 150px;
+        }
+  
+        &-Text {
+          font-size: $Section4_heading_font;
+          span {
+            display: inline-block;
+          }
+        }
+      }
+      
+    }
+
+    &-bottom {
+      height: 50%;
+      padding-left: 110px;
+      padding-top: 30px;
+    
+      &-Text2 {
+        width:55%;
+        font-size: $Section4_text_font;
+      }
+    }
+  }
+}
+
+}
 @media (max-width: 1000px) {
   $Section4_height: 420px;
 
