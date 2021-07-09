@@ -1,11 +1,11 @@
 
+
 // transition for shop
     @keyframes zoomIn{
     
       0%{
         height:calc(50vh - 40px);
         width:50vw;
-
       }
       100%{
         height:calc(100vh - 80px);
@@ -25,7 +25,6 @@
         transform: translateX(0);
         opacity:1;
         display:inline-block;
-
       }
     }
      
@@ -63,12 +62,23 @@
 
     @keyframes growText{
       0%{
-        transform: translateX(100%);
+        transform: translateX(0%);
+        max-width:0%;
+        opacity:0;
+        overflow:hidden;
+      }
+      15%{
+        opacity:0;
+        width:50%;
+      }
+      25%{
         opacity:0;
       }
       100%{
+        width:50%;
         transform: translateX(0);
         opacity:1;
+        display:inline-block;
 
       }
     }
@@ -91,21 +101,22 @@
 @keyframes zoomInSupport{
     
       0%{
-        width:50vw;
+        width:calc(100vw / 3);
         height:calc(50vh - 40px);
         top:calc(50vh - 40px);
       }
       100%{
-        width:100%;
-        height:100vh;
-        top:0;
+        width:100vw;
+        height:calc(100vh - 80px);
+        top:80px;
+
       }
     }
    
     @keyframes zoomedOutSupport{
       0%{
         width:100vw;
-        height:100vh;
+        height:calc(100vh - 80px);
         top:0;
       }
       100%{
@@ -117,14 +128,12 @@
 
     @keyframes textAnimationSupport{
       0%{
-        transform: translateX(0%);
         opacity:0;
       }
       35%{
         opacity:0;
       }
       100%{
-        transform: translateX(0);
         opacity:1;
 
       }
@@ -132,7 +141,6 @@
      
     @keyframes textAnimationReverseSupport{
       0%{
-        transform: translateX(0%);
         opacity:1;
       }
       20%{
@@ -140,22 +148,87 @@
       }
       100%{
         opacity:0;
-        transform: translateX(0%);
       }
     }
 
-    .download_button{
-      // padding-left: 8px;
-      // padding-top: 8px;
-      // padding-right: 8px;
-      // padding-bottom: 8px;
+  // Stay 
+
+
+@keyframes zoomInStay{
+    
+  0%{
+    width:calc(100vw / 3);
+    height:calc(50vh - 40px);
+    top:calc(50vh - 40px);
+    left:calc(100vw / 3);
+  }
+  100%{
+    width:100vw;
+    height:calc(100vh - 80px);
+    top:80px;
+    left:0;
+  }
+}
+
+@keyframes zoomedOutStay{
+  0%{
+    width:100vw;
+    height:calc(100vh - 80px);
+    top:0;
+    left:0;
+  }
+  100%{
+    height:calc(50vh - 40px);
+    width:calc(100vw / 3);
+    top:calc(50vh - 40px);
+    left:calc(100vw / 3);
+
+  }
+}
+
+  // Trade
+
+
+  @keyframes zoomInTrade{
+      
+    0%{
+      width:calc(100vw / 3);
+      height:calc(50vh - 40px);
+      top:calc(50vh - 40px);
+      right:0;
+    }
+    100%{
+      width:100vw;
+      height:calc(100vh - 80px);
+      top:80px;
+      right:0;
+    }
+  }
+
+  @keyframes zoomedOutTrade{
+    0%{
+      width:100vw;
+      height:calc(100vh - 80px);
+      top:0;
+      right:0;
+    }
+    100%{
+      height:calc(50vh - 40px);
+      width:calc(100vw / 3);
+      top:calc(50vh - 40px);
+      right:0;
+
+    }
+  }
+
+.download_button{
       width:110px;
       height:32px;
-      margin-right: 14px;
+      margin-right: 0.875rem;
       color: white;
       font-family: "Monserrat";
       font-weight: 250;
-      font-size: 12px;
+      font-size: 0.75rem;
       background: #161615 0% 0% no-repeat padding-box;
       border: none;
       outline: none;
@@ -166,11 +239,11 @@
     .signIn_button{
       height:32px;
       width:110px;
-      margin-right: 16px;
+      margin-right: 1rem;
       color: black;
       font-family: "Monserrat";
       font-weight: 300;
-      font-size: 12px;
+      font-size: 0.75rem;
       background: inherit;
       border: 1.5px solid black;
       outline: none;
@@ -181,9 +254,7 @@
     }
     
 $Half-Width: 50%;
-// $Section1_height: auto;
 $Section1_height: calc(100vh - 80px);
-// $row2_height: auto;
 
 .Section1 {
   background: #5dbc58;
@@ -195,7 +266,7 @@ $Section1_height: calc(100vh - 80px);
     max-width:100%;
 
     &-shopOpen{
-      position:absolute;
+      position:fixed;
       background: #cfd136;
       max-width:100vw;
       height:calc(100vh - 80px);
@@ -204,11 +275,12 @@ $Section1_height: calc(100vh - 80px);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      transition: all 1s ease;
+      transition: all 1s ease-in;
       z-index:10;
-      animation: zoomIn 1.5s ease;
+      animation: zoomIn 1.3s ease;
       opacity:1;
       padding:0;
+      overflow:hidden;
       &-image{
         display:flex;
         justify-content: center;
@@ -220,17 +292,16 @@ $Section1_height: calc(100vh - 80px);
       }
       &-image>img{
         min-width:calc(40vw / 2);
-        // min-height:calc(40vh / 2);
         width:60%;
         height:90%;
       }
-      &-cross{
+      &-cross,.cross-disappear {
         position:absolute;
         top:5%;
         right:3%;
         z-index:10;
         opacity:1;
-        transform:opacity 0.5s ease;
+        transition:opacity 1s ease;
       }
       &-cross >img{
         cursor:pointer;
@@ -246,10 +317,6 @@ $Section1_height: calc(100vh - 80px);
         align-items:flex-start;
         padding-left:10px;
         padding-right:90px;
-
-        // padding-right:50px;
-        // padding-bottom:50px;
-        // animation: txt 2s forwards;
         animation:textAnimation 2s ease;
 
         &-Gollaa {
@@ -258,27 +325,25 @@ $Section1_height: calc(100vh - 80px);
           white-space: nowrap;
 
           &-image {
-            // max-width: 50%;
             max-width: 120px;
             margin-right: 6px;
           }
           &-heading {
-            font-size: 16px;
+            font-size: 1rem;
             font-family: "Poppins";
             font-weight: 200;
-            // padding-left: 5px;
           }
         }
         &-subheading1{
           font-family:'Monserrat';
           font-weight: 250;
-          font-size:16px;
+          font-size:0.875rem;
           padding-bottom:2rem;
         }
         &-subheading2,&-subheading3{
           font-family:'Poppins';
           font-weight:200;
-          font-size:16px;
+          font-size:0.75rem;
         }
         &-subheading2{
           padding-bottom:1rem;
@@ -296,10 +361,10 @@ $Section1_height: calc(100vh - 80px);
       position:absolute;
       background: #cfd136;
       z-index:10;
-      width:50vw;
+      width:49.5vw;
       height:calc(50vh - 40px);
       transition: all 1s ease !important;
-      animation: zoomedOut 1.5s forwards !important;
+      animation: zoomedOut 1.3s ease !important;
       z-index:10;
       padding-left: 30px;
       padding-right: 20px;
@@ -307,10 +372,9 @@ $Section1_height: calc(100vh - 80px);
       padding-bottom: 20px;
 
       &-textBlock{
-        animation:textAnimationReverse 1.5s ease;
+        animation:textAnimationReverse 1.2s ease;
         opacity:0;
         width:50%;
-        padding-left:20px;
       }
     }
 
@@ -374,7 +438,7 @@ $Section1_height: calc(100vh - 80px);
         &-subheading {
           font-family: "Monserrat";
           font-weight: 200;
-          font-size: 14px;
+          font-size: 0.875rem;
         }
         &-app,.maxOpacity {
           transition:opacity 0.5s;
@@ -390,7 +454,7 @@ $Section1_height: calc(100vh - 80px);
         &-app > span , .maxOpacity>span{
           font-family: "Monserrat";
           font-weight: 200;
-          font-size: 12px;
+          font-size: 0.75rem;
           overflow: hidden;
           white-space: nowrap;
           opacity:1;
@@ -401,11 +465,11 @@ $Section1_height: calc(100vh - 80px);
 
    
     &-growOpen{
-      position:absolute;
+      position:fixed;
       right:0;
       background: #8cc63f;
-      max-width:100%;
-      height:100vh;
+      max-width:100vw;
+      height:calc(100vh - 80px);
       flex-grow: 1;
       flex-shrink: 1;
       display: flex;
@@ -413,10 +477,10 @@ $Section1_height: calc(100vh - 80px);
       align-items: center;
       transition: all 1s ease;
       z-index:10;
-      animation: zoomIn 1.5s ease;
+      animation: zoomIn 1.3s ease;
       opacity:1;
 
-      &-cross{
+      &-cross,.growCross{
         position:absolute;
         top:5%;
         right:4%;
@@ -426,17 +490,47 @@ $Section1_height: calc(100vh - 80px);
         cursor:pointer;
       }
      
+      &-image{
+        display:flex;
+        justify-content: flex-end;
+        align-items:flex-end;
+        // flex-basis:50%;
+        height:100%;
+        min-width:50%;
+      }
+      &-image>img{
+        min-width:calc(40vw / 2);
+        width:100%;
+        height:100%;
+        transform:translateY(16%);
+      }
+
+      &-ParentTextBlock{
+        max-width: 50%;
+        flex: 0 0 50vw;
+        flex-grow:0;
+        flex-shrink: 0;
+        height:calc(100vh - 80px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        animation:textAnimation 1s ease;
+        overflow:hidden;
+      }
       &-textBlock{
-        width: 50%;
-        height:100vh;
+        flex: 0 0 50vw;
+        min-width:50vw;
+        flex-grow:0;
+        flex-shrink:0;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items:flex-start;
+        overflow:hidden;
         padding-left:50px;
+        padding-right:50px;
         padding-bottom:50px;
-        animation: growTxt 1s forwards;
-        animation:growText 1s ease;
 
         &-Gollaa {
           margin-bottom: 2rem;
@@ -444,13 +538,12 @@ $Section1_height: calc(100vh - 80px);
           white-space: nowrap;
 
           &-image {
-            // max-width: 90px;
-            max-width: 50%;
+            max-width:120px;
             margin: 0;
           }
           &-heading {
-            font-size: 16px;
-            font-family: Poppins;
+            font-size: 1rem;
+            font-family: "Poppins";
             font-weight: 200;
             padding-left: 5px;
           }
@@ -458,20 +551,20 @@ $Section1_height: calc(100vh - 80px);
         &-subheading1{
           font-family:'Monserrat';
           font-weight: 250;
-          font-size:16px;
+          font-size:0.875rem;
           padding-bottom:2rem;
         }
         &-subheading2,&-subheading3{
           font-family:'Poppins';
           font-weight:200;
-          font-size:16px;
+          font-size:0.75rem;
         }
         &-subheading2{
           padding-bottom:1rem;
         }
         &-app >button{
           @extend .download_button;
-          margin-top:1.5rem;
+          margin-top:2.2rem;
         }
       }
       
@@ -482,13 +575,14 @@ $Section1_height: calc(100vh - 80px);
       position:absolute;
       background: #8cc63f;
       z-index:2;
-      width:50%;
-      height:calc(50%);
+      width:50vw;
+      height:calc(50vh - 40px);
       transition: all 1s ease !important;
-      animation: zoomedOut 1.5s forwards !important;
+      animation: zoomedOut 1.3s ease !important;
       z-index:2;
       &-textBlock{
-        animation:growTextReverse 3s ease;
+        width:50%;
+        animation:textAnimationReverse 1.5s ease;
       }
     }
 
@@ -505,8 +599,6 @@ $Section1_height: calc(100vh - 80px);
       display: flex;
       height:calc(50vh - 40px);
       flex: 1 1 50%;
-      flex-grow:1;
-      flex-shrink:1;
       background: #8cc63f;
       padding-left: 56.52px;
 
@@ -538,7 +630,7 @@ $Section1_height: calc(100vh - 80px);
             margin: 0;
           }
           &-heading {
-            font-size: 16px;
+            font-size: 1rem;
             font-family: "Poppins";
             font-weight: 200;
             padding-left: 6px;
@@ -548,7 +640,7 @@ $Section1_height: calc(100vh - 80px);
         &-subheading {
           font-family: "Monserrat";
           font-weight: 200;
-          font-size: 14px;
+          font-size: 0.875rem;
         }
         &-app,.maxOpacity{
           transition:opacity 0.5s;
@@ -563,7 +655,7 @@ $Section1_height: calc(100vh - 80px);
         &-app > span, .maxOpacity >span {
           font-family: "Monserrat";
           font-weight: 200;
-          font-size: 12px;
+          font-size: 0.75rem;
           overflow: hidden;
           white-space: nowrap;
         }
@@ -572,11 +664,11 @@ $Section1_height: calc(100vh - 80px);
 
   
     &-supportOpen{
-      position:absolute;
-      top:0px;
+      position:fixed;
+      top:80px;
       background: #ede139;
-      max-width:100%;
-      height:100vh;
+      width:100vw;
+      height:calc(100vh - 80px);
       flex-grow: 1;
       flex-shrink: 1;
       display: flex;
@@ -584,8 +676,24 @@ $Section1_height: calc(100vh - 80px);
       align-items: center;
       transition: all 1s ease;
       z-index:10;
-      animation: zoomInSupport 1.5s ease;
+      animation: zoomInSupport 1.3s ease;
       opacity:1;
+
+      &-image{
+        display:flex;
+        justify-content: center;
+        align-items:flex-end;
+        flex-basis:50%;
+        height:100%;
+        width:50%;
+        // background:darkorange;
+      }
+      &-image>img{
+        min-width:calc(40vw / 2);
+        width:70%;
+        height:100%;
+        transform:translate(-20%,20%);
+      }
 
       &-cross{
         position:absolute;
@@ -597,18 +705,34 @@ $Section1_height: calc(100vh - 80px);
         cursor:pointer;
       }
      
-      &-textBlock{
-        width: 50%;
-        height:100vh;
+      &-ParentTextBlock{
+        max-width: 50%;
+        min-height:calc( 100vh - 80px);
         display: flex;
+        flex:0 0 50%;
         flex-direction: column;
         justify-content: center;
-        animation: txt 1s forwards;
+        // animation: txt 1s forwards;
+        align-items:center;
+        // padding-left:50px;
+        // padding-right:50px;
+        // padding-bottom:50px;
+        animation:textAnimationSupport 1s ease;
+        overflow:hidden;
+      }
+
+      &-textBlock{
+        width: 50vw;
+        display: flex;
+        flex:0 0 50vw;
+        flex-direction: column;
+        justify-content: center;
         align-items:flex-start;
         padding-left:50px;
+        padding-right:50px;
         padding-bottom:50px;
-        animation:textAnimationSupport 1s ease;
-
+        overflow:hidden;
+        
         &-Gollaa {
           margin-bottom: 2rem;
           overflow: hidden;
@@ -619,7 +743,7 @@ $Section1_height: calc(100vh - 80px);
             margin: 0;
           }
           &-heading {
-            font-size: 16px;
+            font-size: 1rem;
             font-family: Poppins;
             font-weight: 200;
             padding-left: 5px;
@@ -630,20 +754,20 @@ $Section1_height: calc(100vh - 80px);
         &-subheading1{
           font-family:'Monserrat';
           font-weight: 250;
-          font-size:16px;
+          font-size:0.875rem;
           padding-bottom:2rem;
         }
         &-subheading2,&-subheading3{
           font-family:'Poppins';
           font-weight:200;
-          font-size:16px;
+          font-size:0.75rem;
         }
         &-subheading2{
           padding-bottom:1rem;
         }
         &-app >button{
           @extend .download_button;
-          margin-top:1.5rem;
+          margin-top:2.2rem;
         }
       }
       
@@ -654,13 +778,15 @@ $Section1_height: calc(100vh - 80px);
       position:absolute;
       background: #cfd136;
       z-index:2;
-      width:50%;
+      width:50vw;
       height:calc(50vh - 40px);
       transition: all 1s ease !important;
       animation: zoomedOutSupport 1.5s forwards !important;
       z-index:2;
       &-textBlock{
-        animation:textAnimationReverseSupport 3s ease;
+        animation:textAnimationReverse 1s ease;
+        opacity:0;
+        // display:none;
       }
     }
 
@@ -692,7 +818,8 @@ $Section1_height: calc(100vh - 80px);
       }
 
       &-image > img {
-        max-width: 280px;
+        // max-width: 280px;
+        max-width:70%;
         height: auto;
         object-fit: contain;
       }
@@ -707,11 +834,11 @@ $Section1_height: calc(100vh - 80px);
 
           &-image {
             // max-width: 75px;
-            max-width:110px;
+            max-width:120px;
             margin: 0;
           }
           &-heading {
-            font-size: 16px;
+            font-size: 1rem;
             font-family: "Poppins";
             font-weight: 200;
             padding-left: 5px;
@@ -721,7 +848,7 @@ $Section1_height: calc(100vh - 80px);
         &-subheading {
           font-family: "Monserrat";
           font-weight: 200;
-          font-size: 14px;
+          font-size: 0.875rem;
           position:relative;
 
           &-app,.maxOpacity {
@@ -738,7 +865,7 @@ $Section1_height: calc(100vh - 80px);
           &-app > span, .maxOpacity >span {
             font-family: "Monserrat";
             font-weight: 200;
-            font-size: 12px;
+            font-size: 0.75rem;
             overflow: hidden;
             white-space: nowrap;
           }
@@ -747,35 +874,169 @@ $Section1_height: calc(100vh - 80px);
       }
     }
 
-    &-stay {
+    &-stayOpen{
+      position:fixed;
+      top:80px;
+      left:0;
+      background: #5dbc58;
+      width:100vw;
+      height:calc(100vh - 80px);
+      flex-grow: 1;
+      flex-shrink: 1;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      transition: all 1.3s ease;
+      z-index:10;
+      animation: zoomInStay 1.3s ease;
+      opacity:1;
+
+      &-image{
+        display:flex;
+        justify-content: center;
+        align-items:flex-end;
+        flex-basis:50%;
+        height:90%;
+        height:100%;
+        width:50%;
+      }
+      &-image>img{
+        // min-width:calc(40vw / 2);
+        max-width:80%;
+        height:60%;
+        // transform:translate(15%,15%);
+      }
+
+      &-cross{
+        position:absolute;
+        top:5%;
+        right:4%;
+        z-index:3;
+      }
+      &-cross >img{
+        cursor:pointer;
+      }
+     
+      &-ParentTextBlock{
+        max-width: 50%;
+        min-height:calc( 100vh - 80px);
+        display: flex;
+        flex:0 0 50%;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        animation:textAnimationSupport 1s ease;
+        overflow:hidden;
+      }
+
+      &-textBlock{
+        width: 50vw;
+        display: flex;
+        flex:0 0 50vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items:flex-start;
+        padding-left:50px;
+        padding-right:50px;
+        padding-bottom:50px;
+        overflow:hidden;
+        
+        &-Gollaa {
+          margin-bottom: 2rem;
+          overflow: hidden;
+          white-space: nowrap;
+
+          &-image {
+            max-width: 50%;
+            margin: 0;
+          }
+          &-heading {
+            font-size: 1rem;
+            font-family: Poppins;
+            font-weight: 200;
+            padding-left: 5px;
+            text-transform: uppercase;
+
+          }
+        }
+        &-subheading1{
+          font-family:'Monserrat';
+          font-weight: 250;
+          font-size:0.875rem;
+          padding-bottom:2rem;
+        }
+        &-subheading2,&-subheading3{
+          font-family:'Poppins';
+          font-weight:200;
+          font-size:0.75rem;
+        }
+        &-subheading2{
+          padding-bottom:1rem;
+        }
+        &-app >button{
+          @extend .download_button;
+          margin-top:2.2rem;
+        }
+      }
+      
+    }
+
+
+    &-stayClosed{
+      left:calc(100vw / 3);
+      position:absolute;
+      background: #5dbc58;
+      width:50vw;
+      height:calc(50vh - 40px);
+      transition: all 1s ease !important;
+      animation: zoomedOutStay 1.5s forwards !important;
+      z-index:2;
+      &-textBlock{
+        animation:textAnimationReverse 1s ease;
+        opacity:0;
+        // display:none;
+      }
+    }
+
+    &-dummyStay{
+      display:inline-block;
+      position:static;
+    }
+    &-stay,&-dummyStay {
+      position:relative;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       // width: calc(100% / 3);
       flex: 1 1 250px;
-      // height: 350px;
+      height: calc(50vh - 40px);
       background: #5dbc58;
       padding-left: 25px;
-      padding-right: 25px;
+      padding-right: 10px;
       padding-top: 25px;
 
       &-image {
+        height:100%;
+        width:100%;
         display: flex;
         align-items: flex-end;
+        align-self:flex-end;
         justify-content: flex-end;
         text-align: right;
         padding: 0;
         margin: 0;
-        // background: pink
       }
 
       &-image > img {
-        max-width: 230px;
+        // max-width: 230px;
+        width:auto;
+        height: 60%;
         // flex: 1 1 230px;
         // height: 300px;
-        object-fit: contain;
-        // padding: 0;
-        // margin: 0;
+        object-fit:cover;
+        margin:0;
+        padding:0;
+
       }
       &-text {
         display: flex;
@@ -792,7 +1053,7 @@ $Section1_height: calc(100vh - 80px);
             margin: 0;
           }
           &-heading {
-            font-size: 16px;
+            font-size: 1rem;
             font-family: "Poppins";
             font-weight: 200;
             padding-left: 5px;
@@ -802,48 +1063,179 @@ $Section1_height: calc(100vh - 80px);
         &-subheading {
           font-family: "Monserrat";
           font-weight: 200;
-          font-size: 14px;
-        }
-        &-app {
-          display: none;
-          margin-top: 35px;
-          position: absolute;
-          top: 60px;
-        }
-        &-app > button {
-          padding-left: 12px;
-          padding-top: 6px;
-          padding-right: 18px;
-          padding-bottom: 6px;
-          margin-right: 16px;
-          color: white;
-          font-family: "Monserrat";
-          font-weight: 250;
-          font-size: 12px;
-          background: #161615 0% 0% no-repeat padding-box;
-          border: none;
-          outline: none;
-          border-radius: 6px;
-          overflow: hidden;
-          white-space: nowrap;
-        }
-        &-app > span {
-          font-family: "Monserrat";
-          font-weight: 200;
-          font-size: 12px;
-          overflow: hidden;
-          white-space: nowrap;
+          font-size: 0.875rem;
+          position:relative;
+          &-app,.maxOpacity {
+            position:absolute;
+            top:30px;
+            left:0;
+            transition:opacity 0.5s;
+            margin-top: 35px;
+            cursor: pointer;
+            opacity:0;
+            z-index:3;
+          }
+          &-app > button, .maxOpacity > button{
+            @extend .download_button;
+      
+          }
+          &-app > span , .maxOpacity>span{
+            font-family: "Monserrat";
+            font-weight: 200;
+            font-size: 0.75rem;
+            overflow: hidden;
+            white-space: nowrap;
+            opacity:1;
+            transition:opacity 1s ease;
+          }
         }
       }
     }
 
-    &-trade {
+
+    &-tradeOpen{
+      position:fixed;
+      right:0;
+      background: #afd466;
+      width:100vw;
+      height:calc(100vh - 80px);
+      flex-grow: 1;
+      flex-shrink: 1;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      transition: all 1s ease;
+      z-index:10;
+      animation: zoomInTrade 1.3s ease;
+      opacity:1;
+
+      &-cross,.tradeCross{
+        position:absolute;
+        top:5%;
+        right:4%;
+        z-index:3;
+      }
+      &-cross >img{
+        cursor:pointer;
+      }
+     
+      &-image{
+        display:flex;
+        justify-content: flex-end;
+        align-items:flex-end;
+        flex-basis:50%;
+        height:65%;
+        min-width:50%;
+      }
+      &-image>img{
+        min-width:calc(40vw / 2);
+        width:100%;
+        height:100%;
+        transform:translate(-0%,30%);
+        // transform:translateY(16%);
+      }
+
+      &-ParentTextBlock{
+        max-width: 50%;
+        flex: 0 0 50vw;
+        flex-grow:0;
+        flex-shrink: 0;
+        height:calc(100vh - 80px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        animation:textAnimation 1s ease;
+        overflow:hidden;
+      }
+      &-textBlock{
+        flex: 0 0 50vw;
+        min-width:50vw;
+        flex-grow:0;
+        flex-shrink:0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:flex-start;
+        overflow:hidden;
+        padding-left:50px;
+        padding-right:50px;
+        padding-bottom:50px;
+
+        &-Gollaa {
+          margin-bottom: 2rem;
+          overflow: hidden;
+          white-space: nowrap;
+
+          &-image {
+            max-width:120px;
+            margin: 0;
+          }
+          &-heading {
+            font-size: 1rem;
+            font-family: "Poppins";
+            font-weight: 200;
+            padding-left: 5px;
+          }
+        }
+        &-subheading1{
+          font-family:'Monserrat';
+          font-weight: 250;
+          font-size:0.875rem;
+          padding-bottom:2rem;
+        }
+        &-subheading2,&-subheading3{
+          font-family:'Poppins';
+          font-weight:200;
+          font-size:0.75rem;
+        }
+        &-subheading2{
+          padding-bottom:1rem;
+        }
+        &-app >button{
+          @extend .download_button;
+          margin-top:2.2rem;
+        }
+      }
+      
+    }
+
+
+    &-tradeClosed{
+      position:absolute;
+      background: #afd466;
+      z-index:2;
+      width:calc(100vw / 3);
+      // left:calc((100vw / 3)*2);
+      top:calc(50vh - 40px);
+      right:0;
+      height:calc(50vh - 40px);
+      transition: all 1s ease !important;
+      animation: zoomedOutTrade 1.3s ease !important;
+      z-index:2;
+      overflow:hidden;
+      &-textBlock{
+        // width:50%;
+        animation:textAnimationReverse 1.5s ease;
+        opacity:0;
+        overflow:hidden;
+
+      }
+    }
+
+    &-dummyTrade{
+      display:inline-block;
+      position:static;
+    }
+
+    &-trade,&-dummyTrade {
+      position:relative;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       // width: calc(100% / 3);
       flex: 1 1 250px;
-      // height: 350px;
+      height: calc(50vh - 40px);
       background: #afd466;
       padding-left: 25px;
       padding-right: 25px;
@@ -856,11 +1248,14 @@ $Section1_height: calc(100vh - 80px);
         text-align: right;
         padding: 0;
         margin: 0;
-        // background: pink;
+        height:65%;
+        width:100%;
       }
 
       &-image > img {
-        max-width: 180px;
+        // max-width: 180px;
+        max-width:50%;
+        
         // flex: 1 1 180px;
         // height: 300px;
         object-fit: contain;
@@ -877,11 +1272,11 @@ $Section1_height: calc(100vh - 80px);
           margin-bottom: 8px;
 
           &-image {
-            max-width: 110px;
+            max-width: 120px;
             margin: 0;
           }
           &-heading {
-            font-size: 16px;
+            font-size: 1rem;
             font-family: Poppins;
             font-weight: 200;
             padding-left: 5px;
@@ -891,7 +1286,29 @@ $Section1_height: calc(100vh - 80px);
         &-subheading {
           font-family: "Monserrat";
           font-weight: 200;
-          font-size: 14px;
+          font-size: 0.875rem;
+          position:relative;
+
+          &-app,.maxOpacity{
+            position:absolute;
+            top:30px;
+            left:0;
+            transition:opacity 0.5s;
+            margin-top: 35px;
+            cursor: pointer;
+            opacity:0;
+            z-index:3;
+          }
+          &-app > button ,.maxOpacity >button {
+           @extend .signIn_button;
+          }
+          &-app > span, .maxOpacity >span {
+            font-family: "Monserrat";
+            font-weight: 200;
+            font-size: 0.75rem;
+            overflow: hidden;
+            white-space: nowrap;
+          }
         }
         &-app {
           display: none;
@@ -900,15 +1317,15 @@ $Section1_height: calc(100vh - 80px);
           top: 60px;
         }
         &-app > button {
-          padding-left: 12px;
+          padding-left: 0.75rem;
           padding-top: 6px;
           padding-right: 18px;
           padding-bottom: 6px;
-          margin-right: 16px;
+          margin-right: 1rem;
           color: white;
           font-family: "Monserrat";
           font-weight: 250;
-          font-size: 12px;
+          font-size: 0.75rem;
           background: #161615 0% 0% no-repeat padding-box;
           border: none;
           outline: none;
@@ -919,7 +1336,7 @@ $Section1_height: calc(100vh - 80px);
         &-app > span {
           font-family: "Monserrat";
           font-weight: 200;
-          font-size: 12px;
+          font-size: 0.75rem;
           overflow: hidden;
           white-space: nowrap;
         }
@@ -976,15 +1393,15 @@ $Section1_height: calc(100vh - 80px);
             opacity: 1;
           }
           &-app > button {
-            padding-left: 12px;
+            padding-left: 0.75rem;
             padding-top: 6px;
             padding-right: 18px;
             padding-bottom: 6px;
-            margin-right: 16px;
-            font-size: 14px;
+            margin-right: 1rem;
+            font-size: 0.875rem;
           }
           &-app > span {
-            font-size: 14px;
+            font-size: 0.875rem;
             overflow: hidden;
             white-space: nowrap;
           }
@@ -1025,39 +1442,23 @@ $Section1_height: calc(100vh - 80px);
               margin: 0;
             }
             &-heading {
-              font-size: 16px;
+              font-size: 1rem;
               padding-left: 5px;
             }
           }
           &-subheading {
-            font-size: 16px;
+            font-size: 1rem;
           }
           &-app {
             margin-top: 35px;
             position: absolute;
             top: 60px;
           }
-          &-app > button {
-            padding-left: 12px;
-            padding-top: 6px;
-            padding-right: 18px;
-            padding-bottom: 6px;
-            margin-right: 16px;
-            color: white;
-            font-family: "Monserrat";
-            font-weight: 250;
-            font-size: 12px;
-            background: #161615 0% 0% no-repeat padding-box;
-            border: none;
-            outline: none;
-            border-radius: 6px;
-            overflow: hidden;
-            white-space: nowrap;
-          }
+         
           &-app > span {
             font-family: "Monserrat";
             font-weight: 200;
-            font-size: 12px;
+            font-size: 0.75rem;
             overflow: hidden;
             white-space: nowrap;
           }
@@ -1097,12 +1498,12 @@ $Section1_height: calc(100vh - 80px);
               margin: 0;
             }
             &-heading {
-              font-size: 14px;
+              font-size: 0.875rem;
               padding-left: 5px;
             }
           }
           &-subheading {
-            font-size: 14px;
+            font-size: 0.875rem;
           }
           &-app {
             margin-top: 35px;
@@ -1110,18 +1511,18 @@ $Section1_height: calc(100vh - 80px);
             top: 60px;
           }
           &-app > button {
-            padding-left: 12px;
+            padding-left: 0.75rem;
             padding-top: 6px;
             padding-right: 18px;
             padding-bottom: 6px;
-            margin-right: 16px;
-            font-size: 12px;
+            margin-right: 1rem;
+            font-size: 0.75rem;
             border-radius: 6px;
             overflow: hidden;
             white-space: nowrap;
           }
           &-app > span {
-            font-size: 12px;
+            font-size: 0.75rem;
             overflow: hidden;
             white-space: nowrap;
           }
@@ -1161,12 +1562,12 @@ $Section1_height: calc(100vh - 80px);
               margin: 0;
             }
             &-heading {
-              font-size: 14px;
+              font-size: 0.875rem;
               padding-left: 5px;
             }
           }
           &-subheading {
-            font-size: 14px;
+            font-size: 0.875rem;
           }
           &-app {
             margin-top: 35px;
@@ -1174,12 +1575,12 @@ $Section1_height: calc(100vh - 80px);
             top: 60px;
           }
           &-app > button {
-            padding-left: 12px;
+            padding-left: 0.75rem;
             padding-top: 6px;
             padding-right: 18px;
             padding-bottom: 6px;
-            margin-right: 16px;
-            font-size: 12px;
+            margin-right: 1rem;
+            font-size: 0.75rem;
             border: none;
             outline: none;
             border-radius: 6px;
@@ -1189,7 +1590,7 @@ $Section1_height: calc(100vh - 80px);
           &-app > span {
             font-family: "Monserrat";
             font-weight: 200;
-            font-size: 12px;
+            font-size: 0.75rem;
             overflow: hidden;
             white-space: nowrap;
           }
@@ -1227,12 +1628,12 @@ $Section1_height: calc(100vh - 80px);
               margin: 0;
             }
             &-heading {
-              font-size: 14px;
+              font-size: 0.875rem;
               padding-left: 5px;
             }
           }
           &-subheading {
-            font-size: 14px;
+            font-size: 0.875rem;
           }
           &-app {
             margin-top: 35px;
@@ -1240,18 +1641,18 @@ $Section1_height: calc(100vh - 80px);
             top: 60px;
           }
           &-app > button {
-            padding-left: 12px;
+            padding-left: 0.75rem;
             padding-top: 6px;
             padding-right: 18px;
             padding-bottom: 6px;
-            margin-right: 16px;
-            font-size: 12px;
+            margin-right: 1rem;
+            font-size: 0.75rem;
             border-radius: 6px;
             overflow: hidden;
             white-space: nowrap;
           }
           &-app > span {
-            font-size: 12px;
+            font-size: 0.75rem;
             overflow: hidden;
             white-space: nowrap;
           }
@@ -1259,6 +1660,1378 @@ $Section1_height: calc(100vh - 80px);
       }
     }
   }
+}
+
+
+@media(min-width:1500px){
+
+.Section1 {
+  height:$Section1_height;
+  &-row1 {
+
+    &-shopOpen{
+      &-image{
+      
+      }
+      &-image>img{
+        width:60%;
+        height:90%;
+      }
+      &-cross,.cross-disappear {
+        top:5%;
+        right:3%;
+      }
+     
+      &-textBlock{
+        width: 50%;
+        padding-left:10px;
+        padding-right:90px;
+
+        &-Gollaa {
+          margin-bottom: 2rem;
+
+          &-image {
+            max-width: 140px;
+            margin-right: 6px;
+          }
+          &-heading {
+            font-size: 1.25rem;
+          }
+        }
+        &-subheading1{
+          font-size:1.125rem;
+          padding-bottom:2rem;
+        }
+        &-subheading2,&-subheading3{
+          font-size:1rem;
+        }
+        &-subheading2{
+          padding-bottom:1rem;
+        }
+        &-app >button{
+          // @extend .download_button;
+          width:152px;
+          height:44px;
+          font-weight:300;
+          border-radius:10px;
+          font-size: 1rem;
+          margin-top:2.2rem;
+        }
+      }
+      
+    }
+
+
+    &-shopClosed{
+      padding-left: 30px;
+      padding-right: 20px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      &-textBlock{
+        width:50%;
+      }
+    }
+ 
+   
+    &-shop,&-dummyShop {
+      padding-left: 30px;
+      padding-right: 20px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      
+
+      &-image {
+        flex:1 1 50%;
+        height:90%;
+      }
+      &-image > img {
+        max-width: 90%;
+        height:100%;
+      }
+      &-text {
+        width: 50%;
+       
+
+        &-Gollaa {
+          margin-bottom: 8px;
+          
+
+          &-image {
+            max-width: 140px;
+            // max-width: 32%;
+            margin: 0;
+          }
+          &-heading {
+            font-size: 1.25rem;
+            padding-left: 6px;
+          }
+        }
+        &-subheading {
+          font-size: 1.125rem;
+        }
+        &-app,.maxOpacity {
+          margin-top: 35px;
+        }
+        &-app > button, .maxOpacity > button{
+          // @extend .download_button;
+          width:152px;
+          height:44px;
+          font-weight:300;
+          border-radius:10px;
+          font-size: 1rem;
+        }
+        &-app > span , .maxOpacity>span{
+          font-size: 1rem;
+        }
+      }
+    }
+
+   
+    &-growOpen{
+    
+
+      &-cross,.growCross{
+        top:5%;
+        right:4%;
+      }
+    
+      &-image{
+        display:flex;
+        justify-content: flex-end;
+        align-items:flex-end;
+        // flex-basis:50%;
+        height:100%;
+        min-width:50%;
+      }
+      &-image>img{
+        min-width:calc(40vw / 2);
+        width:100%;
+        height:100%;
+        transform:translateY(16%);
+      }
+
+      &-ParentTextBlock{
+        max-width: 50%;
+        flex: 0 0 50vw;
+      }
+      &-textBlock{
+        padding-left:50px;
+        padding-right:50px;
+        padding-bottom:50px;
+
+        &-Gollaa {
+          margin-bottom: 2rem;
+          
+          &-image {
+            max-width:140px;
+            margin: 0;
+          }
+          &-heading {
+            font-size: 1.25rem;
+            padding-left: 5px;
+          }
+        }
+        &-subheading1{
+          font-size:1.125rem;
+          padding-bottom:2rem;
+        }
+        &-subheading2,&-subheading3{
+          font-size:1rem;
+        }
+        &-subheading2{
+          padding-bottom:1rem;
+        }
+        &-app >button{
+          // @extend .download_button;
+          margin-top:2.2rem;
+          width:152px;
+          height:44px;
+          font-weight:300;
+          border-radius:10px;
+          font-size: 1rem;
+        }
+      }
+      
+    }
+
+
+    &-growClosed{
+     
+      &-textBlock{
+      }
+    }
+
+    &-grow,&-dummyGrow {
+     
+      padding-left: 56.52px;
+
+      &-image {
+        padding: 0;
+        margin:0;
+        width: 50%;
+      }
+
+      &-image > img {
+        max-width: 100%;
+        transform:translateY(5px);
+      }
+      &-text {
+        width: 50%;
+       
+
+        &-Gollaa {
+          margin-bottom: 8px;
+
+          &-image {
+            max-width:140px;
+            margin: 0;
+          }
+          &-heading {
+            font-size: 1.25rem;
+            padding-left: 6px;
+          }
+        }
+        &-subheading {
+          font-size: 1.125rem;
+        }
+        &-app,.maxOpacity{
+          margin-top: 35px;
+        }
+        &-app > button ,.maxOpacity >button {
+        //  @extend .signIn_button;
+          width:152px;
+          height:44px;
+          font-weight:300;
+          border-radius:10px;
+          font-size: 1rem;
+        }
+        &-app > span, .maxOpacity >span {
+          font-size: 1rem;
+        }
+      }
+    }
+
+  
+    &-supportOpen{
+    
+      &-image{
+       
+        height:100%;
+        width:50%;
+      }
+      &-image>img{
+        min-width:calc(40vw / 2);
+        width:70%;
+        height:100%;
+        transform:translate(-20%,20%);
+      }
+
+      &-cross{
+        top:5%;
+        right:4%;
+      }
+    
+     
+      &-ParentTextBlock{
+      
+      }
+
+      &-textBlock{
+       
+        padding-left:50px;
+        padding-right:50px;
+        padding-bottom:50px;
+        
+        &-Gollaa {
+          margin-bottom: 2rem;
+        
+          &-image {
+            max-width: 50%;
+            margin: 0;
+          }
+          &-heading {
+            font-size: 1.25rem;
+            padding-left: 5px;
+          }
+        }
+        &-subheading1{
+        
+          font-size:1.125rem;
+          padding-bottom:2rem;
+        }
+        &-subheading2,&-subheading3{
+          font-size:1rem;
+        }
+        &-subheading2{
+          padding-bottom:1rem;
+        }
+        &-app >button{
+          // @extend .download_button;
+          width:152px;
+          height:44px;
+          font-weight:300;
+          border-radius:10px;
+          font-size: 1rem;
+          margin-top:2.2rem;
+        }
+      }
+      
+    }
+
+
+    &-supportClosed{
+    
+      &-textBlock{
+      }
+    }
+   
+    &-support,&-dummySupport{
+      flex: 1 1 250px;
+      padding-left: 25px;
+      padding-right: 25px;
+      padding-top: 25px;
+
+      &-image {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        text-align: right;
+        padding: 0;
+        margin: 0;
+      }
+
+      &-image > img {
+        height: auto;
+      }
+      &-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+
+        &-Gollaa {
+          margin-bottom: 8px;
+
+          &-image {
+            // max-width: 75px;
+            max-width:140px;
+            margin: 0;
+          }
+          &-heading {
+            font-size: 1.25rem;
+            padding-left: 5px;
+          }
+        }
+        &-subheading {
+          font-size: 1.125rem;
+
+          &-app,.maxOpacity {
+            top:30px;
+          }
+         
+          &-app > span, .maxOpacity >span {
+            font-size: 1rem;
+          }
+        }
+       
+      }
+    }
+
+    &-stayOpen{
+      &-image{
+        flex-basis:50%;
+        height:90%;
+        height:100%;
+        width:50%;
+      }
+      &-image>img{
+        max-width:80%;
+        height:60%;
+      }
+
+      &-cross{
+        position:absolute;
+        top:5%;
+        right:4%;
+        z-index:3;
+      }
+     
+      &-ParentTextBlock{
+        max-width: 50%;
+        min-height:calc( 100vh - 80px);
+        display: flex;
+        flex:0 0 50%;
+       
+      }
+
+      &-textBlock{
+        
+        padding-left:50px;
+        padding-right:50px;
+        padding-bottom:50px;
+        
+        &-Gollaa {
+          margin-bottom: 2rem;
+          
+
+          &-image {
+            max-width: 50%;
+            margin: 0;
+          }
+          &-heading {
+            font-size: 1.25rem;
+            padding-left: 5px;
+
+          }
+        }
+        &-subheading1{
+          font-size:1.125rem;
+          padding-bottom:2rem;
+        }
+        &-subheading2,&-subheading3{
+          font-size:1rem;
+        }
+        &-subheading2{
+          padding-bottom:1rem;
+        }
+        &-app >button{
+          // @extend .download_button;
+          margin-top:2.2rem;
+          width:152px;
+          height:44px;
+          font-weight:300;
+          border-radius:10px;
+          font-size: 1rem;
+        }
+      }
+      
+    }
+
+
+    &-stayClosed{
+      
+      &-textBlock{
+        animation:textAnimationReverse 1s ease;
+        opacity:0;
+        // display:none;
+      }
+    }
+
+  
+    &-stay,&-dummyStay {
+     
+      flex: 1 1 250px;
+      height: calc(50vh - 40px);
+      padding-left: 25px;
+      padding-right: 25px;
+      padding-top: 25px;
+
+      &-image {
+        height:60%;
+        width:60%;
+        display: flex;
+        align-items: flex-end;
+        align-self:flex-end;
+        justify-content: flex-end;
+        text-align: right;
+        padding: 0;
+        margin: 0;
+      }
+
+      &-image > img {
+        // max-width: 230px;
+        max-width:100%;
+        height: 100%;
+      object-fit:contain;
+      }
+      &-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+
+        &-Gollaa {
+          margin-bottom: 8px;
+
+          &-image {
+            max-width:140px;
+          }
+          &-heading {
+            font-size: 1.25rem;
+            padding-left: 5px;
+          }
+        }
+        &-subheading {
+          font-size: 1.125rem;
+          &-app,.maxOpacity {
+            top:30px;
+            left:0;
+            margin-top: 35px;
+          }
+          &-app > button, .maxOpacity > button{
+            // @extend .download_button;
+              width:152px;
+              height:44px;
+              font-weight:300;
+              border-radius:10px;
+              font-size: 1rem;
+              
+          }
+          &-app > span , .maxOpacity>span{
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+
+
+    &-tradeOpen{
+      
+
+      &-cross,.tradeCross{
+        position:absolute;
+        top:5%;
+        right:4%;
+        z-index:3;
+      }
+     
+      &-image{
+        display:flex;
+        justify-content: flex-end;
+        align-items:flex-end;
+        flex-basis:50%;
+        height:65%;
+        min-width:50%;
+      }
+      &-image>img{
+        min-width:calc(40vw / 2);
+        width:100%;
+        height:100%;
+        transform:translate(-0%,30%);
+      }
+
+      &-ParentTextBlock{
+        max-width: 50%;
+        flex: 0 0 50vw;
+        flex-grow:0;
+        flex-shrink: 0;
+        height:calc(100vh - 80px);
+      }
+      &-textBlock{
+        flex: 0 0 50vw;
+        min-width:50vw;
+        padding-left:50px;
+        padding-right:50px;
+        padding-bottom:50px;
+
+        &-Gollaa {
+          margin-bottom: 2rem;
+          &-image {
+            max-width:140px;
+            margin: 0;
+          }
+          &-heading {
+            font-size: 1.25rem;
+            padding-left: 5px;
+          }
+        }
+        &-subheading1{
+          font-size:1.125rem;
+          padding-bottom:2rem;
+        }
+        &-subheading2,&-subheading3{
+          font-size:1rem;
+        }
+        &-subheading2{
+          padding-bottom:1rem;
+        }
+        &-app >button{
+          // @extend .download_button;
+          margin-top:2.2rem;
+          width:152px;
+          height:44px;
+          font-weight:300;
+          border-radius:10px;
+          font-size: 1rem;
+        }
+      }
+      
+    }
+
+
+    &-tradeClosed{
+    
+      width:calc(100vw / 3);
+      // left:calc((100vw / 3)*2);
+      top:calc(50vh - 40px);
+      right:0;
+      height:calc(50vh - 40px);
+      &-textBlock{
+      }
+    }
+
+
+    &-trade,&-dummyTrade {
+      flex: 1 1 250px;
+      height: calc(50vh - 40px);
+      background: #afd466;
+      padding-left: 25px;
+      padding-right: 25px;
+      padding-top: 25px;
+
+      &-image {
+        padding: 0;
+        margin: 0;
+        height:65%;
+        width:100%;
+      }
+
+      &-image > img {
+        max-width:50%;
+        object-fit: contain;
+      }
+      &-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        // background-color: #ede139;
+        &-Gollaa {
+          margin-bottom: 8px;
+
+          &-image {
+            max-width: 140px;
+            margin: 0;
+          }
+          &-heading {
+            font-size: 1.25rem;
+            padding-left: 5px;
+          }
+        }
+        &-subheading {
+          font-size: 1.125rem;
+
+          &-app,.maxOpacity{
+            position:absolute;
+            top:30px;
+            left:0;
+          }
+          &-app > button ,.maxOpacity >button {
+          //  @extend .signIn_button;
+            width:152px;
+            height:44px;
+            font-weight:300;
+            border-radius:10px;
+            font-size: 1rem;
+          }
+          &-app > span, .maxOpacity >span {
+            font-size: 1rem;
+          }
+        }
+        &-app {
+          margin-top: 35px;
+        }
+        &-app > button {
+          width:152px;
+          height:44px;
+          font-weight:300;
+          border-radius:10px;
+          font-size: 1rem;
+        }
+        &-app > span {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+// media queries section
+
+@media(max-width:900px){
+
+  .Section1 {
+    height:$Section1_height;
+    &-row1 {
+  
+      &-shopOpen{
+        &-image{
+        
+        }
+        &-image>img{
+          width:60%;
+          height:90%;
+        }
+        &-cross,.cross-disappear {
+          top:5%;
+          right:3%;
+        }
+       
+        &-textBlock{
+          width: 50%;
+          padding-left:10px;
+          padding-right:90px;
+  
+          &-Gollaa {
+            margin-bottom: 2rem;
+  
+            &-image {
+              max-width: 140px;
+              margin-right: 6px;
+            }
+            &-heading {
+              font-size: 1.25rem;
+            }
+          }
+          &-subheading1{
+            font-size:1.125rem;
+            padding-bottom:2rem;
+          }
+          &-subheading2,&-subheading3{
+            font-size:1rem;
+          }
+          &-subheading2{
+            padding-bottom:1rem;
+          }
+          &-app >button{
+            // @extend .download_button;
+            width:152px;
+            height:44px;
+            font-weight:300;
+            border-radius:10px;
+            font-size: 1rem;
+            margin-top:2.2rem;
+          }
+        }
+        
+      }
+  
+  
+      &-shopClosed{
+        padding-left: 30px;
+        padding-right: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+  
+        &-textBlock{
+          width:50%;
+        }
+      }
+   
+     
+      &-shop,&-dummyShop {
+        width:100vw;
+        padding-left: 30px;
+        padding-right: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        
+  
+        &-image {
+          flex:1 1 50%;
+          height:90%;
+        }
+        &-image > img {
+          max-width: 90%;
+          height:100%;
+        }
+        &-text {
+          width: 50%;
+         
+  
+          &-Gollaa {
+            margin-bottom: 8px;
+            
+  
+            &-image {
+              max-width: 140px;
+              // max-width: 32%;
+              margin: 0;
+            }
+            &-heading {
+              font-size: 1.25rem;
+              padding-left: 6px;
+            }
+          }
+          &-subheading {
+            font-size: 1.125rem;
+          }
+          &-app,.maxOpacity {
+            margin-top: 35px;
+          }
+          &-app > button, .maxOpacity > button{
+            // @extend .download_button;
+            width:152px;
+            height:44px;
+            font-weight:300;
+            border-radius:10px;
+            font-size: 1rem;
+          }
+          &-app > span , .maxOpacity>span{
+            font-size: 1rem;
+          }
+        }
+      }
+  
+     
+      &-growOpen{
+      
+  
+        &-cross,.growCross{
+          top:5%;
+          right:4%;
+        }
+      
+        &-image{
+          display:flex;
+          justify-content: flex-end;
+          align-items:flex-end;
+          // flex-basis:50%;
+          height:100%;
+          min-width:50%;
+        }
+        &-image>img{
+          min-width:calc(40vw / 2);
+          width:100%;
+          height:100%;
+          transform:translateY(16%);
+        }
+  
+        &-ParentTextBlock{
+          max-width: 50%;
+          flex: 0 0 50vw;
+        }
+        &-textBlock{
+          padding-left:50px;
+          padding-right:50px;
+          padding-bottom:50px;
+  
+          &-Gollaa {
+            margin-bottom: 2rem;
+            
+            &-image {
+              max-width:140px;
+              margin: 0;
+            }
+            &-heading {
+              font-size: 1.25rem;
+              padding-left: 5px;
+            }
+          }
+          &-subheading1{
+            font-size:1.125rem;
+            padding-bottom:2rem;
+          }
+          &-subheading2,&-subheading3{
+            font-size:1rem;
+          }
+          &-subheading2{
+            padding-bottom:1rem;
+          }
+          &-app >button{
+            // @extend .download_button;
+            margin-top:2.2rem;
+            width:152px;
+            height:44px;
+            font-weight:300;
+            border-radius:10px;
+            font-size: 1rem;
+          }
+        }
+        
+      }
+  
+  
+      &-growClosed{
+       
+        &-textBlock{
+        }
+      }
+  
+      &-grow,&-dummyGrow {
+       
+        padding-left: 56.52px;
+  
+        &-image {
+          padding: 0;
+          margin:0;
+          width: 50%;
+        }
+  
+        &-image > img {
+          max-width: 100%;
+          transform:translateY(5px);
+        }
+        &-text {
+          width: 50%;
+         
+  
+          &-Gollaa {
+            margin-bottom: 8px;
+  
+            &-image {
+              max-width:140px;
+              margin: 0;
+            }
+            &-heading {
+              font-size: 1.25rem;
+              padding-left: 6px;
+            }
+          }
+          &-subheading {
+            font-size: 1.125rem;
+          }
+          &-app,.maxOpacity{
+            margin-top: 35px;
+          }
+          &-app > button ,.maxOpacity >button {
+          //  @extend .signIn_button;
+            width:152px;
+            height:44px;
+            font-weight:300;
+            border-radius:10px;
+            font-size: 1rem;
+          }
+          &-app > span, .maxOpacity >span {
+            font-size: 1rem;
+          }
+        }
+      }
+  
+    
+      &-supportOpen{
+      
+        &-image{
+         
+          height:100%;
+          width:50%;
+        }
+        &-image>img{
+          min-width:calc(40vw / 2);
+          width:70%;
+          height:100%;
+          transform:translate(-20%,20%);
+        }
+  
+        &-cross{
+          top:5%;
+          right:4%;
+        }
+      
+       
+        &-ParentTextBlock{
+        
+        }
+  
+        &-textBlock{
+         
+          padding-left:50px;
+          padding-right:50px;
+          padding-bottom:50px;
+          
+          &-Gollaa {
+            margin-bottom: 2rem;
+          
+            &-image {
+              max-width: 50%;
+              margin: 0;
+            }
+            &-heading {
+              font-size: 1.25rem;
+              padding-left: 5px;
+            }
+          }
+          &-subheading1{
+          
+            font-size:1.125rem;
+            padding-bottom:2rem;
+          }
+          &-subheading2,&-subheading3{
+            font-size:1rem;
+          }
+          &-subheading2{
+            padding-bottom:1rem;
+          }
+          &-app >button{
+            // @extend .download_button;
+            width:152px;
+            height:44px;
+            font-weight:300;
+            border-radius:10px;
+            font-size: 1rem;
+            margin-top:2.2rem;
+          }
+        }
+        
+      }
+  
+  
+      &-supportClosed{
+      
+        &-textBlock{
+        }
+      }
+     
+      &-support,&-dummySupport{
+        flex: 1 1 250px;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 25px;
+  
+        &-image {
+          display: flex;
+          align-items: flex-end;
+          justify-content: flex-end;
+          text-align: right;
+          padding: 0;
+          margin: 0;
+        }
+  
+        &-image > img {
+          height: auto;
+        }
+        &-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          position: relative;
+  
+          &-Gollaa {
+            margin-bottom: 8px;
+  
+            &-image {
+              // max-width: 75px;
+              max-width:140px;
+              margin: 0;
+            }
+            &-heading {
+              font-size: 1.25rem;
+              padding-left: 5px;
+            }
+          }
+          &-subheading {
+            font-size: 1.125rem;
+  
+            &-app,.maxOpacity {
+              top:30px;
+            }
+           
+            &-app > span, .maxOpacity >span {
+              font-size: 1rem;
+            }
+          }
+         
+        }
+      }
+  
+      &-stayOpen{
+        &-image{
+          flex-basis:50%;
+          height:90%;
+          height:100%;
+          width:50%;
+        }
+        &-image>img{
+          max-width:80%;
+          height:60%;
+        }
+  
+        &-cross{
+          position:absolute;
+          top:5%;
+          right:4%;
+          z-index:3;
+        }
+       
+        &-ParentTextBlock{
+          max-width: 50%;
+          min-height:calc( 100vh - 80px);
+          display: flex;
+          flex:0 0 50%;
+         
+        }
+  
+        &-textBlock{
+          
+          padding-left:50px;
+          padding-right:50px;
+          padding-bottom:50px;
+          
+          &-Gollaa {
+            margin-bottom: 2rem;
+            
+  
+            &-image {
+              max-width: 50%;
+              margin: 0;
+            }
+            &-heading {
+              font-size: 1.25rem;
+              padding-left: 5px;
+  
+            }
+          }
+          &-subheading1{
+            font-size:1.125rem;
+            padding-bottom:2rem;
+          }
+          &-subheading2,&-subheading3{
+            font-size:1rem;
+          }
+          &-subheading2{
+            padding-bottom:1rem;
+          }
+          &-app >button{
+            // @extend .download_button;
+            margin-top:2.2rem;
+            width:152px;
+            height:44px;
+            font-weight:300;
+            border-radius:10px;
+            font-size: 1rem;
+          }
+        }
+        
+      }
+  
+  
+      &-stayClosed{
+        
+        &-textBlock{
+          animation:textAnimationReverse 1s ease;
+          opacity:0;
+          // display:none;
+        }
+      }
+  
+    
+      &-stay,&-dummyStay {
+       
+        flex: 1 1 250px;
+        height: calc(50vh - 40px);
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 25px;
+  
+        &-image {
+          height:60%;
+          width:60%;
+          display: flex;
+          align-items: flex-end;
+          align-self:flex-end;
+          justify-content: flex-end;
+          text-align: right;
+          padding: 0;
+          margin: 0;
+        }
+  
+        &-image > img {
+          // max-width: 230px;
+          max-width:100%;
+          height: 100%;
+        object-fit:contain;
+        }
+        &-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          position: relative;
+  
+          &-Gollaa {
+            margin-bottom: 8px;
+  
+            &-image {
+              max-width:140px;
+            }
+            &-heading {
+              font-size: 1.25rem;
+              padding-left: 5px;
+            }
+          }
+          &-subheading {
+            font-size: 1.125rem;
+            &-app,.maxOpacity {
+              top:30px;
+              left:0;
+              margin-top: 35px;
+            }
+            &-app > button, .maxOpacity > button{
+              // @extend .download_button;
+                width:152px;
+                height:44px;
+                font-weight:300;
+                border-radius:10px;
+                font-size: 1rem;
+                
+            }
+            &-app > span , .maxOpacity>span{
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+  
+  
+      &-tradeOpen{
+        
+  
+        &-cross,.tradeCross{
+          position:absolute;
+          top:5%;
+          right:4%;
+          z-index:3;
+        }
+       
+        &-image{
+          display:flex;
+          justify-content: flex-end;
+          align-items:flex-end;
+          flex-basis:50%;
+          height:65%;
+          min-width:50%;
+        }
+        &-image>img{
+          min-width:calc(40vw / 2);
+          width:100%;
+          height:100%;
+          transform:translate(-0%,30%);
+        }
+  
+        &-ParentTextBlock{
+          max-width: 50%;
+          flex: 0 0 50vw;
+          flex-grow:0;
+          flex-shrink: 0;
+          height:calc(100vh - 80px);
+        }
+        &-textBlock{
+          flex: 0 0 50vw;
+          min-width:50vw;
+          padding-left:50px;
+          padding-right:50px;
+          padding-bottom:50px;
+  
+          &-Gollaa {
+            margin-bottom: 2rem;
+            &-image {
+              max-width:140px;
+              margin: 0;
+            }
+            &-heading {
+              font-size: 1.25rem;
+              padding-left: 5px;
+            }
+          }
+          &-subheading1{
+            font-size:1.125rem;
+            padding-bottom:2rem;
+          }
+          &-subheading2,&-subheading3{
+            font-size:1rem;
+          }
+          &-subheading2{
+            padding-bottom:1rem;
+          }
+          &-app >button{
+            // @extend .download_button;
+            margin-top:2.2rem;
+            width:152px;
+            height:44px;
+            font-weight:300;
+            border-radius:10px;
+            font-size: 1rem;
+          }
+        }
+        
+      }
+  
+  
+      &-tradeClosed{
+      
+        width:calc(100vw / 3);
+        // left:calc((100vw / 3)*2);
+        top:calc(50vh - 40px);
+        right:0;
+        height:calc(50vh - 40px);
+        &-textBlock{
+        }
+      }
+  
+  
+      &-trade,&-dummyTrade {
+        flex: 1 1 250px;
+        height: calc(50vh - 40px);
+        background: #afd466;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 25px;
+  
+        &-image {
+          padding: 0;
+          margin: 0;
+          height:65%;
+          width:100%;
+        }
+  
+        &-image > img {
+          max-width:50%;
+          object-fit: contain;
+        }
+        &-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          position: relative;
+          // background-color: #ede139;
+          &-Gollaa {
+            margin-bottom: 8px;
+  
+            &-image {
+              max-width: 140px;
+              margin: 0;
+            }
+            &-heading {
+              font-size: 1.25rem;
+              padding-left: 5px;
+            }
+          }
+          &-subheading {
+            font-size: 1.125rem;
+  
+            &-app,.maxOpacity{
+              position:absolute;
+              top:30px;
+              left:0;
+            }
+            &-app > button ,.maxOpacity >button {
+            //  @extend .signIn_button;
+              width:152px;
+              height:44px;
+              font-weight:300;
+              border-radius:10px;
+              font-size: 1rem;
+            }
+            &-app > span, .maxOpacity >span {
+              font-size: 1rem;
+            }
+          }
+          &-app {
+            margin-top: 35px;
+          }
+          &-app > button {
+            width:152px;
+            height:44px;
+            font-weight:300;
+            border-radius:10px;
+            font-size: 1rem;
+          }
+          &-app > span {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
 }
 
 @media (max-width: 690px) {
@@ -1311,15 +3084,15 @@ $Section1_height: calc(100vh - 80px);
             display: none;
           }
           &-app > button {
-            padding-left: 12px;
+            padding-left: 0.75rem;
             padding-top: 6px;
             padding-right: 18px;
             padding-bottom: 6px;
-            margin-right: 16px;
-            font-size: 14px;
+            margin-right: 1rem;
+            font-size: 0.875rem;
           }
           &-app > span {
-            font-size: 14px;
+            font-size: 0.875rem;
             overflow: hidden;
             white-space: nowrap;
           }
@@ -1360,12 +3133,12 @@ $Section1_height: calc(100vh - 80px);
               margin: 0;
             }
             &-heading {
-              font-size: 16px;
+              font-size: 1rem;
               padding-left: 5px;
             }
           }
           &-subheading {
-            font-size: 16px;
+            font-size: 1rem;
           }
           &-app {
             margin-top: 35px;
@@ -1373,15 +3146,15 @@ $Section1_height: calc(100vh - 80px);
             top: 60px;
           }
           &-app > button {
-            padding-left: 12px;
+            padding-left: 0.75rem;
             padding-top: 6px;
             padding-right: 18px;
             padding-bottom: 6px;
-            margin-right: 16px;
+            margin-right: 1rem;
             color: white;
             font-family: "Monserrat";
             font-weight: 250;
-            font-size: 12px;
+            font-size: 0.75rem;
             background: #161615 0% 0% no-repeat padding-box;
             border: none;
             outline: none;
@@ -1392,7 +3165,7 @@ $Section1_height: calc(100vh - 80px);
           &-app > span {
             font-family: "Monserrat";
             font-weight: 200;
-            font-size: 12px;
+            font-size: 0.75rem;
             overflow: hidden;
             white-space: nowrap;
           }
@@ -1432,12 +3205,12 @@ $Section1_height: calc(100vh - 80px);
               margin: 0;
             }
             &-heading {
-              font-size: 14px;
+              font-size: 0.875rem;
               padding-left: 5px;
             }
           }
           &-subheading {
-            font-size: 14px;
+            font-size: 0.875rem;
           }
           &-app {
             margin-top: 35px;
@@ -1445,18 +3218,18 @@ $Section1_height: calc(100vh - 80px);
             top: 60px;
           }
           &-app > button {
-            padding-left: 12px;
+            padding-left: 0.75rem;
             padding-top: 6px;
             padding-right: 18px;
             padding-bottom: 6px;
-            margin-right: 16px;
-            font-size: 12px;
+            margin-right: 1rem;
+            font-size: 0.75rem;
             border-radius: 6px;
             overflow: hidden;
             white-space: nowrap;
           }
           &-app > span {
-            font-size: 12px;
+            font-size: 0.75rem;
             overflow: hidden;
             white-space: nowrap;
           }
@@ -1496,12 +3269,12 @@ $Section1_height: calc(100vh - 80px);
               margin: 0;
             }
             &-heading {
-              font-size: 14px;
+              font-size: 0.875rem;
               padding-left: 5px;
             }
           }
           &-subheading {
-            font-size: 14px;
+            font-size: 0.875rem;
           }
           &-app {
             margin-top: 35px;
@@ -1509,12 +3282,12 @@ $Section1_height: calc(100vh - 80px);
             top: 60px;
           }
           &-app > button {
-            padding-left: 12px;
+            padding-left: 0.75rem;
             padding-top: 6px;
             padding-right: 18px;
             padding-bottom: 6px;
-            margin-right: 16px;
-            font-size: 12px;
+            margin-right: 1rem;
+            font-size: 0.75rem;
             border: none;
             outline: none;
             border-radius: 6px;
@@ -1524,7 +3297,7 @@ $Section1_height: calc(100vh - 80px);
           &-app > span {
             font-family: "Monserrat";
             font-weight: 200;
-            font-size: 12px;
+            font-size: 0.75rem;
             overflow: hidden;
             white-space: nowrap;
           }
@@ -1562,12 +3335,12 @@ $Section1_height: calc(100vh - 80px);
               margin: 0;
             }
             &-heading {
-              font-size: 14px;
+              font-size: 0.875rem;
               padding-left: 5px;
             }
           }
           &-subheading {
-            font-size: 14px;
+            font-size: 0.875rem;
           }
           &-app {
             margin-top: 35px;
@@ -1575,18 +3348,18 @@ $Section1_height: calc(100vh - 80px);
             top: 60px;
           }
           &-app > button {
-            padding-left: 12px;
+            padding-left: 0.75rem;
             padding-top: 6px;
             padding-right: 18px;
             padding-bottom: 6px;
-            margin-right: 16px;
-            font-size: 12px;
+            margin-right: 1rem;
+            font-size: 0.75rem;
             border-radius: 6px;
             overflow: hidden;
             white-space: nowrap;
           }
           &-app > span {
-            font-size: 12px;
+            font-size: 0.75rem;
             overflow: hidden;
             white-space: nowrap;
           }
@@ -1645,15 +3418,15 @@ $Section1_height: calc(100vh - 80px);
             display: none;
           }
           &-app > button {
-            padding-left: 12px;
+            padding-left: 0.75rem;
             padding-top: 6px;
             padding-right: 18px;
             padding-bottom: 6px;
-            margin-right: 16px;
-            font-size: 14px;
+            margin-right: 1rem;
+            font-size: 0.875rem;
           }
           &-app > span {
-            font-size: 14px;
+            font-size: 0.875rem;
             overflow: hidden;
             white-space: nowrap;
           }
@@ -1690,12 +3463,12 @@ $Section1_height: calc(100vh - 80px);
               margin: 0;
             }
             &-heading {
-              font-size: 14px;
+              font-size: 0.875rem;
               padding-left: 5px;
             }
           }
           &-subheading {
-            font-size: 12px;
+            font-size: 0.75rem;
           }
           &-app {
             margin-top: 35px;
@@ -1703,15 +3476,15 @@ $Section1_height: calc(100vh - 80px);
             top: 60px;
           }
           &-app > button {
-            padding-left: 12px;
+            padding-left: 0.75rem;
             padding-top: 6px;
             padding-right: 18px;
             padding-bottom: 6px;
-            margin-right: 16px;
+            margin-right: 1rem;
             color: white;
             font-family: "Monserrat";
             font-weight: 250;
-            font-size: 12px;
+            font-size: 0.75rem;
             background: #161615 0% 0% no-repeat padding-box;
             border: none;
             outline: none;
@@ -1722,7 +3495,7 @@ $Section1_height: calc(100vh - 80px);
           &-app > span {
             font-family: "Monserrat";
             font-weight: 200;
-            font-size: 12px;
+            font-size: 0.75rem;
             overflow: hidden;
             white-space: nowrap;
           }
@@ -1759,12 +3532,12 @@ $Section1_height: calc(100vh - 80px);
               margin: 0;
             }
             &-heading {
-              font-size: 14px;
+              font-size: 0.875rem;
               padding-left: 5px;
             }
           }
           &-subheading {
-            font-size: 12px;
+            font-size: 0.75rem;
           }
           &-app {
             margin-top: 35px;
@@ -1772,18 +3545,18 @@ $Section1_height: calc(100vh - 80px);
             top: 60px;
           }
           &-app > button {
-            padding-left: 12px;
+            padding-left: 0.75rem;
             padding-top: 6px;
             padding-right: 18px;
             padding-bottom: 6px;
-            margin-right: 16px;
-            font-size: 12px;
+            margin-right: 1rem;
+            font-size: 0.75rem;
             border-radius: 6px;
             overflow: hidden;
             white-space: nowrap;
           }
           &-app > span {
-            font-size: 12px;
+            font-size: 0.75rem;
             overflow: hidden;
             white-space: nowrap;
           }
@@ -1820,12 +3593,12 @@ $Section1_height: calc(100vh - 80px);
               margin: 0;
             }
             &-heading {
-              font-size: 14px;
+              font-size: 0.875rem;
               padding-left: 5px;
             }
           }
           &-subheading {
-            font-size: 12px;
+            font-size: 0.75rem;
           }
           &-app {
             display: none;
@@ -1834,12 +3607,12 @@ $Section1_height: calc(100vh - 80px);
             top: 60px;
           }
           &-app > button {
-            padding-left: 12px;
+            padding-left: 0.75rem;
             padding-top: 6px;
             padding-right: 18px;
             padding-bottom: 6px;
-            margin-right: 16px;
-            font-size: 12px;
+            margin-right: 1rem;
+            font-size: 0.75rem;
             border: none;
             outline: none;
             border-radius: 6px;
@@ -1849,7 +3622,7 @@ $Section1_height: calc(100vh - 80px);
           &-app > span {
             font-family: "Monserrat";
             font-weight: 200;
-            font-size: 12px;
+            font-size: 0.75rem;
             overflow: hidden;
             white-space: nowrap;
           }
@@ -1888,12 +3661,12 @@ $Section1_height: calc(100vh - 80px);
               margin: 0;
             }
             &-heading {
-              font-size: 14px;
+              font-size: 0.875rem;
               padding-left: 5px;
             }
           }
           &-subheading {
-            font-size: 12px;
+            font-size: 0.75rem;
           }
           &-app {
             margin-top: 35px;
@@ -1901,18 +3674,18 @@ $Section1_height: calc(100vh - 80px);
             top: 60px;
           }
           &-app > button {
-            padding-left: 12px;
+            padding-left: 0.75rem;
             padding-top: 6px;
             padding-right: 18px;
             padding-bottom: 6px;
-            margin-right: 16px;
-            font-size: 12px;
+            margin-right: 1rem;
+            font-size: 0.75rem;
             border-radius: 6px;
             overflow: hidden;
             white-space: nowrap;
           }
           &-app > span {
-            font-size: 12px;
+            font-size: 0.75rem;
             overflow: hidden;
             white-space: nowrap;
           }
@@ -1968,7 +3741,7 @@ $Section1_height: calc(100vh - 80px);
             }
           }
           &-subheading {
-            font-size: 16px;
+            font-size: 1rem;
           }
           &-app {
             margin-top: 35px;
@@ -1976,15 +3749,15 @@ $Section1_height: calc(100vh - 80px);
             display: none;
           }
           &-app > button {
-            padding-left: 12px;
+            padding-left: 0.75rem;
             padding-top: 6px;
             padding-right: 18px;
             padding-bottom: 6px;
-            margin-right: 16px;
-            font-size: 14px;
+            margin-right: 1rem;
+            font-size: 0.875rem;
           }
           &-app > span {
-            font-size: 14px;
+            font-size: 0.875rem;
             overflow: hidden;
             white-space: nowrap;
           }
@@ -2023,12 +3796,12 @@ $Section1_height: calc(100vh - 80px);
               margin: 0;
             }
             &-heading {
-              font-size: 14px;
+              font-size: 0.875rem;
               padding-left: 5px;
             }
           }
           &-subheading {
-            font-size: 12px;
+            font-size: 0.75rem;
           }
           &-app {
             margin-top: 35px;
@@ -2036,15 +3809,15 @@ $Section1_height: calc(100vh - 80px);
             top: 60px;
           }
           &-app > button {
-            padding-left: 12px;
+            padding-left: 0.75rem;
             padding-top: 6px;
             padding-right: 18px;
             padding-bottom: 6px;
-            margin-right: 16px;
+            margin-right: 1rem;
             color: white;
             font-family: "Monserrat";
             font-weight: 250;
-            font-size: 12px;
+            font-size: 0.75rem;
             background: #161615 0% 0% no-repeat padding-box;
             border: none;
             outline: none;
@@ -2055,7 +3828,7 @@ $Section1_height: calc(100vh - 80px);
           &-app > span {
             font-family: "Monserrat";
             font-weight: 200;
-            font-size: 12px;
+            font-size: 0.75rem;
             overflow: hidden;
             white-space: nowrap;
           }
@@ -2096,12 +3869,12 @@ $Section1_height: calc(100vh - 80px);
               fill: white;
             }
             &-heading {
-              font-size: 14px;
+              font-size: 0.875rem;
               padding-left: 5px;
             }
           }
           &-subheading {
-            font-size: 12px;
+            font-size: 0.75rem;
           }
           &-app {
             margin-top: 35px;
@@ -2109,18 +3882,18 @@ $Section1_height: calc(100vh - 80px);
             top: 60px;
           }
           &-app > button {
-            padding-left: 12px;
+            padding-left: 0.75rem;
             padding-top: 6px;
             padding-right: 18px;
             padding-bottom: 6px;
-            margin-right: 16px;
-            font-size: 12px;
+            margin-right: 1rem;
+            font-size: 0.75rem;
             border-radius: 6px;
             overflow: hidden;
             white-space: nowrap;
           }
           &-app > span {
-            font-size: 12px;
+            font-size: 0.75rem;
             overflow: hidden;
             white-space: nowrap;
           }
@@ -2160,12 +3933,12 @@ $Section1_height: calc(100vh - 80px);
               margin: 0;
             }
             &-heading {
-              font-size: 14px;
+              font-size: 0.875rem;
               padding-left: 5px;
             }
           }
           &-subheading {
-            font-size: 12px;
+            font-size: 0.75rem;
           }
           &-app {
             display: none;
@@ -2174,12 +3947,12 @@ $Section1_height: calc(100vh - 80px);
             top: 60px;
           }
           &-app > button {
-            padding-left: 12px;
+            padding-left: 0.75rem;
             padding-top: 6px;
             padding-right: 18px;
             padding-bottom: 6px;
-            margin-right: 16px;
-            font-size: 12px;
+            margin-right: 1rem;
+            font-size: 0.75rem;
             border: none;
             outline: none;
             border-radius: 6px;
@@ -2189,7 +3962,7 @@ $Section1_height: calc(100vh - 80px);
           &-app > span {
             font-family: "Monserrat";
             font-weight: 200;
-            font-size: 12px;
+            font-size: 0.75rem;
             overflow: hidden;
             white-space: nowrap;
           }
@@ -2231,12 +4004,12 @@ $Section1_height: calc(100vh - 80px);
               margin: 0;
             }
             &-heading {
-              font-size: 14px;
+              font-size: 0.875rem;
               padding-left: 5px;
             }
           }
           &-subheading {
-            font-size: 12px;
+            font-size: 0.75rem;
           }
           &-app {
             margin-top: 35px;
@@ -2244,23 +4017,25 @@ $Section1_height: calc(100vh - 80px);
             top: 60px;
           }
           &-app > button {
-            padding-left: 12px;
+            padding-left: 0.75rem;
             padding-top: 6px;
             padding-right: 18px;
             padding-bottom: 6px;
-            margin-right: 16px;
-            font-size: 12px;
+            margin-right: 1rem;
+            font-size: 0.75rem;
             border-radius: 6px;
             overflow: hidden;
             white-space: nowrap;
           }
           &-app > span {
-            font-size: 12px;
+            font-size: 0.75rem;
             overflow: hidden;
             white-space: nowrap;
           }
         }
       }
     }
+   }
   }
+ }
 }

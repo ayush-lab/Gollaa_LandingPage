@@ -16,7 +16,7 @@
         font-family: "Monserrat";
         font-size:30px;
         font-weight:300;
-        padding-bottom:1rem;
+        padding-bottom:2rem;
         text-align:center;
     }
     &-para{
@@ -24,6 +24,37 @@
         font-family: "Poppins";
         font-size:12px;
         font-weight:200;
+    }
+}
+
+@media(min-width:1500px){
+    .CitySection4{
+        background:#DAD800;
+        padding-top:50px;
+        padding-bottom:50px;
+        color:white;
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        text-align:center;
+        padding-left:30%;
+        padding-right:30%;
+        height:calc(50vh - 40px);
+    
+        &-heading{
+            font-family: "Monserrat";
+            font-size:36px;
+            font-weight:300;
+            padding-bottom:2rem;
+            text-align:center;
+        }
+        &-para{
+            text-align: center;
+            font-family: "Poppins";
+            font-size:1rem;
+            font-weight:200;
+        }
     }
 }
 

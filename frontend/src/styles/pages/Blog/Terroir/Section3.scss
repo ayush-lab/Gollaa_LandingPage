@@ -9,7 +9,7 @@
     background:#ADCB4F;
     color:black;
     font-family:"Monserrat";
-    font-size:16px;
+    font-size:1rem;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -122,6 +122,52 @@
     }
 }
 
+@media(min-width:1500px){
+    .TerroirSection3_name{
+        font-size:20px;
+    }
+    .TerroirSection3{
+        height:auto;
+        background:#A1D8D8;
+        max-width:100vw;
+    
+        &-heading{
+            padding-top:40px;
+            padding-bottom:40px;
+            text-align:center;
+            color:#145629;
+            font-family:'Monserrat';
+            font-weight:300;
+            font-size:1.75rem;
+        }
+    
+        &-pictures{
+         
+            &-row1,&-row2{
+                // position:relative;
+                display:flex;
+                flex-wrap:wrap;
+                justify-content: space-between;
+                align-content: center;
+                padding-left:80px;
+                padding-right:80px;
+                padding-bottom:130px;
+    
+            }
+    
+        
+        }
+    
+    
+        &-pictures img{
+            width:250px;
+            height:250px;
+            z-index:2;
+            position:relative;
+        }
+    
+    }
+}
 
 @media(max-width:970px){
    

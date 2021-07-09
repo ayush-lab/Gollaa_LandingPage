@@ -28,16 +28,19 @@ $Pure-Green: #5faf42;
   }
 
   &-col1 >button{
-    padding-top:16px;
-    padding-left: 12px;
-    padding-top: 6px;
-    padding-right: 18px;
-    padding-bottom: 6px;
+    // padding-top:16px;
+    // padding-left: 12px;
+    // padding-top: 6px;
+    // padding-right: 18px;
+    // padding-bottom: 6px;
     margin-right: 16px;
+    padding:0;
+    width:110px;
+    height:32px;
     color: white;
     font-family: "Monserrat";
     font-weight: 250;
-    font-size: 14px;
+    font-size: 12px;
     background: #161615 0% 0% no-repeat padding-box;
     border: none;
     outline: none;
@@ -123,6 +126,86 @@ $Pure-Green: #5faf42;
     }
   }
 }
+
+
+@media(min-width:1500px){
+  $Footer-height: 200px;
+
+  .Footer {
+    height:$Footer-height;
+    
+    &-col1 {  
+    height: $Footer-height;
+
+    }
+  
+    &-col1 >button{
+   
+      width:152px;
+      height:44px;
+      font-weight:300;
+      border-radius:10px;
+      font-size: 1rem;
+      margin-right: 16px;
+      
+    }
+  
+    &-col2 {
+      height: $Footer-height;
+      padding-left: 20px;
+      padding-top:0px;
+      flex-basis: 30%;
+  
+      &-details {
+        &-info {
+          font-size: 1.125rem;
+          padding-bottom: 10px;
+        }
+  
+        &-contact {
+          padding-bottom: 8px;
+          display: flex;
+          img {
+            width: 15px;
+          }
+        }
+  
+        &-contact > span {
+          font-size: 1rem;
+          margin-left: 15px;
+        }
+      }
+    }
+  
+    &-col3 {
+      height: $Footer-height;
+      padding-top:30px;
+      &-row1 { 
+      }
+      &-row1 p:nth-child(1) {
+        font-size: 1.125rem;
+        padding-bottom: 12px;
+      }
+      &-row1 p {
+        font-size: 1rem;
+        padding-bottom: 12px;
+      }
+  
+    }
+    &-col4 {
+      height: $Footer-height;
+  
+      &-logo {
+        flex-basis: 150px;
+      }
+      &-logo > img {
+        width: 100%;
+      }
+    }
+  }
+  
+}
+
 
 @media (max-width: 1000px) {
   $Footer-height: 180px;
@@ -215,6 +298,8 @@ $Pure-Green: #5faf42;
       &-details {
         &-info {
           padding-bottom: 10px;
+          text-transform: lowercase;
+
         }
 
         &-contact {
@@ -340,19 +425,6 @@ $Pure-Green: #5faf42;
       }
   
 
-      // &-row2 {
-      //   height: 50%;
-      //   width: 100%;
-
-      //   &-col1 {
-      //     width: 80%;
-      //     padding-left: 20px;
-      //     font-size: 14px;
-      //   }
-      //   &-col2 {
-      //     width: 50%;
-      //   }
-      // }
     }
     &-col4 {
       flex-basis: 25%;

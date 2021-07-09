@@ -1,4 +1,4 @@
-$Section4_heading_font:28px;
+$Section4_heading_font:1.75rem;
 $Section4_padding:90px;
 
 .CurrencySection4{
@@ -64,6 +64,52 @@ $Section4_padding:90px;
     
 }
 
+@media(min-width:1500px){
+    $Section4_heading_font:2rem;
+    $Section4_padding:120px;
+
+.CurrencySection4{
+    display:flex;
+    height:calc(100vh - 80px);
+    z-index:2;
+
+    &-left{
+        position:relative;
+        flex-basis:50%;
+       
+        &-text{
+            position: absolute;
+            padding-left:$Section4_padding;
+            padding-right:$Section4_padding;
+            width:100%;
+            height:100%;
+            top:0;
+            &-heading{
+                font-size:$Section4_heading_font;
+                padding-bottom:2rem;
+            }
+            &-heading>span{
+                display: block;
+            }
+            &-para{
+                font-size:1rem;
+                transform:translateX(-150%);
+                &-para1,&-para2{
+                   
+                }
+                &-para1{
+                    padding-bottom:1rem;
+                }
+            }
+            
+
+        }
+    }
+  
+    
+}
+
+}
 
 @media(max-width:900px){
     $Section4_heading_font:1.75rem;

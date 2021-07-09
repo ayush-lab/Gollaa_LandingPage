@@ -1,6 +1,6 @@
 
 $Section5_padding:90px;
-$Section5_heading_font:28px;
+$Section5_heading_font:1.75rem;
 
 .CitySection5{
     background:#A1D8D8;
@@ -105,6 +105,111 @@ $Section5_heading_font:28px;
 .Bottom_to_Top{
     transform: translate(0) !important;
     opacity:1 !important;
+}
+
+@media(min-width:1500px){
+    $Section5_padding:120px;
+    $Section5_heading_font:1.75rem;
+
+.CitySection5{
+    background:#A1D8D8;
+    display:flex;
+    height:calc(100vh - 80px - 200px);
+    position:relative;
+    max-width:100vw;
+
+    &-left{
+        flex-basis:50%;
+        width:50%;
+    }
+    &-left >img{
+        width:100%;
+        height:100%;
+        object-fit: cover;
+    }
+    &-text{
+        flex-basis:50%;
+        width:50%;
+        // padding-top:60px;
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    &-right{
+        // padding-bottom:2rem;
+        width:100%;
+        padding-left:$Section5_padding;
+        padding-right: $Section5_padding;
+        &-heading,&-para{
+           
+        }
+
+        &-heading{
+           font-family: "Monserrat";
+           font-size:$Section5_heading_font;
+           font-weight:300;
+           padding-bottom:2rem;
+           text-align:center;
+           overflow:none;
+           white-space: nowrap;
+       }
+       &-para{
+           text-align: center;
+           font-family: "Poppins";
+           font-size:1rem;
+           font-weight:200;
+       }
+    }
+
+    &-last,&-lastDummy{
+        position:absolute;
+        top:50%;
+        left:50%;
+        width:50%;
+        height:50%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        transform:translateY(100%);
+        transition:all 0.5s ease;
+        opacity:0;
+        padding-top:2rem;
+        padding-left:$Section5_padding;
+        padding-right: $Section5_padding;
+        &-heading{
+            font-family: "Monserrat";
+            font-size:$Section5_heading_font;
+            font-weight:300;
+            padding-bottom:2rem;
+            text-align:center;
+            overflow:none;
+            white-space: nowrap;
+        }
+        &-para{
+            text-align: center;
+            font-family: "Poppins";
+            font-size:1rem;
+            font-weight:200;
+        }
+    }
+    &-lastDummy{
+        position:relative !important;
+        opacity:0;
+        transform:translateY(0%) !important;
+        top:0;
+        left:0;
+        // width:100%;
+        height:auto !important;
+        width:100% !important;
+        display:block;
+        flex-direction: none;
+        align-items: none;
+        justify-content: none;
+    }
+}
 }
 
 @media(min-width:1450px){

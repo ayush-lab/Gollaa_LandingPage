@@ -1,6 +1,6 @@
 $Section1_height: calc(100vh - 80px);
 $Section1_heading_font:36px;
-$Section1_subHeading_font:28px;
+$Section1_subHeading_font:1.75rem;
 $Section1_padding:90px;
 .Section1Change {
   display: flex;
@@ -45,17 +45,79 @@ $Section1_padding:90px;
         padding-left:$Section1_padding;
         padding-right:$Section1_padding;
         &-text1{
-            padding-bottom:1rem;
+            padding-bottom:2rem;
         }
         &-text2{
           font-family: 'Monserrat';
           font-weight: 300;
           font-size:$Section1_subHeading_font;
-          padding-bottom:1rem;
+          padding-bottom:2rem;
         }
     }
 
    }
+}
+
+@media(min-width:1500px){
+  $Section1_height: calc(100vh - 80px);
+$Section1_heading_font:2.5rem;
+$Section1_subHeading_font:2rem;
+$Section1_padding:120px;
+.Section1Change {
+  display: flex;
+  width: 100%;
+  height: $Section1_height;
+  position:relative;
+
+  &-picture {
+    width: 50%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    background:#A1D8D8;
+
+    &-earth {
+    
+      width: 50%;
+      height:50%;
+    }
+
+  }
+
+  &-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ADCB4F;
+    color:white;
+    &-heading{
+        font-size:$Section1_heading_font;
+        font-family:'Monserrat';
+        font-weight:300;
+        padding-bottom:2rem;
+    }
+
+    &-para{
+        font-size:1rem;
+        font-family:'poppins';
+        font-weight:200;
+        padding-left:$Section1_padding;
+        padding-right:$Section1_padding;
+        &-text1{
+            padding-bottom:2rem;
+        }
+        &-text2{
+          font-family: 'Monserrat';
+          font-weight: 300;
+          font-size:$Section1_subHeading_font;
+          padding-bottom:2rem;
+        }
+    }
+
+   }
+}
 }
 
 @media(max-width:900px){
@@ -232,7 +294,7 @@ $Section1_height: calc(90vh - 80px);
     }
 
     &-para{
-        font-size:8px;
+        font-size:0.5rem;
         font-family:'poppins';
         font-weight:200;
         padding-left:60px;
@@ -292,7 +354,7 @@ $Section1_height: calc(90vh - 80px);
       }
   
       &-para{
-          font-size:8px;
+          font-size:0.5rem;
           padding-left:15px;
           padding-right:15px;
           &-text1{

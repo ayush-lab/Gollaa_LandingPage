@@ -61,6 +61,57 @@ $Section2_padding_card:40px;
     transition: opacity 1s ease !important;
 }
 
+@media(min-width:1500px){
+    $Section2_heading_font:2rem;
+    $Section2_para_font:1rem;
+    $Section2_padding:none;
+    $Section2_padding_card:40px;
+
+.CurrencySection2{
+    height:calc(100vh - 80px);
+    width:100%;
+    position:relative;
+    &-about{
+        display:none;
+    }
+    &-card{
+        position:absolute;
+        top:10%;
+        left:5%;
+        width:500px;
+        background:#8CC63F;
+        border-radius:20px;
+        color:white;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding:$Section2_padding_card;
+        opacity:0;
+        transition:opacity 0.8s ease;
+        &-text{
+            &-heading{
+                font-family: "Monserrat";
+                font-size:$Section2_heading_font;
+                font-weight:300;
+                padding-bottom:1rem;
+                text-align:center;
+            }
+            &-heading>span{
+                display: block;
+            }
+            &-para{
+                text-align: center;
+                font-family: "Poppins";
+                font-size:$Section2_para_font;
+                font-weight:200;
+            }
+      }
+    }
+
+}
+}
+
 
 @media(max-width:900px){
     $Section2_heading_font:1.75rem;

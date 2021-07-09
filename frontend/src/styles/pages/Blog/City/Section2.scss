@@ -65,6 +65,61 @@
     transform:scale(2,2) !important;
 }
 
+@media(min-width:1500px){
+    .CitySection2{
+        height:calc(100vh - 80px);
+        width:100%;
+        position:relative;
+    
+        &-overlay{
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height: 100%;
+            background:#000;
+            opacity:0.3;
+            z-index:1;
+        }
+        &-Agrotourism{
+            display:none;
+        }
+        &-text{
+            z-index:2;
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            display:flex;
+            justify-content:flex-start;
+            align-items:center;
+            flex-direction:column;
+            text-align:center;
+            color:white;
+            padding-left:30%;
+            padding-right:30%;
+            padding-top:90px;
+    
+            &-heading{
+                font-family: "Monserrat";
+                font-size:24px;
+                font-weight:300;
+                transition: all 0.6s ease;
+                transform:scale(1,1);
+                padding-bottom:1.5rem;
+            }
+    
+            &-para{
+                font-family: "Poppins";
+                font-size:18px;
+                font-weight:200;
+                
+            }
+        }
+    }
+}
+
 @media(max-width:900px){
     .CitySection2{
         &-text{

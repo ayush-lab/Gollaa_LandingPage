@@ -5,9 +5,11 @@
     flex-direction: column;
     justify-content: center;
     align-items:center;
-    height:calc(80vh - 80px);
-    padding-left:20%;
-    padding-right:20%;
+    height:calc(100vh - 80px);
+    padding-left:30%;
+    padding-right:30%;
+    // padding-top:60px;
+    // padding-bottom:60px;
 
     &-text{
         &-para1{
@@ -19,6 +21,9 @@
             font-weight:200;
             font-size:12px;
         }
+        &-para3{
+            padding-top:1rem;
+        }
         &-heading{
             color:white;
             font-family: "Monserrat";
@@ -28,6 +33,38 @@
         }
     }
    
+}
+
+@media(min-width:1500px){
+    .AboutUsSection1{
+        background:#8ABB2A;
+        text-align:center;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        height:auto;
+        padding-left:30%;
+        padding-right:30%;
+        padding-top:60px;
+        padding-bottom:60px;
+        &-text{
+            &-para1{
+                padding-bottom: 2rem;
+            }
+            &-para1,&-para2,&-para3{
+                font-size:1rem;
+            }
+            &-para3{
+                padding-top:2rem;
+            }
+            &-heading{
+                font-size:2rem;
+                padding-bottom:2rem;
+            }
+        }
+       
+    }
 }
 
 @media(max-width:970px){

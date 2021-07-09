@@ -35,6 +35,43 @@ $Section1_padding:30%;
 }
 
 
+@media(min-width:1500px){
+    $Section1_heading_font:2.5rem;
+    $Section1_para_font:1rem;
+    $Section1_padding:240px;
+
+.CurrencySection1{
+    background:#ADCB4F;
+    display:flex;
+    flex-direction: column;
+    color:white;
+
+    &-text{
+        padding-top:60px;
+        padding-bottom:60px;
+
+        &-heading{
+            font-family: "Monserrat";
+            font-size:$Section1_heading_font;
+            font-weight:300;
+            padding-bottom:2rem;
+            text-align:center;
+        }
+        &-heading>span{
+            display:block;
+        }
+        &-para{
+            text-align: center;
+            font-size:$Section1_para_font;
+            font-weight:200;
+            padding-left:$Section1_padding;
+            padding-right:$Section1_padding;
+        }
+    }
+}
+
+}
+
 @media(max-width:900px){
     $Section1_heading_font:1.75rem;
     $Section1_para_font:0.625rem;

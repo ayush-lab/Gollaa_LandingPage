@@ -27,6 +27,28 @@
     }
 }
 
+@media(min-width:1500px){
+    .EconomicCard{
+        width:300px;
+        height:400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size:1rem;
+        padding-left:30px;
+        padding-right:30px;
+        margin-bottom:40px;
+    
+        &-image >img{
+            width: 200px;
+            height:200px;
+        }
+        &-content{
+            text-align: center;
+        }
+    }
+}
+
 @media(max-width:970px){
     .EconomicCard{
         width:280px;

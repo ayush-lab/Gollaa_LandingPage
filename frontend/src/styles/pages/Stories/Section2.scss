@@ -34,6 +34,30 @@
     }
 }
 
+
+@media(min-width:1500px){
+    .StoriesSection2{
+        max-width:100vw;
+        padding-left:10%;
+        padding-right:10%;
+        padding-top:5%;
+        padding-bottom:5%;
+    
+    
+        &-heading{  
+            font-size:2rem;
+            padding-bottom:2rem;
+        }
+    
+        &-cards{
+    
+            &-row1,&-row2{
+                justify-content: space-evenly;
+            }
+            
+        }
+    }
+}
 @media(max-width:970px){
     .StoriesSection2{
         display:flex;

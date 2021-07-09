@@ -19,7 +19,7 @@ export default function Footer(){
 
                <div className="Footer-col2-details"> 
 
-               <p className="Footer-col2-details-info">Contact us</p>
+               <p className="Footer-col2-details-info">CONTACT US</p>
 
                     <div className="Footer-col2-details-contact"> 
                         <img src={Phone} alt="contact"/>

@@ -1,5 +1,5 @@
 $Section2_height: calc(100vh - 80px);
-$Section2_heading_font:28px;
+$Section2_heading_font:1.75rem;
 $Section2_padding:90px;
 
 .Section2Change {
@@ -57,6 +57,66 @@ $Section2_padding:90px;
  
 }
 
+
+@media(min-width:1500px){
+  $Section2_height: calc(100vh - 80px);
+$Section2_heading_font:2rem;
+$Section2_padding:120px;
+
+.Section2Change {
+  display: flex;
+  width: 100%;
+  height: $Section2_height;
+  position:relative;
+
+  &-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #5FAF42;
+    color:black;
+    &-heading{
+        font-size:$Section2_heading_font;
+        font-family:'Monserrat';
+        font-weight:300;
+        padding-bottom:2rem;
+        padding-left:$Section2_padding;
+        padding-right:$Section2_padding;
+        align-self:flex-start;
+    }
+
+    &-para{
+        font-size:1rem;
+        font-family:'poppins';
+        font-weight:200;
+        padding-left:$Section2_padding;
+        padding-right:$Section2_padding;
+        &-text1{
+            padding-bottom:1rem;
+        }
+    }
+
+   }
+
+  &-picture {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    position: relative;
+    background:#145629;
+
+    &-earth {
+      width: 50%;
+      height: 50%;
+    }
+
+  }
+ 
+}
+}
 
 
 @media(max-width:900px){
@@ -197,7 +257,7 @@ $Section2_padding:90px;
       }
   
       &-para{
-          font-size:8px;
+          font-size:0.5rem;
           padding-left:60px;
           padding-right:60px;
           &-text1{
@@ -258,7 +318,7 @@ $Section2_padding:90px;
       }
   
       &-para{
-          font-size:8px;
+          font-size:0.5rem;
           padding-left:15px;
           padding-right:15px;
           &-text1{

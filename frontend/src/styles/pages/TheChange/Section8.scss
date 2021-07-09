@@ -1,10 +1,10 @@
 .Section8Values{
-    height: calc(100vh - 80px);
+    height: calc(100vh - 80px - 180px);
     // width:100% !important;
     background:#EDE139;
     display:flex;
     flex-direction: column;
-    justify-content:space-around;
+    justify-content:center;
     overflow-x:hidden;
     overflow-y: hidden;
     // position:relative;
@@ -18,45 +18,72 @@
         text-align: center;
         font-family:'Monserrat';
         font-weight:200;
-        font-size:36px;
-        // background:red;
+        font-size:1.75rem;
+        padding-bottom:2rem;
         overflow: hidden;
-        // overflow-y:hidden;
-        // overflow:hidden !important;
     }
     &-cards{
         display:flex;
         align-items:center;
-        justify-content:space-around;
-        // padding-left: 50px;
-        // padding-right:50px;
+        justify-content:space-evenly;
         overflow-x: auto;
         overflow-y: hidden;
     }
     &-mobcards{
         display:none;
         align-items:center;
-        justify-content:space-around;
-        // padding-left: 50px;
-        // padding-right:50px;
+        justify-content:space-evenly;
         overflow-x: auto;
         overflow-y: hidden;
     }
 }
 
+@media(min-width:1500px){
+    .Section8Values{
+        height: calc(100vh - 80px - 180px);
+        justify-content:center;
+    
+        &-heading{
+            display:flex;
+            justify-content: center;
+            align-items: flex-start;
+            text-align: center;
+            font-family:'Monserrat';
+            font-weight:200;
+            font-size:2rem;
+            padding-bottom:2rem;
+            overflow: hidden;
+        }
+        &-cards{
+            display:flex;
+            align-items:center;
+            justify-content:space-evenly;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+        &-mobcards{
+            display:none;
+            align-items:center;
+            justify-content:space-evenly;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+    }
+}
 
 @media(max-width:1200px){
     .Section8Values{
-        height: calc(100vh - 80px);
+        height: calc(100vh - 80px - 180px);
         display:flex;
         flex-direction: column;
-        justify-content:space-around;
+        justify-content:center;
         
         &-heading{
             text-align: center;
             font-family:'Monserrat';
             font-weight:200;
             font-size:30px;
+            padding-bottom:2rem;
         }
         &-cards{
             display:flex;
@@ -71,14 +98,14 @@
 
 @media(max-width:900px){
     .Section8Values{
-        height: calc(100vh - 80px);
+        height: calc(100vh - 80px -180px);
         display:flex;
         flex-direction: column;
-        justify-content:space-around;
+        justify-content:center;
         
         &-heading{
             text-align: center;
-            font-size:28px;
+            font-size:1.75rem;
         }
         &-cards{
             display:flex;
@@ -91,10 +118,10 @@
 
 @media(max-width:570px){
     .Section8Values{
-        height: calc(80vh - 80px);
+        height: calc(80vh - 80px -100px);
         display:flex;
         flex-direction: column;
-        justify-content:space-around;
+        justify-content:center;
         
         &-heading{
             text-align: center;

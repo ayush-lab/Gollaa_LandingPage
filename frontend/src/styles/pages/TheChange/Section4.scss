@@ -1,5 +1,5 @@
 $Section4_height:  calc(100vh - 80px);
-$Section4_heading_font:28px;
+$Section4_heading_font:1.75rem;
 $Section4_padding:90px;
 
 .Section4Change {
@@ -56,6 +56,66 @@ $Section4_padding:90px;
  
 }
 
+@media(min-width:1500px){
+  $Section4_height:  calc(100vh - 80px);
+$Section4_heading_font:2rem;
+$Section4_padding:120px;
+
+.Section4Change {
+  display: flex;
+  width: 100%;
+  height: $Section4_height;
+  position:relative;
+
+  &-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ADCB4F;
+    color:black;
+    &-heading{
+        font-size:$Section4_heading_font;
+        font-family:'Monserrat';
+        font-weight:300;
+        padding-bottom:2rem;
+        padding-left:$Section4_padding;
+        align-self:flex-start;
+    }
+
+    &-para{
+        font-size:1rem;
+        font-family:'poppins';
+        font-weight:200;
+        padding-left:$Section4_padding;
+        padding-right:$Section4_padding;
+        &-text1{
+            padding-bottom:1rem;
+        }
+    }
+
+   }
+
+  &-picture {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    position: relative;
+    background:#A1D8D8;
+
+    &-earth {
+      width: 50%;
+      height: 50%;
+    }
+
+  }
+
+ 
+}
+}
+
 @media(max-width:900px){
   $Section4_height:  calc(100vh - 80px);
 
@@ -71,7 +131,7 @@ $Section4_padding:90px;
     justify-content: center;
     align-items: center;
     &-heading{
-        font-size:28px;
+        font-size:1.75rem;
         padding-bottom:1rem;
         padding-left:60px;
         align-self:flex-start;
@@ -190,7 +250,7 @@ $Section4_padding:90px;
     }
 
     &-para{
-        font-size:8px;
+        font-size:0.5rem;
         padding-left:60px;
         padding-right:60px;
         &-text1{
@@ -247,7 +307,7 @@ $Section4_padding:90px;
     }
 
     &-para{
-        font-size:8px;
+        font-size:0.5rem;
         padding-left:15px;
         padding-right:15px;
         &-text1{

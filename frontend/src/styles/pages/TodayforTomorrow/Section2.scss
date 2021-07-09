@@ -1,6 +1,6 @@
 $Section2_height:  calc(100vh - 80px);
 $Section2_padding:90px;
-$Section2_heading_font:28px;
+$Section2_heading_font:1.75rem;
 
 .Section2Today {
   display: flex;
@@ -26,7 +26,7 @@ $Section2_heading_font:28px;
     }
 
     &-para{
-        font-size:12px;
+        font-size:0.75rem;
         font-family:'poppins';
         font-weight:200;
         padding-left:$Section2_padding;
@@ -67,6 +67,77 @@ $Section2_heading_font:28px;
 }
 
 
+@media(min-width:1500px){
+  $Section2_height:  calc(100vh - 80px);
+$Section2_padding:120px;
+$Section2_heading_font:2rem;
+
+.Section2Today {
+  display: flex;
+  width: 100%;
+  height: $Section2_height;
+  position:relative;
+
+  &-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #5FAF42;
+    color:black;
+    &-heading{
+        font-size:$Section2_heading_font;
+        font-family:'Monserrat';
+        font-weight:250;
+        padding-bottom:2rem;
+        padding-left:$Section2_padding;
+        align-self:flex-start;
+    }
+
+    &-para{
+        font-size:1rem;
+        font-family:'poppins';
+        font-weight:200;
+        padding-left:$Section2_padding;
+        padding-right:$Section2_padding;
+        &-text1{
+            padding-bottom:0rem;
+        }
+    }
+
+   }
+
+  &-picture {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &-earth {
+      position: absolute;
+      top: 20%;
+      left: 30%;
+      width: 50%;
+      height: 60%;
+    }
+
+    &-top {
+      height: 50%;
+      background: #5DBC58;
+    }
+
+    &-bottom {
+      height: 50%;
+      background: #EDE139;
+    }
+  }
+
+ 
+}
+
+}
+
 @media (max-width: 950px){
 
 
@@ -88,7 +159,7 @@ $Section2_heading_font:28px;
       padding-left:60px;
       padding-right:60px;
       &-heading{
-          font-size:28px;
+          font-size:1.75rem;
           font-family:'Monserrat';
           font-weight:250;
           padding-bottom:1rem;
@@ -159,7 +230,7 @@ $Section2_heading_font:28px;
       padding-left:60px;
       padding-right:60px;
       &-heading{
-          font-size:28px;
+          font-size:1.75rem;
           font-family:'Monserrat';
           font-weight:250;
           padding-bottom:1rem;
@@ -296,7 +367,7 @@ $Section2_heading_font:28px;
       padding-left:50px;
       padding-right:50px;
       &-heading{
-          font-size:12px;
+          font-size:0.75rem;
           font-family:'Monserrat';
           font-weight:250;
           padding-bottom:1rem;
@@ -305,7 +376,7 @@ $Section2_heading_font:28px;
       }
   
       &-para{
-          font-size:8px;
+          font-size:0.5rem;
           font-family:'poppins';
           font-weight:200;
           &-text1{
@@ -366,7 +437,7 @@ $Section2_heading_font:28px;
       padding-left:15px;
       padding-right:15px;
       &-heading{
-          font-size:12px;
+          font-size:0.75rem;
           font-family:'Monserrat';
           font-weight:250;
           padding-bottom:1rem;
@@ -375,7 +446,7 @@ $Section2_heading_font:28px;
       }
   
       &-para{
-          font-size:8px;
+          font-size:0.5rem;
           font-family:'poppins';
           font-weight:200;
           &-text1{

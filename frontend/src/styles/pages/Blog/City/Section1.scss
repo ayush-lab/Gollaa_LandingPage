@@ -8,7 +8,7 @@
 }
 
 $Section1_padding:90px;
-
+$Section1_heading_font:2.25rem;
 .CitySection1{
     display:flex;
     height:calc(100vh - 80px);
@@ -42,7 +42,7 @@ $Section1_padding:90px;
             &-heading{
                 color:black;
                 font-family: "Monserrat";
-                font-size:36px;
+                font-size:$Section1_heading_font;
                 font-weight:300;
                 padding-bottom:2rem;
                 text-align:center;
@@ -76,6 +76,59 @@ $Section1_padding:90px;
 
 .right_to_left{
     transform:translateX(0) !important;
+}
+
+@media(min-width:1500px){
+    $Section1_padding:120px;
+    $Section1_heading_font:2.5rem;
+.CitySection1{
+    display:flex;
+    height:calc(100vh - 80px);
+    width:100%;
+    &-left{
+        flex-basis:50%;
+        
+    }
+    &-left img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
+    &-right{
+        flex-basis:50%;
+        &-text{
+            position: absolute;
+            padding-left:$Section1_padding;
+            padding-right:$Section1_padding;
+          
+            &-heading{
+                font-size:$Section1_heading_font;
+                padding-bottom:2rem;
+            }
+            &-heading>span{
+                display:block;
+            }
+            &-para{
+                font-size:1rem;
+                font-weight:200;
+                transform:translateX(0);
+                transition:transform 0.7s ease;
+                animation: rightTOleft 0.5s ease;
+                &-para1,&-para2{
+               
+                }
+                &-para1{
+                    padding-bottom:1rem;
+                }
+            }
+
+        
+           
+        }
+    }
+
+}
+
 }
 
 @media(max-width:1250px){

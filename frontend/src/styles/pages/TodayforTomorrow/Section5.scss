@@ -1,5 +1,5 @@
 $Section5_height:  calc(100vh - 80px);
-$Section5_heading_font:28px;
+$Section5_heading_font:1.75rem;
 $Section5_padding:90px;
 .Section5Today {
   display: flex;
@@ -68,6 +68,80 @@ $Section5_padding:90px;
   }
 
  
+}
+
+@media(min-width:1500px){
+  $Section5_height:  calc(100vh - 80px);
+$Section5_heading_font:2rem;
+$Section5_padding:120px;
+.Section5Today {
+  display: flex;
+  width: 100%;
+  height: $Section5_height;
+  position:relative;
+
+  &-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #A1D8D8;
+    color:black;
+    &-heading{
+        font-size:$Section5_heading_font;
+        font-family:'Monserrat';
+        font-weight:250;
+        padding-bottom:2rem;
+        padding-left:$Section5_padding;
+        align-self:flex-start;
+    }
+
+    &-para{
+        font-size:1rem;
+        font-family:'poppins';
+        font-weight:200;
+        padding-left:$Section5_padding;
+        padding-right:$Section5_padding;
+        &-text1{
+            padding-bottom:1rem;
+        }
+    }
+
+   }
+
+  &-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #DAD800;
+    color:black;
+    &-heading{
+        font-size:$Section5_heading_font;
+        font-family:'Monserrat';
+        font-weight:250;
+        padding-bottom:2rem;
+        padding-left:$Section5_padding;
+        align-self:flex-start;
+    }
+
+    &-para{
+        font-size:1rem;
+        font-family:'poppins';
+        font-weight:200;
+        padding-left:$Section5_padding;
+        padding-right:$Section5_padding;
+        &-text1{
+            padding-bottom:1rem;
+        }
+    }
+
+  }
+
+ 
+}
 }
 
 
@@ -250,7 +324,7 @@ $Section5_padding:90px;
       }
   
       &-para{
-          font-size:8px;
+          font-size:0.5rem;
           font-family:'poppins';
           font-weight:200;
           padding-left:60px;
@@ -281,7 +355,7 @@ $Section5_padding:90px;
       }
   
       &-para{
-          font-size:8px;
+          font-size:0.5rem;
           font-family:'poppins';
           font-weight:200;
           padding-left:40px;
@@ -325,7 +399,7 @@ $Section5_padding:90px;
       }
   
       &-para{
-          font-size:8px;
+          font-size:0.5rem;
           font-family:'poppins';
           font-weight:200;
           padding-left:60px;
@@ -356,7 +430,7 @@ $Section5_padding:90px;
       }
   
       &-para{
-          font-size:8px;
+          font-size:0.5rem;
           font-family:'poppins';
           font-weight:200;
           padding-left:15px;

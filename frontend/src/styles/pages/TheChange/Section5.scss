@@ -1,6 +1,5 @@
 $Section5_height: calc(100vh - 80px);
-
-$Section5_heading_font:28px;
+$Section5_heading_font:1.75rem;
 $Section5_padding:90px;
 
 .Section5Change {
@@ -62,6 +61,74 @@ $Section5_padding:90px;
 
    }
 }
+
+@media(min-width:1500px){
+  $Section5_height: calc(100vh - 80px);
+  $Section5_heading_font:2rem;
+  $Section5_padding:120px;
+  
+  .Section5Change {
+    display: flex;
+    width: 100%;
+    height: $Section5_height;
+    position:relative;
+  
+    &-picture {
+      width: 50%;
+      display: flex;
+      justify-content:center;
+      align-items:center;
+      background:#5DBC58;
+  
+      &-earth {
+      
+        width: 50%;
+        height: 50%;
+      }
+  
+    }
+  
+    &-info {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      // align-items: center;
+      background: #CEC41D;
+      color:white;
+      &-heading{
+          font-size:$Section5_heading_font;
+          font-family:'Monserrat';
+          font-weight:300;
+          padding-bottom:2rem;
+          padding-left:$Section5_padding;
+      }
+  
+      &-para{
+          font-size:1rem;
+          font-family:'poppins';
+          font-weight:200;
+          padding-left:$Section5_padding;
+          padding-right:$Section5_padding;
+          &-text1{
+              padding-bottom:1rem;
+          }
+          &-text2{
+              padding-bottom:1rem;
+          }
+          &-text3{
+            font-family: 'Monserrat';
+            font-weight: 250;
+            font-size:$Section5_heading_font;
+            padding-bottom:1rem;
+          }
+      }
+  
+     }
+  }
+  
+}
+
 
 @media(max-width:900px){
   $Section5_height: calc(100vh - 80px);
@@ -214,7 +281,7 @@ $Section5_padding:90px;
     }
 
     &-para{
-        font-size:8px;
+        font-size:0.5rem;
         padding-left:60px;
         padding-right:60px;
         &-text1{
@@ -273,7 +340,7 @@ $Section5_padding:90px;
     }
 
     &-para{
-        font-size:8px;
+        font-size:0.5rem;
         padding-left:15px;
         padding-right:15px;
         &-text1{

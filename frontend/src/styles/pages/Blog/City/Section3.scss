@@ -1,4 +1,4 @@
-$Section3_heading_font:28px;
+$Section3_heading_font:1.75rem;
 $Section3_padding:90px;
 
 .CitySection3{
@@ -62,6 +62,49 @@ $Section3_padding:90px;
 
 .leftToRight{
     transform:translateX(0) !important;
+}
+
+@media(min-width:1500px){
+    $Section3_heading_font:2rem;
+    $Section3_padding:120px;
+
+.CitySection3{
+    display:flex;
+    height:calc(50vh - 40px);
+    &-left{
+        flex-basis:50%;
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        position:relative;
+        &-text{
+            position: absolute;
+            padding-left:$Section3_padding;
+            padding-right:$Section3_padding;
+            width:100%;
+            height:100%;
+            top:0;
+            &-heading{
+                font-size:$Section3_heading_font;
+                padding-bottom:2rem;
+            }
+            &-para{
+                    text-align: center;
+                    font-size:1rem;
+                    transform:translateX(-150%);
+                    
+                &-para1,&-para2{
+                    
+                }
+                &-para1{
+                    padding-bottom:1rem;
+                }
+            }
+        }
+    }
+
+}
+
 }
 
 @media(max-width:1200px){

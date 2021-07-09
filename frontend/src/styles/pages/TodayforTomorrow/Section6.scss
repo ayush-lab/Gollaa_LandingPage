@@ -1,5 +1,5 @@
 $Section6_height:  calc(100vh - 80px);
-$Section6_heading_font:28px;
+$Section6_heading_font:1.75px;
 $Section6_padding:90px;
 .Section6Today {
   display: flex;
@@ -56,6 +56,68 @@ $Section6_padding:90px;
   }
 
  
+}
+
+@media(min-width:1500px){
+  $Section6_height:  calc(100vh - 80px);
+$Section6_heading_font:2rem;
+$Section6_padding:120px;
+.Section6Today {
+  display: flex;
+  width: 100%;
+  height: $Section6_height;
+  position:relative;
+
+  &-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #5FAF42;
+    color:white;
+    &-heading{
+        font-size:$Section6_heading_font;
+        font-family:'Monserrat';
+        font-weight:250;
+        padding-bottom:2rem;
+        padding-left:$Section6_padding;
+        align-self:flex-start;
+    }
+
+    &-para{
+        font-size:1rem;
+        font-family:'poppins';
+        font-weight:200;
+        padding-left:$Section6_padding;
+        padding-right:$Section6_padding;
+        &-text1{
+            padding-bottom:1rem;
+        }
+        &-text2{
+            padding-bottom:1rem;
+        }
+        
+    }
+
+   }
+
+  &-picture {
+    width: 50%;
+    display: flex;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: #8ABB2A;
+
+    &-earth {
+      width: 40%;
+      height: 40%;
+    }
+  }
+
+ 
+}
 }
 
 
@@ -217,7 +279,7 @@ $Section6_padding:90px;
       }
   
       &-para{
-          font-size:8px;
+          font-size:0.5rem;
           font-family:'poppins';
           font-weight:200;
           padding-left:60px;
@@ -280,7 +342,7 @@ $Section6_padding:90px;
       }
   
       &-para{
-          font-size:8px;
+          font-size:0.5rem;
           font-family:'poppins';
           font-weight:200;
           padding-left:15px;

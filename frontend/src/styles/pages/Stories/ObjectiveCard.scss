@@ -24,6 +24,24 @@
     }
 }
 
+@media(min-width:1500px){
+    .ObjectiveCard{
+        width:280px;
+        height:280px;
+        border-radius: 20px;
+        font-size:1rem;
+        color:#707070;
+        padding-left:30px;
+        padding-right:30px;
+        padding-top:30px;
+        margin:0;
+      
+        &-content{
+            padding-top:10px;
+        }
+    }
+}
+
 @media(max-width:1200px){
     .ObjectiveCard{
         min-width:230px;

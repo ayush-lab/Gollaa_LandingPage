@@ -9,11 +9,31 @@
     overflow-y: hidden;
 
     &-cards{
-        width:100vw;
+        width:75vw;
         display:flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
     }
 }
+
+@media(min-width:1500px){
+    .AboutUsSection2{
+        background-color: #EBEBEB;
+        max-width:100vw;
+        height:calc(100vh - 80px - 200px);
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        overflow-x:hidden;
+        overflow-y: hidden;
+    
+        &-cards{
+            width:70vw;
+            display:flex;
+            justify-content: space-around;
+        }
+    }
+}
+
 
 @media(min-height:700px){
    .AboutUsSection2{

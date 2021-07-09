@@ -39,7 +39,7 @@
                 font-family: "Monserrat";
                 font-size:30px;
                 font-weight:300;
-                padding-bottom:1rem;
+                padding-bottom:2rem;
                 text-align:center;
             }
             &-heading>span{
@@ -78,7 +78,7 @@
         display:inline-block;
         width:100%;
         height:calc(100%);
-        object-fit:contain;
+        object-fit:cover;
         z-index:1;
         overflow-x:hidden;
     }
@@ -89,6 +89,69 @@
    transform:translateY(0);
 }
 
+
+@media(min-width:1500px){
+    .CurrencySection5{
+        height:calc(100vh - 80px - 200px);
+        display:flex;
+        max-width:100vw;
+        position:relative;
+        overflow:hidden;
+    
+        &-overlay{
+            position:absolute;
+            background:rgb(36, 12, 12);
+
+        }
+        &-about{
+            display:none;
+        }
+        &-textBlock{
+            position:absolute;
+            width:100%;
+            height:100%;
+            padding-top:50px;
+            padding-bottom:50px;
+            &-text{
+                width:40%;
+                z-index:2;
+    
+                &-heading{
+                    font-size:2rem;
+                    padding-bottom:2rem;
+                    text-align:center;
+                }
+                &-heading>span{
+                    display: block;
+                }
+    
+            
+                &-para1,&-para2{
+                    text-align: center;
+                    font-size:1rem;
+                }
+                &-para1{
+                    padding-bottom:0.5rem;
+                }
+            }
+            
+        }
+        &-image{
+            max-width:100vw;
+            min-height:400%;
+            background:rgb(36, 12, 12);
+            z-index:0;
+            transform:translateY(calc(-100% / 2));
+            transition:all 1.5s ease-in;
+        }
+        
+        &-image img{
+            height:calc(100%);
+            object-fit:cover;
+        }
+        
+    }
+}
 @media(max-width:900px){
     .CurrencySection5{
         height:calc(100vh - 80px - 180px);
