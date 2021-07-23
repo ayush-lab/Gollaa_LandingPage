@@ -196,7 +196,7 @@ export default function Section1(){
     window.addEventListener("resize", handleResize)
 
     return ()=>{
-        window.removeEventListener('resize')
+        window.removeEventListener('resize', handleResize)
     }
   },[])
 
