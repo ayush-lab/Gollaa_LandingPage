@@ -279,7 +279,7 @@ $PaddingForOpenedCard:80px;
       justify-content: space-between;
       align-items: center;
       transition: all 1s ease-in;
-      z-index:12;
+      z-index:10000;
       animation: zoomIn 1.3s ease;
       opacity:1;
       padding:0;
