@@ -268,10 +268,10 @@ $Blog_height:calc(100vh - 80px);
             &-text button{
                 @extend .Blog_button;
                 width:152px;
-                height:44px;
+                height:40px;
                 font-weight:300;
                 border-radius:10px;
-                font-size: 1rem;
+                font-size: 15px;
             }
         }
         &-row1 img{
@@ -309,10 +309,10 @@ $Blog_height:calc(100vh - 80px);
                 &-text button{
                     @extend .Blog_button;
                     width:152px;
-                    height:44px;
+                    height:40px;
                     font-weight:300;
                     border-radius:10px;
-                    font-size: 1rem;
+                    font-size: 15px;
                 }
             }
     
@@ -334,10 +334,10 @@ $Blog_height:calc(100vh - 80px);
                 &-text button{
                     @extend .Blog_button;
                     width:152px;
-                    height:44px;
+                    height:40px;
                     font-weight:300;
                     border-radius:10px;
-                    font-size: 1rem;
+                    font-size: 15px;
                 }
             }
     
@@ -394,10 +394,10 @@ $Blog_height:calc(100vh - 80px);
             &-text button{
                 @extend .Blog_button;
                 width:152px;
-                height:44px;
+                height:40px;
                 font-weight:300;
                 border-radius:10px;
-                font-size: 1rem;
+                font-size: 15px;
             }
     
         }
@@ -751,9 +751,10 @@ $Blog_height:calc(100vh - 80px);
             &-text button{
                 @extend .Blog_button;
                 opacity:1;
-                width:95px;
-                height:40px;
                 border-radius: 5px;
+                width:80px;
+                height:25px;
+                font-size: 0.5rem;
             }
         }
         &-row1 img{
@@ -796,8 +797,10 @@ $Blog_height:calc(100vh - 80px);
                 &-text button{
                     @extend .Blog_button;
                     opacity:1;
-                    width:95px;
-                    height:40px;
+                    border-radius: 5px;
+                    width:80px;
+                    height:25px;
+                    font-size: 0.5rem;
                     border-radius: 5px;
                 }
             }
@@ -830,8 +833,10 @@ $Blog_height:calc(100vh - 80px);
                 &-text button{
                     @extend .Blog_button;
                     opacity:1;
-                    width:95px;
-                    height:40px;
+                    border-radius: 5px;
+                    width:80px;
+                    height:25px;
+                    font-size: 0.5rem;
                     border-radius: 5px;
                 }
             }
@@ -870,6 +875,7 @@ $Blog_height:calc(100vh - 80px);
                 align-items:center;
                 left:0%;
                 top:0%;
+                transform:translateY(-9px);
             }
             &-text >p{
                @extend .Blog_text_p;
@@ -877,13 +883,15 @@ $Blog_height:calc(100vh - 80px);
                overflow:visible;
                white-space: normal;
                text-align:center;
-               font-size:12;
+               font-size:12px;
             }
             &-text button{
                 @extend .Blog_button;
                 opacity:1;
-                width:95px;
-                height:40px;
+                border-radius: 5px;
+                width:80px;
+                height:25px;
+                font-size: 0.5rem;
                 border-radius: 5px;
             }
     

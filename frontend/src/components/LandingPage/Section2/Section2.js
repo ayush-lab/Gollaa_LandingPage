@@ -33,24 +33,24 @@ export default function Section2(){
                 <div className="Section2-info-top">
                     <div className="Section2-info-top-imagewithText">
                         <img className="Section2-info-top-image" src={logo} alt="logo"/>
-                        <p className="Section2-info-top-text">TODAY FOR TOMORROW</p>
+                        <p className="Section2-info-top-text">TODAY FOR <span>TOMORROW</span></p>
                     </div>
                 </div>
 
                 <div className="Section2-info-bottom">
-                    <span className="Section2-info-bottom-bigText1">
+                    <p className="Section2-info-bottom-bigText1">
                     Gollaa is a platform that allows 
                     farmers and local businesses to market and sell 
-                    their products at real prices. </span>
+                    their products at real prices. </p>
                     
-                   <span className="Section2-info-bottom-bigText2"> Our vision statement 
+                   <p className="Section2-info-bottom-bigText2"> Our vision statement 
                     " TODAY FOR TOMORROW" perfectly captures the motivation and inducement
                      that we carry within our hearts to help local communities become
                       resilient and gain a reputable position in society. By taking action
                        today, we wish to create an equilibrium between the environment and humanity.
-                    </span>
+                    </p>
                     
-                    <div className={Section2.Hover ? "Section2-info-bottom-link": "displayNone"}>
+                    <div className={Section2.Hover ? "Section2-info-bottom-link": "Section2-info-bottom-linkNone"}>
                         <Link className="link" to="/today">See More</Link>
                     </div>
                     

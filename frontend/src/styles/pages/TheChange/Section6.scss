@@ -1,12 +1,14 @@
 $Section6_height:  calc(100vh - 80px);
-$Section6_heading_font:1.75rem;
-$Section6_padding:90px;
+$Section6_heading_font:1rem;
+$Section6_padding:15%;
 
 .Section6Change {
   display: flex;
   width: 100%;
   height: $Section6_height;
   position:relative;
+  scroll-snap-align: start;
+
 
   &-info {
     width: 50%;
@@ -20,8 +22,9 @@ $Section6_padding:90px;
         font-size:$Section6_heading_font;
         font-family:'Monserrat';
         font-weight:300;
-        padding-bottom:2rem;
+        padding-bottom:1rem;
         padding-left:$Section6_padding;
+        padding-right:$Section6_padding;
         align-self:flex-start;
     }
 
@@ -58,8 +61,8 @@ $Section6_padding:90px;
 
 @media(min-width:1500px){
   $Section6_height:  calc(100vh - 80px);
-  $Section6_heading_font:2rem;
-  $Section6_padding:120px;
+  $Section6_heading_font:20px;
+  $Section6_padding:20%;
 
   .Section6Change {
     display: flex;
@@ -79,7 +82,7 @@ $Section6_padding:90px;
           font-size:$Section6_heading_font;
           font-family:'Monserrat';
           font-weight:300;
-          padding-bottom:2rem;
+          padding-bottom:1rem;
           padding-left:$Section6_padding;
           align-self:flex-start;
       }
@@ -132,16 +135,12 @@ $Section6_padding:90px;
       justify-content: center;
       align-items: center;
       &-heading{
-          font-size:1.75rem;
           padding-bottom:1rem;
-          padding-left:60px;
           align-self:flex-start;
       }
   
       &-para{
           font-size:10px;
-          padding-left:60px;
-          padding-right:60px;
           &-text1{
               padding-bottom:1rem;
           }
@@ -184,21 +183,13 @@ $Section6_padding:90px;
       align-items: center;
       text-align:center;
       &-heading{
-          font-size:1.75rem;
-          padding-bottom:1rem;
-          padding-left:60px;
           align-self:center;
           width:100%;
-          padding-left:60px;
-          padding-right:60px;
           text-align:center;
 
       }
   
       &-para{
-          font-size:10px;
-          padding-left:60px;
-          padding-right:60px;
           &-text1{
               padding-bottom:0.5rem;
           }

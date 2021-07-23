@@ -1,11 +1,13 @@
 $Section7_height:  calc(100vh - 80px);
-$Section7_heading_font:1.75rem;
-$Section7_padding:90px;
+$Section7_heading_font:1rem;
+$Section7_padding:15%;
 .Section7Change {
   display: flex;
   width: 100%;
   height: $Section7_height;
   position:relative;
+  scroll-snap-align: start;
+
 
   &-left,&-right {
     width: 50%;
@@ -14,13 +16,14 @@ $Section7_padding:90px;
     justify-content: center;
     align-items: center;
     background: #ADCB4F;
-    color:white;
+    color:black;
     &-heading{
         font-size:$Section7_heading_font;
         font-family:'Monserrat';
         font-weight:300;
-        padding-bottom:2rem;
+        padding-bottom:1rem;
         padding-left:$Section7_padding;
+        padding-right:$Section7_padding;
         align-self:flex-start;
     }
 
@@ -38,6 +41,7 @@ $Section7_padding:90px;
    }
 
    &-right{
+       color:white;
        background:#8ABB2A;
        &-heading{
            font-weight:300;
@@ -49,8 +53,8 @@ $Section7_padding:90px;
 
 @media(min-width:1500px){
     $Section7_height:  calc(100vh - 80px);
-    $Section7_heading_font:2rem;
-    $Section7_padding:120px;
+    $Section7_heading_font:20px;
+    $Section7_padding:20%;
 .Section7Change {
   display: flex;
   width: 100%;
@@ -64,13 +68,13 @@ $Section7_padding:90px;
     justify-content: center;
     align-items: center;
     background: #ADCB4F;
-    color:white;
     &-heading{
         font-size:$Section7_heading_font;
         font-family:'Monserrat';
         font-weight:300;
-        padding-bottom:2rem;
+        padding-bottom:1rem;
         padding-left:$Section7_padding;
+        padding-right:$Section7_padding;
         align-self:flex-start;
     }
 
@@ -112,17 +116,13 @@ $Section7_padding:90px;
     justify-content: center;
     align-items: center;
     &-heading{
-        font-size:1.75rem;
         padding-bottom:1rem;
-        padding-left:60px;
         align-self:flex-start;
     }
 
     &-para{
-        font-size:10px;
-        padding-left:60px;
-        padding-right:60px;
         &-text1{
+            font-size:10px;
             padding-bottom:1rem;
         }
     }
@@ -160,17 +160,11 @@ $Section7_padding:90px;
     align-items: center;
     text-align:center;
     &-heading{
-        font-size:1.75rem;
-        padding-bottom:1rem;
-        padding-left:60px;
-        padding-right:60px;
         align-self:center;
     }
 
     &-para{
         font-size:10px;
-        padding-left:60px;
-        padding-right:60px;
         &-text1{
             padding-bottom:0.5rem;
         }
@@ -221,6 +215,7 @@ $Section7_padding:90px;
         padding-right:60px;
         &-text1{
             padding-bottom:0.5rem;
+            font-size:8px;
         }
     }
 
@@ -230,6 +225,7 @@ $Section7_padding:90px;
        &-heading{
            font-weight:300;
        }
+       
    }
  
 }

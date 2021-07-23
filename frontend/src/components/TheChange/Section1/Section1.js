@@ -1,6 +1,5 @@
 import React from 'react';
 import earth_Illustration from '../../../assets/images/Earth Illustration.svg'
-import logo from '../../../assets/images/Gollaa Logo White.svg'
 
 export default function Section1Change(){
 

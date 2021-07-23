@@ -11,10 +11,11 @@ $Pure-Green: #5faf42;
 .Footer {
   height: $Footer-height;
   width: 100%;
+  max-width:100vw;
   display: flex;
   padding: 0;
   margin: 0;
-  scroll-snap-align: center;
+  // scroll-snap-align: center;
   position:relative;
   z-index:3;
   
@@ -23,7 +24,7 @@ $Pure-Green: #5faf42;
     justify-content:center;
     align-items:center;
     height: $Footer-height;
-    flex-basis: 20%;
+    flex-basis: calc(100vw / 4);
     background: $Mustard-Yellow;
   }
 
@@ -58,8 +59,9 @@ $Pure-Green: #5faf42;
     align-items: center;
     padding-left: 20px;
     padding-top:0px;
-    flex-basis: 30%;
-    background: $Pure-Green;
+    // flex-basis: 30%;
+    flex-basis: calc(100vw / 4);
+    background: #ADCB4F;
     font-family: "Monserrat";
     font-weight: 300;
 
@@ -67,6 +69,8 @@ $Pure-Green: #5faf42;
       &-info {
         font-size: 14px;
         padding-bottom: 10px;
+        text-transform: uppercase;
+
       }
 
       &-contact {
@@ -86,7 +90,8 @@ $Pure-Green: #5faf42;
 
   &-col3 {
     height: $Footer-height;
-    flex-basis: 40%;
+    // flex-basis: 40%;
+    flex-basis: calc(100vw / 4);
     font-family: "Monserrat";
     font-weight: 300;
     background:#5DBC58;
@@ -112,7 +117,8 @@ $Pure-Green: #5faf42;
 
   }
   &-col4 {
-    flex-basis: 25%;
+    // flex-basis: 25%;
+    flex-basis: calc(100vw / 4);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -136,16 +142,17 @@ $Pure-Green: #5faf42;
     
     &-col1 {  
     height: $Footer-height;
+    flex-basis: calc(100% / 4);
 
     }
   
     &-col1 >button{
    
       width:152px;
-      height:44px;
+      height:40px;
       font-weight:300;
       border-radius:10px;
-      font-size: 1rem;
+      font-size: 15px;
       margin-right: 16px;
       
     }
@@ -154,7 +161,7 @@ $Pure-Green: #5faf42;
       height: $Footer-height;
       padding-left: 20px;
       padding-top:0px;
-      flex-basis: 30%;
+      flex-basis: calc(100% / 4);
   
       &-details {
         &-info {
@@ -180,8 +187,10 @@ $Pure-Green: #5faf42;
     &-col3 {
       height: $Footer-height;
       padding-top:30px;
-      &-row1 { 
-      }
+      flex-basis: calc(100% / 4);
+
+      // &-row1 { 
+      // }
       &-row1 p:nth-child(1) {
         font-size: 1.125rem;
         padding-bottom: 12px;
@@ -194,6 +203,7 @@ $Pure-Green: #5faf42;
     }
     &-col4 {
       height: $Footer-height;
+      flex-basis: calc(100% / 4);
   
       &-logo {
         flex-basis: 150px;
@@ -217,10 +227,10 @@ $Pure-Green: #5faf42;
       height: $Footer-height;
       flex-basis: 20%;
 
-      &-row1 {
-      }
-      &-row2 {
-      }
+      // &-row1 {
+      // }
+      // &-row2 {
+      // }
     }
 
     &-col2 {
@@ -284,10 +294,13 @@ $Pure-Green: #5faf42;
       height: $Footer-height;
       flex-basis: 15%;
 
-      &-row1 {
-      }
-      &-row2 {
-      }
+      // &-row1 {
+      // }
+      // &-row2 {
+      // }
+    }
+    &-col1 >button{
+      display:none;
     }
 
     &-col2 {
@@ -299,7 +312,7 @@ $Pure-Green: #5faf42;
         &-info {
           padding-bottom: 10px;
           text-transform: lowercase;
-
+          text-transform: capitalize;
         }
 
         &-contact {
@@ -370,10 +383,10 @@ $Pure-Green: #5faf42;
       height: $Footer-height;
       flex-basis: 15%;
 
-      &-row1 {
-      }
-      &-row2 {
-      }
+      // &-row1 {
+      // }
+      // &-row2 {
+      // }
     }
 
     &-col1 > button{
@@ -388,6 +401,8 @@ $Pure-Green: #5faf42;
       &-details {
         &-info {
           padding-bottom: 10px;
+          text-transform: lowercase;
+          text-transform: capitalize;
         }
 
         &-contact {
@@ -409,8 +424,9 @@ $Pure-Green: #5faf42;
     &-col3 {
       height: $Footer-height;
       flex-basis: 40%;
-      padding:0;
-      align-items:center;
+      // padding-top:px;
+      // align-items:inherit;
+      padding-top:22px;
       &-row1 {
         padding-left: 20px;
       }
@@ -449,19 +465,19 @@ $Pure-Green: #5faf42;
       display: flex;
       height: $Footer-height;
       flex-basis: 15%;
-
-      &-row1 {
-      }
-      &-row2 {
-      }
+      display:none;
+      // &-row1 {
+      // }
+      // &-row2 {
+      // }
     }
 
     &-col2 {
       height: $Footer-height;
-      padding-left: 13px;
+      padding-left: 0px;
       margin: 0;
-      flex-basis: 40%;
-      align-items: flex-start;
+      flex-basis: 50%;
+      align-items: center;
 
       &-details {
         display: flex;
@@ -494,8 +510,9 @@ $Pure-Green: #5faf42;
 
     &-col3 {
       height: $Footer-height;
-      flex-basis: 35%;
+      flex-basis: 30%;
       justify-content:flex-start;
+      padding-top:15px;
       &-row1 {
         padding-left: 10px;
         padding-bottom:20px;
@@ -514,25 +531,9 @@ $Pure-Green: #5faf42;
         font-size: 8px;
       }
 
-      // &-row2 {
-      //   height: 50%;
-      //   width: 100%;
-
-      //   &-col1 {
-      //     width: 80%;
-      //     padding-left: 10px;
-      //     font-size: 8px;
-      //   }
-      //   &-col1 p:nth-child(1) {
-      //     padding-bottom: 4px;
-      //   }
-      //   &-col2 {
-      //     width: 50%;
-      //   }
-      // }
     }
     &-col4 {
-      flex-basis: 25%;
+      flex-basis: 20%;
       background-color: $Pure-Yellow;
 
       &-logo {

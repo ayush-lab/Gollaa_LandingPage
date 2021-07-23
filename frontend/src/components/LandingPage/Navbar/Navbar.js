@@ -23,8 +23,8 @@ export default function Navbar(){
       let toggler = React.useRef();
 
     return(
-        <div style={{marginBottom:'80px'}}>
-            <div className="Navbar">
+        <>
+            <div className="Navbar" style={{marginBottom:'0px'}}>
 
                 <div className="Navbar-logo">
                     <Link className="link" to="/home">
@@ -48,7 +48,7 @@ export default function Navbar(){
                 </div>
                 
             </div>
-        </div>
+        </>
     )
 
 }

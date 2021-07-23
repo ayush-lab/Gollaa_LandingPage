@@ -1,11 +1,13 @@
 $Section3_height:  calc(100vh - 80px);
-$Section3_heading_font:1.75rem;
-$Section3_padding:90px;
+$Section3_heading_font:1rem;
+$Section3_padding:15%;
 .Section3Today {
   display: flex;
   width: 100%;
   height: $Section3_height;
   position:relative;
+  scroll-snap-align: start;
+
 
   &-picture {
     width: 50%;
@@ -33,11 +35,12 @@ $Section3_padding:90px;
     &-heading{
         font-size:$Section3_heading_font;
         font-family:'Monserrat';
-        font-weight:250;
-        padding-bottom:rem;
+        font-weight:300;
+        padding-bottom:1rem;
         align-self:flex-start;
         padding-left:$Section3_padding;
-        padding-bottom:2rem;
+        padding-right:$Section3_padding;
+
     }
 
     &-para{
@@ -59,8 +62,8 @@ $Section3_padding:90px;
 
 @media(min-width:1500px){
   $Section3_height:  calc(100vh - 80px);
-  $Section3_heading_font:2rem;
-  $Section3_padding:120px;
+  $Section3_heading_font:20px;
+  $Section3_padding:20%;
   .Section3Today {
     display: flex;
     width: 100%;
@@ -93,11 +96,11 @@ $Section3_padding:90px;
       &-heading{
           font-size:$Section3_heading_font;
           font-family:'Monserrat';
-          font-weight:250;
+          font-weight:300;
           padding-bottom:rem;
           align-self:flex-start;
           padding-left:$Section3_padding;
-          padding-bottom:2rem;
+          padding-bottom:1rem;
       }
   
       &-para{
@@ -154,21 +157,11 @@ $Section3_padding:90px;
     background: #5DBC58;
     color:white;
     &-heading{
-        font-size:28px;
-        font-family:'Monserrat';
-        font-weight:250;
-        padding-bottom:rem;
         align-self:flex-start;
-        padding-left:60px;
-        padding-bottom:1rem;
     }
 
     &-para{
         font-size:10px;
-        font-family:'poppins';
-        font-weight:200;
-        padding-left:60px;
-        padding-right:60px;
         &-text1{
             padding-bottom:1rem;
         }
@@ -219,26 +212,19 @@ $Section3_padding:90px;
     color:white;
     text-align: center;
     &-heading{
-        font-size:28px;
-        font-family:'Monserrat';
-        font-weight:250;
-        padding-bottom:rem;
-        align-self:center;
-        padding-left:60px;
-        padding-bottom:1rem;
+      align-self:center;
+      padding:0;
     }
 
     &-para{
         font-size:10px;
-        font-family:'poppins';
-        font-weight:200;
-        padding-left:60px;
-        padding-right:60px;
+        padding:0;
+        text-align: center;
         &-text1{
-            padding-bottom:1rem;
+            padding-bottom:0.5rem;
         }
         &-text2{
-            padding-bottom:1rem;
+            padding-bottom:0.5rem;
         }
     }
 

@@ -1,12 +1,13 @@
 $Section1_height: calc(100vh - 80px);
-$Section1_padding:90px;
-$Section1_heading_font:2.25rem;
+$Section1_padding:15%;
+$Section1_heading_font:2rem;
 
 .Section1Today {
   display: flex;
   width: 100%;
   height: $Section1_height;
   position:relative;
+  scroll-snap-align: start;
 
   &-picture {
     width: 50%;
@@ -22,8 +23,8 @@ $Section1_heading_font:2.25rem;
       height:100%;
       display:flex;
       justify-content: center;
-      align-items:flex-end;
-      padding-bottom:20%;
+      align-items:center;
+      padding-bottom:0;
     }
     &-earth >img{
       width:60%;
@@ -55,7 +56,9 @@ $Section1_heading_font:2.25rem;
         padding-left:$Section1_padding;
         padding-right:$Section1_padding;
         font-family:'Monserrat';
-        font-weight:250;
+        font-weight:300;
+        justify-self:flex-start;
+        align-self:flex-start;
         padding-bottom:2rem;
     }
 
@@ -75,8 +78,8 @@ $Section1_heading_font:2.25rem;
 
 @media(min-width:1500px){
   $Section1_height: calc(100vh - 80px);
-  $Section1_padding:120px;
-  $Section1_heading_font:2.5rem;
+  $Section1_padding:20%;
+  $Section1_heading_font:36px;
 
 .Section1Today {
   display: flex;
@@ -98,8 +101,7 @@ $Section1_heading_font:2.25rem;
       height:100%;
       display:flex;
       justify-content: center;
-      align-items:flex-end;
-      padding-bottom:20%;
+      align-items:center;
     }
     &-earth >img{
       width:60%;
@@ -131,7 +133,9 @@ $Section1_heading_font:2.25rem;
         padding-left:$Section1_padding;
         padding-right:$Section1_padding;
         font-family:'Monserrat';
-        font-weight:250;
+        font-weight:300;
+        justify-self:flex-start;
+        align-self:flex-start;
         padding-bottom:2rem;
     }
 
@@ -155,8 +159,6 @@ $Section1_heading_font:2.25rem;
   $Section1_height: calc(100vh - 80px);
 
   .Section1Today {
-    // display: flex;
-    // width: 100%;
     height: $Section1_height;
     position:relative;
   
@@ -174,8 +176,7 @@ $Section1_heading_font:2.25rem;
         height:100%;
         display:flex;
         justify-content: center;
-        align-items:flex-end;
-        padding-bottom:20%;
+        align-items:center;
       }
       &-earth >img{
         width:60%;
@@ -200,19 +201,12 @@ $Section1_heading_font:2.25rem;
       align-items: center;
       background: #8ABB2A;
       &-heading{
-          font-size:30px;
-          font-family:'Monserrat';
-          font-weight:250;
           padding-bottom:2rem;
           text-align:center;
       }
   
       &-para{
           font-size:10px;
-          font-family:'poppins';
-          font-weight:200;
-          padding-left:60px;
-          padding-right:60px;
           &-text1{
               padding-bottom:1rem;
           }
@@ -245,8 +239,8 @@ $Section1_heading_font:2.25rem;
         height:100%;
         display:flex;
         justify-content: center;
-        align-items:flex-end;
-        padding-bottom:20%;
+        align-items:center;
+        padding-bottom:0;
       }
       &-earth >img{
         width:60%;
@@ -273,19 +267,11 @@ $Section1_heading_font:2.25rem;
       background: #8ABB2A;
       color:white;
       &-heading{
-          font-size:1.75rem;
-          font-family:'Monserrat';
-          font-weight:250;
           padding-bottom:2rem;
           text-align:center;
       }
   
       &-para{
-          font-size:10px;
-          font-family:'poppins';
-          font-weight:200;
-          padding-left:60px;
-          padding-right:60px;
           &-text1{
               padding-bottom:1rem;
           }
@@ -318,7 +304,7 @@ $Section1_heading_font:2.25rem;
         height:100%;
         display:flex;
         justify-content: center;
-        align-items:flex-end;
+        align-items:center;
         // padding-bottom:20%;
       }
       &-earth >img{
@@ -346,21 +332,16 @@ $Section1_heading_font:2.25rem;
       justify-content: center;
       align-items: center;
       background: #8ABB2A;
-      color:white;
       text-align:center;
       &-heading{
-          // font-size:25px;
-          font-family:'Monserrat';
-          font-weight:250;
+          padding:0;
           padding-bottom:2rem;
+          justify-self:center;
+          align-self:center;
       }
   
       &-para{
           font-size:10px;
-          font-family:'poppins';
-          font-weight:200;
-          padding-left:60px;
-          padding-right:60px;
           &-text1{
               padding-bottom:1rem;
           }
@@ -395,12 +376,12 @@ $Section1_heading_font:2.25rem;
         height:100%;
         display:flex;
         justify-content: center;
-        align-items:flex-end;
-        padding-bottom:5%;
+        align-items:center;
+        padding-bottom:0;
       }
       &-earth >img{
         width:60%;
-        height:90%;
+        height:60%;
       }
   
       &-top {
@@ -430,6 +411,8 @@ $Section1_heading_font:2.25rem;
           font-family:'Monserrat';
           font-weight:250;
           padding-bottom:1rem;
+          padding-left:50px;
+          padding-right:50px;
       }
   
       &-para{
@@ -467,12 +450,11 @@ $Section1_heading_font:2.25rem;
         height:100%;
         display:flex;
         justify-content: center;
-        align-items:flex-end;
-        padding-bottom:5%;
+      
       }
       &-earth >img{
         width:60%;
-        height:90%;
+        height:60%;
       }
   
       &-top {

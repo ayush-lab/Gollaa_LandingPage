@@ -1,11 +1,12 @@
 $Section4_height: calc(100vh - 80px);
-$Section4_padding:90px;
-$Section4_heading_font:1.75rem;
+$Section4_padding:15%;
+$Section4_heading_font:1rem;
 .Section4Today {
   display: flex;
   width: 100%;
   height: $Section4_height;
   position:relative;
+  scroll-snap-align: start;
 
   &-info {
     width: 50%;
@@ -18,9 +19,10 @@ $Section4_heading_font:1.75rem;
     &-heading{
         font-size:$Section4_heading_font;
         font-family:'Monserrat';
-        font-weight:250;
-        padding-bottom:2rem;
+        font-weight:300;
+        padding-bottom:1rem;
         padding-left:$Section4_padding;
+        padding-right:$Section4_padding;
         align-self:flex-start;
     }
 
@@ -57,8 +59,8 @@ $Section4_heading_font:1.75rem;
 
 @media(min-width:1500px){
   $Section4_height: calc(100vh - 80px);
-  $Section4_padding:120px;
-  $Section4_heading_font:2rem;
+  $Section4_padding:20%;
+  $Section4_heading_font:20px;
 .Section4Today {
   display: flex;
   width: 100%;
@@ -76,8 +78,8 @@ $Section4_heading_font:1.75rem;
     &-heading{
         font-size:$Section4_heading_font;
         font-family:'Monserrat';
-        font-weight:250;
-        padding-bottom:2rem;
+        font-weight:300;
+        padding-bottom:1rem;
         padding-left:$Section4_padding;
         align-self:flex-start;
     }
@@ -132,20 +134,11 @@ $Section4_heading_font:1.75rem;
     background: #CFD136;
     color:white;
     &-heading{
-        font-size:28px;
-        font-family:'Monserrat';
-        font-weight:250;
-        padding-bottom:1rem;
-        padding-left:60px;
         align-self:flex-start;
     }
 
     &-para{
         font-size:10px;
-        font-family:'poppins';
-        font-weight:200;
-        padding-left:60px;
-        padding-right:60px;
         &-text1{
             padding-bottom:1rem;
         }
@@ -191,22 +184,13 @@ $Section4_heading_font:1.75rem;
     color:white;
     text-align: center;
     &-heading{
-        font-size:30px;
-        font-family:'Monserrat';
-        font-weight:250;
-        padding-bottom:1rem;
-        padding-left:60px;
         align-self:center;
+        padding:0;
     }
 
     &-para{
-        font-size:12px;
-        font-family:'poppins';
-        font-weight:200;
-        padding-left:60px;
-        padding-right:60px;
         &-text1{
-            padding-bottom:1rem;
+            padding-bottom:0.5rem;
         }
     }
 

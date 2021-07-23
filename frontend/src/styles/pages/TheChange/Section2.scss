@@ -1,12 +1,14 @@
 $Section2_height: calc(100vh - 80px);
-$Section2_heading_font:1.75rem;
-$Section2_padding:90px;
+$Section2_heading_font:16px;
+$Section2_padding:15%;
 
 .Section2Change {
   display: flex;
   width: 100%;
   height: $Section2_height;
   position:relative;
+  scroll-snap-align: start;
+
 
   &-info {
     width: 50%;
@@ -15,12 +17,12 @@ $Section2_padding:90px;
     justify-content: center;
     align-items: center;
     background: #5FAF42;
-    color:black;
+    color:white;
     &-heading{
         font-size:$Section2_heading_font;
         font-family:'Monserrat';
         font-weight:300;
-        padding-bottom:2rem;
+        padding-bottom:1rem;
         padding-left:$Section2_padding;
         padding-right:$Section2_padding;
         align-self:flex-start;
@@ -60,8 +62,8 @@ $Section2_padding:90px;
 
 @media(min-width:1500px){
   $Section2_height: calc(100vh - 80px);
-$Section2_heading_font:2rem;
-$Section2_padding:120px;
+$Section2_heading_font:20px;
+$Section2_padding:20%;
 
 .Section2Change {
   display: flex;
@@ -76,12 +78,11 @@ $Section2_padding:120px;
     justify-content: center;
     align-items: center;
     background: #5FAF42;
-    color:black;
     &-heading{
         font-size:$Section2_heading_font;
         font-family:'Monserrat';
         font-weight:300;
-        padding-bottom:2rem;
+        padding-bottom:1rem;
         padding-left:$Section2_padding;
         padding-right:$Section2_padding;
         align-self:flex-start;
@@ -135,18 +136,13 @@ $Section2_padding:120px;
       justify-content: center;
       align-items: center;
       &-heading{
-          font-size:28px;
           padding-bottom:1rem;
-          padding-left:60px;
-          padding-right:60px;
           align-self:flex-start;
       }
   
       &-para{
-          font-size:10px;
-          padding-left:60px;
-          padding-right:60px;
           &-text1{
+              font-size:10px;
               padding-bottom:1rem;
           }
       }
@@ -189,9 +185,6 @@ $Section2_padding:120px;
       align-items: center;
       text-align:center;
       &-heading{
-          font-size:28px;
-          padding-bottom:1rem;
-          padding-left:60px;
           align-self:none;
           width:100%;
           text-align:center;
@@ -199,8 +192,6 @@ $Section2_padding:120px;
   
       &-para{
           font-size:10px;
-          padding-left:60px;
-          padding-right:60px;
           &-text1{
               padding-bottom:0.5rem;
           }
@@ -262,6 +253,7 @@ $Section2_padding:120px;
           padding-right:60px;
           &-text1{
               padding-bottom:0.5rem;
+              font-size:8px;
           }
       }
   

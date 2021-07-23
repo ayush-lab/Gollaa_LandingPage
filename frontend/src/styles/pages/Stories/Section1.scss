@@ -6,15 +6,25 @@
     align-items:center;
     justify-content: center;
     text-align: center;
-    height:calc(100vh - 80px);
+    height:auto;
+    padding-top:5%;
+    padding-bottom:5%;
     overflow:none;
 
     
     &-text{
-        padding-bottom:2rem;
-        padding-left:20%;
-        padding-right:20%;
+        padding-bottom:4rem;
+        padding-left:30%;
+        padding-right:30%;
 
+        &-heading{
+            color:white;
+            font-family: "Monserrat";
+            font-size:32px;
+            font-weight:300;
+            padding-bottom:2rem;   
+            text-transform:uppercase;
+        }
         &-para{
             color:white;
             font-family: 'poppins';
@@ -26,7 +36,7 @@
     &-heading{
         color:white;
         font-family: "Monserrat";
-        font-size:28px;
+        font-size:32px;
         font-weight:300;
         padding-bottom:2rem;
     }
@@ -46,10 +56,16 @@
         height:calc(100vh - 80px);
         
         &-text{
-            padding-bottom:2rem;
-            padding-left:20%;
-            padding-right:20%;
-    
+            padding-bottom:5rem;
+            padding-left:30%;
+            padding-right:30%;
+            &-heading{
+                color:white;
+                font-family: "Monserrat";
+                font-size:36px;
+                font-weight:300;
+                padding-bottom:2rem;   
+            }
             &-para{
                 font-size:1rem;
             }
@@ -57,7 +73,7 @@
     
         &-heading{
             color:white;
-            font-size:2rem;
+            font-size:36px;
             padding-bottom:2rem;
         }
     
@@ -87,6 +103,15 @@
             padding-bottom:1rem;
             padding-left:20%;
             padding-right:20%;
+
+            &-heading{
+                color:white;
+                font-family: "Monserrat";
+                font-size:28px;
+                font-weight:300;
+                padding-bottom:1rem;   
+                text-transform:uppercase;
+            }
     
             &-para{
                 font-size:12px;
@@ -161,10 +186,18 @@
         padding-bottom:5%;
         
         &-text{
-            padding-bottom:1rem;
+            padding-bottom:3rem;
             padding-left:10%;
             padding-right:10%;
     
+            &-heading{
+                color:white;
+                font-family: "Monserrat";
+                font-size:14px;
+                font-weight:300;
+                padding-bottom:1rem;   
+                text-transform:uppercase;
+            }
             &-para{
                 font-size:8px;
             }

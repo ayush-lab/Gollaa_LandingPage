@@ -124,12 +124,12 @@ export default function CurrencySections(){
                         digitalized or be used as banknotes. Digitized local currency helps consumers make secure
                         payments conveniently. Some local currencies also offer incentives on the usage of the local money, 
                         which encourages consumers to make purchases. The circulative local economy can create jobs by 
-                        supporting small businesses. The local currency can either be digitalized or be used as banknotes. 
-                        Digitized local currency helps consumers make secure payments conveniently. Some local currencies also 
-                        offer incentives on the usage of the local money, which encourages consumers to make purchases. 
-                        The circulative local economy can create jobs by supporting small businesses.</p>
-                        <p className="CurrencySection5-about-text-para2">The local currency can either be digitalized or be used as banknotes. 
-                        Digitized local currency helps consumers make secure payments conveniently. Some local</p>
+                        supporting small businesses.</p>
+                        <p className="CurrencySection5-about-text-para2">The local currency can either be
+                        digitalized or be used as banknotes. Digitized local currency helps consumers make secure
+                        payments conveniently. Some local currencies also offer incentives on the usage of the local money, 
+                        which encourages consumers to make purchases. The circulative local economy can create jobs by 
+                        supporting small businesses.</p>
                     </div>
               </div>
 
@@ -140,12 +140,12 @@ export default function CurrencySections(){
                         digitalized or be used as banknotes. Digitized local currency helps consumers make secure
                         payments conveniently. Some local currencies also offer incentives on the usage of the local money, 
                         which encourages consumers to make purchases. The circulative local economy can create jobs by 
-                        supporting small businesses. The local currency can either be digitalized or be used as banknotes. 
-                        Digitized local currency helps consumers make secure payments conveniently. Some local currencies also 
-                        offer incentives on the usage of the local money, which encourages consumers to make purchases. 
-                        The circulative local economy can create jobs by supporting small businesses.</p>
-                        <p className="CurrencySection5-textBlock-text-para2">The local currency can either be digitalized or be used as banknotes. 
-                        Digitized local currency helps consumers make secure payments conveniently. Some local</p>
+                        supporting small businesses.</p>
+                        <p className="CurrencySection5-textBlock-text-para2">The local currency can either be
+                        digitalized or be used as banknotes. Digitized local currency helps consumers make secure
+                        payments conveniently. Some local currencies also offer incentives on the usage of the local money, 
+                        which encourages consumers to make purchases. The circulative local economy can create jobs by 
+                        supporting small businesses.</p>
                     </div>
               </div>
               <div className={"CurrencySection5-overlay"}></div>

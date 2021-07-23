@@ -12,6 +12,7 @@ export default function CitySection1(){
 
     // let RightToLeftRef=React.useRef();
     let zoomOut = React.useRef();
+    let zoomOutBenefit = React.useRef();
     let LeftToRightRef = React.useRef();
     let BottomToTopRef = React.useRef();
 
@@ -68,6 +69,18 @@ export default function CitySection1(){
               <div className="CitySection2-overlay"></div>
           </div>
 
+          <div  onMouseEnter={()=>{zoomOutBenefit.current.classList.add('zoom_Out')}} className="CitySection4">
+              <p ref={zoomOutBenefit} className="CitySection4-heading">Benefits of Agrotourism</p>
+              <p className="CitySection4-para">Farmers around the world have started diversifying their income
+               sources to increase profitability. Agrotourism can prove to be beneficial for such
+                farmers as well as consumers.<span> It can help farmers gain more recognition and revenue 
+                    for their products. Consumers can learn about various farm activities during their stay.
+                     Some farm spaces also provide the option to consumers to help out. Agrotourism can also 
+                     boost the local economy with visitors who would eat and shop locally</span>. Visitors can dine in on the local
+               cuisine and explore more about the region’s heritage.</p>
+
+          </div>
+
           <div onMouseEnter={()=>{LeftToRightRef.current.classList.add('leftToRight')}} className="CitySection3">
                 <div className="CitySection3-left">
                     <div className="CitySection3-left-text">
@@ -98,12 +111,7 @@ export default function CitySection1(){
                 </div>
           </div>
 
-          <div className="CitySection4">
-              <p className="CitySection4-heading">Benefits of Agrotourism</p>
-              <p className="CitySection4-para">Farmers around the world have started diversifying their income sources to increase profitability. Agrotourism can prove to be beneficial for such farmers as well as consumers. It can help farmers gain more recognition and revenue for their products. Consumers can learn about various farm activities during their stay. Some farm spaces also provide the option to consumers to help out. Agrotourism can also boost the local economy with visitors who would eat and shop locally. Visitors can dine in on the local
-               cuisine and explore more about the region’s heritage.</p>
-
-          </div>
+          
 
           <div onMouseEnter={()=>{BottomToTopRef.current.classList.add('Bottom_to_Top')}} className="CitySection5">
               <div className="CitySection5-left">

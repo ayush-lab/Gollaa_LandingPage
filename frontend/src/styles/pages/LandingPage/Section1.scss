@@ -53,7 +53,7 @@
         // height:300px;
         // height:calc(50vh);
         height:calc(50vh - 40px);
-        max-width:49.5vw;
+        max-width:50vw;
       }
     }
 
@@ -166,7 +166,6 @@
     width:100vw;
     height:calc(100vh - 80px);
     top:80px;
-    left:0;
   }
 }
 
@@ -201,7 +200,6 @@
       width:100vw;
       height:calc(100vh - 80px);
       top:80px;
-      right:0;
     }
   }
 
@@ -255,10 +253,15 @@
     
 $Half-Width: 50%;
 $Section1_height: calc(100vh - 80px);
+$PaddingForOpenedCard:80px;
 
 .Section1 {
   background: #5dbc58;
   height:$Section1_height;
+  scroll-snap-align: start;
+  // scroll-margin:80px;
+  position:relative;
+
   &-row1 {
     display: flex;
     flex-wrap: wrap;
@@ -276,7 +279,7 @@ $Section1_height: calc(100vh - 80px);
       justify-content: space-between;
       align-items: center;
       transition: all 1s ease-in;
-      z-index:10;
+      z-index:12;
       animation: zoomIn 1.3s ease;
       opacity:1;
       padding:0;
@@ -286,14 +289,14 @@ $Section1_height: calc(100vh - 80px);
         justify-content: center;
         align-items:center;
         flex-basis:50%;
-        height:100%;
+        height:50%;
         width:50%;
       
       }
       &-image>img{
         min-width:calc(40vw / 2);
-        width:60%;
-        height:90%;
+        width:100%;
+        height:100%;
       }
       &-cross,.cross-disappear {
         position:absolute;
@@ -315,21 +318,21 @@ $Section1_height: calc(100vh - 80px);
         flex-direction: column;
         justify-content: center;
         align-items:flex-start;
-        padding-left:10px;
-        padding-right:90px;
+        padding-left:$PaddingForOpenedCard;
+        padding-right:$PaddingForOpenedCard;
         animation:textAnimation 2s ease;
 
         &-Gollaa {
-          margin-bottom: 2rem;
+          margin-bottom: 0.5rem;
           overflow: hidden;
           white-space: nowrap;
 
           &-image {
             max-width: 120px;
-            margin-right: 6px;
+            margin-right: 8px;
           }
           &-heading {
-            font-size: 1rem;
+            font-size: 2rem;
             font-family: "Poppins";
             font-weight: 200;
           }
@@ -346,7 +349,7 @@ $Section1_height: calc(100vh - 80px);
           font-size:0.75rem;
         }
         &-subheading2{
-          padding-bottom:1rem;
+          padding-bottom:2rem;
         }
         &-app >button{
           @extend .download_button;
@@ -360,12 +363,11 @@ $Section1_height: calc(100vh - 80px);
     &-shopClosed{
       position:absolute;
       background: #cfd136;
-      z-index:10;
       width:49.5vw;
       height:calc(50vh - 40px);
       transition: all 1s ease !important;
       animation: zoomedOut 1.3s ease !important;
-      z-index:10;
+      z-index:12;
       padding-left: 30px;
       padding-right: 20px;
       padding-top: 20px;
@@ -386,7 +388,7 @@ $Section1_height: calc(100vh - 80px);
    
     &-shop,&-dummyShop {
       position:relative;
-      flex-basis: $Half-Width !important;
+      flex-basis: $Half-Width;
       height:calc(50vh - 40px);
       left:0;
       opacity:1;
@@ -397,7 +399,7 @@ $Section1_height: calc(100vh - 80px);
       justify-content: space-between;
       align-items: center;
       background: #cfd136;
-      padding-left: 30px;
+      padding-left: 80px;
       padding-right: 20px;
       padding-top: 20px;
       padding-bottom: 20px;
@@ -407,16 +409,20 @@ $Section1_height: calc(100vh - 80px);
         // flex: 1 1 250px;
         flex:1 1 50%;
         height:90%;
+        display:flex;
+        justify-content:flex-start;
       }
       &-image > img {
-        max-width: 90%;
+        max-width: 70%;
         height:100%;
       }
       &-text {
-        width: 50%;
+        width: auto;
+        height:100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        margin-right:10px;
 
         &-Gollaa {
           margin-bottom: 8px;
@@ -424,15 +430,15 @@ $Section1_height: calc(100vh - 80px);
           white-space: nowrap;
 
           &-image {
-            max-width: 120px;
+            max-width: 90px;
             // max-width: 32%;
             margin: 0;
           }
           &-heading {
-            font-size: 1rem;
+            font-size: 1.2rem;
             font-family: "Poppins";
             font-weight: 200;
-            padding-left: 6px;
+            padding-left: 8px;
           }
         }
         &-subheading {
@@ -446,6 +452,8 @@ $Section1_height: calc(100vh - 80px);
           cursor: pointer;
           opacity:0;
           z-index:3;
+          overflow: hidden;
+          white-space: nowrap;
         }
         &-app > button, .maxOpacity > button{
           @extend .download_button;
@@ -476,7 +484,7 @@ $Section1_height: calc(100vh - 80px);
       justify-content: space-around;
       align-items: center;
       transition: all 1s ease;
-      z-index:10;
+      z-index:12;
       animation: zoomIn 1.3s ease;
       opacity:1;
 
@@ -495,14 +503,14 @@ $Section1_height: calc(100vh - 80px);
         justify-content: flex-end;
         align-items:flex-end;
         // flex-basis:50%;
-        height:100%;
+        height:80%;
         min-width:50%;
       }
       &-image>img{
         min-width:calc(40vw / 2);
         width:100%;
         height:100%;
-        transform:translateY(16%);
+        transform:translateY(0%);
       }
 
       &-ParentTextBlock{
@@ -528,12 +536,12 @@ $Section1_height: calc(100vh - 80px);
         justify-content: center;
         align-items:flex-start;
         overflow:hidden;
-        padding-left:50px;
-        padding-right:50px;
-        padding-bottom:50px;
+        padding-left:$PaddingForOpenedCard;
+        padding-right:$PaddingForOpenedCard;
+        padding-bottom:0px;
 
         &-Gollaa {
-          margin-bottom: 2rem;
+          margin-bottom: 0.5rem;
           overflow: hidden;
           white-space: nowrap;
 
@@ -542,10 +550,10 @@ $Section1_height: calc(100vh - 80px);
             margin: 0;
           }
           &-heading {
-            font-size: 1rem;
+            font-size: 2rem;
             font-family: "Poppins";
             font-weight: 200;
-            padding-left: 5px;
+            padding-left: 8px;
           }
         }
         &-subheading1{
@@ -560,7 +568,7 @@ $Section1_height: calc(100vh - 80px);
           font-size:0.75rem;
         }
         &-subheading2{
-          padding-bottom:1rem;
+          padding-bottom:2rem;
         }
         &-app >button{
           @extend .download_button;
@@ -572,6 +580,7 @@ $Section1_height: calc(100vh - 80px);
 
 
     &-growClosed{
+      padding-right:60px;
       position:absolute;
       background: #8cc63f;
       z-index:2;
@@ -579,7 +588,7 @@ $Section1_height: calc(100vh - 80px);
       height:calc(50vh - 40px);
       transition: all 1s ease !important;
       animation: zoomedOut 1.3s ease !important;
-      z-index:2;
+      z-index:12;
       &-textBlock{
         width:50%;
         animation:textAnimationReverse 1.5s ease;
@@ -600,11 +609,12 @@ $Section1_height: calc(100vh - 80px);
       height:calc(50vh - 40px);
       flex: 1 1 50%;
       background: #8cc63f;
-      padding-left: 56.52px;
+      padding-left: 30px;
 
       &-image {
         display: flex;
-        align-items: flex-end;
+        align-items:center;
+        justify-content:flex-end;
         padding: 0;
         margin:0;
         width: 50%;
@@ -612,28 +622,29 @@ $Section1_height: calc(100vh - 80px);
 
       &-image > img {
         max-width: 100%;
+        max-height:80%;
         // max-width:110px;
-        transform:translateY(5px);
+        margin-right:60px;
+        transform:translateY(0px);
       }
       &-text {
         width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-
         &-Gollaa {
           margin-bottom: 8px;
 
           &-image {
             // max-width: 30%;
-            max-width:120px;
+            max-width:90px;
             margin: 0;
           }
           &-heading {
-            font-size: 1rem;
+            font-size: 1.2rem;
             font-family: "Poppins";
             font-weight: 200;
-            padding-left: 6px;
+            padding-left: 8px;
             text-transform: uppercase;
           }
         }
@@ -648,6 +659,8 @@ $Section1_height: calc(100vh - 80px);
           cursor: pointer;
           opacity:0;
           z-index:3;
+          overflow: hidden;
+          white-space: nowrap;
         }
         &-app > button ,.maxOpacity >button {
          @extend .signIn_button;
@@ -675,7 +688,7 @@ $Section1_height: calc(100vh - 80px);
       justify-content: space-around;
       align-items: center;
       transition: all 1s ease;
-      z-index:10;
+      z-index:12;
       animation: zoomInSupport 1.3s ease;
       opacity:1;
 
@@ -728,13 +741,13 @@ $Section1_height: calc(100vh - 80px);
         flex-direction: column;
         justify-content: center;
         align-items:flex-start;
-        padding-left:50px;
-        padding-right:50px;
-        padding-bottom:50px;
+        padding-left:$PaddingForOpenedCard;
+        padding-right:$PaddingForOpenedCard;
+        padding-bottom:$PaddingForOpenedCard;
         overflow:hidden;
         
         &-Gollaa {
-          margin-bottom: 2rem;
+          margin-bottom: 0.5rem;
           overflow: hidden;
           white-space: nowrap;
 
@@ -743,10 +756,10 @@ $Section1_height: calc(100vh - 80px);
             margin: 0;
           }
           &-heading {
-            font-size: 1rem;
+            font-size: 2rem;
             font-family: Poppins;
             font-weight: 200;
-            padding-left: 5px;
+            padding-left: 8px;
             text-transform: uppercase;
 
           }
@@ -782,7 +795,7 @@ $Section1_height: calc(100vh - 80px);
       height:calc(50vh - 40px);
       transition: all 1s ease !important;
       animation: zoomedOutSupport 1.5s forwards !important;
-      z-index:2;
+      z-index:12;
       &-textBlock{
         animation:textAnimationReverse 1s ease;
         opacity:0;
@@ -800,15 +813,16 @@ $Section1_height: calc(100vh - 80px);
       position:relative;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: center;
       flex: 1 1 250px;
       height:calc(50vh - 40px);
       background: #ede139;
-      padding-left: 25px;
-      padding-right: 25px;
-      padding-top: 25px;
+      padding:0;
 
       &-image {
+        position:absolute;
+        width:100%;
+        height:100%;
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
@@ -820,7 +834,7 @@ $Section1_height: calc(100vh - 80px);
       &-image > img {
         // max-width: 280px;
         max-width:70%;
-        height: auto;
+        height: 150px;
         object-fit: contain;
       }
       &-text {
@@ -828,20 +842,24 @@ $Section1_height: calc(100vh - 80px);
         flex-direction: column;
         justify-content: center;
         position: relative;
-
+        padding-left: 30px;
+        padding-right: 0px;
+        padding-top: 0px;
+        padding-bottom:60px;
+        z-index:10;
         &-Gollaa {
           margin-bottom: 8px;
 
           &-image {
             // max-width: 75px;
-            max-width:120px;
+            max-width:90px;
             margin: 0;
           }
           &-heading {
-            font-size: 1rem;
+            font-size: 1.2rem;
             font-family: "Poppins";
             font-weight: 200;
-            padding-left: 5px;
+            padding-left: 8px;
             text-transform: uppercase;
           }
         }
@@ -887,7 +905,7 @@ $Section1_height: calc(100vh - 80px);
       justify-content: space-around;
       align-items: center;
       transition: all 1.3s ease;
-      z-index:10;
+      z-index:12;
       animation: zoomInStay 1.3s ease;
       opacity:1;
 
@@ -936,13 +954,13 @@ $Section1_height: calc(100vh - 80px);
         flex-direction: column;
         justify-content: center;
         align-items:flex-start;
-        padding-left:50px;
-        padding-right:50px;
-        padding-bottom:50px;
+        padding-left:$PaddingForOpenedCard;
+        padding-right:$PaddingForOpenedCard;
+        // padding-bottom:50px;
         overflow:hidden;
         
         &-Gollaa {
-          margin-bottom: 2rem;
+          margin-bottom: 0.5rem;
           overflow: hidden;
           white-space: nowrap;
 
@@ -951,10 +969,10 @@ $Section1_height: calc(100vh - 80px);
             margin: 0;
           }
           &-heading {
-            font-size: 1rem;
+            font-size: 2rem;
             font-family: Poppins;
             font-weight: 200;
-            padding-left: 5px;
+            padding-left: 8px;
             text-transform: uppercase;
 
           }
@@ -990,7 +1008,7 @@ $Section1_height: calc(100vh - 80px);
       height:calc(50vh - 40px);
       transition: all 1s ease !important;
       animation: zoomedOutStay 1.5s forwards !important;
-      z-index:2;
+      z-index:12;
       &-textBlock{
         animation:textAnimationReverse 1s ease;
         opacity:0;
@@ -1006,16 +1024,15 @@ $Section1_height: calc(100vh - 80px);
       position:relative;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: center;
       // width: calc(100% / 3);
       flex: 1 1 250px;
       height: calc(50vh - 40px);
       background: #5dbc58;
-      padding-left: 25px;
-      padding-right: 10px;
-      padding-top: 25px;
+      padding:0;
 
       &-image {
+        position:absolute;
         height:100%;
         width:100%;
         display: flex;
@@ -1026,11 +1043,12 @@ $Section1_height: calc(100vh - 80px);
         padding: 0;
         margin: 0;
       }
+    
 
       &-image > img {
         // max-width: 230px;
-        width:auto;
-        height: 60%;
+        max-width:70%;
+        height: 140px;
         // flex: 1 1 230px;
         // height: 300px;
         object-fit:cover;
@@ -1043,20 +1061,26 @@ $Section1_height: calc(100vh - 80px);
         flex-direction: column;
         justify-content: center;
         position: relative;
-
+        padding-left: 30px;
+        padding-right: 0px;
+        padding-bottom: 60px;  
+        z-index:10;
         &-Gollaa {
           margin-bottom: 8px;
 
           &-image {
             // max-width: 75px;
-            max-width:110px;
+            max-width:90px;
             margin: 0;
           }
+          &-imageWhite{
+            display:none;
+          }
           &-heading {
-            font-size: 1rem;
+            font-size: 1.2rem;
             font-family: "Poppins";
             font-weight: 200;
-            padding-left: 5px;
+            padding-left: 8px;
             text-transform: uppercase;
           }
         }
@@ -1105,7 +1129,7 @@ $Section1_height: calc(100vh - 80px);
       justify-content: space-around;
       align-items: center;
       transition: all 1s ease;
-      z-index:10;
+      z-index:12;
       animation: zoomInTrade 1.3s ease;
       opacity:1;
 
@@ -1131,7 +1155,7 @@ $Section1_height: calc(100vh - 80px);
         min-width:calc(40vw / 2);
         width:100%;
         height:100%;
-        transform:translate(-0%,30%);
+        transform:translate(-0%,0%);
         // transform:translateY(16%);
       }
 
@@ -1158,12 +1182,12 @@ $Section1_height: calc(100vh - 80px);
         justify-content: center;
         align-items:flex-start;
         overflow:hidden;
-        padding-left:50px;
-        padding-right:50px;
-        padding-bottom:50px;
+        padding-left:$PaddingForOpenedCard;
+        padding-right:$PaddingForOpenedCard;
+        // padding-bottom:50px;
 
         &-Gollaa {
-          margin-bottom: 2rem;
+          margin-bottom: 0.5rem;
           overflow: hidden;
           white-space: nowrap;
 
@@ -1172,10 +1196,10 @@ $Section1_height: calc(100vh - 80px);
             margin: 0;
           }
           &-heading {
-            font-size: 1rem;
+            font-size: 2rem;
             font-family: "Poppins";
             font-weight: 200;
-            padding-left: 5px;
+            padding-left: 8px;
           }
         }
         &-subheading1{
@@ -1204,7 +1228,7 @@ $Section1_height: calc(100vh - 80px);
     &-tradeClosed{
       position:absolute;
       background: #afd466;
-      z-index:2;
+      z-index:12;
       width:calc(100vw / 3);
       // left:calc((100vw / 3)*2);
       top:calc(50vh - 40px);
@@ -1232,30 +1256,30 @@ $Section1_height: calc(100vh - 80px);
       position:relative;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: center;
       // width: calc(100% / 3);
       flex: 1 1 250px;
       height: calc(50vh - 40px);
       background: #afd466;
-      padding-left: 25px;
-      padding-right: 25px;
-      padding-top: 25px;
+      padding:0;
 
       &-image {
+        position:absolute;
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
         text-align: right;
         padding: 0;
         margin: 0;
-        height:65%;
+        height:100%;
         width:100%;
       }
+     
 
       &-image > img {
         // max-width: 180px;
         max-width:50%;
-        
+        height:150px;
         // flex: 1 1 180px;
         // height: 300px;
         object-fit: contain;
@@ -1267,19 +1291,25 @@ $Section1_height: calc(100vh - 80px);
         flex-direction: column;
         justify-content: center;
         position: relative;
-        // background-color: #ede139;
+        padding-left: 30px;
+        padding-right: 0px;
+        padding-bottom: 60px;
+        z-index:10;
         &-Gollaa {
           margin-bottom: 8px;
 
           &-image {
-            max-width: 120px;
+            max-width: 90px;
             margin: 0;
           }
+          &-imageWhite{
+            display:none;
+          }
           &-heading {
-            font-size: 1rem;
+            font-size: 1.2rem;
             font-family: Poppins;
             font-weight: 200;
-            padding-left: 5px;
+            padding-left: 8px;
             text-transform:uppercase;
           }
         }
@@ -1309,6 +1339,9 @@ $Section1_height: calc(100vh - 80px);
             overflow: hidden;
             white-space: nowrap;
           }
+        }
+        &-subheading span:nth-child(1){
+          display:block;
         }
         &-app {
           display: none;
@@ -1345,231 +1378,498 @@ $Section1_height: calc(100vh - 80px);
   }
 }
 
-// media queries section
 
-@media (max-width: 900px) {
+
+
+
+@media(max-width:900px){
+  $Half-Width: 50%;
   $Section1_height: auto;
-  $row2_height: auto;
+  $Card_height:40vh;
+  $Heading_font:1rem;
+  $subHeading_font:0.875rem;
+  $smallest_Heading_font:0.75rem;
 
   .Section1 {
-    &-row1 {
-      height: $Section1_height;
+    height:auto;
 
-      &-shop {
-        flex: 1 1 100%;
-        flex-direction: row-reverse;
-        align-items: flex-start;
-        padding-left: 25px;
+    &-row1 {
+      display: flex;
+      flex-wrap: wrap;
+      position:relative;
+      max-width:100%;
+      width:100%;
+     
+  
+      &-dummyShop{
+        display:inline-block;
+        position:static;
+      }
+   
+     
+      &-shop,&-dummyShop {
+        position:relative;
+        flex-basis: 100vw;
+        width:100vw;
+        height:$Card_height;
+        opacity:1;
+        transition:opacity 0.5s ease;
+        flex-grow: 1;
+        flex-shrink: 1;
+        display: flex;
+        flex-direction:row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 30px;
         padding-right: 20px;
         padding-top: 20px;
         padding-bottom: 20px;
-
+  
         &-image {
-          flex: 1 1 100px;
+          flex:1 1 50%;
+          height:90%;
+          justify-content:center;
+
         }
         &-image > img {
           max-width: 90%;
+          height:100%;
         }
         &-text {
           width: 50%;
-          height: $Section1_height;
-          padding-top: 30px;
-
-          &-Gollaa {
-            margin-bottom: 8px;
-            &-image {
-              max-width: 40%;
-            }
-            &-heading {
-              font-size: 24px;
-              padding-left: 5px;
-            }
-          }
-          &-subheading {
-            font-size: 24px;
-          }
-          &-app {
-            margin-top: 35px;
-            opacity: 1;
-          }
-          &-app > button {
-            padding-left: 0.75rem;
-            padding-top: 6px;
-            padding-right: 18px;
-            padding-bottom: 6px;
-            margin-right: 1rem;
-            font-size: 0.875rem;
-          }
-          &-app > span {
-            font-size: 0.875rem;
-            overflow: hidden;
-            white-space: nowrap;
-          }
-        }
-      }
-
-      &-grow {
-        display: flex;
-        flex-direction: column;
-        flex: 1 1 50%;
-        min-height: $Section1_height;
-        padding-left: 25px;
-        padding-top: 25px;
-        &-image {
-          align-items: flex-end;
-          padding: 0;
-        }
-        &-image {
-          width: 100%;
-        }
-        &-image > img {
-          // max-width: 350px;
-          max-width: 100%;
-        }
-        &-text {
-          width: 100%;
-          height: $Section1_height;
           display: flex;
           flex-direction: column;
-          justify-content: center;
-          position: relative;
-
+          justify-self: flex-start;
+          align-self:flex-start;
+          padding-top:25px;
+          
           &-Gollaa {
             margin-bottom: 8px;
-
+            overflow: hidden;
+            white-space: nowrap;
+  
             &-image {
-              max-width: 75px;
+              max-width: 120px;
               margin: 0;
             }
             &-heading {
-              font-size: 1rem;
-              padding-left: 5px;
+              font-size: $Heading_font;
+              font-family: "Poppins";
+              font-weight: 200;
+              padding-left: 6px;
             }
           }
           &-subheading {
-            font-size: 1rem;
-          }
-          &-app {
-            margin-top: 35px;
-            position: absolute;
-            top: 60px;
-          }
-         
-          &-app > span {
             font-family: "Monserrat";
             font-weight: 200;
-            font-size: 0.75rem;
+            font-size: $subHeading_font;
+          }
+          &-app,.maxOpacity {
+            transition:opacity 0.5s;
+            margin-top: 35px;
+            cursor: pointer;
+            opacity:1;
+            z-index:3;
+          }
+          // &-app > button, .maxOpacity > button{
+          //   // @extend .download_button;
+          // }
+          &-app > span , .maxOpacity>span{
+            font-family: "Monserrat";
+            font-weight: 200;
+            font-size: $smallest_Heading_font;
+            overflow: hidden;
+            white-space: nowrap;
+            opacity:1;
+            transition:opacity 1s ease;
+          }
+        }
+      }
+
+      &-dummyGrow{
+        display:inline-block;
+        position:static;
+      }
+  
+      &-grow,&-dummyGrow {
+        position:relative;
+        transition: all 1s ease;
+        right:0;
+        opacity:1;
+        display: flex;
+        height:$Card_height;
+        flex: 1 1 50%;
+        flex-direction:column;
+        justify-content:space-between;
+        width:50%;
+        background: #8cc63f;
+        padding-left: 0px;
+        padding-top:0px;
+        padding-right:0px;
+
+  
+        &-image {
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          text-align: right;
+          padding: 0;
+          margin: 0;
+          width:100%;
+          height:50%;
+        }
+  
+        &-image > img {
+          max-width: 100%;
+          height:100%;
+          object-fit:cover;
+          transform:translateY(0px);
+          margin:0;
+        }
+        &-text {
+          position:relative;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding-left: 25px;
+          padding-top:25px;
+          padding-right:25px;
+
+          &-Gollaa {
+            margin-bottom: 8px;
+            overflow: hidden;
+            white-space: nowrap;
+  
+            &-image {
+              // max-width: 30%;
+              max-width:120px;
+              margin: 0;
+            }
+            &-heading {
+              font-size: $Heading_font;
+              font-family: "Poppins";
+              font-weight: 200;
+              padding-left: 6px;
+              text-transform: uppercase;
+            }
+          }
+          &-subheading {
+            font-family: "Monserrat";
+            font-weight: 200;
+            font-size: $subHeading_font;
+          }
+          &-app,.maxOpacity{
+            position:absolute;
+            top:100%;
+            left:25px;
+            transition:opacity 0.5s;
+            margin-top:35px;
+            cursor: pointer;
+            opacity:1;
+            z-index:3;
+          }
+          &-app > button ,.maxOpacity >button {
+          //  @extend .signIn_button;
+              display:none;
+          }
+          &-app > span, .maxOpacity >span {
+            font-family: "Monserrat";
+            font-weight: 250;
+            font-size: $smallest_Heading_font;
             overflow: hidden;
             white-space: nowrap;
           }
         }
       }
-
-      &-support {
+  
+      &-dummySupport{
+        display:inline-block;
+        position:static;
+      }
+   
+     
+      &-support,&-dummySupport{
+        position:relative;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         flex: 1 1 50%;
-        padding-left: 25px;
-        padding-top: 25px;
-
+        width:50%;
+        height:$Card_height;
+        background: #ede139;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+  
         &-image {
+          position:static;
           display: flex;
           align-items: flex-end;
-          justify-content: flex-end;
+          justify-content: center;
+          text-align: right;
+          padding: 0;
+          margin: 0;
+          width:100%;
+          max-height:50%;
         }
-
+  
         &-image > img {
-          max-width: 320px;
-          height: auto;
+          // max-width: 280px;
+          // max-width:100%;
+          height: 75%;
+          max-width:251px;
+          // transform:translateY(20px);
           object-fit: contain;
         }
         &-text {
+          padding-left: 25px;
+          padding-top:25px;
+          padding-right:25px;
           display: flex;
           flex-direction: column;
           justify-content: center;
           position: relative;
-
+  
           &-Gollaa {
             margin-bottom: 8px;
-
+  
             &-image {
-              max-width: 75px;
+              // max-width: 75px;
+              max-width:120px;
               margin: 0;
             }
             &-heading {
-              font-size: 0.875rem;
+              font-size: $Heading_font;
+              font-family: "Poppins";
+              font-weight: 200;
               padding-left: 5px;
+              text-transform: uppercase;
             }
           }
           &-subheading {
-            font-size: 0.875rem;
+            font-family: "Monserrat";
+            font-weight: 200;
+            font-size:$subHeading_font;
+            position:relative;
+  
+            &-app,.maxOpacity {
+              position:absolute;
+              top:30px;
+              left:0;
+              transition:opacity 0.5s;
+              margin-top: 35px;
+              cursor: pointer;
+              opacity:1;
+              z-index:3;
+            }
+           
+            &-app > span, .maxOpacity >span {
+              font-family: "Monserrat";
+              font-weight: 250;
+              font-size: $smallest_Heading_font;
+              overflow: hidden;
+              white-space: nowrap;
+            }
           }
-          &-app {
-            margin-top: 35px;
-            position: absolute;
-            top: 60px;
-          }
-          &-app > button {
-            padding-left: 0.75rem;
-            padding-top: 6px;
-            padding-right: 18px;
-            padding-bottom: 6px;
-            margin-right: 1rem;
-            font-size: 0.75rem;
-            border-radius: 6px;
-            overflow: hidden;
-            white-space: nowrap;
-          }
-          &-app > span {
-            font-size: 0.75rem;
-            overflow: hidden;
-            white-space: nowrap;
-          }
+         
         }
       }
 
-      &-stay {
+      &-dummyStay{
+        display:inline-block;
+        position:static;
+      }
+      &-stay,&-dummyStay {
+        position:relative;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         flex: 1 1 50%;
-        padding-left: 25px;
-        padding-top: 25px;
-
+        width:50%;
+        height: $Card_height;
+        background: #5dbc58;
+        padding-left: 0;
+        padding-right:0;
+        padding-top: 0;
+  
         &-image {
+          // height:100%;
+          position:static;
+          width:232px;
           display: flex;
           align-items: flex-end;
+          align-self:center;
           justify-content: flex-end;
           text-align: right;
+          padding: 0;
+          margin: 0;
         }
-
+  
         &-image > img {
-          max-width: 230px;
-          object-fit: contain;
+          // transform:translateY(23.5px);
+          align-self:flex-end;
+          justify-self:flex-end;
+          width:100%;
+          // height: 100%;
+          // flex: 1 1 230px;
+          // height: 300px;
+          object-fit:contain;
+          margin:0;
+          padding:0;
+  
         }
         &-text {
+          padding-left: 25px;
+          padding-top:25px;
+          padding-right:25px;
           display: flex;
           flex-direction: column;
           justify-content: center;
           position: relative;
-
+  
           &-Gollaa {
             margin-bottom: 8px;
-
+  
             &-image {
-              max-width: 75px;
+              // max-width: 75px;
+              max-width:110px;
               margin: 0;
             }
             &-heading {
-              font-size: 0.875rem;
+              font-size: $Heading_font;
+              font-family: "Poppins";
+              font-weight: 200;
               padding-left: 5px;
+              text-transform: uppercase;
             }
           }
           &-subheading {
-            font-size: 0.875rem;
+            font-family: "Monserrat";
+            font-weight: 200;
+            font-size: $subHeading_font;
+            position:relative;
+            &-app,.maxOpacity {
+              position:absolute;
+              top:30px;
+              left:0;
+              transition:opacity 0.5s;
+              margin-top: 35px;
+              cursor: pointer;
+              opacity:1;
+              z-index:3;
+            }
+            &-app > button, .maxOpacity > button{
+              // @extend .download_button;
+              display:none;
+            }
+            &-app > span , .maxOpacity>span{
+              font-family: "Monserrat";
+              font-weight: 250;
+              font-size: $smallest_Heading_font;
+              overflow: hidden;
+              white-space: nowrap;
+              opacity:1;
+              transition:opacity 1s ease;
+            }
+          }
+        }
+      }
+  
+      &-dummyTrade{
+        display:inline-block;
+        position:static;
+      }
+  
+      &-trade,&-dummyTrade {
+        position:relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50%;
+        flex: 1 1 50%;
+        height: $Card_height;
+        background: #afd466;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+  
+        &-image {
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          text-align: right;
+          padding: 0;
+          margin: 0;
+          // height:100%;
+          width:100%;
+          // background:pink;
+        }
+  
+        &-image > img {
+          // max-width: 180px;
+          // width:50%;
+          // height:100%;
+          max-width:170px;
+          // transform:translateY(21.5px);
+          object-fit: contain;
+          padding: 0;
+          margin: 0;
+        }
+        &-text {
+          padding-left: 25px;
+          padding-top:25px;
+          padding-right:25px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          position: relative;
+          // background-color: #ede139;
+          &-Gollaa {
+            margin-bottom: 8px;
+  
+            &-image {
+              max-width: 120px;
+              margin: 0;
+            }
+            &-heading {
+              font-size: $Heading_font;
+              font-family: Poppins;
+              font-weight: 200;
+              padding-left: 5px;
+              text-transform:uppercase;
+            }
+          }
+          &-subheading {
+            font-family: "Monserrat";
+            font-weight: 200;
+            font-size: $subHeading_font;
+            position:relative;
+  
+            &-app,.maxOpacity{
+              position:absolute;
+              top:30px;
+              left:0;
+              transition:opacity 0.5s;
+              margin-top: 35px;
+              cursor: pointer;
+              opacity:1;
+              z-index:3;
+            }
+            &-app > button ,.maxOpacity >button {
+            //  @extend .signIn_button;
+            display:none;
+            }
+            &-app > span, .maxOpacity >span {
+              font-family: "Monserrat";
+              font-weight: 250;
+              font-size: $smallest_Heading_font;
+              overflow: hidden;
+              white-space: nowrap;
+            }
           }
           &-app {
+            display: none;
             margin-top: 35px;
             position: absolute;
             top: 60px;
@@ -1580,7 +1880,11 @@ $Section1_height: calc(100vh - 80px);
             padding-right: 18px;
             padding-bottom: 6px;
             margin-right: 1rem;
+            color: white;
+            font-family: "Monserrat";
+            font-weight: 250;
             font-size: 0.75rem;
+            background: #161615 0% 0% no-repeat padding-box;
             border: none;
             outline: none;
             border-radius: 6px;
@@ -1590,52 +1894,537 @@ $Section1_height: calc(100vh - 80px);
           &-app > span {
             font-family: "Monserrat";
             font-weight: 200;
-            font-size: 0.75rem;
+            font-size: $smallest_Heading_font;
             overflow: hidden;
             white-space: nowrap;
           }
         }
       }
-      &-trade {
+    }
+  } 
+}
+
+
+
+
+
+
+
+@media(max-width:570px){
+
+  $Half-Width: 50%;
+  $Section1_height: auto;
+  $Card_height:30vh;
+  $Heading_font:0.875rem;
+  $subHeading_font:0.75rem;
+  $smallest_Heading_font:0.5rem;
+  $Golla_width:65px;
+
+  .Section1 {
+    height:auto;
+
+    &-row1 {
+      display: flex;
+      flex-wrap: wrap;
+      position:relative;
+      max-width:100%;
+      width:100%;
+     
+  
+      &-dummyShop{
+        display:inline-block;
+        position:static;
+      }
+   
+     
+      &-shop,&-dummyShop {
+        position:relative;
+        flex-basis: 100vw;
+        width:100vw;
+        height:$Card_height;
+        opacity:1;
+        transition:opacity 0.5s ease;
+        flex-grow: 1;
+        flex-shrink: 1;
+        display: flex;
+        flex-direction:row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 30px;
+        padding-right: 25px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+  
+        &-image {
+          flex:1 1 50%;
+          height:70%;
+        }
+        &-image > img {
+          max-width: 90%;
+          height:100%;
+        }
+        &-text {
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-self: flex-start;
+          align-self:flex-start;
+          justify-content:center;
+          padding-top:0px;
+          
+          &-Gollaa {
+            margin-bottom: 8px;
+            overflow: hidden;
+            white-space: nowrap;
+  
+            &-image {
+              max-width: $Golla_width;
+              margin: 0;
+            }
+            &-heading {
+              font-size: $Heading_font;
+              font-family: "Poppins";
+              font-weight: 200;
+              padding-left: 6px;
+            }
+          }
+          &-subheading {
+            font-family: "Monserrat";
+            font-weight: 200;
+            font-size: $subHeading_font;
+          }
+          &-app,.maxOpacity {
+            transition:opacity 0.5s;
+            margin-top: 16px;
+            cursor: pointer;
+            opacity:1;
+            z-index:3;
+          }
+          &-app > button, .maxOpacity > button{
+            // @extend .download_button;
+            width:80px;
+            height:25px;
+            margin-right: 0.5rem;
+            font-size: 0.5rem;
+          }
+          &-app > span , .maxOpacity>span{
+            font-family: "Monserrat";
+            font-weight: 200;
+            font-size: $smallest_Heading_font;
+            overflow: hidden;
+            white-space: nowrap;
+            opacity:1;
+            transition:opacity 1s ease;
+          }
+        }
+      }
+
+      &-dummyGrow{
+        display:inline-block;
+        position:static;
+      }
+  
+      &-grow,&-dummyGrow {
+        position:relative;
+        transition: all 1s ease;
+        right:0;
+        opacity:1;
+        display: flex;
+        height:$Card_height;
+        flex: 1 1 50%;
+        flex-direction:column;
+        justify-content:space-between;
+        width:50%;
+        background: #8cc63f;
+        padding-left: 0px;
+        padding-top:0px;
+        padding-right:0px;
+
+  
+        &-image {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          padding: 0;
+          margin: 0;
+          max-width:100%;
+          max-height:120px;
+        }
+  
+        &-image > img {
+          max-width: 100%;
+          max-height:100%;
+          height:100%;
+          object-fit:cover;
+          transform:translateY(0px);
+        }
+        &-text {
+          position:relative;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding-left: 25px;
+          padding-top:25px;
+          padding-right:25px;
+
+          &-Gollaa {
+            margin-bottom: 8px;
+            overflow: hidden;
+            white-space: nowrap;
+  
+            &-image {
+              max-width:$Golla_width;
+              margin: 0;
+            }
+            &-heading {
+              font-size: $Heading_font;
+              font-family: "Poppins";
+              font-weight: 200;
+              padding-left: 6px;
+              text-transform: uppercase;
+            }
+          }
+          &-subheading {
+            font-family: "Monserrat";
+            font-weight: 200;
+            font-size: $subHeading_font;
+          }
+          &-app,.maxOpacity{
+            position:absolute;
+            top:100%;
+            left:25px;
+            transition:opacity 0.5s;
+            margin-top: 6%;
+            cursor: pointer;
+            opacity:1;
+            z-index:3;
+          }
+          &-app > button ,.maxOpacity >button {
+          //  @extend .signIn_button;
+              display:none;
+          }
+          &-app > span, .maxOpacity >span {
+            font-family: "Monserrat";
+            font-weight: 200;
+            font-size: $smallest_Heading_font;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+        }
+      }
+  
+      &-dummySupport{
+        display:inline-block;
+        position:static;
+      }
+   
+     
+      &-support,&-dummySupport{
+        position:relative;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         flex: 1 1 50%;
-        padding-left: 25px;
-        padding-top: 25px;
-
+        width:50%;
+        height:calc(30vh+ 60px);
+        background: #ede139;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+  
         &-image {
           display: flex;
           align-items: flex-end;
-          justify-content: flex-end;
+          justify-content: center;
           text-align: right;
+          padding: 0;
+          margin: 0;
+          width:100%;
         }
-
+  
         &-image > img {
-          max-width: 180px;
+          // max-width: 280px;
+          // max-width:100%;
+          height: 50%;
+          max-width:150px;
+          // transform:translateY(20px);
           object-fit: contain;
         }
         &-text {
+          padding-left: 25px;
+          padding-top:25px;
+          padding-right:15px;
           display: flex;
           flex-direction: column;
           justify-content: center;
           position: relative;
+  
           &-Gollaa {
             margin-bottom: 8px;
-
+  
             &-image {
-              max-width: 75px;
+              // max-width: 75px;
+              max-width:$Golla_width;
               margin: 0;
             }
             &-heading {
-              font-size: 0.875rem;
+              font-size: $Heading_font;
+              font-family: "Poppins";
+              font-weight: 200;
               padding-left: 5px;
+              text-transform: uppercase;
             }
           }
           &-subheading {
-            font-size: 0.875rem;
+            font-family: "Monserrat";
+            font-weight: 200;
+            font-size:$subHeading_font;
+            position:relative;
+  
+            &-app,.maxOpacity {
+              position:absolute;
+              top:30px;
+              left:0;
+              transition:opacity 0.5s;
+              margin-top: 0.8rem;
+              cursor: pointer;
+              opacity:1;
+              z-index:3;
+            }
+           
+            &-app > span, .maxOpacity >span {
+              font-family: "Monserrat";
+              font-weight: 200;
+              font-size: $smallest_Heading_font;
+              overflow: hidden;
+              white-space: nowrap;
+            }
+          }
+         
+        }
+      }
+
+      &-dummyStay{
+        display:inline-block;
+        position:static;
+      }
+      &-stay,&-dummyStay {
+        position:relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1 1 50%;
+        width:50%;
+        height: $Card_height;
+        background: #5dbc58;
+        padding-left: 0;
+        padding-right:0;
+        padding-top: 0;
+  
+        &-image{
+          height:100%;
+          width:100%;
+          display: flex;
+          align-items: flex-end;
+          align-self:center;
+          justify-content: center;
+          text-align: right;
+          padding: 0;
+          margin: 0;
+        }
+  
+        &-image > img {
+          transform:translateY(0px);
+          //23.5
+          align-self:flex-end;
+          justify-self:flex-end;
+          width:100%;
+          height: 90px;
+          // flex: 1 1 230px;
+          // height: 300px;
+          object-fit:contain;
+          margin:0;
+          padding:0;
+  
+        }
+        &-text {
+          padding-left: 25px;
+          padding-top:25px;
+          padding-right:5px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          position: relative;
+          color:white;
+
+          &-Gollaa {
+            margin-bottom: 8px;
+            transform:translateY(-60px);
+  
+            &-image,&-imageWhite {
+              // max-width: 75px;
+              max-width:$Golla_width;
+              margin: 0;
+              display:none;
+            }
+            &-imageWhite{
+              display:inline-block;
+            }
+            &-heading {
+              font-size: $Heading_font;
+              font-family: "Poppins";
+              font-weight: 200;
+              padding-left: 5px;
+              text-transform: uppercase;
+            }
+          }
+          &-subheading {
+            font-family: "Monserrat";
+            font-weight: 200;
+            font-size: $subHeading_font;
+            position:relative;
+            z-index:10;
+            transform:translateY(-60px);
+
+            &-app,.maxOpacity {
+              position:absolute !important;
+              transform:none !important;
+              top:30px;
+              left:0;
+              transition:none;
+              margin-top: 0.8rem;
+              opacity:1;
+              z-index:3;
+            }
+            &-app > button, .maxOpacity > button{
+              // @extend .download_button;
+              display:none;
+            }
+            &-app > span , .maxOpacity>span{
+              font-family: "Monserrat";
+              font-weight: 200;
+              font-size: $smallest_Heading_font;
+              overflow: hidden;
+              white-space: nowrap;
+              opacity:1;
+              color:white;
+              z-index:10;
+
+            }
+          }
+        }
+      }
+  
+      &-dummyTrade{
+        display:inline-block;
+        position:static;
+      }
+  
+      &-trade,&-dummyTrade {
+        position:relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50%;
+        flex: 1 1 50%;
+        height: $Card_height;
+        background: #afd466;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+  
+        &-image {
+          position:static;
+          display: flex;
+          align-items: flex-end;
+          justify-content: flex-end;
+          text-align: right;
+          padding: 0;
+          margin: 0;
+          // height:100%;
+          height:68px;
+          width:100%;
+        }
+       
+  
+        &-image > img {
+          // max-width: 180px;
+          // width:50%;
+          height:100%;
+          max-width:100px;
+          transform:translateY(0);
+          object-fit: contain;
+          padding: 0;
+          margin: 0;
+        }
+        &-text {
+          padding-left: 25px;
+          padding-top:25px;
+          padding-right:15px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          position: relative;
+          // background-color: #ede139;
+          &-Gollaa {
+            margin-bottom: 8px;
+  
+            &-image,&-imageWhite {
+              max-width: $Golla_width;
+              margin: 0;
+              display:none;
+            }
+            &-imageWhite{
+              display:inline-block;
+            }
+            &-heading {
+              font-size: $Heading_font;
+              font-family: Poppins;
+              font-weight: 200;
+              padding-left: 5px;
+              text-transform:uppercase;
+              color:white;
+
+            }
+          }
+          &-subheading {
+            font-family: "Monserrat";
+            font-weight: 200;
+            font-size: $subHeading_font;
+            position:relative;
+            color:white;
+            
+  
+            &-app,.maxOpacity{
+              position:absolute;
+              top:30px;
+              left:0;
+              transition:opacity 0.5s;
+              margin-top: 1rem;
+              cursor: pointer;
+              opacity:1;
+              z-index:3;
+            }
+            &-app > button ,.maxOpacity >button {
+            //  @extend .signIn_button;
+            display:none;
+            }
+            &-app > span, .maxOpacity >span {
+              font-family: "Monserrat";
+              font-weight: 200;
+              font-size: $smallest_Heading_font;
+              overflow: hidden;
+              color:white;
+              white-space: nowrap;
+            }
+          }
+            &-subheading span:nth-child(1){
+            display:inline-block;
           }
           &-app {
+            display: none;
             margin-top: 35px;
             position: absolute;
             top: 60px;
@@ -1646,36 +2435,559 @@ $Section1_height: calc(100vh - 80px);
             padding-right: 18px;
             padding-bottom: 6px;
             margin-right: 1rem;
+            color: white;
+            font-family: "Monserrat";
+            font-weight: 250;
             font-size: 0.75rem;
+            background: #161615 0% 0% no-repeat padding-box;
+            border: none;
+            outline: none;
             border-radius: 6px;
             overflow: hidden;
             white-space: nowrap;
           }
           &-app > span {
-            font-size: 0.75rem;
+            font-family: "Monserrat";
+            font-weight: 200;
+            font-size: $smallest_Heading_font;
+            overflow: hidden;
+            color:white;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  } 
+}
+
+
+
+@media(max-width:370px){
+
+  $Half-Width: 50%;
+  $Section1_height: auto;
+  $Card_height:32vh;
+  $Heading_font:0.875rem;
+  $subHeading_font:0.75rem;
+  $smallest_Heading_font:0.5rem;
+  $Golla_width:65px;
+
+  .Section1 {
+    height:auto;
+
+    &-row1 {
+      display: flex;
+      flex-wrap: wrap;
+      position:relative;
+      max-width:100%;
+      width:100%;
+     
+  
+      &-dummyShop{
+        display:inline-block;
+        position:static;
+      }
+   
+     
+      &-shop,&-dummyShop {
+        position:relative;
+        flex-basis: 100vw;
+        width:100vw;
+        height:$Card_height;
+        opacity:1;
+        transition:opacity 0.5s ease;
+        flex-grow: 1;
+        flex-shrink: 1;
+        display: flex;
+        flex-direction:row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 30px;
+        padding-right: 25px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+  
+        &-image {
+          flex:1 1 50%;
+          height:90%;
+        }
+        &-image > img {
+          max-width: 70%;
+          height:100%;
+        }
+        &-text {
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-self: center;
+          align-self:flex-start;
+          padding-top:0px;
+          
+          &-Gollaa {
+            margin-bottom: 4px;
+            overflow: hidden;
+            white-space: nowrap;
+  
+            &-image {
+              max-width: $Golla_width;
+              margin: 0;
+            }
+            &-heading {
+              font-size: $Heading_font;
+              font-family: "Poppins";
+              font-weight: 200;
+              padding-left: 6px;
+            }
+          }
+          &-subheading {
+            font-family: "Monserrat";
+            font-weight: 200;
+            font-size: $subHeading_font;
+          }
+          &-app,.maxOpacity {
+            transition:opacity 0.5s;
+            margin-top: 1rem;
+            cursor: pointer;
+            opacity:1;
+            z-index:3;
+          }
+          &-app > button, .maxOpacity > button{
+            // @extend .download_button;
+            width:80px;
+            height:25px;
+            margin-right: 0.5rem;
+            font-size: 0.5rem;
+          }
+          &-app > span , .maxOpacity>span{
+            font-family: "Monserrat";
+            font-weight: 200;
+            font-size: $smallest_Heading_font;
+            overflow: hidden;
+            white-space: nowrap;
+            opacity:1;
+            transition:opacity 1s ease;
+          }
+        }
+      }
+
+      &-dummyGrow{
+        display:inline-block;
+        position:static;
+      }
+  
+      &-grow,&-dummyGrow {
+        position:relative;
+        transition: all 1s ease;
+        right:0;
+        opacity:1;
+        display: flex;
+        height:$Card_height;
+        flex: 1 1 50%;
+        flex-direction:column;
+        justify-content:space-between;
+        width:50%;
+        background: #8cc63f;
+        padding-left: 0px;
+        padding-top:0px;
+        padding-right:0px;
+
+  
+        &-image {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          padding: 0;
+          margin: 0;
+          width:100%;
+          height:90px;
+        }
+  
+        &-image > img {
+          max-width: 100%;
+          height:100%;
+          object-fit:cover;
+          transform:translateY(0px);
+        }
+        &-text {
+          position:relative;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding-left: 25px;
+          padding-top:25px;
+          padding-right:25px;
+
+          &-Gollaa {
+            margin-bottom:4px;
+            overflow: hidden;
+            white-space: nowrap;
+  
+            &-image {
+              max-width:$Golla_width;
+              margin: 0;
+            }
+            &-heading {
+              font-size: $Heading_font;
+              font-family: "Poppins";
+              font-weight: 200;
+              padding-left: 6px;
+              text-transform: uppercase;
+            }
+          }
+          &-subheading {
+            font-family: "Monserrat";
+            font-weight: 200;
+            font-size: $subHeading_font;
+          }
+          &-app,.maxOpacity{
+            position:absolute;
+            top:100%;
+            left:25px;
+            transition:opacity 0.5s;
+            margin-top: 6%;
+            cursor: pointer;
+            opacity:1;
+            z-index:3;
+          }
+          &-app > button ,.maxOpacity >button {
+          //  @extend .signIn_button;
+              display:none;
+          }
+          &-app > span, .maxOpacity >span {
+            font-family: "Monserrat";
+            font-weight: 200;
+            font-size: $smallest_Heading_font;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+        }
+      }
+  
+      &-dummySupport{
+        display:inline-block;
+        position:static;
+      }
+   
+     
+      &-support,&-dummySupport{
+        position:relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1 1 50%;
+        width:50%;
+        // height:$Card_height;
+        height:calc(32vh + 60px);
+        background: #ede139;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+  
+        &-image {
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          text-align: right;
+          padding: 0;
+          margin: 0;
+          width:100%;
+        }
+  
+        &-image > img {
+          // max-width: 280px;
+          // max-width:100%;
+          height: 50%;
+          max-width:150px;
+          // transform:translateY(20px);
+          object-fit: contain;
+        }
+        &-text {
+          padding-left: 25px;
+          padding-top:25px;
+          padding-right:15px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          position: relative;
+  
+          &-Gollaa {
+            margin-bottom:4px;
+  
+            &-image {
+              // max-width: 75px;
+              max-width:$Golla_width;
+              margin: 0;
+            }
+            &-heading {
+              font-size: $Heading_font;
+              font-family: "Poppins";
+              font-weight: 200;
+              padding-left: 5px;
+              text-transform: uppercase;
+            }
+          }
+          &-subheading {
+            font-family: "Monserrat";
+            font-weight: 200;
+            font-size:$subHeading_font;
+            position:relative;
+  
+            &-app,.maxOpacity {
+              position:absolute;
+              top:30px;
+              left:0;
+              transition:opacity 0.5s;
+              margin-top: 0.8rem;
+              cursor: pointer;
+              opacity:1;
+              z-index:3;
+            }
+           
+            &-app > span, .maxOpacity >span {
+              font-family: "Monserrat";
+              font-weight: 200;
+              font-size: $smallest_Heading_font;
+              overflow: hidden;
+              white-space: nowrap;
+            }
+          }
+         
+        }
+      }
+
+      &-dummyStay{
+        display:inline-block;
+        position:static;
+      }
+      &-stay,&-dummyStay {
+        position:relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1 1 50%;
+        width:50%;
+        height: $Card_height;
+        background: #5dbc58;
+        padding-left: 0;
+        padding-right:0;
+        padding-top: 0;
+  
+        &-image {
+          position:absolute;
+          height:95%;
+          width:100%;
+          display: flex;
+          align-items: flex-end;
+          align-self:center;
+          justify-content:center;
+          text-align: right;
+          padding: 0;
+          margin: 0;
+          transform:translateY(12px);
+
+        }
+  
+        &-image > img {
+          // transform:translateY(23.5px);
+          transform:none;
+          align-self:flex-end;
+          justify-self:flex-end;
+          width:85px;
+          height: 73px;
+          // flex: 1 1 230px;
+          // height: 300px;
+          object-fit:cover;
+          margin:0;
+          padding:0;
+  
+        }
+        &-text {
+          padding-left: 25px;
+          padding-top:25px;
+          padding-right:5px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          position: relative;
+  
+          &-Gollaa {
+            margin-bottom:4px;
+            transform:translateY(-60px);
+  
+            &-image {
+              // max-width: 75px;
+              max-width:$Golla_width;
+              margin: 0;
+            }
+            &-heading {
+              font-size: $Heading_font;
+              font-family: "Poppins";
+              font-weight: 200;
+              padding-left: 5px;
+              text-transform: uppercase;
+            }
+          }
+          &-subheading {
+            font-family: "Monserrat";
+            font-weight: 200;
+            font-size: $subHeading_font;
+            position:relative;
+            transform:translateY(-60px);
+
+            &-app,.maxOpacity {
+              position:absolute;
+              top:30px;
+              left:0;
+              transition:opacity 0.5s;
+              margin-top: 0.8rem;
+              cursor: pointer;
+              opacity:1;
+              z-index:3;
+            }
+            &-app > button, .maxOpacity > button{
+              // @extend .download_button;
+              display:none;
+            }
+            &-app > span , .maxOpacity>span{
+              font-family: "Monserrat";
+              font-weight: 200;
+              font-size: $smallest_Heading_font;
+              overflow: hidden;
+              white-space: nowrap;
+              opacity:1;
+              transition:opacity 1s ease;
+            }
+          }
+        }
+      }
+  
+      &-dummyTrade{
+        display:inline-block;
+        position:static;
+      }
+  
+      &-trade,&-dummyTrade {
+        position:relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50%;
+        flex: 1 1 50%;
+        height: $Card_height;
+        background: #afd466;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+  
+        &-image {
+          display: flex;
+          align-items: flex-end;
+          justify-content: flex-end;
+          text-align: right;
+          padding: 0;
+          margin: 0;
+          // height:100%;
+          height:90px;
+          width:100%;
+        }
+  
+        &-image > img {
+          height:80px;
+          max-width:90px;
+          transform:translateY(0);
+          object-fit: contain;
+          padding: 0;
+          margin: 0;
+        }
+        &-text {
+          padding-left: 25px;
+          padding-top:25px;
+          padding-right:15px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          position: relative;
+          // background-color: #ede139;
+          &-Gollaa {
+            margin-bottom:4px;
+  
+            &-image {
+              max-width: $Golla_width;
+              margin: 0;
+            }
+            &-heading {
+              font-size: $Heading_font;
+              font-family: Poppins;
+              font-weight: 200;
+              padding-left: 5px;
+              text-transform:uppercase;
+            }
+          }
+          &-subheading {
+            font-family: "Monserrat";
+            font-weight: 200;
+            font-size: $subHeading_font;
+            position:relative;
+  
+            &-app,.maxOpacity{
+              position:absolute;
+              top:30px;
+              left:0;
+              transition:opacity 0.5s;
+              margin-top: 1.4rem;
+              cursor: pointer;
+              opacity:1;
+              z-index:3;
+            }
+          
+            &-app > span, .maxOpacity >span {
+              font-family: "Monserrat";
+              font-weight: 200;
+              font-size: $smallest_Heading_font;
+              overflow: hidden;
+              white-space: nowrap;
+            }
+          }
+         
+          &-app > span {
+            font-family: "Monserrat";
+            font-weight: 200;
+            font-size: $smallest_Heading_font;
             overflow: hidden;
             white-space: nowrap;
           }
         }
       }
     }
-  }
+  } 
 }
 
 
+
+// media queries section
+
 @media(min-width:1500px){
 
+  $PaddingFromCorner:80px;
+  $PaddingForOpenedCard:200px;
 .Section1 {
   height:$Section1_height;
   &-row1 {
 
     &-shopOpen{
-      &-image{
       
+      &-image{
+      width:100%;
+      height:100%;
+      padding-left:30px;
       }
       &-image>img{
-        width:60%;
-        height:90%;
+        width:65%;
+        height:47%;
+        min-width:391px;
+        min-height:340px;
       }
       &-cross,.cross-disappear {
         top:5%;
@@ -1684,18 +2996,18 @@ $Section1_height: calc(100vh - 80px);
      
       &-textBlock{
         width: 50%;
-        padding-left:10px;
-        padding-right:90px;
+        padding-left:$PaddingForOpenedCard;
+        padding-right:$PaddingForOpenedCard;
 
         &-Gollaa {
-          margin-bottom: 2rem;
+          margin-bottom: 0.5rem;
 
           &-image {
             max-width: 140px;
-            margin-right: 6px;
+            margin-right: 8px;
           }
           &-heading {
-            font-size: 1.25rem;
+            font-size: 2.5rem;
           }
         }
         &-subheading1{
@@ -1706,15 +3018,15 @@ $Section1_height: calc(100vh - 80px);
           font-size:1rem;
         }
         &-subheading2{
-          padding-bottom:1rem;
+          padding-bottom:2rem;
         }
         &-app >button{
           // @extend .download_button;
           width:152px;
-          height:44px;
+          height:40px;
           font-weight:300;
           border-radius:10px;
-          font-size: 1rem;
+          font-size: 15px;
           margin-top:2.2rem;
         }
       }
@@ -1723,48 +3035,55 @@ $Section1_height: calc(100vh - 80px);
 
 
     &-shopClosed{
-      padding-left: 30px;
-      padding-right: 20px;
-      padding-top: 20px;
-      padding-bottom: 20px;
+      padding-left: 120px;
+      padding-right: 00px;
+      padding-top:00px;
+      padding-bottom: 00px;
 
       &-textBlock{
-        width:50%;
+        width:10%;
+        overflow:none;
       }
     }
  
    
     &-shop,&-dummyShop {
       padding-left: 30px;
-      padding-right: 20px;
-      padding-top: 20px;
-      padding-bottom: 20px;
+      padding-right: 0px;
+      padding-top: 0px;
+      padding-bottom: 0px;
       
 
       &-image {
         flex:1 1 50%;
-        height:90%;
+        height:70%;
+        display:flex;
+        justify-content:center;
+        align-items:center;
       }
       &-image > img {
-        max-width: 90%;
+        max-width: 100%;
         height:100%;
       }
       &-text {
-        width: 50%;
-       
+        width: auto;
+        padding-left: 0px;
+        padding-right: $PaddingFromCorner;
+        padding-top:0px;
 
         &-Gollaa {
-          margin-bottom: 8px;
+          margin-bottom:4px;
           
 
           &-image {
-            max-width: 140px;
+            max-width: 120px;
             // max-width: 32%;
             margin: 0;
           }
           &-heading {
-            font-size: 1.25rem;
-            padding-left: 6px;
+            font-size: 1.625rem;
+            padding-left: 8px;
+            transform: translate(0px, -2px);
           }
         }
         &-subheading {
@@ -1772,14 +3091,16 @@ $Section1_height: calc(100vh - 80px);
         }
         &-app,.maxOpacity {
           margin-top: 35px;
+          overflow: hidden;
+          white-space: nowrap;
         }
         &-app > button, .maxOpacity > button{
           // @extend .download_button;
           width:152px;
-          height:44px;
+          height:40px;
           font-weight:300;
           border-radius:10px;
-          font-size: 1rem;
+          font-size: 15px;
         }
         &-app > span , .maxOpacity>span{
           font-size: 1rem;
@@ -1798,17 +3119,17 @@ $Section1_height: calc(100vh - 80px);
     
       &-image{
         display:flex;
-        justify-content: flex-end;
-        align-items:flex-end;
+        justify-content: center;
+        align-items:center;
         // flex-basis:50%;
         height:100%;
         min-width:50%;
       }
       &-image>img{
         min-width:calc(40vw / 2);
-        width:100%;
-        height:100%;
-        transform:translateY(16%);
+        width:50%;
+        height:70%;
+        transform:translateY(0%);
       }
 
       &-ParentTextBlock{
@@ -1816,20 +3137,20 @@ $Section1_height: calc(100vh - 80px);
         flex: 0 0 50vw;
       }
       &-textBlock{
-        padding-left:50px;
-        padding-right:50px;
-        padding-bottom:50px;
+        padding-left:$PaddingForOpenedCard;
+        padding-right:$PaddingForOpenedCard;
+        padding-bottom:0px;
 
         &-Gollaa {
-          margin-bottom: 2rem;
+          margin-bottom: 0.5rem;
           
           &-image {
             max-width:140px;
             margin: 0;
           }
           &-heading {
-            font-size: 1.25rem;
-            padding-left: 5px;
+            font-size: 2.5rem;
+            padding-left: 8px;
           }
         }
         &-subheading1{
@@ -1840,16 +3161,16 @@ $Section1_height: calc(100vh - 80px);
           font-size:1rem;
         }
         &-subheading2{
-          padding-bottom:1rem;
+          padding-bottom:2rem;
         }
         &-app >button{
           // @extend .download_button;
           margin-top:2.2rem;
           width:152px;
-          height:44px;
+          height:40px;
           font-weight:300;
           border-radius:10px;
-          font-size: 1rem;
+          font-size: 15px;
         }
       }
       
@@ -1857,39 +3178,43 @@ $Section1_height: calc(100vh - 80px);
 
 
     &-growClosed{
+      padding-right:30px;
      
-      &-textBlock{
-      }
+      // &-textBlock{
+      // }
     }
 
     &-grow,&-dummyGrow {
      
-      padding-left: 56.52px;
-
+      padding-left: 0;
+      justify-content:space-between;
+      padding-right:30px;
       &-image {
         padding: 0;
         margin:0;
         width: 50%;
+        align-items:center;
       }
 
       &-image > img {
         max-width: 100%;
-        transform:translateY(5px);
+        transform:translateY(0px);
       }
       &-text {
-        width: 50%;
-       
+        width: auto;
+        padding-left:$PaddingFromCorner;
 
         &-Gollaa {
-          margin-bottom: 8px;
+          margin-bottom:4px;
 
           &-image {
-            max-width:140px;
+            max-width:120px;
             margin: 0;
           }
           &-heading {
-            font-size: 1.25rem;
-            padding-left: 6px;
+            font-size: 1.625rem;
+            padding-left: 8px;
+            transform: translate(0px, -2px);
           }
         }
         &-subheading {
@@ -1901,10 +3226,10 @@ $Section1_height: calc(100vh - 80px);
         &-app > button ,.maxOpacity >button {
         //  @extend .signIn_button;
           width:152px;
-          height:44px;
+          height:40px;
           font-weight:300;
           border-radius:10px;
-          font-size: 1rem;
+          font-size: 15px;
         }
         &-app > span, .maxOpacity >span {
           font-size: 1rem;
@@ -1919,12 +3244,16 @@ $Section1_height: calc(100vh - 80px);
        
         height:100%;
         width:50%;
+        justify-content:center;
+        align-items:flex-end;
+        transform: translate(-10%, 30%);
       }
       &-image>img{
         min-width:calc(40vw / 2);
         width:70%;
         height:100%;
         transform:translate(-20%,20%);
+        transform:translate(0,0);
       }
 
       &-cross{
@@ -1933,26 +3262,26 @@ $Section1_height: calc(100vh - 80px);
       }
     
      
-      &-ParentTextBlock{
+      // &-ParentTextBlock{
       
-      }
+      // }
 
       &-textBlock{
        
-        padding-left:50px;
-        padding-right:50px;
-        padding-bottom:50px;
+        padding-left:$PaddingForOpenedCard;
+        padding-right:$PaddingForOpenedCard;
+        padding-bottom:0px;
         
         &-Gollaa {
-          margin-bottom: 2rem;
+          margin-bottom: 0.5rem;
         
           &-image {
             max-width: 50%;
             margin: 0;
           }
           &-heading {
-            font-size: 1.25rem;
-            padding-left: 5px;
+            font-size: 2.5rem;
+            padding-left: 8px;
           }
         }
         &-subheading1{
@@ -1964,15 +3293,15 @@ $Section1_height: calc(100vh - 80px);
           font-size:1rem;
         }
         &-subheading2{
-          padding-bottom:1rem;
+          padding-bottom:2rem;
         }
         &-app >button{
           // @extend .download_button;
           width:152px;
-          height:44px;
+          height:40px;
           font-weight:300;
           border-radius:10px;
-          font-size: 1rem;
+          font-size: 15px;
           margin-top:2.2rem;
         }
       }
@@ -1981,18 +3310,21 @@ $Section1_height: calc(100vh - 80px);
 
 
     &-supportClosed{
-    
-      &-textBlock{
-      }
+        // padding:60px;
+        // transform:translate(20px);
+      // &-textBlock{
+      // }
     }
    
     &-support,&-dummySupport{
       flex: 1 1 250px;
-      padding-left: 25px;
-      padding-right: 25px;
-      padding-top: 25px;
+      padding:0;
+     
 
       &-image {
+        position:absolute;
+        width:100%;
+        height:100%;
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
@@ -2003,31 +3335,38 @@ $Section1_height: calc(100vh - 80px);
 
       &-image > img {
         height: auto;
+        margin-right: 20px;
       }
       &-text {
         display: flex;
         flex-direction: column;
         justify-content: center;
         position: relative;
-
+        padding:0;
+        padding-bottom: 40px;
+        padding-left:80px;
+        height:100%;
         &-Gollaa {
-          margin-bottom: 8px;
+          margin-bottom:4px;
 
           &-image {
             // max-width: 75px;
-            max-width:140px;
+            max-width:120px;
             margin: 0;
+            // margin-right: 20px;
+
           }
           &-heading {
-            font-size: 1.25rem;
-            padding-left: 5px;
+            font-size: 1.625rem;
+            padding-left: 8px;
+            transform: translate(0px, -2px);
           }
         }
         &-subheading {
           font-size: 1.125rem;
 
           &-app,.maxOpacity {
-            top:30px;
+            top:40px;
           }
          
           &-app > span, .maxOpacity >span {
@@ -2046,8 +3385,8 @@ $Section1_height: calc(100vh - 80px);
         width:50%;
       }
       &-image>img{
-        max-width:80%;
-        height:60%;
+        max-width:100%;
+        height:50%;
       }
 
       &-cross{
@@ -2067,21 +3406,23 @@ $Section1_height: calc(100vh - 80px);
 
       &-textBlock{
         
-        padding-left:50px;
-        padding-right:50px;
-        padding-bottom:50px;
+        padding-left:$PaddingForOpenedCard;
+        padding-right:$PaddingForOpenedCard;
+        padding-bottom:0px;
         
         &-Gollaa {
-          margin-bottom: 2rem;
+          margin-bottom: 0.5rem;
           
 
           &-image {
             max-width: 50%;
             margin: 0;
+            // margin-right: 20px;
+
           }
           &-heading {
-            font-size: 1.25rem;
-            padding-left: 5px;
+            font-size: 2.5rem;
+            padding-left: 8px;
 
           }
         }
@@ -2099,10 +3440,10 @@ $Section1_height: calc(100vh - 80px);
           // @extend .download_button;
           margin-top:2.2rem;
           width:152px;
-          height:44px;
+          height:40px;
           font-weight:300;
           border-radius:10px;
-          font-size: 1rem;
+          font-size: 15px;
         }
       }
       
@@ -2123,13 +3464,16 @@ $Section1_height: calc(100vh - 80px);
      
       flex: 1 1 250px;
       height: calc(50vh - 40px);
-      padding-left: 25px;
-      padding-right: 25px;
-      padding-top: 25px;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 0;
 
       &-image {
-        height:60%;
-        width:60%;
+        position:absolute;
+        height:100%;
+        width:100%;
+        // height:auto;
+        // width:450px;
         display: flex;
         align-items: flex-end;
         align-self:flex-end;
@@ -2143,39 +3487,46 @@ $Section1_height: calc(100vh - 80px);
         // max-width: 230px;
         max-width:100%;
         height: 100%;
-      object-fit:contain;
+        height:270px;
+        width:320px;
+       object-fit:contain;
       }
       &-text {
+        height:100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         position: relative;
+        padding:0;
+        padding-bottom: 40px;
+        padding-left:80px;
 
         &-Gollaa {
-          margin-bottom: 8px;
+          margin-bottom:4px;
 
           &-image {
-            max-width:140px;
+            max-width:120px;
           }
           &-heading {
-            font-size: 1.25rem;
-            padding-left: 5px;
+            font-size: 1.625rem;
+            padding-left: 8px;
+            transform: translate(0px, -2px);
           }
         }
         &-subheading {
           font-size: 1.125rem;
           &-app,.maxOpacity {
-            top:30px;
+            top:40px;
             left:0;
-            margin-top: 35px;
+            margin-top: 40px;
           }
           &-app > button, .maxOpacity > button{
             // @extend .download_button;
               width:152px;
-              height:44px;
+              height:40px;
               font-weight:300;
               border-radius:10px;
-              font-size: 1rem;
+              font-size: 15px;
               
           }
           &-app > span , .maxOpacity>span{
@@ -2201,14 +3552,14 @@ $Section1_height: calc(100vh - 80px);
         justify-content: flex-end;
         align-items:flex-end;
         flex-basis:50%;
-        height:65%;
+        height:100%;
         min-width:50%;
       }
       &-image>img{
-        min-width:calc(40vw / 2);
-        width:100%;
-        height:100%;
-        transform:translate(-0%,30%);
+        min-width:calc(0);
+        width:70%;
+        height:80%;
+        transform:translate(-0%,0%);
       }
 
       &-ParentTextBlock{
@@ -2221,19 +3572,20 @@ $Section1_height: calc(100vh - 80px);
       &-textBlock{
         flex: 0 0 50vw;
         min-width:50vw;
-        padding-left:50px;
-        padding-right:50px;
-        padding-bottom:50px;
+        padding-left:$PaddingForOpenedCard;
+        padding-right:$PaddingForOpenedCard;
+        padding-bottom:0;
 
         &-Gollaa {
-          margin-bottom: 2rem;
+          margin-bottom: 0.5rem;
           &-image {
-            max-width:140px;
+            max-width:120px;
             margin: 0;
           }
           &-heading {
-            font-size: 1.25rem;
-            padding-left: 5px;
+            font-size: 2.5rem;
+            padding-left: 8px;
+            // transform: translate(0px, 0px);
           }
         }
         &-subheading1{
@@ -2244,16 +3596,16 @@ $Section1_height: calc(100vh - 80px);
           font-size:1rem;
         }
         &-subheading2{
-          padding-bottom:1rem;
+          padding-bottom:2rem;
         }
         &-app >button{
           // @extend .download_button;
           margin-top:2.2rem;
           width:152px;
-          height:44px;
+          height:40px;
           font-weight:300;
           border-radius:10px;
-          font-size: 1rem;
+          font-size: 15px;
         }
       }
       
@@ -2267,8 +3619,12 @@ $Section1_height: calc(100vh - 80px);
       top:calc(50vh - 40px);
       right:0;
       height:calc(50vh - 40px);
+      // padding-right:60px;
+
       &-textBlock{
+        width:70%;
       }
+      
     }
 
 
@@ -2276,37 +3632,48 @@ $Section1_height: calc(100vh - 80px);
       flex: 1 1 250px;
       height: calc(50vh - 40px);
       background: #afd466;
-      padding-left: 25px;
-      padding-right: 25px;
-      padding-top: 25px;
+      padding-left: 0px;
+      padding-right: 0px;
+      padding-top: 0px;
 
       &-image {
+        position:absolute;
+        width:100%;
+        height:100%;
         padding: 0;
         margin: 0;
-        height:65%;
-        width:100%;
+        // height:65%;
+        // width:100%;
       }
 
       &-image > img {
         max-width:50%;
+        height:65%;
         object-fit: contain;
+        margin-right: 0px;
+
       }
       &-text {
+        height:100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         position: relative;
-        // background-color: #ede139;
+        padding:0;
+        padding-bottom: 40px;
+        padding-left:80px;
+
         &-Gollaa {
-          margin-bottom: 8px;
+          margin-bottom:4px;
 
           &-image {
-            max-width: 140px;
+            max-width: 120px;
             margin: 0;
           }
           &-heading {
-            font-size: 1.25rem;
-            padding-left: 5px;
+            font-size: 1.625rem;
+            padding-left: 8px;
+            transform: translate(0px, -2px);
           }
         }
         &-subheading {
@@ -2314,16 +3681,16 @@ $Section1_height: calc(100vh - 80px);
 
           &-app,.maxOpacity{
             position:absolute;
-            top:30px;
+            top:40px;
             left:0;
           }
           &-app > button ,.maxOpacity >button {
           //  @extend .signIn_button;
             width:152px;
-            height:44px;
+            height:40px;
             font-weight:300;
             border-radius:10px;
-            font-size: 1rem;
+            font-size: 15px;
           }
           &-app > span, .maxOpacity >span {
             font-size: 1rem;
@@ -2334,10 +3701,10 @@ $Section1_height: calc(100vh - 80px);
         }
         &-app > button {
           width:152px;
-          height:44px;
+          height:40px;
           font-weight:300;
           border-radius:10px;
-          font-size: 1rem;
+          font-size: 15px;
         }
         &-app > span {
           font-size: 1rem;
@@ -2347,1695 +3714,11 @@ $Section1_height: calc(100vh - 80px);
   }
 }
 
-// media queries section
-
-@media(max-width:900px){
-
-  .Section1 {
-    height:$Section1_height;
-    &-row1 {
-  
-      &-shopOpen{
-        &-image{
-        
-        }
-        &-image>img{
-          width:60%;
-          height:90%;
-        }
-        &-cross,.cross-disappear {
-          top:5%;
-          right:3%;
-        }
-       
-        &-textBlock{
-          width: 50%;
-          padding-left:10px;
-          padding-right:90px;
-  
-          &-Gollaa {
-            margin-bottom: 2rem;
-  
-            &-image {
-              max-width: 140px;
-              margin-right: 6px;
-            }
-            &-heading {
-              font-size: 1.25rem;
-            }
-          }
-          &-subheading1{
-            font-size:1.125rem;
-            padding-bottom:2rem;
-          }
-          &-subheading2,&-subheading3{
-            font-size:1rem;
-          }
-          &-subheading2{
-            padding-bottom:1rem;
-          }
-          &-app >button{
-            // @extend .download_button;
-            width:152px;
-            height:44px;
-            font-weight:300;
-            border-radius:10px;
-            font-size: 1rem;
-            margin-top:2.2rem;
-          }
-        }
-        
-      }
-  
-  
-      &-shopClosed{
-        padding-left: 30px;
-        padding-right: 20px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-  
-        &-textBlock{
-          width:50%;
-        }
-      }
-   
-     
-      &-shop,&-dummyShop {
-        width:100vw;
-        padding-left: 30px;
-        padding-right: 20px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        
-  
-        &-image {
-          flex:1 1 50%;
-          height:90%;
-        }
-        &-image > img {
-          max-width: 90%;
-          height:100%;
-        }
-        &-text {
-          width: 50%;
-         
-  
-          &-Gollaa {
-            margin-bottom: 8px;
-            
-  
-            &-image {
-              max-width: 140px;
-              // max-width: 32%;
-              margin: 0;
-            }
-            &-heading {
-              font-size: 1.25rem;
-              padding-left: 6px;
-            }
-          }
-          &-subheading {
-            font-size: 1.125rem;
-          }
-          &-app,.maxOpacity {
-            margin-top: 35px;
-          }
-          &-app > button, .maxOpacity > button{
-            // @extend .download_button;
-            width:152px;
-            height:44px;
-            font-weight:300;
-            border-radius:10px;
-            font-size: 1rem;
-          }
-          &-app > span , .maxOpacity>span{
-            font-size: 1rem;
-          }
-        }
-      }
-  
-     
-      &-growOpen{
-      
-  
-        &-cross,.growCross{
-          top:5%;
-          right:4%;
-        }
-      
-        &-image{
-          display:flex;
-          justify-content: flex-end;
-          align-items:flex-end;
-          // flex-basis:50%;
-          height:100%;
-          min-width:50%;
-        }
-        &-image>img{
-          min-width:calc(40vw / 2);
-          width:100%;
-          height:100%;
-          transform:translateY(16%);
-        }
-  
-        &-ParentTextBlock{
-          max-width: 50%;
-          flex: 0 0 50vw;
-        }
-        &-textBlock{
-          padding-left:50px;
-          padding-right:50px;
-          padding-bottom:50px;
-  
-          &-Gollaa {
-            margin-bottom: 2rem;
-            
-            &-image {
-              max-width:140px;
-              margin: 0;
-            }
-            &-heading {
-              font-size: 1.25rem;
-              padding-left: 5px;
-            }
-          }
-          &-subheading1{
-            font-size:1.125rem;
-            padding-bottom:2rem;
-          }
-          &-subheading2,&-subheading3{
-            font-size:1rem;
-          }
-          &-subheading2{
-            padding-bottom:1rem;
-          }
-          &-app >button{
-            // @extend .download_button;
-            margin-top:2.2rem;
-            width:152px;
-            height:44px;
-            font-weight:300;
-            border-radius:10px;
-            font-size: 1rem;
-          }
-        }
-        
-      }
-  
-  
-      &-growClosed{
-       
-        &-textBlock{
-        }
-      }
-  
-      &-grow,&-dummyGrow {
-       
-        padding-left: 56.52px;
-  
-        &-image {
-          padding: 0;
-          margin:0;
-          width: 50%;
-        }
-  
-        &-image > img {
-          max-width: 100%;
-          transform:translateY(5px);
-        }
-        &-text {
-          width: 50%;
-         
-  
-          &-Gollaa {
-            margin-bottom: 8px;
-  
-            &-image {
-              max-width:140px;
-              margin: 0;
-            }
-            &-heading {
-              font-size: 1.25rem;
-              padding-left: 6px;
-            }
-          }
-          &-subheading {
-            font-size: 1.125rem;
-          }
-          &-app,.maxOpacity{
-            margin-top: 35px;
-          }
-          &-app > button ,.maxOpacity >button {
-          //  @extend .signIn_button;
-            width:152px;
-            height:44px;
-            font-weight:300;
-            border-radius:10px;
-            font-size: 1rem;
-          }
-          &-app > span, .maxOpacity >span {
-            font-size: 1rem;
-          }
-        }
-      }
-  
-    
-      &-supportOpen{
-      
-        &-image{
-         
-          height:100%;
-          width:50%;
-        }
-        &-image>img{
-          min-width:calc(40vw / 2);
-          width:70%;
-          height:100%;
-          transform:translate(-20%,20%);
-        }
-  
-        &-cross{
-          top:5%;
-          right:4%;
-        }
-      
-       
-        &-ParentTextBlock{
-        
-        }
-  
-        &-textBlock{
-         
-          padding-left:50px;
-          padding-right:50px;
-          padding-bottom:50px;
-          
-          &-Gollaa {
-            margin-bottom: 2rem;
-          
-            &-image {
-              max-width: 50%;
-              margin: 0;
-            }
-            &-heading {
-              font-size: 1.25rem;
-              padding-left: 5px;
-            }
-          }
-          &-subheading1{
-          
-            font-size:1.125rem;
-            padding-bottom:2rem;
-          }
-          &-subheading2,&-subheading3{
-            font-size:1rem;
-          }
-          &-subheading2{
-            padding-bottom:1rem;
-          }
-          &-app >button{
-            // @extend .download_button;
-            width:152px;
-            height:44px;
-            font-weight:300;
-            border-radius:10px;
-            font-size: 1rem;
-            margin-top:2.2rem;
-          }
-        }
-        
-      }
-  
-  
-      &-supportClosed{
-      
-        &-textBlock{
-        }
-      }
-     
-      &-support,&-dummySupport{
-        flex: 1 1 250px;
-        padding-left: 25px;
-        padding-right: 25px;
-        padding-top: 25px;
-  
-        &-image {
-          display: flex;
-          align-items: flex-end;
-          justify-content: flex-end;
-          text-align: right;
-          padding: 0;
-          margin: 0;
-        }
-  
-        &-image > img {
-          height: auto;
-        }
-        &-text {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          position: relative;
-  
-          &-Gollaa {
-            margin-bottom: 8px;
-  
-            &-image {
-              // max-width: 75px;
-              max-width:140px;
-              margin: 0;
-            }
-            &-heading {
-              font-size: 1.25rem;
-              padding-left: 5px;
-            }
-          }
-          &-subheading {
-            font-size: 1.125rem;
-  
-            &-app,.maxOpacity {
-              top:30px;
-            }
-           
-            &-app > span, .maxOpacity >span {
-              font-size: 1rem;
-            }
-          }
-         
-        }
-      }
-  
-      &-stayOpen{
-        &-image{
-          flex-basis:50%;
-          height:90%;
-          height:100%;
-          width:50%;
-        }
-        &-image>img{
-          max-width:80%;
-          height:60%;
-        }
-  
-        &-cross{
-          position:absolute;
-          top:5%;
-          right:4%;
-          z-index:3;
-        }
-       
-        &-ParentTextBlock{
-          max-width: 50%;
-          min-height:calc( 100vh - 80px);
-          display: flex;
-          flex:0 0 50%;
-         
-        }
-  
-        &-textBlock{
-          
-          padding-left:50px;
-          padding-right:50px;
-          padding-bottom:50px;
-          
-          &-Gollaa {
-            margin-bottom: 2rem;
-            
-  
-            &-image {
-              max-width: 50%;
-              margin: 0;
-            }
-            &-heading {
-              font-size: 1.25rem;
-              padding-left: 5px;
-  
-            }
-          }
-          &-subheading1{
-            font-size:1.125rem;
-            padding-bottom:2rem;
-          }
-          &-subheading2,&-subheading3{
-            font-size:1rem;
-          }
-          &-subheading2{
-            padding-bottom:1rem;
-          }
-          &-app >button{
-            // @extend .download_button;
-            margin-top:2.2rem;
-            width:152px;
-            height:44px;
-            font-weight:300;
-            border-radius:10px;
-            font-size: 1rem;
-          }
-        }
-        
-      }
-  
-  
-      &-stayClosed{
-        
-        &-textBlock{
-          animation:textAnimationReverse 1s ease;
-          opacity:0;
-          // display:none;
-        }
-      }
-  
-    
-      &-stay,&-dummyStay {
-       
-        flex: 1 1 250px;
-        height: calc(50vh - 40px);
-        padding-left: 25px;
-        padding-right: 25px;
-        padding-top: 25px;
-  
-        &-image {
-          height:60%;
-          width:60%;
-          display: flex;
-          align-items: flex-end;
-          align-self:flex-end;
-          justify-content: flex-end;
-          text-align: right;
-          padding: 0;
-          margin: 0;
-        }
-  
-        &-image > img {
-          // max-width: 230px;
-          max-width:100%;
-          height: 100%;
-        object-fit:contain;
-        }
-        &-text {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          position: relative;
-  
-          &-Gollaa {
-            margin-bottom: 8px;
-  
-            &-image {
-              max-width:140px;
-            }
-            &-heading {
-              font-size: 1.25rem;
-              padding-left: 5px;
-            }
-          }
-          &-subheading {
-            font-size: 1.125rem;
-            &-app,.maxOpacity {
-              top:30px;
-              left:0;
-              margin-top: 35px;
-            }
-            &-app > button, .maxOpacity > button{
-              // @extend .download_button;
-                width:152px;
-                height:44px;
-                font-weight:300;
-                border-radius:10px;
-                font-size: 1rem;
-                
-            }
-            &-app > span , .maxOpacity>span{
-              font-size: 1rem;
-            }
-          }
-        }
-      }
-  
-  
-      &-tradeOpen{
-        
-  
-        &-cross,.tradeCross{
-          position:absolute;
-          top:5%;
-          right:4%;
-          z-index:3;
-        }
-       
-        &-image{
-          display:flex;
-          justify-content: flex-end;
-          align-items:flex-end;
-          flex-basis:50%;
-          height:65%;
-          min-width:50%;
-        }
-        &-image>img{
-          min-width:calc(40vw / 2);
-          width:100%;
-          height:100%;
-          transform:translate(-0%,30%);
-        }
-  
-        &-ParentTextBlock{
-          max-width: 50%;
-          flex: 0 0 50vw;
-          flex-grow:0;
-          flex-shrink: 0;
-          height:calc(100vh - 80px);
-        }
-        &-textBlock{
-          flex: 0 0 50vw;
-          min-width:50vw;
-          padding-left:50px;
-          padding-right:50px;
-          padding-bottom:50px;
-  
-          &-Gollaa {
-            margin-bottom: 2rem;
-            &-image {
-              max-width:140px;
-              margin: 0;
-            }
-            &-heading {
-              font-size: 1.25rem;
-              padding-left: 5px;
-            }
-          }
-          &-subheading1{
-            font-size:1.125rem;
-            padding-bottom:2rem;
-          }
-          &-subheading2,&-subheading3{
-            font-size:1rem;
-          }
-          &-subheading2{
-            padding-bottom:1rem;
-          }
-          &-app >button{
-            // @extend .download_button;
-            margin-top:2.2rem;
-            width:152px;
-            height:44px;
-            font-weight:300;
-            border-radius:10px;
-            font-size: 1rem;
-          }
-        }
-        
-      }
-  
-  
-      &-tradeClosed{
-      
-        width:calc(100vw / 3);
-        // left:calc((100vw / 3)*2);
-        top:calc(50vh - 40px);
-        right:0;
-        height:calc(50vh - 40px);
-        &-textBlock{
-        }
-      }
-  
-  
-      &-trade,&-dummyTrade {
-        flex: 1 1 250px;
-        height: calc(50vh - 40px);
-        background: #afd466;
-        padding-left: 25px;
-        padding-right: 25px;
-        padding-top: 25px;
-  
-        &-image {
-          padding: 0;
-          margin: 0;
-          height:65%;
-          width:100%;
-        }
-  
-        &-image > img {
-          max-width:50%;
-          object-fit: contain;
-        }
-        &-text {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          position: relative;
-          // background-color: #ede139;
-          &-Gollaa {
-            margin-bottom: 8px;
-  
-            &-image {
-              max-width: 140px;
-              margin: 0;
-            }
-            &-heading {
-              font-size: 1.25rem;
-              padding-left: 5px;
-            }
-          }
-          &-subheading {
-            font-size: 1.125rem;
-  
-            &-app,.maxOpacity{
-              position:absolute;
-              top:30px;
-              left:0;
-            }
-            &-app > button ,.maxOpacity >button {
-            //  @extend .signIn_button;
-              width:152px;
-              height:44px;
-              font-weight:300;
-              border-radius:10px;
-              font-size: 1rem;
-            }
-            &-app > span, .maxOpacity >span {
-              font-size: 1rem;
-            }
-          }
-          &-app {
-            margin-top: 35px;
-          }
-          &-app > button {
-            width:152px;
-            height:44px;
-            font-weight:300;
-            border-radius:10px;
-            font-size: 1rem;
-          }
-          &-app > span {
-            font-size: 1rem;
-          }
-        }
-      }
-    }
-}
-
-@media (max-width: 690px) {
-  $Section1_height: auto;
-  $row2_height: auto;
-
-  .Section1 {
-    &-row1 {
-      height: $Section1_height;
-
-      &-shop {
-        flex: 1 1 100%;
-        flex-direction: row-reverse;
-        align-items: flex-start;
-        padding-left: 25px;
-        padding-right: 20px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-
-        &-image {
-          flex: 1 1 100px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        &-image > img {
-          max-width: 90%;
-        }
-        &-text {
-          width: 50%;
-          height: $Section1_height;
-          padding-top: 30px;
-
-          &-Gollaa {
-            margin-bottom: 8px;
-            &-image {
-              max-width: 30%;
-            }
-            &-heading {
-              font-size: 22px;
-              padding-left: 5px;
-            }
-          }
-          &-subheading {
-            font-size: 20px;
-          }
-          &-app {
-            margin-top: 35px;
-            opacity: 1;
-            display: none;
-          }
-          &-app > button {
-            padding-left: 0.75rem;
-            padding-top: 6px;
-            padding-right: 18px;
-            padding-bottom: 6px;
-            margin-right: 1rem;
-            font-size: 0.875rem;
-          }
-          &-app > span {
-            font-size: 0.875rem;
-            overflow: hidden;
-            white-space: nowrap;
-          }
-        }
-      }
-
-      &-grow {
-        display: flex;
-        flex-direction: column;
-        flex: 1 1 50%;
-        min-height: $Section1_height;
-        padding-left: 25px;
-        padding-top: 25px;
-        &-image {
-          align-items: flex-end;
-          padding: 0;
-        }
-        &-image {
-          width: 100%;
-        }
-        &-image > img {
-          // max-width: 350px;
-          max-width: 250px;
-        }
-        &-text {
-          width: 100%;
-          height: $Section1_height;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          position: relative;
-
-          &-Gollaa {
-            margin-bottom: 8px;
-
-            &-image {
-              max-width: 75px;
-              margin: 0;
-            }
-            &-heading {
-              font-size: 1rem;
-              padding-left: 5px;
-            }
-          }
-          &-subheading {
-            font-size: 1rem;
-          }
-          &-app {
-            margin-top: 35px;
-            position: absolute;
-            top: 60px;
-          }
-          &-app > button {
-            padding-left: 0.75rem;
-            padding-top: 6px;
-            padding-right: 18px;
-            padding-bottom: 6px;
-            margin-right: 1rem;
-            color: white;
-            font-family: "Monserrat";
-            font-weight: 250;
-            font-size: 0.75rem;
-            background: #161615 0% 0% no-repeat padding-box;
-            border: none;
-            outline: none;
-            border-radius: 6px;
-            overflow: hidden;
-            white-space: nowrap;
-          }
-          &-app > span {
-            font-family: "Monserrat";
-            font-weight: 200;
-            font-size: 0.75rem;
-            overflow: hidden;
-            white-space: nowrap;
-          }
-        }
-      }
-
-      &-support {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        flex: 1 1 50%;
-        padding-left: 25px;
-        padding-top: 25px;
-
-        &-image {
-          display: flex;
-          align-items: flex-end;
-          justify-content: center;
-        }
-
-        &-image > img {
-          max-width: 220px;
-          height: auto;
-          object-fit: contain;
-        }
-        &-text {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          position: relative;
-
-          &-Gollaa {
-            margin-bottom: 8px;
-
-            &-image {
-              max-width: 75px;
-              margin: 0;
-            }
-            &-heading {
-              font-size: 0.875rem;
-              padding-left: 5px;
-            }
-          }
-          &-subheading {
-            font-size: 0.875rem;
-          }
-          &-app {
-            margin-top: 35px;
-            position: absolute;
-            top: 60px;
-          }
-          &-app > button {
-            padding-left: 0.75rem;
-            padding-top: 6px;
-            padding-right: 18px;
-            padding-bottom: 6px;
-            margin-right: 1rem;
-            font-size: 0.75rem;
-            border-radius: 6px;
-            overflow: hidden;
-            white-space: nowrap;
-          }
-          &-app > span {
-            font-size: 0.75rem;
-            overflow: hidden;
-            white-space: nowrap;
-          }
-        }
-      }
-
-      &-stay {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        flex: 1 1 50%;
-        padding-left: 25px;
-        padding-top: 25px;
-
-        &-image {
-          display: flex;
-          align-items: flex-end;
-          justify-content: center;
-          text-align: right;
-        }
-
-        &-image > img {
-          max-width: 130px;
-          object-fit: contain;
-        }
-        &-text {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          position: relative;
-
-          &-Gollaa {
-            margin-bottom: 8px;
-
-            &-image {
-              max-width: 75px;
-              margin: 0;
-            }
-            &-heading {
-              font-size: 0.875rem;
-              padding-left: 5px;
-            }
-          }
-          &-subheading {
-            font-size: 0.875rem;
-          }
-          &-app {
-            margin-top: 35px;
-            position: absolute;
-            top: 60px;
-          }
-          &-app > button {
-            padding-left: 0.75rem;
-            padding-top: 6px;
-            padding-right: 18px;
-            padding-bottom: 6px;
-            margin-right: 1rem;
-            font-size: 0.75rem;
-            border: none;
-            outline: none;
-            border-radius: 6px;
-            overflow: hidden;
-            white-space: nowrap;
-          }
-          &-app > span {
-            font-family: "Monserrat";
-            font-weight: 200;
-            font-size: 0.75rem;
-            overflow: hidden;
-            white-space: nowrap;
-          }
-        }
-      }
-      &-trade {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        flex: 1 1 50%;
-        padding-left: 25px;
-        padding-top: 25px;
-
-        &-image {
-          display: flex;
-          align-items: flex-end;
-          justify-content: center;
-          text-align: right;
-        }
-
-        &-image > img {
-          max-width: 120px;
-          object-fit: contain;
-        }
-        &-text {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          position: relative;
-          &-Gollaa {
-            margin-bottom: 8px;
-
-            &-image {
-              max-width: 75px;
-              margin: 0;
-            }
-            &-heading {
-              font-size: 0.875rem;
-              padding-left: 5px;
-            }
-          }
-          &-subheading {
-            font-size: 0.875rem;
-          }
-          &-app {
-            margin-top: 35px;
-            position: absolute;
-            top: 60px;
-          }
-          &-app > button {
-            padding-left: 0.75rem;
-            padding-top: 6px;
-            padding-right: 18px;
-            padding-bottom: 6px;
-            margin-right: 1rem;
-            font-size: 0.75rem;
-            border-radius: 6px;
-            overflow: hidden;
-            white-space: nowrap;
-          }
-          &-app > span {
-            font-size: 0.75rem;
-            overflow: hidden;
-            white-space: nowrap;
-          }
-        }
-      }
-    }
+@media(max-width:370px) and (min-height:716px){
+  .Section1-stay-image,.Section1-dummyStay-image{
+    transform:none;
   }
 }
 
-// media query 2
 
-@media (max-width: 550px) {
-  $Section1_height: auto;
-  $row2_height: auto;
-
-  .Section1 {
-    &-row1 {
-      height: $Section1_height;
-      align-items: stretch;
-      position: relative;
-      &-shop {
-        flex: 1 1 100%;
-        justify-content: flex-start;
-        padding-left: 25px;
-        padding-right: 20px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-
-        &-image {
-          flex: 1 1 65px;
-        }
-        &-image > img {
-          max-width: 100%;
-        }
-        &-text {
-          width: 50%;
-          height: $Section1_height;
-          padding-top: 0px;
-
-          &-Gollaa {
-            margin-bottom: 8px;
-            &-image {
-              max-width: 85px;
-            }
-            &-heading {
-              font-size: 22px;
-              padding-left: 5px;
-            }
-          }
-          &-subheading {
-            font-size: 18px;
-          }
-          &-app {
-            margin-top: 35px;
-            opacity: 1;
-            display: none;
-          }
-          &-app > button {
-            padding-left: 0.75rem;
-            padding-top: 6px;
-            padding-right: 18px;
-            padding-bottom: 6px;
-            margin-right: 1rem;
-            font-size: 0.875rem;
-          }
-          &-app > span {
-            font-size: 0.875rem;
-            overflow: hidden;
-            white-space: nowrap;
-          }
-        }
-      }
-
-      &-grow {
-        display: flex;
-        flex: 1 1 50%;
-        // max-height: 200px;
-        // align-self: flex-start;
-        padding-left: 25px;
-        padding-top: 25px;
-        &-image {
-          padding: 0;
-        }
-        &-image {
-          width: 100%;
-        }
-        &-image > img {
-          // max-width: 350px;
-          max-width: 200px;
-        }
-        &-text {
-          width: 100%;
-          height: $Section1_height;
-          position: relative;
-
-          &-Gollaa {
-            margin-bottom: 8px;
-
-            &-image {
-              max-width: 65px;
-              margin: 0;
-            }
-            &-heading {
-              font-size: 0.875rem;
-              padding-left: 5px;
-            }
-          }
-          &-subheading {
-            font-size: 0.75rem;
-          }
-          &-app {
-            margin-top: 35px;
-            position: absolute;
-            top: 60px;
-          }
-          &-app > button {
-            padding-left: 0.75rem;
-            padding-top: 6px;
-            padding-right: 18px;
-            padding-bottom: 6px;
-            margin-right: 1rem;
-            color: white;
-            font-family: "Monserrat";
-            font-weight: 250;
-            font-size: 0.75rem;
-            background: #161615 0% 0% no-repeat padding-box;
-            border: none;
-            outline: none;
-            border-radius: 6px;
-            overflow: hidden;
-            white-space: nowrap;
-          }
-          &-app > span {
-            font-family: "Monserrat";
-            font-weight: 200;
-            font-size: 0.75rem;
-            overflow: hidden;
-            white-space: nowrap;
-          }
-        }
-      }
-
-      &-support {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        flex: 1 1 50%;
-        // height: 300px;
-        padding-left: 25px;
-        padding-top: 25px;
-
-        &-image {
-          display: flex;
-        }
-
-        &-image > img {
-          max-width: 150px;
-          height: auto;
-          object-fit: contain;
-        }
-        &-text {
-          display: flex;
-          position: relative;
-
-          &-Gollaa {
-            margin-bottom: 8px;
-
-            &-image {
-              max-width: 65px;
-              margin: 0;
-            }
-            &-heading {
-              font-size: 0.875rem;
-              padding-left: 5px;
-            }
-          }
-          &-subheading {
-            font-size: 0.75rem;
-          }
-          &-app {
-            margin-top: 35px;
-            position: absolute;
-            top: 60px;
-          }
-          &-app > button {
-            padding-left: 0.75rem;
-            padding-top: 6px;
-            padding-right: 18px;
-            padding-bottom: 6px;
-            margin-right: 1rem;
-            font-size: 0.75rem;
-            border-radius: 6px;
-            overflow: hidden;
-            white-space: nowrap;
-          }
-          &-app > span {
-            font-size: 0.75rem;
-            overflow: hidden;
-            white-space: nowrap;
-          }
-        }
-      }
-
-      &-stay {
-        // position: static;
-        // opacity: 0.2;
-        top: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        flex: 1 1 50%;
-        padding-left: 25px;
-        padding-top: 25px;
-        &-image {
-          display: flex;
-        }
-
-        &-image > img {
-          max-width: 130px;
-          object-fit: contain;
-        }
-        &-text {
-          display: flex;
-          position: relative;
-
-          &-Gollaa {
-            margin-bottom: 8px;
-
-            &-image {
-              max-width: 65px;
-              margin: 0;
-            }
-            &-heading {
-              font-size: 0.875rem;
-              padding-left: 5px;
-            }
-          }
-          &-subheading {
-            font-size: 0.75rem;
-          }
-          &-app {
-            display: none;
-            margin-top: 35px;
-            position: absolute;
-            top: 60px;
-          }
-          &-app > button {
-            padding-left: 0.75rem;
-            padding-top: 6px;
-            padding-right: 18px;
-            padding-bottom: 6px;
-            margin-right: 1rem;
-            font-size: 0.75rem;
-            border: none;
-            outline: none;
-            border-radius: 6px;
-            overflow: hidden;
-            white-space: nowrap;
-          }
-          &-app > span {
-            font-family: "Monserrat";
-            font-weight: 200;
-            font-size: 0.75rem;
-            overflow: hidden;
-            white-space: nowrap;
-          }
-        }
-      }
-
-      &-trade {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        flex: 0 0 50%;
-        padding-left: 25px;
-        padding-top: 25px;
-
-        &-image {
-          display: flex;
-          align-items: flex-end;
-          justify-content: center;
-          text-align: right;
-        }
-
-        &-image > img {
-          max-width: 120px;
-          object-fit: contain;
-        }
-        &-text {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          position: relative;
-          &-Gollaa {
-            margin-bottom: 8px;
-
-            &-image {
-              max-width: 65px;
-              margin: 0;
-            }
-            &-heading {
-              font-size: 0.875rem;
-              padding-left: 5px;
-            }
-          }
-          &-subheading {
-            font-size: 0.75rem;
-          }
-          &-app {
-            margin-top: 35px;
-            position: absolute;
-            top: 60px;
-          }
-          &-app > button {
-            padding-left: 0.75rem;
-            padding-top: 6px;
-            padding-right: 18px;
-            padding-bottom: 6px;
-            margin-right: 1rem;
-            font-size: 0.75rem;
-            border-radius: 6px;
-            overflow: hidden;
-            white-space: nowrap;
-          }
-          &-app > span {
-            font-size: 0.75rem;
-            overflow: hidden;
-            white-space: nowrap;
-          }
-        }
-      }
-    }
-  }
-}
-
-// media query 2
-
-@media (max-width: 450px) {
-  $Section1_height: auto;
-  $row2_height: auto;
-  $shop_height: auto;
-
-  .Section1 {
-    &-row1 {
-      height: $Section1_height;
-      align-items: stretch;
-      position: relative;
-      &-shop {
-        flex: 1 1 100%;
-        justify-content: flex-start;
-        padding-left: 25px;
-        padding-right: 20px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        height: $shop_height;
-
-        &-image {
-          flex: 1 1 85px;
-          width: 55%;
-        }
-        &-image > img {
-          max-width: 100%;
-        }
-        &-text {
-          width: 45%;
-          height: $Section1_height;
-          padding-top: 0px;
-
-          &-Gollaa {
-            margin-bottom: 8px;
-            overflow: visible;
-            white-space: nowrap;
-            &-image {
-              max-width: 85px;
-            }
-            &-heading {
-              font-size: 22px;
-              padding-left: 5px;
-            }
-          }
-          &-subheading {
-            font-size: 1rem;
-          }
-          &-app {
-            margin-top: 35px;
-            opacity: 1;
-            display: none;
-          }
-          &-app > button {
-            padding-left: 0.75rem;
-            padding-top: 6px;
-            padding-right: 18px;
-            padding-bottom: 6px;
-            margin-right: 1rem;
-            font-size: 0.875rem;
-          }
-          &-app > span {
-            font-size: 0.875rem;
-            overflow: hidden;
-            white-space: nowrap;
-          }
-        }
-      }
-
-      &-grow {
-        display: flex;
-        flex: 0 1 50%;
-        // max-height: 200px;
-        align-self: flex-start;
-        padding-left: 0px;
-        padding-top: 0px;
-        &-image {
-          padding: 0;
-        }
-        &-image {
-          width: 100%;
-        }
-        &-image > img {
-          // max-width: 350px;
-          max-width: 100%;
-        }
-        &-text {
-          width: 100%;
-          height: $Section1_height;
-          position: relative;
-          padding-left: 25px;
-          padding-top: 25px;
-
-          &-Gollaa {
-            margin-bottom: 8px;
-
-            &-image {
-              max-width: 65px;
-              margin: 0;
-            }
-            &-heading {
-              font-size: 0.875rem;
-              padding-left: 5px;
-            }
-          }
-          &-subheading {
-            font-size: 0.75rem;
-          }
-          &-app {
-            margin-top: 35px;
-            position: absolute;
-            top: 60px;
-          }
-          &-app > button {
-            padding-left: 0.75rem;
-            padding-top: 6px;
-            padding-right: 18px;
-            padding-bottom: 6px;
-            margin-right: 1rem;
-            color: white;
-            font-family: "Monserrat";
-            font-weight: 250;
-            font-size: 0.75rem;
-            background: #161615 0% 0% no-repeat padding-box;
-            border: none;
-            outline: none;
-            border-radius: 6px;
-            overflow: hidden;
-            white-space: nowrap;
-          }
-          &-app > span {
-            font-family: "Monserrat";
-            font-weight: 200;
-            font-size: 0.75rem;
-            overflow: hidden;
-            white-space: nowrap;
-          }
-        }
-      }
-
-      &-support {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        flex: 1 1 50%;
-        height: 250px;
-        padding-left: 0;
-        padding-top: 0;
-        background: #8abb2a;
-        color: white;
-
-        &-image {
-          display: flex;
-        }
-
-        &-image > img {
-          max-width: 95%;
-          height: auto;
-          object-fit: contain;
-        }
-        &-text {
-          display: flex;
-          position: relative;
-          padding-left: 25px;
-          padding-top: 25px;
-          &-Gollaa {
-            margin-bottom: 8px;
-
-            &-image {
-              max-width: 65px;
-              margin: 0;
-              fill: white;
-            }
-            &-heading {
-              font-size: 0.875rem;
-              padding-left: 5px;
-            }
-          }
-          &-subheading {
-            font-size: 0.75rem;
-          }
-          &-app {
-            margin-top: 35px;
-            position: absolute;
-            top: 60px;
-          }
-          &-app > button {
-            padding-left: 0.75rem;
-            padding-top: 6px;
-            padding-right: 18px;
-            padding-bottom: 6px;
-            margin-right: 1rem;
-            font-size: 0.75rem;
-            border-radius: 6px;
-            overflow: hidden;
-            white-space: nowrap;
-          }
-          &-app > span {
-            font-size: 0.75rem;
-            overflow: hidden;
-            white-space: nowrap;
-          }
-        }
-      }
-
-      &-stay {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-        flex: 0 0 50%;
-        padding-left: 0;
-        padding-top: 0;
-        position: relative;
-        color: white;
-
-        &-image {
-          display: flex;
-        }
-
-        &-image > img {
-          max-width: 130px;
-          object-fit: contain;
-        }
-        &-text {
-          display: flex;
-          position: absolute;
-          top: -15%;
-          left: 10%;
-
-          &-Gollaa {
-            margin-bottom: 8px;
-
-            &-image {
-              max-width: 65px;
-              margin: 0;
-            }
-            &-heading {
-              font-size: 0.875rem;
-              padding-left: 5px;
-            }
-          }
-          &-subheading {
-            font-size: 0.75rem;
-          }
-          &-app {
-            display: none;
-            margin-top: 35px;
-            position: absolute;
-            top: 60px;
-          }
-          &-app > button {
-            padding-left: 0.75rem;
-            padding-top: 6px;
-            padding-right: 18px;
-            padding-bottom: 6px;
-            margin-right: 1rem;
-            font-size: 0.75rem;
-            border: none;
-            outline: none;
-            border-radius: 6px;
-            overflow: hidden;
-            white-space: nowrap;
-          }
-          &-app > span {
-            font-family: "Monserrat";
-            font-weight: 200;
-            font-size: 0.75rem;
-            overflow: hidden;
-            white-space: nowrap;
-          }
-        }
-      }
-
-      &-trade {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        flex: 0 0 50%;
-        padding-left: 0;
-        padding-top: 0;
-        background: #ffe815;
-
-        &-image {
-          display: flex;
-          align-items: flex-end;
-          justify-content: center;
-          text-align: right;
-        }
-
-        &-image > img {
-          max-width: 60%;
-          object-fit: contain;
-        }
-        &-text {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          position: relative;
-          padding-left: 25px;
-          padding-top: 25px;
-          &-Gollaa {
-            margin-bottom: 8px;
-
-            &-image {
-              max-width: 65px;
-              margin: 0;
-            }
-            &-heading {
-              font-size: 0.875rem;
-              padding-left: 5px;
-            }
-          }
-          &-subheading {
-            font-size: 0.75rem;
-          }
-          &-app {
-            margin-top: 35px;
-            position: absolute;
-            top: 60px;
-          }
-          &-app > button {
-            padding-left: 0.75rem;
-            padding-top: 6px;
-            padding-right: 18px;
-            padding-bottom: 6px;
-            margin-right: 1rem;
-            font-size: 0.75rem;
-            border-radius: 6px;
-            overflow: hidden;
-            white-space: nowrap;
-          }
-          &-app > span {
-            font-size: 0.75rem;
-            overflow: hidden;
-            white-space: nowrap;
-          }
-        }
-      }
-    }
-   }
-  }
- }
 }

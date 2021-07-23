@@ -15,8 +15,12 @@ import Footer from '../../components/LandingPage/Footer/Footer';
 export default function TodayForTomorrow(){
 
     React.useEffect(() => {
-        window.scrollTo(0, 0)
-      }, [])
+        const timer = setTimeout(() => {
+            window.scrollTo(0, 0)
+          }, 10);
+          return () => clearTimeout(timer);
+    }, [])
+    
     return(
         <React.Fragment>
             <Navbar/>

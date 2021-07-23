@@ -25,8 +25,9 @@ export default function Section1Today(){
             </div>
 
             <div className="Section2Today-picture">
-                <img className="Section2Today-picture-earth" src={Plantation} alt="earth being planted with plants"/>
-
+                <div className="Section2Today-picture-earth">
+                    <img src={Plantation} alt="earth being planted with plants"/>
+                </div>
                 <div className="Section2Today-picture-top">
 
                 </div>

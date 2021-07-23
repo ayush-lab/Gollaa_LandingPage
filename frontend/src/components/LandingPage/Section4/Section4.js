@@ -43,11 +43,13 @@ export default function Section4(){
                     <span>GOLLAA: </span> A CHANGE 
                     </p> */}
 
-                    <p className="Section4-info-bottom-Text2" >We at Gollaa have decided to take up the 
-                        responsibility of paving the way for a
-                         better tomorrow- one that is sustainable and humane.</p>
+                    <p className="Section4-info-bottom-Text2" >We at Gollaa have decided
+                     to take up the responsibility of paving the way for a better tomorrow- one that is 
+                     sustainable and humane.<span className="Section4-info-bottom-Text2-span">Gollaa is a platform that facilitates direct interaction between
+                      consumers and sellers. This allows local businesses to make huge 
+                    profits from the products they sell and consumers to get authentic organic products.</span></p>
                     
-                    <div className={Section4.Hover ? "Section2-info-bottom-link": "displayNone"}>
+                    <div className={Section4.Hover ? "Section2-info-bottom-link": "Section2-info-bottom-linkNone"}>
                         <Link to="/change" className="link">See More</Link></div>
                 </div>
             </div>

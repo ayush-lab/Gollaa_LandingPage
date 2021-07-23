@@ -1,11 +1,11 @@
 
-$Section5_padding:90px;
-$Section5_heading_font:1.75rem;
+$Section5_padding:15%;
+$Section5_heading_font:36px;
 
 .CitySection5{
     background:#A1D8D8;
     display:flex;
-    height:calc(100vh - 80px - 180px);
+    height:calc(100vh - 80px);
     position:relative;
     max-width:100vw;
 
@@ -31,8 +31,7 @@ $Section5_heading_font:1.75rem;
     &-right{
         // padding-bottom:2rem;
         width:100%;
-        padding-left:$Section5_padding;
-        padding-right: $Section5_padding;
+        
         &-heading,&-para{
            
         }
@@ -43,14 +42,18 @@ $Section5_heading_font:1.75rem;
            font-weight:300;
            padding-bottom:1rem;
            text-align:center;
-           overflow:none;
-           white-space: nowrap;
+           white-space: wrap;
+           padding-left:$Section5_padding;
+           padding-right: $Section5_padding;
        }
        &-para{
+           padding-left:$Section5_padding;
+           padding-right: $Section5_padding;
            text-align: center;
            font-family: "Poppins";
            font-size:12px;
            font-weight:200;
+        //    padding-bottom:1rem;
        }
     }
 
@@ -65,11 +68,10 @@ $Section5_heading_font:1.75rem;
         align-items: center;
         justify-content: flex-start;
         transform:translateY(100%);
-        transition:all 0.5s ease;
+        transition:all 0.6s ease;
         opacity:0;
         padding-top:1rem;
-        padding-left:$Section5_padding;
-        padding-right: $Section5_padding;
+        
         &-heading{
             font-family: "Monserrat";
             font-size:$Section5_heading_font;
@@ -78,12 +80,15 @@ $Section5_heading_font:1.75rem;
             text-align:center;
             overflow:none;
             white-space: nowrap;
+            padding-bottom:1rem;
         }
         &-para{
             text-align: center;
             font-family: "Poppins";
             font-size:12px;
             font-weight:200;
+            padding-left:$Section5_padding;
+            padding-right: $Section5_padding;
         }
     }
     &-lastDummy{
@@ -99,6 +104,8 @@ $Section5_heading_font:1.75rem;
         flex-direction: none;
         align-items: none;
         justify-content: none;
+        padding-top:2rem;
+
     }
 }
 
@@ -108,8 +115,8 @@ $Section5_heading_font:1.75rem;
 }
 
 @media(min-width:1500px){
-    $Section5_padding:120px;
-    $Section5_heading_font:1.75rem;
+    $Section5_padding:20%;
+    $Section5_heading_font:36px;
 
 .CitySection5{
     background:#A1D8D8;
@@ -140,8 +147,7 @@ $Section5_heading_font:1.75rem;
     &-right{
         // padding-bottom:2rem;
         width:100%;
-        padding-left:$Section5_padding;
-        padding-right: $Section5_padding;
+      
         &-heading,&-para{
            
         }
@@ -150,12 +156,14 @@ $Section5_heading_font:1.75rem;
            font-family: "Monserrat";
            font-size:$Section5_heading_font;
            font-weight:300;
-           padding-bottom:2rem;
+           padding-bottom:1rem;
            text-align:center;
            overflow:none;
            white-space: nowrap;
        }
        &-para{
+           padding-left:$Section5_padding;
+           padding-right: $Section5_padding;
            text-align: center;
            font-family: "Poppins";
            font-size:1rem;
@@ -174,16 +182,15 @@ $Section5_heading_font:1.75rem;
         align-items: center;
         justify-content: flex-start;
         transform:translateY(100%);
-        transition:all 0.5s ease;
+        transition:all 0.6s ease;
         opacity:0;
-        padding-top:2rem;
-        padding-left:$Section5_padding;
-        padding-right: $Section5_padding;
+        padding-top:1rem;
+       
         &-heading{
             font-family: "Monserrat";
             font-size:$Section5_heading_font;
             font-weight:300;
-            padding-bottom:2rem;
+            padding-bottom:1rem;
             text-align:center;
             overflow:none;
             white-space: nowrap;
@@ -193,6 +200,8 @@ $Section5_heading_font:1.75rem;
             font-family: "Poppins";
             font-size:1rem;
             font-weight:200;
+            padding-left:$Section5_padding;
+            padding-right: $Section5_padding;
         }
     }
     &-lastDummy{
@@ -231,6 +240,55 @@ $Section5_heading_font:1.75rem;
     .CitySection5-last,.CitySection5-lastDummy{
         padding-left:60px;
         padding-right:60px;
+    }
+}
+
+
+@media(max-width:1200px){
+$Section5_padding:15%;
+$Section5_heading_font:28px;
+
+.CitySection5{
+    background:#A1D8D8;
+    display:flex;
+    height:calc(100vh - 80px );
+    position:relative;
+    max-width:100vw;
+
+   
+    &-right{
+        // padding-bottom:2rem;
+        width:100%;
+        
+        &-heading,&-para{
+           
+        }
+
+        &-heading{
+           font-family: "Monserrat";
+           font-size:$Section5_heading_font;
+        
+       }
+     
+    }
+
+    &-last,&-lastDummy{
+       
+        
+        &-heading{
+            font-family: "Monserrat";
+            font-size:$Section5_heading_font;
+           
+        }
+        &-para{
+           
+            padding-left:$Section5_padding;
+            padding-right: $Section5_padding;
+        }
+    }
+    &-lastDummy{
+        
+      }
     }
 }
 
@@ -540,7 +598,7 @@ $Section5_heading_font:28px;
 }
 
 
-@media(max-width:570px){
+@media(max-width:370px){
 
     $Section5_padding:15px;
     $Section5_heading_font:14px;
@@ -576,7 +634,7 @@ $Section5_heading_font:28px;
             padding-left:$Section5_padding;
             padding-right: $Section5_padding;
             &-heading,&-para{
-               
+               padding:0;
             }
     
             &-heading{
@@ -621,6 +679,7 @@ $Section5_heading_font:28px;
                 font-family: "Poppins";
                 font-size:8px;
                 font-weight:200;
+                padding:0;
             }
         }
         &-lastDummy{

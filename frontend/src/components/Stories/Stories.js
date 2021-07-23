@@ -23,6 +23,7 @@ export default function StoriesSections(){
           <>
             <div className="StoriesSection1">
                 <div className="StoriesSection1-text">
+                    <p className="StoriesSection1-text-heading">Our Stories</p>
                     <p className="StoriesSection1-text-para">While waiting for their coffee in a Café in Paris during summer of 2020, Karim, Aman and Utkarsh had a discussion on the agriculture system and how food is perceived by society, despite the enormous challenges it continues to provide us. Yet our local heros ( farmers and local businesses) remain in disguise. Later that same year Subhash and Jot Singh, accustomed with the ground reality of the current Indian framework, partnered in the inception of Gollaa with a vision of bringing transparency to the system by removing intermediaries and hurdles for both consumers and local farmers/local businesses. Hence, Gollaa, a 360° Transformative economy with a solid, scalable and effective infrastructure supporting not only local businesses/ local farmers but the local communities by creating micro interactions and transactions within the 
                         community via technology and making communities resilient was founded.</p>
                 </div>

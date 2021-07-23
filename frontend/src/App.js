@@ -9,11 +9,12 @@ import City from "./Pages/Blog/City/City";
 import Currency from "./Pages/Blog/Currency/Currency";
 import Stories from "./Pages/Stories/Story";
 import AboutUs from './Pages/AbousUs/AboutUs';
-
+import  ScrollToTop from './Utility/Scroll';
 
 function App() {
   return (
     <Router>
+     <ScrollToTop />
         <Switch>
           <Route path='/today' exact component={TodayForTomorrow} />
           <Route path='/change' exact component={TheChange} />

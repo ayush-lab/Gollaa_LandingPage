@@ -1,5 +1,4 @@
 import React from 'react';
-import BalancedSystem from '../../../assets/images/Balance.svg'
 
 export default function Section5Today(){
 

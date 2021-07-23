@@ -1,8 +1,8 @@
-$Section4_heading_font:1.75rem;
-$Section4_padding:90px;
+$Section4_heading_font:32px;
+$Section4_padding:10%;
 
 .TerroirSection4{
-    height:calc(100vh - 80px);
+    height:calc(100vh - 80px );
     max-width:100vw;
     display:flex;
     background:#5FAF42;
@@ -49,11 +49,11 @@ $Section4_padding:90px;
 }
 
 @media(min-width:1500px){
-    $Section4_heading_font:2rem;
-$Section4_padding:120px;
+    $Section4_heading_font:40px;
+    $Section4_padding:10%;
 
 .TerroirSection4{
-    height:calc(100vh - 80px - 180px);
+    height:calc(100vh - 80px - 200px);
     max-width:100vw;
     display:flex;
     background:#5FAF42;
@@ -101,7 +101,7 @@ $Section4_padding:120px;
 }
 
 @media(max-width:1280px){
-    $Section4_heading_font:28px;
+    $Section4_heading_font:20px;
     $Section4_padding:60px;
 
 .TerroirSection4{
@@ -158,7 +158,7 @@ $Section4_padding:120px;
 
 
 @media(max-width:900px){
-    $Section4_heading_font:28px;
+    $Section4_heading_font:20px;
     $Section4_padding:60px;
 
 .TerroirSection4{
@@ -214,7 +214,7 @@ $Section4_padding:120px;
 }
 
 @media(max-width:770px){
-    $Section4_heading_font:28px;
+    $Section4_heading_font:20px;
     $Section4_padding:60px;
 
 .TerroirSection4{

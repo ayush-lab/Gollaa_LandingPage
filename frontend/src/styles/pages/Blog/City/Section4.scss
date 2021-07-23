@@ -1,23 +1,28 @@
 .CitySection4{
     background:#DAD800;
-    padding-top:50px;
-    padding-bottom:50px;
-    color:white;
+    // padding-top:50px;
+    // padding-bottom:50px;
+    color:black;
     display:flex;
     flex-direction: column;
     justify-content:center;
     align-items: center;
     text-align:center;
-    padding-left:30%;
-    padding-right:30%;
-    height:calc(50vh - 40px);
-
+    padding-left:35%;
+    padding-right:35%;
+    height:auto;
+    // padding-top:5%;
+    // padding-bottom:5%;
+    height:calc(100vh - 80px);
+    
     &-heading{
         font-family: "Monserrat";
-        font-size:30px;
+        font-size:15px;
         font-weight:300;
-        padding-bottom:2rem;
+        padding-bottom:1rem;
         text-align:center;
+        transition: all 0.6s ease;
+        transform:scale(1,1);
     }
     &-para{
         text-align: center;
@@ -25,28 +30,31 @@
         font-size:12px;
         font-weight:200;
     }
+    &-para span {
+        display:block;
+    }
 }
 
 @media(min-width:1500px){
     .CitySection4{
         background:#DAD800;
-        padding-top:50px;
-        padding-bottom:50px;
-        color:white;
+        // padding-top:50px;
+        // padding-bottom:50px;
+        color:black;
         display:flex;
         flex-direction: column;
         justify-content:center;
         align-items: center;
         text-align:center;
-        padding-left:30%;
-        padding-right:30%;
-        height:calc(50vh - 40px);
+        padding-left:35%;
+        padding-right:35%;
+        height:calc(100vh - 80px);
     
         &-heading{
             font-family: "Monserrat";
-            font-size:36px;
+            font-size:25px;
             font-weight:300;
-            padding-bottom:2rem;
+            padding-bottom:1rem;
             text-align:center;
         }
         &-para{

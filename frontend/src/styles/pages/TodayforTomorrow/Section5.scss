@@ -1,11 +1,12 @@
 $Section5_height:  calc(100vh - 80px);
-$Section5_heading_font:1.75rem;
-$Section5_padding:90px;
+$Section5_heading_font:1rem;
+$Section5_padding:15%;
 .Section5Today {
   display: flex;
   width: 100%;
   height: $Section5_height;
   position:relative;
+  scroll-snap-align: start;
 
   &-left {
     width: 50%;
@@ -18,9 +19,10 @@ $Section5_padding:90px;
     &-heading{
         font-size:$Section5_heading_font;
         font-family:'Monserrat';
-        font-weight:250;
-        padding-bottom:2rem;
+        font-weight:300;
+        padding-bottom:1rem;
         padding-left:$Section5_padding;
+        padding-right:$Section5_padding;
         align-self:flex-start;
     }
 
@@ -48,9 +50,10 @@ $Section5_padding:90px;
     &-heading{
         font-size:$Section5_heading_font;
         font-family:'Monserrat';
-        font-weight:250;
-        padding-bottom:2rem;
+        font-weight:300;
+        padding-bottom:1rem;
         padding-left:$Section5_padding;
+        padding-right:$Section5_padding;
         align-self:flex-start;
     }
 
@@ -72,8 +75,8 @@ $Section5_padding:90px;
 
 @media(min-width:1500px){
   $Section5_height:  calc(100vh - 80px);
-$Section5_heading_font:2rem;
-$Section5_padding:120px;
+  $Section5_heading_font:20px;
+  $Section5_padding:20%;
 .Section5Today {
   display: flex;
   width: 100%;
@@ -91,8 +94,8 @@ $Section5_padding:120px;
     &-heading{
         font-size:$Section5_heading_font;
         font-family:'Monserrat';
-        font-weight:250;
-        padding-bottom:2rem;
+        font-weight:300;
+        padding-bottom:1rem;
         padding-left:$Section5_padding;
         align-self:flex-start;
     }
@@ -121,8 +124,6 @@ $Section5_padding:120px;
     &-heading{
         font-size:$Section5_heading_font;
         font-family:'Monserrat';
-        font-weight:250;
-        padding-bottom:2rem;
         padding-left:$Section5_padding;
         align-self:flex-start;
     }
@@ -163,20 +164,12 @@ $Section5_padding:120px;
     background: #A1D8D8;
     color:black;
     &-heading{
-        font-size:28px;
-        font-family:'Monserrat';
-        font-weight:250;
         padding-bottom:1rem;
-        padding-left:60px;
         align-self:flex-start;
     }
 
     &-para{
         font-size:10px;
-        font-family:'poppins';
-        font-weight:200;
-        padding-left:60px;
-        padding-right:60px;
         &-text1{
             padding-bottom:1rem;
         }
@@ -193,20 +186,12 @@ $Section5_padding:120px;
     background: #DAD800;
     color:black;
     &-heading{
-        font-size:28px;
-        font-family:'Monserrat';
-        font-weight:250;
-        padding-bottom:2rem;
-        padding-left:40px;
+        padding-bottom:1rem;
         align-self:flex-start;
     }
 
     &-para{
         font-size:10px;
-        font-family:'poppins';
-        font-weight:200;
-        padding-left:40px;
-        padding-right:40px;
         &-text1{
             padding-bottom:1rem;
         }
@@ -239,20 +224,11 @@ $Section5_padding:120px;
     text-align:center;
 
     &-heading{
-        font-size:30px;
-        font-family:'Monserrat';
-        font-weight:250;
-        padding-bottom:1rem;
-        padding-left:0px;
         align-self:center;
+        padding:0;
     }
 
     &-para{
-        font-size:12px;
-        font-family:'poppins';
-        font-weight:200;
-        padding-left:60px;
-        padding-right:60px;
         &-text1{
             padding-bottom:1rem;
         }
@@ -271,20 +247,11 @@ $Section5_padding:120px;
     text-align:center;
     color:black;
     &-heading{
-        font-size:30px;
-        font-family:'Monserrat';
-        font-weight:250;
-        padding-bottom:2rem;
-        padding-left:0px;
         align-self:center;
+        padding:0;
     }
 
     &-para{
-        font-size:12px;
-        font-family:'poppins';
-        font-weight:200;
-        padding-left:40px;
-        padding-right:40px;
         &-text1{
             padding-bottom:1rem;
         }
@@ -358,8 +325,8 @@ $Section5_padding:120px;
           font-size:0.5rem;
           font-family:'poppins';
           font-weight:200;
-          padding-left:40px;
-          padding-right:40px;
+          padding-left:60px;
+          padding-right:60px;
           &-text1{
               padding-bottom:1rem;
           }
@@ -402,8 +369,8 @@ $Section5_padding:120px;
           font-size:0.5rem;
           font-family:'poppins';
           font-weight:200;
-          padding-left:60px;
-          padding-right:60px;
+          padding-left:15px;
+          padding-right:15px;
           &-text1{
               padding-bottom:1rem;
           }
