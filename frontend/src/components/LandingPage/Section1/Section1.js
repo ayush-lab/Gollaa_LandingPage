@@ -20,10 +20,7 @@ export default function Section1(){
 
 
   const shopFullScreen=()=>{
-    var windowWidth = window.matchMedia("(max-width: 900px)") 
-    if(!windowWidth.matches){
-        windowWidth = window.matchMedia("(max-height: 600px)") 
-    }
+    var windowWidth = window.matchMedia("(max-width: 900px)")
     if(windowWidth.matches){
         shopHandler(prevState=>({...prevState,shopModal:true}));
     }
@@ -34,9 +31,6 @@ export default function Section1(){
 
   const growFullScreen=()=>{
     var windowWidth = window.matchMedia("(max-width: 900px)")
-    if(!windowWidth.matches){
-        windowWidth = window.matchMedia("(max-height: 600px)") 
-    }
     if(windowWidth.matches){
         growHandler(prevState=>({...prevState,growModal:true}));
     }
@@ -47,9 +41,6 @@ export default function Section1(){
 
   const supportFullScreen=()=>{
     var windowWidth = window.matchMedia("(max-width: 900px)")
-    if(!windowWidth.matches){
-        windowWidth = window.matchMedia("(max-height: 600px)") 
-    }
     if(windowWidth.matches){
         supportHandler(prevState=>({...prevState,supportModal:true}));
     }
@@ -59,9 +50,6 @@ export default function Section1(){
 
   const stayFullScreen=()=>{
     var windowWidth = window.matchMedia("(max-width: 900px)")
-    if(!windowWidth.matches){
-        windowWidth = window.matchMedia("(max-height: 600px)") 
-    }
     if(windowWidth.matches){
         stayHandler(prevState=>({...prevState,stayModal:true}));
     }
@@ -71,9 +59,6 @@ export default function Section1(){
 
   const tradeFullScreen=()=>{
     var windowWidth = window.matchMedia("(max-width: 900px)")
-    if(!windowWidth.matches){
-        windowWidth = window.matchMedia("(max-height: 600px)") 
-    }
     if(windowWidth.matches){
         tradeHandler(prevState=>({...prevState,tradeModal:true}));
     }
@@ -192,24 +177,6 @@ export default function Section1(){
     },1500)
   }
 
-  React.useEffect(() => {
-    window.addEventListener("resize", handleResize)
-
-    return ()=>{
-        window.removeEventListener('resize')
-    }
-  },[])
-
-   const handleResize = ()=>{
-  
-    shopHandler(prevState=>({...prevState,shopOpen:false,shopClicked:false,shopClosedClick:false}))
-    growHandler(prevState=>({...prevState,growOpen:false,growClicked:false,growClosedClick:false}))
-    stayHandler(prevState=>({...prevState,stayOpen:false,stayClicked:false,stayClosedClick:false}))
-    supportHandler(prevState=>({...prevState,supportOpen:false,supportClicked:false,supportClosedClick:false}))
-    tradeHandler(prevState=>({...prevState,tradeOpen:false,tradeClicked:false,tradeClosedClick:false}))
-  
-}
-
   let shopRef=useRef();
   let shopFullScreenText=useRef();
 
@@ -245,12 +212,12 @@ export default function Section1(){
       overlayShop=["overlay-motion"]
   }
   if(shop.shopOpen){
-    document.querySelector("html").style.overflow = "hidden";
+    // document.querySelector("body").style.overflow = "hidden";
   }
   
   if(shop.shopClosedClick){
     overlayShop=["overlay-come"]
-    document.querySelector("html").style.overflow = "auto";
+    // document.querySelector("body").style.overflow = "auto";
   }
 
     // grow
@@ -265,11 +232,11 @@ export default function Section1(){
        overlayGrow=["overlay-motion"]
    }
    if(grow.growOpen){
-   document.querySelector("html").style.overflow = "hidden";
+   // document.querySelector("body").style.overflow = "hidden";
    }     
    if(grow.growClosedClick){
    overlayGrow=["overlay-come"]
-   document.querySelector("html").style.overflow = "auto";
+   // document.querySelector("body").style.overflow = "auto";
    }     
    
    // support
@@ -284,11 +251,11 @@ export default function Section1(){
         overlaySupport=["overlay-motion"]
     }
     if(support.supportOpen){
-    document.querySelector("html").style.overflow = "hidden";
+    // document.querySelector("body").style.overflow = "hidden";
     }     
     if(support.supportClosedClick){
-        overlaySupport=["overlay-come"]
-        document.querySelector("html").style.overflow = "auto";
+    overlaySupport=["overlay-come"]
+    // document.querySelector("body").style.overflow = "auto";
     }  
 
 
@@ -304,11 +271,11 @@ export default function Section1(){
         overlayStay=["overlay-motion"]
     }
     if(stay.stayOpen){
-        document.querySelector("html").style.overflow = "hidden";
+    // document.querySelector("body").style.overflow = "hidden";
     }     
     if(stay.stayClosedClick){
-        overlayStay=["overlay-come"]
-        document.querySelector("html").style.overflow = "auto";
+    overlayStay=["overlay-come"]
+    // document.querySelector("body").style.overflow = "auto";
     }  
 
      // Trade
@@ -323,11 +290,11 @@ export default function Section1(){
         overlayTrade=["overlay-motion"]
     }
     if(trade.tradeOpen){
-        document.querySelector("html").style.overflow = "hidden";
+    // document.querySelector("body").style.overflow = "hidden";
     }     
     if(trade.tradeClosedClick){
-        overlayTrade=["overlay-come"]
-        document.querySelector("html").style.overflow = "auto";
+    overlayTrade=["overlay-come"]
+    // document.querySelector("body").style.overflow = "auto";
     }  
 
 
